@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "question": "Which command shows the VLANs currently configured on a Cisco switch, including the default VLAN?",
+    "options": [
+      "show running-config",
+      "show vlan",
+      "show ip route",
+      "show interfaces status"
+    ],
+    "correctAnswer": "show vlan",
+    "explanation": "The command 'show vlan' displays VLAN information on a switch, including the default VLAN (VLAN 1)."
+  },
+  {
+    "id": 2,
+    "question": "What is the default VLAN ID that is always present on a Cisco switch?",
+    "options": ["VLAN 0", "VLAN 1", "VLAN 100", "VLAN 4094"],
+    "correctAnswer": "VLAN 1",
+    "explanation": "VLAN 1 is the default VLAN on Cisco switches and exists by default on newly initialized switches."
+  },
+  {
+    "id": 3,
+    "question": "Which sequence correctly describes creating VLANs 10, 20, 30 and naming them HR, IT, and Accounting?",
+    "options": [
+      "vlan 10; name HR; vlan 20; name IT; vlan 30; name Accounting",
+      "interface vlan 10; ip address 10.0.10.1; interface vlan 20; ip address 10.0.20.1",
+      "switchport mode trunk; vlan 10 name HR; vlan 20 name IT; vlan 30 name Accounting",
+      "vlan create 10 HR; vlan create 20 IT; vlan create 30 Accounting"
+    ],
+    "correctAnswer": "vlan 10; name HR; vlan 20; name IT; vlan 30; name Accounting",
+    "explanation": "On Cisco switches you create a VLAN with 'vlan <id>' and then set its name with the 'name' command under VLAN configuration mode."
+  },
+  {
+    "id": 4,
+    "question": "How do you typically assign a range of access ports to VLAN 10 on a Cisco switch?",
+    "options": [
+      "interface range fa0/1 - 4; switchport access vlan 10",
+      "vlan 10; assign ports fa0/1-4",
+      "switchport mode trunk; switchport trunk allowed vlan 10",
+      "ip route add vlan 10 to ports fa0/1-4"
+    ],
+    "correctAnswer": "interface range fa0/1 - 4; switchport access vlan 10",
+    "explanation": "To assign multiple access ports to a VLAN you use 'interface range' for the ports then configure 'switchport access vlan <id>'."
+  },
+  {
+    "id": 5,
+    "question": "If two PCs are placed in different VLANs on the same switch but no inter-VLAN routing is configured, what is the expected result when attempting to ping between them?",
+    "options": [
+      "Ping will succeed because the switch forwards across VLANs",
+      "Ping will fail because VLANs are isolated at Layer 3",
+      "Ping will be broadcast to all VLANs",
+      "Ping will be forwarded by CDP"
+    ],
+    "correctAnswer": "Ping will fail because VLANs are isolated at Layer 3",
+    "explanation": "Different VLANs are separate Layer 3 networks; without a router or Layer 3 device providing inter-VLAN routing, hosts in different VLANs cannot reach each other."
+  },
+  {
+    "id": 6,
+    "question": "What is the primary purpose of VTP (VLAN Trunking Protocol)?",
+    "options": [
+      "Encrypt trunk links between switches",
+      "Automatically synchronize VLAN configuration across switches",
+      "Aggregate multiple links into a single logical link",
+      "Provide dynamic IP addressing for VLANs"
+    ],
+    "correctAnswer": "Automatically synchronize VLAN configuration across switches",
+    "explanation": "VTP synchronizes VLAN configuration (VLAN creation, deletion, and name changes) across switches in the same VTP domain."
+  },
+  {
+    "id": 7,
+    "question": "Which statement correctly describes VTP server and client modes?",
+    "options": [
+      "Server replicates VLANs and client can create VLANs",
+      "Server can create/modify VLANs; client only replicates VLANs",
+      "Both server and client can create VLANs",
+      "Client is used to secure VTP updates and server forwards them"
+    ],
+    "correctAnswer": "Server can create/modify VLANs; client only replicates VLANs",
+    "explanation": "A VTP server can create and modify VLANs; a VTP client cannot create VLANs and only receives synchronized VLAN information from servers."
+  },
+  {
+    "id": 8,
+    "question": "VTP is proprietary to which vendor?",
+    "options": ["Juniper", "Arista", "Cisco", "Huawei"],
+    "correctAnswer": "Cisco",
+    "explanation": "VTP (VLAN Trunking Protocol) is a Cisco-proprietary protocol used on Cisco switches to manage VLAN configurations."
+  },
+  {
+    "id": 9,
+    "question": "Which command configures an interface to trunk mode on a Cisco switch?",
+    "options": [
+      "switchport access vlan",
+      "switchport mode trunk",
+      "ip address trunk",
+      "vlan trunk enable"
+    ],
+    "correctAnswer": "switchport mode trunk",
+    "explanation": "The command 'switchport mode trunk' sets a switch interface to trunk mode so it can carry multiple VLANs."
+  },
+  {
+    "id": 10,
+    "question": "Which command sets the VTP domain to 'info1380' on a Cisco switch?",
+    "options": [
+      "vtp domain info1380",
+      "vtp name info1380",
+      "vtp set-domain info1380",
+      "vtp create domain info1380"
+    ],
+    "correctAnswer": "vtp domain info1380",
+    "explanation": "The command 'vtp domain <name>' configures the VTP domain name on a switch (e.g., 'vtp domain info1380')."
+  },
+  {
+    "id": 11,
+    "question": "How do you configure a VTP password on a Cisco switch?",
+    "options": [
+      "vtp secret <password>",
+      "vtp password <password>",
+      "vtp set password <password>",
+      "vtp enable-password <password>"
+    ],
+    "correctAnswer": "vtp password <password>",
+    "explanation": "Use 'vtp password <password>' to set a VTP password so switches exchange VTP updates only if they share the same password."
+  },
+  {
+    "id": 12,
+    "question": "After configuring Switch1 as VTP server with VLANs created and Switch2 as VTP client with the same domain and password, what should happen?",
+    "options": [
+      "Switch2 will ignore Switch1 and keep its own VLANs",
+      "Switch2 will receive and replicate VLANs from Switch1",
+      "VLANs will be removed from both switches",
+      "Switch2 will become a VTP server automatically"
+    ],
+    "correctAnswer": "Switch2 will receive and replicate VLANs from Switch1",
+    "explanation": "A VTP client synchronizes its VLAN database with the VTP server when domain and password match, replicating VLANs created on the server."
+  },
+  {
+    "id": 13,
+    "question": "What is the main benefit of dynamic routing protocols in a network?",
+    "options": [
+      "They manually set static routes for all paths",
+      "They automatically discover and update best paths between networks",
+      "They replace the need for routing tables",
+      "They prevent any topology changes"
+    ],
+    "correctAnswer": "They automatically discover and update best paths between networks",
+    "explanation": "Dynamic routing protocols automatically exchange routing information and update routing tables to find best paths and adapt to network changes."
+  },
+  {
+    "id": 14,
+    "question": "Which of the following correctly describes characteristics of RIP (Routing Information Protocol)?",
+    "options": [
+      "Link-state protocol using cost metric; unlimited hops",
+      "Distance-vector protocol using hop count; 15 hop limit; RIPv1 and RIPv2 versions",
+      "Hybrid protocol using bandwidth and delay; supports topology table",
+      "Path-vector protocol used only for BGP"
+    ],
+    "correctAnswer": "Distance-vector protocol using hop count; 15 hop limit; RIPv1 and RIPv2 versions",
+    "explanation": "RIP is a distance-vector protocol that uses hop count as its metric, has a 15-hop maximum, and comes in RIPv1 and RIPv2 versions."
+  },
+  {
+    "id": 15,
+    "question": "Which statement about OSPF and EIGRP is accurate?",
+    "options": [
+      "OSPF is distance-vector; EIGRP is link-state",
+      "OSPF is link-state with fast convergence and suited for large networks; EIGRP is a Cisco-enhanced (hybrid) protocol using metrics like bandwidth and delay",
+      "Both OSPF and EIGRP are proprietary to Cisco",
+      "EIGRP uses hop count only and cannot load balance"
+    ],
+    "correctAnswer": "OSPF is link-state with fast convergence and suited for large networks; EIGRP is a Cisco-enhanced (hybrid) protocol using metrics like bandwidth and delay",
+    "explanation": "OSPF is a link-state protocol often used in large networks and converges quickly. EIGRP is Cisco-developed (hybrid) using metrics such as bandwidth, delay, and supports features like load balancing and uses topology and routing tables."
+  }
+]

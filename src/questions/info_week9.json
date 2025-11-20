@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary responsibility of a Security Guard?",
+    "options": [
+      "Enforce traffic laws",
+      "Protect people, property, and information",
+      "Investigate crimes",
+      "Arrest individuals without cause"
+    ],
+    "correctAnswer": "Protect people, property, and information",
+    "explanation": "Security Guards are primarily responsible for protecting people, property, and information."
+  },
+  {
+    "id": 2,
+    "question": "Under which law is the security industry in Ontario governed?",
+    "options": [
+      "Ontario Public Safety Act",
+      "Private Security and Investigative Services Act",
+      "Canadian Criminal Code",
+      "Emergency Services Act"
+    ],
+    "correctAnswer": "Private Security and Investigative Services Act",
+    "explanation": "The Private Security and Investigative Services Act governs the security industry in Ontario."
+  },
+  {
+    "id": 3,
+    "question": "What must an individual obtain to work as a Security Guard in Ontario?",
+    "options": [
+      "A police badge",
+      "A college degree",
+      "A valid security guard license",
+      "A military certificate"
+    ],
+    "correctAnswer": "A valid security guard license",
+    "explanation": "Anyone performing security duties must have a valid license to act as a Security Guard in Ontario."
+  },
+  {
+    "id": 4,
+    "question": "True or False: Security Guards in Ontario are not required to be licensed.",
+    "options": ["True", "False"],
+    "correctAnswer": "False",
+    "explanation": "Security Guards must be licensed according to Ontario law."
+  },
+  {
+    "id": 5,
+    "question": "Which of the following is a specialized role in the Private Security sector?",
+    "options": [
+      "Firefighter",
+      "Traffic enforcer",
+      "Loss Prevention Specialist",
+      "Paramedic"
+    ],
+    "correctAnswer": "Loss Prevention Specialist",
+    "explanation": "Loss Prevention Specialists are part of the Private Security sector and work to prevent theft and apprehend perpetrators."
+  },
+  {
+    "id": 6,
+    "question": "Why has there been a shift from public to private security in recent years?",
+    "options": [
+      "Police salaries have decreased",
+      "Private security is more affordable and efficient",
+      "Laws have changed",
+      "Citizens trust private security more"
+    ],
+    "correctAnswer": "Private security is more affordable and efficient",
+    "explanation": "The shift is due to the cost-efficiency of private security and the increased demands on police services."
+  },
+  {
+    "id": 7,
+    "question": "Which of the following tasks is commonly handled by Mobile Patrol Services?",
+    "options": [
+      "Giving parking tickets",
+      "Driving ambulances",
+      "Responding to alarms and patrolling large areas",
+      "Hosting public safety events"
+    ],
+    "correctAnswer": "Responding to alarms and patrolling large areas",
+    "explanation": "Mobile Patrol Services handle alarm responses and large area patrols — duties that were traditionally police tasks."
+  },
+  {
+    "id": 8,
+    "question": "True or False: Loss Prevention Specialists work mainly in hospitals.",
+    "options": ["True", "False"],
+    "correctAnswer": "False",
+    "explanation": "Loss Prevention Specialists typically work in retail environments, not hospitals."
+  }
+]

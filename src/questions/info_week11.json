@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "question": "When a device in one VLAN wants to communicate with a device in another VLAN, to which network element does it send the packet?",
+    "options": [
+      "The destination device's MAC address directly",
+      "Its default gateway (router or Layer 3 switch)",
+      "A broadcast address on the local VLAN",
+      "The switch management interface"
+    ],
+    "correctAnswer": "Its default gateway (router or Layer 3 switch)",
+    "explanation": "Inter-VLAN traffic is sent to the device's default gateway (a router or Layer 3 switch), which routes the packet to the destination VLAN."
+  },
+  {
+    "id": 2,
+    "question": "What does the router or Layer 3 switch consult to determine the best path to the destination VLAN's IP address?",
+    "options": [
+      "ARP table",
+      "MAC address table",
+      "Routing table",
+      "VLAN database"
+    ],
+    "correctAnswer": "Routing table",
+    "explanation": "The router or Layer 3 switch uses its routing table to decide how to forward packets between VLANs based on IP destination addresses."
+  },
+  {
+    "id": 3,
+    "question": "Which inter-VLAN routing method uses a single router interface configured with multiple sub-interfaces (each representing a VLAN)?",
+    "options": [
+      "Layer 3 Switch",
+      "Router-on-a-Stick",
+      "Separate Router Interfaces",
+      "Static VLAN Bridging"
+    ],
+    "correctAnswer": "Router-on-a-Stick",
+    "explanation": "Router-on-a-Stick configures one physical router interface with multiple subinterfaces (using dot1q) to act as gateways for multiple VLANs."
+  },
+  {
+    "id": 4,
+    "question": "Which device can perform both switching and routing functions and is often used for scalable inter-VLAN routing?",
+    "options": ["Layer 2 Switch", "Hub", "Layer 3 Switch", "Access Point"],
+    "correctAnswer": "Layer 3 Switch",
+    "explanation": "A Layer 3 switch performs both switching and routing, making it a scalable solution for inter-VLAN routing in larger networks."
+  },
+  {
+    "id": 5,
+    "question": "Which inter-VLAN routing approach is typically least efficient for large networks?",
+    "options": [
+      "Router-on-a-Stick",
+      "Layer 3 Switch",
+      "Separate Router Interfaces (one per VLAN)",
+      "Virtual Routing and Forwarding (VRF)"
+    ],
+    "correctAnswer": "Separate Router Interfaces (one per VLAN)",
+    "explanation": "Giving each VLAN its own dedicated router interface can be less efficient and harder to scale compared to Router-on-a-Stick or a Layer 3 switch."
+  },
+  {
+    "id": 6,
+    "question": "When configuring subinterfaces for Router-on-a-Stick, which encapsulation is commonly used to carry VLAN tags?",
+    "options": [
+      "ISL encapsulation",
+      "Dot1q (802.1Q) encapsulation",
+      "GRE encapsulation",
+      "PPP encapsulation"
+    ],
+    "correctAnswer": "Dot1q (802.1Q) encapsulation",
+    "explanation": "802.1Q (dot1q) encapsulation is commonly used on router subinterfaces to tag and carry multiple VLANs over a single physical link."
+  },
+  {
+    "id": 7,
+    "question": "If hosts on different VLANs are connected to a switch but no router or Layer 3 device is configured for inter-VLAN routing, what is the expected result when attempting to ping across VLANs?",
+    "options": [
+      "Ping succeeds immediately",
+      "Ping fails because the networks are isolated",
+      "Ping is forwarded by the switch's MAC table",
+      "Ping is broadcast to all VLANs"
+    ],
+    "correctAnswer": "Ping fails because the networks are isolated",
+    "explanation": "Without inter-VLAN routing (router or Layer 3 switch), VLANs are isolated at Layer 3 and hosts on different VLANs cannot reach each other."
+  },
+  {
+    "id": 8,
+    "question": "What is the purpose of Cisco's Dynamic Trunking Protocol (DTP)?",
+    "options": [
+      "Automatically negotiate trunk links between two switches",
+      "Encrypt trunk traffic between switches",
+      "Dynamically assign IP addresses to VLANs",
+      "Aggregate multiple physical links into one logical link"
+    ],
+    "correctAnswer": "Automatically negotiate trunk links between two switches",
+    "explanation": "DTP negotiates trunk links between directly connected Cisco switches, enabling multiple VLANs to be carried over the link."
+  },
+  {
+    "id": 9,
+    "question": "Why is it considered best practice to disable DTP on production switch ports?",
+    "options": [
+      "DTP is deprecated and no longer works",
+      "DTP can be a security risk if left enabled",
+      "DTP prevents VLAN tagging",
+      "DTP consumes excessive CPU on switches"
+    ],
+    "correctAnswer": "DTP can be a security risk if left enabled",
+    "explanation": "DTP can allow unauthorized trunk formation or VLAN hopping; disabling it (e.g., with switchport nonegotiate) reduces attack surface."
+  },
+  {
+    "id": 10,
+    "question": "Which DTP mode is passive and will only become a trunk if the neighbor actively negotiates a trunk?",
+    "options": ["Dynamic desirable", "Dynamic auto", "Trunk", "Access"],
+    "correctAnswer": "Dynamic auto",
+    "explanation": "Dynamic auto is a passive DTP mode: the interface will become a trunk only if the neighbor actively negotiates (e.g., dynamic desirable)."
+  },
+  {
+    "id": 11,
+    "question": "Which DTP mode actively tries to negotiate a trunk with the neighboring device?",
+    "options": ["Access", "Trunk", "Dynamic auto", "Dynamic desirable"],
+    "correctAnswer": "Dynamic desirable",
+    "explanation": "Dynamic desirable is active: the interface actively attempts to negotiate a trunk with its neighbor via DTP."
+  },
+  {
+    "id": 12,
+    "question": "What is EtherChannel?",
+    "options": [
+      "A spanning-tree optimization",
+      "A VLAN tagging protocol",
+      "A link aggregation technique combining multiple physical links into one logical link",
+      "A routing protocol for Layer 3 switches"
+    ],
+    "correctAnswer": "A link aggregation technique combining multiple physical links into one logical link",
+    "explanation": "EtherChannel aggregates multiple physical Ethernet links into a single logical link to increase bandwidth and provide redundancy."
+  },
+  {
+    "id": 13,
+    "question": "Which two protocols are commonly used to negotiate and manage EtherChannel?",
+    "options": [
+      "STP and RSTP",
+      "LACP and PAgP",
+      "HSRP and VRRP",
+      "OSPF and EIGRP"
+    ],
+    "correctAnswer": "LACP and PAgP",
+    "explanation": "LACP (IEEE standard) and PAgP (Cisco proprietary) are the two common protocols used to negotiate and manage EtherChannel groups."
+  },
+  {
+    "id": 14,
+    "question": "Which EtherChannel protocol is an IEEE standard and supports active and passive modes?",
+    "options": [
+      "PAgP (Port Aggregation Protocol)",
+      "LACP (Link Aggregation Control Protocol)",
+      "DTP (Dynamic Trunking Protocol)",
+      "L2TP (Layer 2 Tunneling Protocol)"
+    ],
+    "correctAnswer": "LACP (Link Aggregation Control Protocol)",
+    "explanation": "LACP is an IEEE standardized protocol (802.3ad / 802.1AX) that supports active and passive negotiation modes for link aggregation."
+  },
+  {
+    "id": 15,
+    "question": "When configuring EtherChannel with LACP between two switches using four FastEthernet links, which sequence of actions is correct on each switch?",
+    "options": [
+      "Assign each interface a different channel-group and set them to access mode",
+      "Configure int range fa0/1-4, use channel-group 1 mode active, then configure interface port-channel 1 and set switchport mode trunk",
+      "Enable DTP on each interface and leave channel-group unset",
+      "Create VLANs only on the primary switch and enable STP on the port-channel"
+    ],
+    "correctAnswer": "Configure int range fa0/1-4, use channel-group 1 mode active, then configure interface port-channel 1 and set switchport mode trunk",
+    "explanation": "To configure EtherChannel with LACP: put the member ports in an interface range, run channel-group <num> mode active, then configure the resulting Port-Channel interface (e.g., set it to trunk)."
+  }
+]
