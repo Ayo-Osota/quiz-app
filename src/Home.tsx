@@ -14,12 +14,15 @@ const Home = () => {
       prev.includes(id) ? prev.filter((mid) => mid !== id) : [...prev, id]
     );
   };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-4xl font-bold mb-4">Welcome to the Home Page</h1>
 
       <div className="max-w-xl mx-auto bg-white p-6 rounded shadow">
-        <h1 className="text-xl font-bold mb-4">Select Modules</h1>
+        <h1 className="text-xl font-bold mb-4">
+          Select Modules (you can select multiple)
+        </h1>
         {modules.map((m) => (
           <label key={m.id} className="block mb-2">
             <input
@@ -42,6 +45,10 @@ const Home = () => {
           Start Quiz
         </button>
       </div>
+      <p>
+        Note: AI uses course materials to generate this quiz. Please verify
+        answers for accuracy.
+      </p>
     </div>
   );
 };

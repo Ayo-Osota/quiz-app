@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "question": "What is SNMP primarily used for in network management?",
+    "options": [
+      "Providing secure VPN tunnels",
+      "Identifying devices, monitoring performance, and configuring traps/alerts using UDP",
+      "Routing packets between VLANs",
+      "Encrypting syslog messages"
+    ],
+    "correctAnswer": "Identifying devices, monitoring performance, and configuring traps/alerts using UDP",
+    "explanation": "SNMP (Simple Network Management Protocol) uses UDP and enables administrators to identify devices, monitor network performance, and receive/configure alerts about real-time events."
+  },
+  {
+    "id": 2,
+    "question": "Which protocol is commonly used to test connectivity and is the basis for ping and traceroute?",
+    "options": ["TCP", "SNMP", "ICMP", "Syslog"],
+    "correctAnswer": "ICMP",
+    "explanation": "ICMP (Internet Control Message Protocol) is used for diagnostic functions such as ping and traceroute to identify connectivity and path issues."
+  },
+  {
+    "id": 3,
+    "question": "What is the main purpose of a syslog server in a network?",
+    "options": [
+      "To route packets between VLANs",
+      "To collect and store system log messages from network devices",
+      "To act as a DNS resolver",
+      "To aggregate NetFlow records"
+    ],
+    "correctAnswer": "To collect and store system log messages from network devices",
+    "explanation": "A syslog server centralizes system and device logs sent by routers, switches, and other devices for storage, analysis, and alerting."
+  },
+  {
+    "id": 4,
+    "question": "Which statement about CDP (Cisco Discovery Protocol) is correct?",
+    "options": [
+      "CDP is an open standard and works with all vendors",
+      "CDP runs on TCP and sends messages every 5 seconds",
+      "CDP is Cisco-proprietary, provides information about connected devices, and typically advertises neighbor info every 60 seconds",
+      "CDP replaces SNMP for monitoring performance"
+    ],
+    "correctAnswer": "CDP is Cisco-proprietary, provides information about connected devices, and typically advertises neighbor info every 60 seconds",
+    "explanation": "CDP is a Cisco-owned discovery protocol that shares neighbor device information; it generates periodic advertisements (commonly every 60 seconds) and can be viewed with commands like 'show cdp neighbor'."
+  },
+  {
+    "id": 5,
+    "question": "What does NetFlow collect and where are the records usually sent?",
+    "options": [
+      "Full packet payloads sent to the syslog server",
+      "Metadata about IP traffic flows (timestamps, IPs, interfaces) exported to a flow collector for storage and analysis",
+      "Routing table entries exported to BGP peers",
+      "CDP neighbor tables sent to NetBIOS"
+    ],
+    "correctAnswer": "Metadata about IP traffic flows (timestamps, IPs, interfaces) exported to a flow collector for storage and analysis",
+    "explanation": "NetFlow gathers metadata about traffic flows (not full payloads) and exports flow records to a flow collector where they are stored and processed."
+  },
+  {
+    "id": 6,
+    "question": "Why would a network administrator configure NetFlow on a router or switch?",
+    "options": [
+      "To provide VLAN trunking between switches",
+      "To monitor and analyze traffic patterns and volumes for capacity planning and security",
+      "To replace SNMP for device configuration",
+      "To encrypt management traffic"
+    ],
+    "correctAnswer": "To monitor and analyze traffic patterns and volumes for capacity planning and security",
+    "explanation": "NetFlow provides visibility into traffic flows, helping with capacity planning, usage accounting, and detecting unusual traffic patterns for security investigations."
+  },
+  {
+    "id": 7,
+    "question": "Which is the correct high-level sequence of troubleshooting steps provided in the notes?",
+    "options": [
+      "Develop hypothesis → Identify the issue → Implement solution → Test solution",
+      "Identify the issue → Develop hypothesis → Test the hypothesis → Prepare an action plan → Implement the solution → Test the solution → Document the issue",
+      "Implement a random fix → Test → Document",
+      "Restart all devices → Test → Document"
+    ],
+    "correctAnswer": "Identify the issue → Develop hypothesis → Test the hypothesis → Prepare an action plan → Implement the solution → Test the solution → Document the issue",
+    "explanation": "The recommended troubleshooting workflow is to identify the problem, form and test hypotheses, prepare and implement a solution, verify it works, and document the process."
+  },
+  {
+    "id": 8,
+    "question": "A user reports 'Page Not Found' when accessing a website. Which diagnostic tool from the notes is most appropriate to check DNS resolution first?",
+    "options": ["netstat", "nslookup", "show ip route", "show cdp neighbor"],
+    "correctAnswer": "nslookup",
+    "explanation": "nslookup queries DNS to determine whether the domain name resolves to the correct IP address, making it the first useful test for 'Page Not Found' related to DNS issues."
+  },
+  {
+    "id": 9,
+    "question": "If users cannot print via a networked print server, what is a reasonable first test according to troubleshooting best practices?",
+    "options": [
+      "Run a traceroute to google.com",
+      "Ping the print server to verify basic network connectivity",
+      "Disable SNMP on all devices",
+      "Reconfigure VLAN trunking"
+    ],
+    "correctAnswer": "Ping the print server to verify basic network connectivity",
+    "explanation": "Pinging the print server checks whether the server is reachable on the network; if it fails, further steps include checking the server status, services, and network path."
+  },
+  {
+    "id": 10,
+    "question": "Which of the following best describes the 'ping' command?",
+    "options": [
+      "An application-layer protocol for file transfer",
+      "An ICMP-based utility that sends echo requests and waits for replies to test connectivity",
+      "A tool for collecting NetFlow records",
+      "A command to display routing tables"
+    ],
+    "correctAnswer": "An ICMP-based utility that sends echo requests and waits for replies to test connectivity",
+    "explanation": "Ping uses ICMP echo request/reply messages to verify that a host is reachable and measure basic round-trip time."
+  },
+  {
+    "id": 11,
+    "question": "What information does traceroute provide that is useful for diagnosing network path issues?",
+    "options": [
+      "A list of active TCP connections on the local host",
+      "The sequence of routing hops between source and destination and per-hop round-trip delays",
+      "A dump of application-layer payloads",
+      "The full routing table of all intermediate routers"
+    ],
+    "correctAnswer": "The sequence of routing hops between source and destination and per-hop round-trip delays",
+    "explanation": "Traceroute shows the path packets take (each hop) and provides timing information that helps identify where delays or failures occur along the route."
+  },
+  {
+    "id": 12,
+    "question": "What is PathPing and how does it differ from ping and traceroute?",
+    "options": [
+      "PathPing is a protocol for exporting NetFlow data",
+      "PathPing combines the functionality of ping and traceroute to provide per-hop latency and packet loss statistics over time",
+      "PathPing is identical to nslookup",
+      "PathPing displays syslog entries in real time"
+    ],
+    "correctAnswer": "PathPing combines the functionality of ping and traceroute to provide per-hop latency and packet loss statistics over time",
+    "explanation": "PathPing runs a traceroute to determine hops and then pings each hop over a period to compute packet loss and latency statistics per hop."
+  },
+  {
+    "id": 13,
+    "question": "Which netstat option displays all active connections?",
+    "options": ["netstat -s", "netstat -a", "netstat -r", "netstat -c"],
+    "correctAnswer": "netstat -a",
+    "explanation": "The 'netstat -a' option shows all active connections and listening ports; 'netstat -s' displays protocol statistics."
+  },
+  {
+    "id": 14,
+    "question": "Which use case is nslookup best suited for when troubleshooting network issues?",
+    "options": [
+      "Determining the MAC address of a host",
+      "Retrieving DNS records and performing forward and reverse DNS lookups",
+      "Collecting NetFlow records",
+      "Checking syslog server health"
+    ],
+    "correctAnswer": "Retrieving DNS records and performing forward and reverse DNS lookups",
+    "explanation": "nslookup queries DNS servers to obtain records for a domain or perform reverse lookups to discover the hostname associated with an IP address."
+  },
+  {
+    "id": 15,
+    "question": "Which of the following steps is recommended to document after resolving a network incident?",
+    "options": [
+      "Only the final command you ran",
+      "The issue, hypotheses tested, actions performed, verification results, and any follow-up recommendations",
+      "Delete all logs to free space",
+      "Only the username of the person who reported it"
+    ],
+    "correctAnswer": "The issue, hypotheses tested, actions performed, verification results, and any follow-up recommendations",
+    "explanation": "Good documentation includes a clear description of the problem, diagnostic steps and hypotheses, actions taken, verification of resolution, and recommendations to prevent recurrence."
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is an Access Control List (ACL) in networking?",
+    "options": [
+      "A list of IP addresses used for NAT translation",
+      "A set of rules that determines which network traffic is allowed or denied",
+      "A protocol for encrypting packets",
+      "A routing table for Layer 3 switches"
+    ],
+    "correctAnswer": "A set of rules that determines which network traffic is allowed or denied",
+    "explanation": "An ACL is a set of rules that controls inbound and outbound network traffic by permitting or denying specific packets based on criteria like source/destination IP, protocol, or port."
+  },
+  {
+    "id": 2,
+    "question": "On which devices can networking ACLs typically be configured?",
+    "options": [
+      "Only on firewalls",
+      "Routers, Layer-3 switches, and firewalls",
+      "Only on Layer-2 switches",
+      "Only on end hosts"
+    ],
+    "correctAnswer": "Routers, Layer-3 switches, and firewalls",
+    "explanation": "ACLs can be applied on routers, Layer-3 switches, and firewalls to control traffic at different points in the network."
+  },
+  {
+    "id": 3,
+    "question": "What are the two basic actions an ACL rule can perform on matching traffic?",
+    "options": [
+      "Log and mirror",
+      "Encrypt and compress",
+      "Permit and deny",
+      "Translate and forward"
+    ],
+    "correctAnswer": "Permit and deny",
+    "explanation": "ACL rules typically either permit (allow) or deny (block) matching traffic; they can also be configured to log matches depending on device capabilities."
+  },
+  {
+    "id": 4,
+    "question": "The activity suggests configuring a firewall to block certain protocols. What will this demonstrate?",
+    "options": [
+      "How to increase routing table size",
+      "How to prevent specific protocol traffic from passing through the network",
+      "How to convert ACLs into VLANs",
+      "How to perform link aggregation"
+    ],
+    "correctAnswer": "How to prevent specific protocol traffic from passing through the network",
+    "explanation": "Configuring a firewall to block protocols shows how security policies can be enforced to stop specific types of traffic from traversing the network."
+  },
+  {
+    "id": 5,
+    "question": "What is IPsec primarily used for?",
+    "options": [
+      "Providing dynamic routing between routers",
+      "Securing IP packets and often used to set up VPNs",
+      "Encrypting only application-layer data",
+      "Replacing ACLs on routers"
+    ],
+    "correctAnswer": "Securing IP packets and often used to set up VPNs",
+    "explanation": "IPsec encrypts and/or authenticates IP packets to secure communications over untrusted networks and is commonly used to build VPN tunnels."
+  },
+  {
+    "id": 6,
+    "question": "Which statement best describes how IPsec protects data?",
+    "options": [
+      "It replaces TCP with a secure transport",
+      "It encrypts IP packets so data remains confidential across public networks",
+      "It only blocks malicious IP addresses",
+      "It converts IPv4 to IPv6 securely"
+    ],
+    "correctAnswer": "It encrypts IP packets so data remains confidential across public networks",
+    "explanation": "IPsec provides confidentiality and integrity by encrypting IP packets and optionally authenticating endpoints, protecting data over public networks."
+  },
+  {
+    "id": 7,
+    "question": "What does port security on a switch accomplish?",
+    "options": [
+      "Limits which MAC addresses can send traffic on a given switch port",
+      "Automatically updates VLANs across switches",
+      "Aggregates multiple links into a single logical link",
+      "Encrypts all traffic on a VLAN"
+    ],
+    "correctAnswer": "Limits which MAC addresses can send traffic on a given switch port",
+    "explanation": "Port security restricts a switch port to accept frames only from specified MAC addresses, preventing unauthorized devices from using the port."
+  },
+  {
+    "id": 8,
+    "question": "What is the difference between static and sticky MAC address configurations for port security?",
+    "options": [
+      "Static is encrypted; sticky is unencrypted",
+      "Static requires manual entry of MACs; sticky allows the switch to learn and retain MACs dynamically",
+      "Static works only on routers; sticky works only on firewalls",
+      "Static applies to VLANs; sticky applies to trunks"
+    ],
+    "correctAnswer": "Static requires manual entry of MACs; sticky allows the switch to learn and retain MACs dynamically",
+    "explanation": "Static port security means you manually configure allowed MAC addresses; sticky lets the switch learn MACs from connected devices and save them as secure entries."
+  },
+  {
+    "id": 9,
+    "question": "Which command is used to enable port security on a switch interface (or interfaces)?",
+    "options": [
+      "switchport port-security",
+      "enable portlock",
+      "port-security enable",
+      "secure-port on"
+    ],
+    "correctAnswer": "switchport port-security",
+    "explanation": "The Cisco IOS command 'switchport port-security' enables port security features on the interface; additional options configure static or sticky MACs and violation actions."
+  },
+  {
+    "id": 10,
+    "question": "What does AAA stand for in network security?",
+    "options": [
+      "Access, Audit, Administration",
+      "Authentication, Authorization, Accounting",
+      "Addressing, Allocation, Administration",
+      "Authenticate, Apply, Audit"
+    ],
+    "correctAnswer": "Authentication, Authorization, Accounting",
+    "explanation": "AAA is a security framework: Authentication verifies identity, Authorization grants permissions, and Accounting logs user activities."
+  },
+  {
+    "id": 11,
+    "question": "Which protocols are commonly used to implement the AAA framework?",
+    "options": [
+      "DHCP, ARP, ICMP",
+      "RADIUS, TACACS+, Diameter",
+      "BGP, OSPF, RIP",
+      "HTTP, HTTPS, FTP"
+    ],
+    "correctAnswer": "RADIUS, TACACS+, Diameter",
+    "explanation": "RADIUS, TACACS+, and Diameter are protocols designed to provide AAA services for network devices and authentication systems."
+  },
+  {
+    "id": 12,
+    "question": "Which model does RADIUS use and what are its primary packet types mentioned?",
+    "options": [
+      "Peer-to-peer model; Hello and Update packets",
+      "Client/server model; Access-Request and Accounting-Request packets",
+      "Broadcast model; Query and Reply packets",
+      "Agent model; Bind and Unbind packets"
+    ],
+    "correctAnswer": "Client/server model; Access-Request and Accounting-Request packets",
+    "explanation": "RADIUS operates in a client/server model and uses packets such as Access-Request for authentication/authorization and Accounting-Request for accounting."
+  },
+  {
+    "id": 13,
+    "question": "The activity suggests implementing a RADIUS server using Packet Tracer. What will this activity primarily teach?",
+    "options": [
+      "How to configure VLAN trunks",
+      "How to centralize authentication and accounting for network devices",
+      "How to expand routing tables",
+      "How to set up EtherChannel"
+    ],
+    "correctAnswer": "How to centralize authentication and accounting for network devices",
+    "explanation": "Implementing a RADIUS server demonstrates centralizing user/device authentication and logging accounting data for network access."
+  },
+  {
+    "id": 14,
+    "question": "When configuring an ACL on a router, where can the ACL be applied to control traffic?",
+    "options": [
+      "Only on the router's management interface",
+      "Applied to inbound or outbound directions on interfaces",
+      "Only on remote servers",
+      "Only on switch management VLAN"
+    ],
+    "correctAnswer": "Applied to inbound or outbound directions on interfaces",
+    "explanation": "ACLs on routers are applied to interfaces in either the inbound or outbound direction to filter traffic entering or leaving the interface."
+  },
+  {
+    "id": 15,
+    "question": "Which of the following is a correct statement about implementing port security with sticky MAC addresses?",
+    "options": [
+      "Sticky MACs prevent the switch from learning any MAC addresses",
+      "Sticky MACs allow the switch to learn MACs and save them in the running configuration as secure addresses",
+      "Sticky MACs require a RADIUS server to function",
+      "Sticky MACs are used only for trunk ports"
+    ],
+    "correctAnswer": "Sticky MACs allow the switch to learn MACs and save them in the running configuration as secure addresses",
+    "explanation": "With sticky MACs the switch learns the MAC addresses of connected devices and can retain them as secure entries in the running (and optionally startup) configuration."
+  }
+]

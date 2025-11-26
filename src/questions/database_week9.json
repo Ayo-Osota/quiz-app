@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "question": "What is the purpose of the provided SQL script in the notes?",
+    "options": [
+      "To create network VLANs",
+      "To create two tables (employees and departments) with a relationship for demo purposes",
+      "To configure a router-on-a-stick",
+      "To export NetFlow records"
+    ],
+    "correctAnswer": "To create two tables (employees and departments) with a relationship for demo purposes",
+    "explanation": "The notes describe creating employees and departments tables and establishing relationships between them for demonstration."
+  },
+  {
+    "id": 2,
+    "question": "What does an INNER JOIN return?",
+    "options": [
+      "All rows from the left table with NULLs for unmatched right rows",
+      "All rows from the right table with NULLs for unmatched left rows",
+      "The Cartesian product of both tables",
+      "Only records with matching values in both tables (the intersection)"
+    ],
+    "correctAnswer": "Only records with matching values in both tables (the intersection)",
+    "explanation": "INNER JOIN returns only rows where the join condition matches in both tables — the intersection of the two sets."
+  },
+  {
+    "id": 3,
+    "question": "Given the INNER JOIN example results (Alice, Bob, Charlie, Eve), which employee is implicitly excluded from that INNER JOIN?",
+    "options": ["Alice", "David", "Eve", "Charlie"],
+    "correctAnswer": "David",
+    "explanation": "David is excluded because his department_id is NULL (or has no matching department), so INNER JOIN omits him."
+  },
+  {
+    "id": 4,
+    "question": "When should you use an INNER JOIN according to the notes?",
+    "options": [
+      "When you need the union of both tables",
+      "When you need only the intersection of data (rows present in both tables)",
+      "When you want all rows from the left table regardless of matches",
+      "When you want the Cartesian product of both tables"
+    ],
+    "correctAnswer": "When you need only the intersection of data (rows present in both tables)",
+    "explanation": "The notes advise using INNER JOIN when you want only matching rows present in both tables."
+  },
+  {
+    "id": 5,
+    "question": "What does a LEFT JOIN (or LEFT OUTER JOIN) return?",
+    "options": [
+      "All records from the right table and matching left records",
+      "All records from both tables, removing duplicates",
+      "All records from the left table and matching records from the right table; unmatched right columns are NULL",
+      "Only records with matches in both tables"
+    ],
+    "correctAnswer": "All records from the left table and matching records from the right table; unmatched right columns are NULL",
+    "explanation": "LEFT JOIN returns every row from the left table and the matching rows from the right; where no match exists, right-side columns are NULL."
+  },
+  {
+    "id": 6,
+    "question": "In the LEFT JOIN example, why is department_name NULL for David?",
+    "options": [
+      "Because David's salary is too low",
+      "Because David's department_id is NULL or has no matching department record",
+      "Because LEFT JOIN always returns NULL for the last row",
+      "Because department_name was not selected in the query"
+    ],
+    "correctAnswer": "Because David's department_id is NULL or has no matching department record",
+    "explanation": "David's department_id is NULL (or lacks a matching departments entry), so LEFT JOIN returns the left row with NULL for the right table's columns."
+  },
+  {
+    "id": 7,
+    "question": "What does a RIGHT JOIN (or RIGHT OUTER JOIN) return?",
+    "options": [
+      "All records from the left table only",
+      "All records from the right table and matching records from the left table; unmatched left columns are NULL",
+      "Only matching records from both tables",
+      "The Cartesian product of both tables"
+    ],
+    "correctAnswer": "All records from the right table and matching records from the left table; unmatched left columns are NULL",
+    "explanation": "RIGHT JOIN mirrors LEFT JOIN semantics but returns every row from the right table with matching left-side rows where present; otherwise left columns are NULL."
+  },
+  {
+    "id": 8,
+    "question": "What does a CROSS JOIN produce?",
+    "options": [
+      "Only matching rows between two tables",
+      "All rows from the left table with NULL right columns",
+      "The Cartesian product: each row from table A combined with every row from table B",
+      "Only rows from the right table"
+    ],
+    "correctAnswer": "The Cartesian product: each row from table A combined with every row from table B",
+    "explanation": "CROSS JOIN returns the Cartesian product; every row of the first table is paired with every row of the second, which can produce very large result sets."
+  },
+  {
+    "id": 9,
+    "question": "Which caution applies when using CROSS JOINs?",
+    "options": [
+      "They remove all NULL values automatically",
+      "They always perform better than INNER JOIN",
+      "They can produce extremely large result sets because they pair every row from each table",
+      "They automatically create index keys"
+    ],
+    "correctAnswer": "They can produce extremely large result sets because they pair every row from each table",
+    "explanation": "CROSS JOIN multiplies row counts from both tables and can quickly generate huge datasets, so use with care."
+  },
+  {
+    "id": 10,
+    "question": "Which query would correctly find all employees who don't belong to any department?",
+    "options": [
+      "SELECT e.employee_name FROM employees e INNER JOIN departments d ON e.department_id = d.department_id;",
+      "SELECT e.employee_name FROM employees e LEFT JOIN departments d ON e.department_id = d.department_id WHERE d.department_id IS NULL;",
+      "SELECT * FROM employees WHERE salary > 0;",
+      "SELECT d.department_name FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id WHERE e.employee_id IS NOT NULL;"
+    ],
+    "correctAnswer": "SELECT e.employee_name FROM employees e LEFT JOIN departments d ON e.department_id = d.department_id WHERE d.department_id IS NULL;",
+    "explanation": "A LEFT JOIN with a WHERE clause checking the right table for NULLs returns left-side rows with no matching right-side department — employees without departments."
+  },
+  {
+    "id": 11,
+    "question": "Which query lists all departments and their employees, including departments that have no employees?",
+    "options": [
+      "SELECT d.department_name, e.employee_name FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id;",
+      "SELECT e.employee_name, d.department_name FROM employees e INNER JOIN departments d ON e.department_id = d.department_id;",
+      "SELECT * FROM employees CROSS JOIN departments;",
+      "SELECT department_name FROM departments WHERE department_id IN (SELECT department_id FROM employees);"
+    ],
+    "correctAnswer": "SELECT d.department_name, e.employee_name FROM departments d LEFT JOIN employees e ON e.department_id = d.department_id;",
+    "explanation": "Using LEFT JOIN from departments to employees returns all departments and any matching employees; unmatched employee columns will be NULL for empty departments."
+  },
+  {
+    "id": 12,
+    "question": "Which query uses INNER JOIN to list employees with their departments, ordered by department_name?",
+    "options": [
+      "SELECT e.employee_name, d.department_name FROM employees e INNER JOIN departments d ON e.department_id = d.department_id ORDER BY d.department_name;",
+      "SELECT e.employee_name, d.department_name FROM employees e LEFT JOIN departments d ON e.department_id = d.department_id ORDER BY e.employee_name;",
+      "SELECT * FROM employees ORDER BY salary;",
+      "SELECT d.department_name FROM departments d RIGHT JOIN employees e ON d.department_id = e.department_id ORDER BY e.employee_name;"
+    ],
+    "correctAnswer": "SELECT e.employee_name, d.department_name FROM employees e INNER JOIN departments d ON e.department_id = d.department_id ORDER BY d.department_name;",
+    "explanation": "This INNER JOIN returns only matched employee-department pairs and orders results by department_name as requested."
+  },
+  {
+    "id": 13,
+    "question": "To list all employees, their departments, and the projects those departments work on (assuming a projects table with department_id), which JOIN pattern is most appropriate?",
+    "options": [
+      "employees CROSS JOIN projects",
+      "employees INNER JOIN departments INNER JOIN projects (joining employees→departments→projects on department_id)",
+      "projects LEFT JOIN employees without departments",
+      "departments only"
+    ],
+    "correctAnswer": "employees INNER JOIN departments INNER JOIN projects (joining employees→departments→projects on department_id)",
+    "explanation": "Joining employees to departments and then to projects (via department_id) returns employees with their department and that department's projects; INNER JOINs keep only matched relationships."
+  },
+  {
+    "id": 14,
+    "question": "Which query would help find projects that have no employees assigned to their departments?",
+    "options": [
+      "SELECT p.project_name FROM projects p LEFT JOIN departments d ON p.department_id = d.department_id LEFT JOIN employees e ON d.department_id = e.department_id WHERE e.employee_id IS NULL;",
+      "SELECT * FROM employees INNER JOIN projects ON employees.department_id = projects.department_id;",
+      "SELECT project_name FROM projects CROSS JOIN employees;",
+      "SELECT * FROM departments WHERE department_id IS NOT NULL;"
+    ],
+    "correctAnswer": "SELECT p.project_name FROM projects p LEFT JOIN departments d ON p.department_id = d.department_id LEFT JOIN employees e ON d.department_id = e.department_id WHERE e.employee_id IS NULL;",
+    "explanation": "A LEFT JOIN from projects to departments and then to employees, with a WHERE check for NULL employees, identifies projects whose departments have no assigned employees."
+  },
+  {
+    "id": 15,
+    "question": "Which JOIN would you use when you need all rows from employees and any matching department info, even if some employees have no department?",
+    "options": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN (employees LEFT JOIN departments ...)",
+      "CROSS JOIN"
+    ],
+    "correctAnswer": "LEFT JOIN (employees LEFT JOIN departments ...)",
+    "explanation": "LEFT JOIN with employees as the left table returns every employee row and matching department data when available; unmatched department columns will be NULL."
+  }
+]

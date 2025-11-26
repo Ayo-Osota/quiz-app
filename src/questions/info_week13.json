@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is NOT typically a factor that affects Wi‑Fi signal propagation?",
+    "options": [
+      "Walls and solid objects (obstacles)",
+      "Reflection off surfaces",
+      "VLAN configuration on a switch",
+      "Scattering through dust or water"
+    ],
+    "correctAnswer": "VLAN configuration on a switch",
+    "explanation": "Physical phenomena like obstacles, reflection, refraction, diffraction, and scattering affect Wi‑Fi propagation; VLAN configuration is a network-layer setting and does not affect radio propagation."
+  },
+  {
+    "id": 2,
+    "question": "What does 'reflection' refer to in Wi‑Fi signal propagation?",
+    "options": [
+      "Signal bending around an object",
+      "Signal changing frequency",
+      "Signal bouncing off materials causing path loss",
+      "Signal being absorbed completely"
+    ],
+    "correctAnswer": "Signal bouncing off materials causing path loss",
+    "explanation": "Reflection occurs when radio waves bounce off surfaces, which can change the signal path and contribute to path loss or multipath effects."
+  },
+  {
+    "id": 3,
+    "question": "What is 'refraction' in the context of wireless signals?",
+    "options": [
+      "Signals bending when passing through different media like glass or air",
+      "Signals being blocked by a wall",
+      "Signals splitting into multiple frequencies",
+      "Signals being encrypted"
+    ],
+    "correctAnswer": "Signals bending when passing through different media like glass or air",
+    "explanation": "Refraction is the bending of waves as they pass between materials with different densities or propagation speeds (e.g., air to glass)."
+  },
+  {
+    "id": 4,
+    "question": "Which propagation phenomenon allows Wi‑Fi signals to bend around obstacles?",
+    "options": ["Scattering", "Diffraction", "Reflection", "Refraction"],
+    "correctAnswer": "Diffraction",
+    "explanation": "Diffraction is the bending of waves around edges and obstacles, enabling signals to reach areas not in direct line of sight."
+  },
+  {
+    "id": 5,
+    "question": "What does 'scattering' describe for wireless signals?",
+    "options": [
+      "Signals bouncing off a smooth metal surface",
+      "When a signal is split into multiple directions by particles like dust or water",
+      "Signals being routed between VLANs",
+      "Signals being amplified by an antenna"
+    ],
+    "correctAnswer": "When a signal is split into multiple directions by particles like dust or water",
+    "explanation": "Scattering happens when waves encounter small particles or droplets and are dispersed into multiple directions, weakening the original signal."
+  },
+  {
+    "id": 6,
+    "question": "Why are wireless networks often considered less secure than wired networks?",
+    "options": [
+      "Wireless hardware is always unpatched",
+      "Radio transmissions are an open medium and can be intercepted by anyone in range",
+      "Wired networks use stronger encryption by default",
+      "Wireless cannot use authentication protocols"
+    ],
+    "correctAnswer": "Radio transmissions are an open medium and can be intercepted by anyone in range",
+    "explanation": "Wireless signals broadcast through the air, making them accessible to attackers within range; this openness increases the attack surface compared to physical wired links."
+  },
+  {
+    "id": 7,
+    "question": "PEAP primarily relies on which mechanism to secure wireless authentication?",
+    "options": [
+      "A TLS tunnel combined with user credentials (password)",
+      "Pre-shared WPA key only",
+      "EAP-TLS certificate exchange",
+      "TKIP key rotation"
+    ],
+    "correctAnswer": "A TLS tunnel combined with user credentials (password)",
+    "explanation": "PEAP creates a TLS-protected tunnel between client and authentication server and typically uses user credentials inside that tunnel for authentication."
+  },
+  {
+    "id": 8,
+    "question": "What distinguishes EAP-TLS from PEAP for 802.1X authentication?",
+    "options": [
+      "EAP-TLS uses only passwords while PEAP uses certificates",
+      "EAP-TLS relies on client and server digital certificates and TLS; PEAP generally uses a server TLS tunnel plus user credentials",
+      "PEAP provides stronger security because it uses AES directly",
+      "EAP-TLS cannot be used with 802.1X"
+    ],
+    "correctAnswer": "EAP-TLS relies on client and server digital certificates and TLS; PEAP generally uses a server TLS tunnel plus user credentials",
+    "explanation": "EAP-TLS requires mutual certificate-based authentication (client and server), which is considered very strong; PEAP typically uses a server certificate and user credentials inside the TLS tunnel."
+  },
+  {
+    "id": 9,
+    "question": "Which statement about WPA (Wi‑Fi Protected Access) is correct?",
+    "options": [
+      "WPA introduced TKIP to avoid using a single static WEP key and was introduced by the Wi‑Fi Alliance in 2003",
+      "WPA was introduced after WPA2 and uses CCMP by default",
+      "WPA is identical to WEP but with a new name",
+      "WPA3 replaced TKIP with CCMP in 2003"
+    ],
+    "correctAnswer": "WPA introduced TKIP to avoid using a single static WEP key and was introduced by the Wi‑Fi Alliance in 2003",
+    "explanation": "WPA was designed as an interim replacement for insecure WEP, using TKIP to dynamically change keys; it was introduced in 2003 by the Wi‑Fi Alliance."
+  },
+  {
+    "id": 10,
+    "question": "Which of the following correctly describes WPA2 modes and the encryption protocol it uses?",
+    "options": [
+      "WPA2 only supports PSK and uses TKIP",
+      "WPA2 supports WPA2-PSK (pre-shared key) and WPA2-EAP (enterprise) and uses CCMP based on AES",
+      "WPA2 is proprietary and uses SAE",
+      "WPA2 does not provide message integrity"
+    ],
+    "correctAnswer": "WPA2 supports WPA2-PSK (pre-shared key) and WPA2-EAP (enterprise) and uses CCMP based on AES",
+    "explanation": "WPA2 provides both PSK and enterprise (EAP) modes and uses CCMP (which is based on AES) for strong confidentiality and integrity."
+  },
+  {
+    "id": 11,
+    "question": "What is CCMP and why is it important in Wi‑Fi security?",
+    "options": [
+      "A routing protocol for wireless mesh networks",
+      "Counter Mode with CBC‑MAC Protocol (CCMP) based on AES providing strong confidentiality and integrity, stronger than TKIP",
+      "A legacy authentication protocol replaced by PEAP",
+      "A physical-layer modulation scheme"
+    ],
+    "correctAnswer": "Counter Mode with CBC‑MAC Protocol (CCMP) based on AES providing strong confidentiality and integrity, stronger than TKIP",
+    "explanation": "CCMP (based on AES) is the encryption and integrity mechanism used in WPA2, offering stronger protection than the older TKIP used in WPA."
+  },
+  {
+    "id": 12,
+    "question": "Which feature is a hallmark of WPA3 compared to WPA2?",
+    "options": [
+      "WPA3 reintroduces WEP compatibility",
+      "WPA3 uses SAE (Simultaneous Authentication of Equals) for stronger protection against password guessing",
+      "WPA3 mandates TKIP for backward compatibility",
+      "WPA3 removes support for AES"
+    ],
+    "correctAnswer": "WPA3 uses SAE (Simultaneous Authentication of Equals) for stronger protection against password guessing",
+    "explanation": "WPA3 introduces SAE, which provides more robust password-based authentication and better resistance to offline dictionary attacks compared with WPA2-PSK."
+  },
+  {
+    "id": 13,
+    "question": "Which authentication approach is generally considered more secure but more complex to manage?",
+    "options": [
+      "WPA2-PSK with a simple passphrase",
+      "Open (no authentication)",
+      "EAP-TLS using digital certificates for clients and servers",
+      "WEP with static keys"
+    ],
+    "correctAnswer": "EAP-TLS using digital certificates for clients and servers",
+    "explanation": "EAP-TLS offers strong mutual authentication with certificates, but certificate issuance and lifecycle management add complexity."
+  },
+  {
+    "id": 14,
+    "question": "Which algorithm does WPA3 use to improve security for personal networks?",
+    "options": [
+      "TKIP",
+      "SAE (Simultaneous Authentication of Equals)",
+      "WEP key rolling",
+      "PAP authentication"
+    ],
+    "correctAnswer": "SAE (Simultaneous Authentication of Equals)",
+    "explanation": "WPA3's SAE replaces PSK-based exchanges used in WPA2-PSK to provide stronger defenses against password guessing and offline attacks."
+  },
+  {
+    "id": 15,
+    "question": "Which statement accurately contrasts PEAP and EAP-TLS for 802.1X wireless authentication?",
+    "options": [
+      "PEAP requires client certificates; EAP-TLS uses only passwords",
+      "PEAP uses a server-side TLS tunnel and usually user credentials; EAP-TLS uses mutual certificate-based TLS for stronger security",
+      "Both PEAP and EAP-TLS are deprecated and cannot be used",
+      "PEAP uses SAE while EAP-TLS uses TKIP"
+    ],
+    "correctAnswer": "PEAP uses a server-side TLS tunnel and usually user credentials; EAP-TLS uses mutual certificate-based TLS for stronger security",
+    "explanation": "PEAP protects credentials inside a server-authenticated TLS tunnel and typically uses passwords; EAP-TLS requires certificates on both client and server for mutual authentication, providing higher security."
+  }
+]

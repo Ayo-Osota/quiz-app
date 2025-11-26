@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "question": "Which SQL data type is best for storing whole numbers without fractional parts?",
+    "options": ["VARCHAR", "DECIMAL", "INT", "DATETIME"],
+    "correctAnswer": "INT",
+    "explanation": "INT (and other integer types like SMALLINT, BIGINT) are used for whole numbers without fractional parts."
+  },
+  {
+    "id": 2,
+    "question": "Which numeric data type should you choose for exact monetary calculations to avoid floating-point rounding errors?",
+    "options": ["FLOAT", "DOUBLE", "DECIMAL (or NUMERIC)", "CHAR"],
+    "correctAnswer": "DECIMAL (or NUMERIC)",
+    "explanation": "DECIMAL/NUMERIC store fixed-point numbers with exact precision, making them appropriate for monetary values unlike FLOAT/DOUBLE."
+  },
+  {
+    "id": 3,
+    "question": "What is the main difference between CHAR(n) and VARCHAR(n)?",
+    "options": [
+      "CHAR is for numbers, VARCHAR is for dates",
+      "CHAR is fixed-length; VARCHAR is variable-length",
+      "CHAR supports Unicode, VARCHAR does not",
+      "CHAR stores binary data, VARCHAR stores text"
+    ],
+    "correctAnswer": "CHAR is fixed-length; VARCHAR is variable-length",
+    "explanation": "CHAR allocates a fixed length for every value; VARCHAR stores variable-length strings up to the defined maximum."
+  },
+  {
+    "id": 4,
+    "question": "Which data type stores both date and time information together?",
+    "options": ["DATE", "TIME", "DATETIME", "VARCHAR"],
+    "correctAnswer": "DATETIME",
+    "explanation": "DATETIME stores both date and time components; DATE stores only the date and TIME stores only the time."
+  },
+  {
+    "id": 5,
+    "question": "What is a relationship in the context of a database?",
+    "options": [
+      "A backup strategy for tables",
+      "An association between entities where instances of one relate to instances of another",
+      "A type of index",
+      "A file format for exporting data"
+    ],
+    "correctAnswer": "An association between entities where instances of one relate to instances of another",
+    "explanation": "A relationship links entity instances across entity types (e.g., Student enrolls in Course) and models associations in the database."
+  },
+  {
+    "id": 6,
+    "question": "Which of the following is an example of a one-to-many (1:N) relationship?",
+    "options": [
+      "Each country has exactly one capital city and each capital belongs to exactly one country",
+      "A student enrolls in many courses and each course has many students",
+      "A customer can place multiple orders and each order belongs to one customer",
+      "Each passport maps to one person and vice versa"
+    ],
+    "correctAnswer": "A customer can place multiple orders and each order belongs to one customer",
+    "explanation": "One customer (one side) relating to many orders (many side) is a classic 1:N relationship."
+  },
+  {
+    "id": 7,
+    "question": "Which scenario best illustrates a many-to-many (M:N) relationship?",
+    "options": [
+      "Each employee has a single employee ID",
+      "A book has one ISBN and one publisher",
+      "Students can enroll in many courses, and each course can have many students",
+      "Each country has one currency"
+    ],
+    "correctAnswer": "Students can enroll in many courses, and each course can have many students",
+    "explanation": "When multiple instances of one entity relate to multiple instances of another, it is a many-to-many relationship (often implemented with a join/associative table)."
+  },
+  {
+    "id": 8,
+    "question": "What is the role of a foreign key in a relational database?",
+    "options": [
+      "To store large binary files",
+      "To enforce a reference from one table to a primary key in another table",
+      "To encrypt sensitive columns",
+      "To create indexes automatically"
+    ],
+    "correctAnswer": "To enforce a reference from one table to a primary key in another table",
+    "explanation": "A foreign key creates a link between tables and enforces referential integrity by referencing a valid primary key in the related table."
+  },
+  {
+    "id": 9,
+    "question": "What does 'referential integrity' ensure regarding foreign keys?",
+    "options": [
+      "That every table has a primary key",
+      "That foreign key values correspond to existing primary key values in the referenced table",
+      "That queries run faster",
+      "That schema changes are automatically propagated"
+    ],
+    "correctAnswer": "That foreign key values correspond to existing primary key values in the referenced table",
+    "explanation": "Referential integrity prevents orphaned references by ensuring foreign keys match existing primary key values (or are NULL if allowed)."
+  },
+  {
+    "id": 10,
+    "question": "Which symbol convention in an ERD typically represents a one-to-many relationship?",
+    "options": [
+      "A crow's foot at one end and a single line at the other",
+      "Two crow's feet at both ends",
+      "A single line at both ends",
+      "A dashed line"
+    ],
+    "correctAnswer": "A crow's foot at one end and a single line at the other",
+    "explanation": "A crow's foot at the 'many' end and a single line at the 'one' end visually indicates a 1:N relationship in ER diagrams."
+  },
+  {
+    "id": 11,
+    "question": "What are the three basic components of an Entity-Relationship Diagram (ERD)?",
+    "options": [
+      "Tables, Views, Indexes",
+      "Entities, Attributes, Relationships",
+      "Rows, Columns, Cells",
+      "Schemas, Functions, Triggers"
+    ],
+    "correctAnswer": "Entities, Attributes, Relationships",
+    "explanation": "ERDs represent entities (rectangles), their attributes (ovals), and relationships (diamonds) to model the database structure."
+  },
+  {
+    "id": 12,
+    "question": "Which ERD attribute type represents values derived from other attributes (e.g., age calculated from birthdate)?",
+    "options": [
+      "Multivalued attribute",
+      "Composite attribute",
+      "Derived attribute",
+      "Primary key attribute"
+    ],
+    "correctAnswer": "Derived attribute",
+    "explanation": "Derived attributes are calculated from other attribute(s) (e.g., age derived from birthdate) and are often denoted specially in ER diagrams."
+  },
+  {
+    "id": 13,
+    "question": "Which entity type typically requires the existence of another entity to be meaningful and is depicted specially in ER diagrams?",
+    "options": [
+      "Strong entity",
+      "Weak entity",
+      "Standalone entity",
+      "Temporary entity"
+    ],
+    "correctAnswer": "Weak entity",
+    "explanation": "A weak entity depends on a strong entity for identification (it lacks a complete primary key on its own) and is usually shown with a double rectangle."
+  },
+  {
+    "id": 14,
+    "question": "What is an associative (junction) entity used for in relational modeling?",
+    "options": [
+      "To store system configuration",
+      "To break down a one-to-one relationship",
+      "To implement a many-to-many relationship by linking two entities and possibly holding relationship attributes",
+      "To encrypt sensitive relationships"
+    ],
+    "correctAnswer": "To implement a many-to-many relationship by linking two entities and possibly holding relationship attributes",
+    "explanation": "Associative (junction) entities convert M:N relationships into two 1:N relationships and can store attributes about the association."
+  },
+  {
+    "id": 15,
+    "question": "Which tool from the notes is specifically mentioned for creating ER models?",
+    "options": [
+      "Packet Tracer",
+      "MySQL Workbench",
+      "Wireshark",
+      "NetFlow Collector"
+    ],
+    "correctAnswer": "MySQL Workbench",
+    "explanation": "MySQL Workbench is noted as a tool for creating ER models; other references include IBM and Lucidchart resources for ER diagrams."
+  }
+]
