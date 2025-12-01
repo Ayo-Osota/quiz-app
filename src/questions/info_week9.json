@@ -1,88 +1,167 @@
 [
   {
     "id": 1,
-    "question": "What is the primary responsibility of a Security Guard?",
+    "question": "What is routing in a computer network?",
     "options": [
-      "Enforce traffic laws",
-      "Protect people, property, and information",
-      "Investigate crimes",
-      "Arrest individuals without cause"
+      "A method for encrypting packets",
+      "Sending data packets from one node to another and determining the path they take",
+      "A way to assign IP addresses to hosts",
+      "A protocol for switching at Layer 2"
     ],
-    "correctAnswer": "Protect people, property, and information",
-    "explanation": "Security Guards are primarily responsible for protecting people, property, and information."
+    "correctAnswer": "Sending data packets from one node to another and determining the path they take",
+    "explanation": "Routing involves selecting a path and forwarding IP packets from a source to a destination across networks."
   },
   {
     "id": 2,
-    "question": "Under which law is the security industry in Ontario governed?",
-    "options": [
-      "Ontario Public Safety Act",
-      "Private Security and Investigative Services Act",
-      "Canadian Criminal Code",
-      "Emergency Services Act"
-    ],
-    "correctAnswer": "Private Security and Investigative Services Act",
-    "explanation": "The Private Security and Investigative Services Act governs the security industry in Ontario."
+    "question": "Which device is primarily responsible for routing packets between networks?",
+    "options": ["Switch", "Hub", "Router", "Repeater"],
+    "correctAnswer": "Router",
+    "explanation": "Routers operate at Layer 3 and are responsible for selecting paths and forwarding packets between different networks."
   },
   {
     "id": 3,
-    "question": "What must an individual obtain to work as a Security Guard in Ontario?",
+    "question": "What is a static route?",
     "options": [
-      "A police badge",
-      "A college degree",
-      "A valid security guard license",
-      "A military certificate"
+      "A route learned automatically via a routing protocol",
+      "A route manually configured by a network administrator",
+      "A route that changes every few seconds",
+      "A route created by ARP"
     ],
-    "correctAnswer": "A valid security guard license",
-    "explanation": "Anyone performing security duties must have a valid license to act as a Security Guard in Ontario."
+    "correctAnswer": "A route manually configured by a network administrator",
+    "explanation": "Static routes are manually entered and do not change unless modified by an administrator; they are less scalable but useful for small or specific cases."
   },
   {
     "id": 4,
-    "question": "True or False: Security Guards in Ontario are not required to be licensed.",
-    "options": ["True", "False"],
-    "correctAnswer": "False",
-    "explanation": "Security Guards must be licensed according to Ontario law."
+    "question": "Which statement best describes dynamic routing?",
+    "options": [
+      "Routes are manually entered and never change",
+      "Routes are automatically discovered and updated by routing protocols",
+      "Routes are stored in ARP caches",
+      "Routes are only used for VLANs"
+    ],
+    "correctAnswer": "Routes are automatically discovered and updated by routing protocols",
+    "explanation": "Dynamic routing uses protocols (e.g., OSPF, BGP, EIGRP) to exchange route information and adapt to network changes automatically."
   },
   {
     "id": 5,
-    "question": "Which of the following is a specialized role in the Private Security sector?",
+    "question": "Which command on a Cisco router displays the routing table?",
     "options": [
-      "Firefighter",
-      "Traffic enforcer",
-      "Loss Prevention Specialist",
-      "Paramedic"
+      "show interfaces",
+      "show ip route",
+      "show vlan",
+      "show running-config"
     ],
-    "correctAnswer": "Loss Prevention Specialist",
-    "explanation": "Loss Prevention Specialists are part of the Private Security sector and work to prevent theft and apprehend perpetrators."
+    "correctAnswer": "show ip route",
+    "explanation": "'show ip route' displays routes learned via static configuration and routing protocols, including next-hop and outgoing interfaces."
   },
   {
     "id": 6,
-    "question": "Why has there been a shift from public to private security in recent years?",
+    "question": "Which of the following are typical fields found in a routing table entry?",
     "options": [
-      "Police salaries have decreased",
-      "Private security is more affordable and efficient",
-      "Laws have changed",
-      "Citizens trust private security more"
+      "Network ID, subnet mask, next hop, outgoing interface",
+      "MAC address, VLAN ID, port speed, duplex",
+      "Hostname, DNS server, NTP server, syslog server",
+      "Usernames, passwords, roles, policies"
     ],
-    "correctAnswer": "Private security is more affordable and efficient",
-    "explanation": "The shift is due to the cost-efficiency of private security and the increased demands on police services."
+    "correctAnswer": "Network ID, subnet mask, next hop, outgoing interface",
+    "explanation": "Routing table entries include network/prefix information, the next hop to reach the network, and the outgoing interface used to forward packets."
   },
   {
     "id": 7,
-    "question": "Which of the following tasks is commonly handled by Mobile Patrol Services?",
+    "question": "Which protocols are examples of distance-vector routing protocols?",
     "options": [
-      "Giving parking tickets",
-      "Driving ambulances",
-      "Responding to alarms and patrolling large areas",
-      "Hosting public safety events"
+      "OSPF and IS-IS",
+      "RIP, EIGRP, IGRP",
+      "BGP and OSPF",
+      "STP and RSTP"
     ],
-    "correctAnswer": "Responding to alarms and patrolling large areas",
-    "explanation": "Mobile Patrol Services handle alarm responses and large area patrols — duties that were traditionally police tasks."
+    "correctAnswer": "RIP, EIGRP, IGRP",
+    "explanation": "RIP, EIGRP, and IGRP are considered distance-vector (or distance-vector derived) protocols that use distance metrics to select routes."
   },
   {
     "id": 8,
-    "question": "True or False: Loss Prevention Specialists work mainly in hospitals.",
-    "options": ["True", "False"],
-    "correctAnswer": "False",
-    "explanation": "Loss Prevention Specialists typically work in retail environments, not hospitals."
+    "question": "Which algorithm is commonly associated with distance-vector routing protocols?",
+    "options": [
+      "Dijkstra's algorithm",
+      "Bellman-Ford algorithm",
+      "RSA algorithm",
+      "Kruskal's algorithm"
+    ],
+    "correctAnswer": "Bellman-Ford algorithm",
+    "explanation": "Distance-vector protocols typically use the Bellman-Ford algorithm to compute best paths from a single source."
+  },
+  {
+    "id": 9,
+    "question": "Which routing protocols are examples of link-state protocols?",
+    "options": [
+      "RIP and IGRP",
+      "OSPF and IS-IS",
+      "EIGRP and BGP",
+      "DHCP and ARP"
+    ],
+    "correctAnswer": "OSPF and IS-IS",
+    "explanation": "OSPF and IS-IS are link-state protocols that build a complete view of network topology and compute shortest paths using link-state information."
+  },
+  {
+    "id": 10,
+    "question": "Which algorithm do link-state protocols like OSPF use to compute shortest paths?",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra's algorithm",
+      "Floyd-Warshall",
+      "AES"
+    ],
+    "correctAnswer": "Dijkstra's algorithm",
+    "explanation": "Link-state protocols use Dijkstra's shortest-path-first algorithm to compute optimal paths using a topology database."
+  },
+  {
+    "id": 11,
+    "question": "Which of the following is a key advantage of dynamic routing over static routing?",
+    "options": [
+      "Requires no CPU on routers",
+      "Automatically adapts to topology changes and link failures",
+      "Eliminates the need for routing tables",
+      "Uses no network bandwidth for updates"
+    ],
+    "correctAnswer": "Automatically adapts to topology changes and link failures",
+    "explanation": "Dynamic routing protocols exchange information and update routes automatically, helping the network adapt to changes without manual intervention."
+  },
+  {
+    "id": 12,
+    "question": "Which routing protocol listed is primarily used for exchanging routes between autonomous systems on the Internet?",
+    "options": ["OSPF", "RIP", "BGP", "IS-IS"],
+    "correctAnswer": "BGP",
+    "explanation": "BGP (Border Gateway Protocol) is the path-vector protocol used to exchange routing information between autonomous systems on the Internet."
+  },
+  {
+    "id": 13,
+    "question": "According to the timeline provided, which routing protocol was introduced in 1992?",
+    "options": ["RIPv1", "EIGRP", "BGP", "IS-IS"],
+    "correctAnswer": "EIGRP",
+    "explanation": "EIGRP was introduced in 1992 as an enhanced Cisco routing protocol combining distance and link-state characteristics."
+  },
+  {
+    "id": 14,
+    "question": "What metric types might routers consider when determining the best path using routing protocols?",
+    "options": [
+      "Bandwidth, delay, hop count, reliability",
+      "Screen resolution and CPU clock",
+      "MAC address and serial number",
+      "DNS suffix and hostname"
+    ],
+    "correctAnswer": "Bandwidth, delay, hop count, reliability",
+    "explanation": "Routing protocols use various metrics (e.g., hop count, bandwidth, delay, reliability) depending on the protocol to select optimal routes."
+  },
+  {
+    "id": 15,
+    "question": "What lab command is suggested to inspect a Cisco router's routing table in the activity?",
+    "options": [
+      "show vlan",
+      "show ip route",
+      "show mac address-table",
+      "show version"
+    ],
+    "correctAnswer": "show ip route",
+    "explanation": "The lab activity recommends using 'show ip route' to view the router's routing table and entries."
   }
 ]
