@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What do if statements allow programs to do?",
+    "options": [
+      "Run code repeatedly",
+      "Run code selectively based on conditions",
+      "Define functions",
+      "Import modules"
+    ],
+    "correctAnswer": "Run code selectively based on conditions",
+    "explanation": "If statements allow programs to make decisions and run code selectively based on whether a condition is true or false."
+  },
+  {
+    "id": 2,
+    "question": "What is the purpose of Boolean operators in Python?",
+    "options": [
+      "To perform mathematical calculations",
+      "To evaluate conditions and return True or False",
+      "To concatenate strings",
+      "To define variables"
+    ],
+    "correctAnswer": "To evaluate conditions and return True or False",
+    "explanation": "Boolean operators evaluate conditions and return True or False, enabling decision-making in programs."
+  },
+  {
+    "id": 3,
+    "question": "Which statement is used as an alternative to multiple if-elif chains for matching values?",
+    "options": [
+      "switch statement",
+      "match statement",
+      "case statement",
+      "select statement"
+    ],
+    "correctAnswer": "match statement",
+    "explanation": "Python uses match statements (introduced in Python 3.10) as a structured way to match values against patterns, similar to switch statements in other languages."
+  },
+  {
+    "id": 4,
+    "question": "What is the result of the expression: answer != 'y' or answer != 'n' when answer = 'y'?",
+    "options": [
+      "True",
+      "False",
+      "None",
+      "Error"
+    ],
+    "correctAnswer": "True",
+    "explanation": "When answer = 'y', answer != 'y' is False, but answer != 'n' is True. With 'or', if either condition is True, the result is True."
+  },
+  {
+    "id": 5,
+    "question": "Which logical operator returns True only if both conditions are True?",
+    "options": [
+      "or",
+      "and",
+      "not",
+      "xor"
+    ],
+    "correctAnswer": "and",
+    "explanation": "The 'and' operator returns True only when both conditions are True. If either condition is False, it returns False."
+  },
+  {
+    "id": 6,
+    "question": "What does the 'not' operator do?",
+    "options": [
+      "Combines two conditions",
+      "Inverts the Boolean value",
+      "Checks for equality",
+      "Performs arithmetic negation"
+    ],
+    "correctAnswer": "Inverts the Boolean value",
+    "explanation": "The 'not' operator inverts the Boolean value: not True becomes False, and not False becomes True."
+  },
+  {
+    "id": 7,
+    "question": "How do you check if a number is even in Python?",
+    "options": [
+      "number % 2 == 0",
+      "number / 2 == 0",
+      "number // 2 == 0",
+      "number ** 2 == 0"
+    ],
+    "correctAnswer": "number % 2 == 0",
+    "explanation": "To check if a number is even, use the modulus operator: number % 2 == 0. If the remainder is 0, the number is even."
+  },
+  {
+    "id": 8,
+    "question": "What is the difference between == and = operators?",
+    "options": [
+      "== assigns a value, = compares values",
+      "== compares values, = assigns a value",
+      "Both do the same thing",
+      "== is for strings, = is for numbers"
+    ],
+    "correctAnswer": "== compares values, = assigns a value",
+    "explanation": "The == operator is used for equality comparison (returns True/False), while = is the assignment operator (assigns a value to a variable)."
+  },
+  {
+    "id": 9,
+    "question": "Is Python case sensitive when comparing strings?",
+    "options": [
+      "Yes, 'Hello' and 'hello' are different",
+      "No, 'Hello' and 'hello' are the same",
+      "Only for variables",
+      "Only for keywords"
+    ],
+    "correctAnswer": "Yes, 'Hello' and 'hello' are different",
+    "explanation": "Python is case sensitive, meaning 'Hello' and 'hello' are considered different strings."
+  },
+  {
+    "id": 10,
+    "question": "What allows if statements to run code based on decisions?",
+    "options": [
+      "Loops",
+      "Boolean expressions that evaluate to True or False",
+      "Functions",
+      "Comments"
+    ],
+    "correctAnswer": "Boolean expressions that evaluate to True or False",
+    "explanation": "If statements use Boolean expressions that evaluate to True or False to determine which code block to execute."
+  },
+  {
+    "id": 11,
+    "question": "In match statements, what happens when no case matches?",
+    "options": [
+      "An error is raised",
+      "The program terminates",
+      "The default case (_) is executed if present",
+      "The first case is executed"
+    ],
+    "correctAnswer": "The default case (_) is executed if present",
+    "explanation": "Match statements can have a default case using the underscore (_) that executes when no other case matches."
+  },
+  {
+    "id": 12,
+    "question": "What is the result of: True or False?",
+    "options": [
+      "True",
+      "False",
+      "None",
+      "Error"
+    ],
+    "correctAnswer": "True",
+    "explanation": "The 'or' operator returns True if at least one of the conditions is True. True or False evaluates to True."
+  },
+  {
+    "id": 13,
+    "question": "What is the result of: True and False?",
+    "options": [
+      "True",
+      "False",
+      "None",
+      "Error"
+    ],
+    "correctAnswer": "False",
+    "explanation": "The 'and' operator returns True only if both conditions are True. True and False evaluates to False."
+  },
+  {
+    "id": 14,
+    "question": "What structure allows selective code execution in Python?",
+    "options": [
+      "while loops only",
+      "if, elif, else statements",
+      "for loops only",
+      "functions only"
+    ],
+    "correctAnswer": "if, elif, else statements",
+    "explanation": "If, elif, and else statements allow programs to run code selectively based on conditions."
+  },
+  {
+    "id": 15,
+    "question": "Which statement describes real-world decision making that programs need to emulate?",
+    "options": [
+      "Programs never need to make decisions",
+      "Programs need to decide which code to run and which to ignore based on conditions",
+      "Programs always run all code",
+      "Programs only make random decisions"
+    ],
+    "correctAnswer": "Programs need to decide which code to run and which to ignore based on conditions",
+    "explanation": "Since programs solve real-life problems involving decisions (like 'Should the next level be unlocked?'), they need to make decisions about which code to run."
+  }
+]

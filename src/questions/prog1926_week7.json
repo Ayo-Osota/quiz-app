@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is a flowchart?",
+    "options": [
+      "A type of programming language",
+      "An organized combination of shapes, lines, and text that graphically illustrates a process or structure",
+      "A debugging tool",
+      "A type of function"
+    ],
+    "correctAnswer": "An organized combination of shapes, lines, and text that graphically illustrates a process or structure",
+    "explanation": "A flowchart is an organized combination of shapes, lines, and text that graphically illustrates a process or structure/logic."
+  },
+  {
+    "id": 2,
+    "question": "What does a flowchart represent?",
+    "options": [
+      "Only the final output of a program",
+      "A pictorial representation showing all steps of a process",
+      "The syntax of code",
+      "The hardware architecture"
+    ],
+    "correctAnswer": "A pictorial representation showing all steps of a process",
+    "explanation": "A flowchart is a pictorial representation showing all the steps of a process, illustrating the logic and flow of operations."
+  },
+  {
+    "id": 3,
+    "question": "Why are flowcharts important in software development?",
+    "options": [
+      "They replace the need for code",
+      "They are one of the most important ways to effectively communicate ideas between people with different knowledge levels",
+      "They are required by Python",
+      "They automatically generate code"
+    ],
+    "correctAnswer": "They are one of the most important ways to effectively communicate ideas between people with different knowledge levels",
+    "explanation": "Flowcharts effectively communicate ideas between people who may differ in knowledge, education, and position."
+  },
+  {
+    "id": 4,
+    "question": "Who might use flowcharts in a software project?",
+    "options": [
+      "Only programmers",
+      "Project leaders, clients, and junior programmers",
+      "Only project managers",
+      "Only clients"
+    ],
+    "correctAnswer": "Project leaders, clients, and junior programmers",
+    "explanation": "A Project Leader may develop a flowchart for a client to approve and a junior programmer to then program from."
+  },
+  {
+    "id": 5,
+    "question": "What are the basic components of a flowchart?",
+    "options": [
+      "Only arrows",
+      "Shapes, lines, and text",
+      "Only text descriptions",
+      "Code blocks and variables"
+    ],
+    "correctAnswer": "Shapes, lines, and text",
+    "explanation": "Flowcharts consist of shapes (representing different types of operations), lines (showing flow), and text (describing actions)."
+  },
+  {
+    "id": 6,
+    "question": "What shape is typically used to represent the start or end of a flowchart?",
+    "options": [
+      "Rectangle",
+      "Diamond",
+      "Oval or rounded rectangle",
+      "Parallelogram"
+    ],
+    "correctAnswer": "Oval or rounded rectangle",
+    "explanation": "Ovals or rounded rectangles (terminators) are typically used to represent the start and end points of a flowchart."
+  },
+  {
+    "id": 7,
+    "question": "What shape represents a decision point in a flowchart?",
+    "options": [
+      "Rectangle",
+      "Diamond",
+      "Oval",
+      "Circle"
+    ],
+    "correctAnswer": "Diamond",
+    "explanation": "A diamond shape represents a decision point where the flow can branch based on a yes/no or true/false condition."
+  },
+  {
+    "id": 8,
+    "question": "What shape represents a process or action in a flowchart?",
+    "options": [
+      "Diamond",
+      "Rectangle",
+      "Oval",
+      "Triangle"
+    ],
+    "correctAnswer": "Rectangle",
+    "explanation": "A rectangle represents a process step or action that needs to be performed in the flowchart."
+  },
+  {
+    "id": 9,
+    "question": "What tool can be used to create flowcharts?",
+    "options": [
+      "Only pen and paper",
+      "Visio, draw.io, Lucidchart, or similar tools",
+      "Only Microsoft Word",
+      "Python IDE"
+    ],
+    "correctAnswer": "Visio, draw.io, Lucidchart, or similar tools",
+    "explanation": "Tools like Visio, draw.io, and Lucidchart are commonly used to create professional flowcharts."
+  },
+  {
+    "id": 10,
+    "question": "What should flowchart guidelines ensure?",
+    "options": [
+      "Maximum complexity",
+      "Clarity, consistency, and proper flow direction",
+      "Use of all possible shapes",
+      "Minimum number of shapes"
+    ],
+    "correctAnswer": "Clarity, consistency, and proper flow direction",
+    "explanation": "Flowchart guidelines ensure the chart is clear, consistent in style, and shows proper flow direction (typically top-to-bottom or left-to-right)."
+  },
+  {
+    "id": 11,
+    "question": "What is the purpose of arrows in a flowchart?",
+    "options": [
+      "To make it look professional",
+      "To show the direction of flow between steps",
+      "To separate different processes",
+      "To indicate errors"
+    ],
+    "correctAnswer": "To show the direction of flow between steps",
+    "explanation": "Arrows (or lines with arrows) show the direction of flow from one step to another in the process."
+  },
+  {
+    "id": 12,
+    "question": "Can a flowchart be used before writing any code?",
+    "options": [
+      "No, code must be written first",
+      "Yes, flowcharts can be used to plan logic before coding",
+      "Only for debugging existing code",
+      "Only after testing is complete"
+    ],
+    "correctAnswer": "Yes, flowcharts can be used to plan logic before coding",
+    "explanation": "Flowcharts are often created before writing code to plan and visualize the logic and structure of the program."
+  },
+  {
+    "id": 13,
+    "question": "What does a parallelogram typically represent in a flowchart?",
+    "options": [
+      "Decision point",
+      "Input or output operation",
+      "Process step",
+      "Start or end"
+    ],
+    "correctAnswer": "Input or output operation",
+    "explanation": "A parallelogram shape typically represents input or output operations in a flowchart."
+  },
+  {
+    "id": 14,
+    "question": "Why would a junior programmer need a flowchart?",
+    "options": [
+      "To understand the logic and structure before implementing code",
+      "To replace documentation",
+      "Junior programmers don't use flowcharts",
+      "To test the final product"
+    ],
+    "correctAnswer": "To understand the logic and structure before implementing code",
+    "explanation": "A flowchart helps junior programmers understand the logic and structure of what needs to be implemented before writing code."
+  },
+  {
+    "id": 15,
+    "question": "What aspect of programming do flowcharts primarily illustrate?",
+    "options": [
+      "Syntax and grammar",
+      "Logic and flow of operations",
+      "Variable names",
+      "Compilation process"
+    ],
+    "correctAnswer": "Logic and flow of operations",
+    "explanation": "Flowcharts primarily illustrate the logic and flow of operations in a program, showing how data moves through the process."
+  }
+]

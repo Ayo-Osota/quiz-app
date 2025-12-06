@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is a function in Python?",
+    "options": [
+      "A type of variable",
+      "A group of code that performs a specific task and runs only when called",
+      "A built-in operator",
+      "A comment style"
+    ],
+    "correctAnswer": "A group of code that performs a specific task and runs only when called",
+    "explanation": "A function is a group of code that performs a specific task and runs only when it is called. It's like having a mini program within your larger program."
+  },
+  {
+    "id": 2,
+    "question": "What are the two types of functions in Python?",
+    "options": [
+      "Static and dynamic functions",
+      "Built-in functions and user-defined functions",
+      "Public and private functions",
+      "Sync and async functions"
+    ],
+    "correctAnswer": "Built-in functions and user-defined functions",
+    "explanation": "There are built-in functions (pre-created like print() and round()) and user-defined functions that you create yourself."
+  },
+  {
+    "id": 3,
+    "question": "How do you define a function in Python?",
+    "options": [
+      "function my_function():",
+      "def my_function():",
+      "func my_function():",
+      "define my_function():"
+    ],
+    "correctAnswer": "def my_function():",
+    "explanation": "Functions are defined using the 'def' keyword followed by the function name and parentheses: def my_function():"
+  },
+  {
+    "id": 4,
+    "question": "What are parameters in a function?",
+    "options": [
+      "Return values from the function",
+      "Values passed to the function when it's called",
+      "Local variables inside the function",
+      "Comments in the function"
+    ],
+    "correctAnswer": "Values passed to the function when it's called",
+    "explanation": "Parameters are values that are passed to a function when it is called, allowing the function to work with different data."
+  },
+  {
+    "id": 5,
+    "question": "What does the return statement do in a function?",
+    "options": [
+      "Ends the program",
+      "Sends a value back to the caller",
+      "Prints a value to the console",
+      "Defines a new variable"
+    ],
+    "correctAnswer": "Sends a value back to the caller",
+    "explanation": "The return statement sends a value back to the code that called the function. It can be done on the same line as the calculation."
+  },
+  {
+    "id": 6,
+    "question": "What happens to code written after a return statement with the same indentation?",
+    "options": [
+      "It executes normally",
+      "It will not execute",
+      "It executes only if return is False",
+      "It executes before return"
+    ],
+    "correctAnswer": "It will not execute",
+    "explanation": "Writing anything after return with the same indentation will not execute because the function exits at the return statement."
+  },
+  {
+    "id": 7,
+    "question": "What is the scope of a local variable?",
+    "options": [
+      "Available throughout the entire program",
+      "Only available within the function where it's defined",
+      "Available in all functions",
+      "Available only in imported modules"
+    ],
+    "correctAnswer": "Only available within the function where it's defined",
+    "explanation": "Local variables are only available within the function where they are defined. They cannot be accessed outside that function."
+  },
+  {
+    "id": 8,
+    "question": "What is the scope of a global variable?",
+    "options": [
+      "Only available in one function",
+      "Available throughout the entire program",
+      "Only available in imported modules",
+      "Not available in functions"
+    ],
+    "correctAnswer": "Available throughout the entire program",
+    "explanation": "Global variables are defined outside functions and are available throughout the entire program, including inside functions."
+  },
+  {
+    "id": 9,
+    "question": "How can you mimic overloaded function behavior in Python?",
+    "options": [
+      "By creating multiple functions with the same name",
+      "By using *args and len()",
+      "By using global variables",
+      "Python doesn't support this"
+    ],
+    "correctAnswer": "By using *args and len()",
+    "explanation": "Python can mimic overloaded function behavior by using *args to accept variable numbers of arguments and len() to check how many were passed."
+  },
+  {
+    "id": 10,
+    "question": "What is an example of a built-in function in Python?",
+    "options": [
+      "my_custom_function()",
+      "print()",
+      "custom_calculator()",
+      "user_input()"
+    ],
+    "correctAnswer": "print()",
+    "explanation": "print() is a built-in function that has been pre-created in Python and is available for immediate use."
+  },
+  {
+    "id": 11,
+    "question": "Can you return a value on the same line as the calculation?",
+    "options": [
+      "No, you must use a separate variable first",
+      "Yes, return x + y is valid",
+      "Only for simple additions",
+      "Only with the return keyword on a separate line"
+    ],
+    "correctAnswer": "Yes, return x + y is valid",
+    "explanation": "You can return a value on the same line as the calculation. Instead of 'res = x + y; return res', you can write 'return x + y'."
+  },
+  {
+    "id": 12,
+    "question": "What should function comments describe?",
+    "options": [
+      "Only the return value",
+      "The function's purpose, parameters, and return value",
+      "Only the parameters",
+      "Function comments are not necessary"
+    ],
+    "correctAnswer": "The function's purpose, parameters, and return value",
+    "explanation": "Function comments should describe what the function does, what parameters it accepts, and what it returns to make code more maintainable."
+  },
+  {
+    "id": 13,
+    "question": "What is the output of: def my_print(message, n): while n > 0: print(message, end=' '); n -= 1 followed by my_print('a', 4)?",
+    "options": [
+      "aaaa",
+      "a a a a",
+      "a 4",
+      "aaaa4"
+    ],
+    "correctAnswer": "a a a a",
+    "explanation": "The function prints 'a' 4 times with a space after each (due to end=' '), resulting in 'a a a a '."
+  },
+  {
+    "id": 14,
+    "question": "Why are functions useful in programming?",
+    "options": [
+      "They make code slower",
+      "They allow code reuse and organization",
+      "They are required by Python",
+      "They prevent errors"
+    ],
+    "correctAnswer": "They allow code reuse and organization",
+    "explanation": "Functions allow you to organize code into reusable pieces that can be called whenever needed, making programs more modular and maintainable."
+  },
+  {
+    "id": 15,
+    "question": "What happens when you call a function?",
+    "options": [
+      "The function is defined",
+      "The function's code is executed",
+      "The function is deleted",
+      "Nothing happens"
+    ],
+    "correctAnswer": "The function's code is executed",
+    "explanation": "When you call a function, the code inside that function is executed. The function only runs when it is called."
+  }
+]

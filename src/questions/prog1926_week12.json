@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is a Version Control System (VCS)?",
+    "options": [
+      "A code editor",
+      "A system that tracks changes to files over time",
+      "A testing framework",
+      "A deployment tool"
+    ],
+    "correctAnswer": "A system that tracks changes to files over time",
+    "explanation": "A Version Control System tracks changes to files over time, allowing you to recall specific versions, collaborate, and manage code history."
+  },
+  {
+    "id": 2,
+    "question": "What is Git?",
+    "options": [
+      "A programming language",
+      "A distributed version control system",
+      "A cloud storage service",
+      "An operating system"
+    ],
+    "correctAnswer": "A distributed version control system",
+    "explanation": "Git is a distributed version control system that tracks changes in source code during software development."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between Git and GitHub?",
+    "options": [
+      "They are the same thing",
+      "Git is the version control system; GitHub is a hosting service for Git repositories",
+      "GitHub is the version control system; Git is the hosting service",
+      "Git is for individuals; GitHub is for teams"
+    ],
+    "correctAnswer": "Git is the version control system; GitHub is a hosting service for Git repositories",
+    "explanation": "Git is the version control system software, while GitHub is a cloud-based hosting service that provides Git repository hosting and collaboration features."
+  },
+  {
+    "id": 4,
+    "question": "What command initializes a new Git repository?",
+    "options": [
+      "git start",
+      "git init",
+      "git create",
+      "git new"
+    ],
+    "correctAnswer": "git init",
+    "explanation": "The 'git init' command creates a new Git repository in the current directory."
+  },
+  {
+    "id": 5,
+    "question": "What command stages files for commit?",
+    "options": [
+      "git stage",
+      "git add",
+      "git commit",
+      "git push"
+    ],
+    "correctAnswer": "git add",
+    "explanation": "The 'git add' command stages files, preparing them to be included in the next commit."
+  },
+  {
+    "id": 6,
+    "question": "What command creates a commit with staged changes?",
+    "options": [
+      "git save",
+      "git commit",
+      "git push",
+      "git record"
+    ],
+    "correctAnswer": "git commit",
+    "explanation": "The 'git commit' command creates a commit with the staged changes, typically used with -m flag for a message: git commit -m 'message'."
+  },
+  {
+    "id": 7,
+    "question": "What command shows the current status of the repository?",
+    "options": [
+      "git info",
+      "git status",
+      "git state",
+      "git check"
+    ],
+    "correctAnswer": "git status",
+    "explanation": "The 'git status' command shows which files are modified, staged, or untracked in your working directory."
+  },
+  {
+    "id": 8,
+    "question": "What are the three main stages of a Git project?",
+    "options": [
+      "Create, modify, delete",
+      "Working directory, staging area, repository",
+      "Local, remote, cloud",
+      "Edit, save, commit"
+    ],
+    "correctAnswer": "Working directory, staging area, repository",
+    "explanation": "The three stages are: working directory (where you modify files), staging area (where you prepare commits), and repository (where commits are stored)."
+  },
+  {
+    "id": 9,
+    "question": "What command uploads local commits to a remote repository?",
+    "options": [
+      "git upload",
+      "git send",
+      "git push",
+      "git sync"
+    ],
+    "correctAnswer": "git push",
+    "explanation": "The 'git push' command uploads your local commits to a remote repository like GitHub."
+  },
+  {
+    "id": 10,
+    "question": "What command downloads commits from a remote repository?",
+    "options": [
+      "git pull",
+      "git download",
+      "git fetch",
+      "git get"
+    ],
+    "correctAnswer": "git pull",
+    "explanation": "The 'git pull' command downloads and integrates changes from a remote repository into your current branch."
+  },
+  {
+    "id": 11,
+    "question": "What is a branch in Git?",
+    "options": [
+      "A type of commit",
+      "An independent line of development",
+      "A remote repository",
+      "A staging area"
+    ],
+    "correctAnswer": "An independent line of development",
+    "explanation": "A branch is an independent line of development, allowing you to work on features or fixes without affecting the main codebase."
+  },
+  {
+    "id": 12,
+    "question": "What command creates a new branch?",
+    "options": [
+      "git new-branch",
+      "git branch",
+      "git create-branch",
+      "git add-branch"
+    ],
+    "correctAnswer": "git branch",
+    "explanation": "The 'git branch <branch-name>' command creates a new branch. Use 'git checkout -b <branch-name>' to create and switch to it."
+  },
+  {
+    "id": 13,
+    "question": "What command shows the commit history?",
+    "options": [
+      "git history",
+      "git log",
+      "git commits",
+      "git show-history"
+    ],
+    "correctAnswer": "git log",
+    "explanation": "The 'git log' command displays the commit history, showing commit messages, authors, dates, and commit hashes."
+  },
+  {
+    "id": 14,
+    "question": "What is a commit in Git?",
+    "options": [
+      "A snapshot of your repository at a specific point in time",
+      "A file that has been modified",
+      "A branch of the repository",
+      "A remote server"
+    ],
+    "correctAnswer": "A snapshot of your repository at a specific point in time",
+    "explanation": "A commit is a snapshot of your repository at a specific point in time, representing a saved state of your project."
+  },
+  {
+    "id": 15,
+    "question": "What is the basic Git workflow?",
+    "options": [
+      "Modify files, commit, stage",
+      "Stage, modify files, commit",
+      "Modify files, stage (add), commit",
+      "Commit, modify files, stage"
+    ],
+    "correctAnswer": "Modify files, stage (add), commit",
+    "explanation": "The basic Git workflow is: modify files in working directory, stage changes with 'git add', then commit with 'git commit'."
+  }
+]
