@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What are the two categories of data types in Python?",
+    "options": [
+      "Static and dynamic types",
+      "Value types and reference types",
+      "Mutable and immutable types",
+      "Simple and complex types"
+    ],
+    "correctAnswer": "Value types and reference types",
+    "explanation": "Python has two categories: value types (store a single value directly) and reference types (hold references to where data is stored in memory)."
+  },
+  {
+    "id": 2,
+    "question": "Which of the following are value types in Python?",
+    "options": [
+      "Lists and dictionaries",
+      "Strings, ints, floats, and booleans",
+      "Objects and classes",
+      "Files and modules"
+    ],
+    "correctAnswer": "Strings, ints, floats, and booleans",
+    "explanation": "All basic variables (strings, ints, floats, and Booleans) are value types that store a single value directly."
+  },
+  {
+    "id": 3,
+    "question": "What type of data type are lists in Python?",
+    "options": [
+      "Value type",
+      "Reference type",
+      "Primitive type",
+      "Static type"
+    ],
+    "correctAnswer": "Reference type",
+    "explanation": "Lists are reference types. Variables hold references to where the data is stored in memory, not the actual data."
+  },
+  {
+    "id": 4,
+    "question": "How do you convert a string to uppercase in Python?",
+    "options": [
+      "string.uppercase()",
+      "string.upper()",
+      "string.toUpper()",
+      "uppercase(string)"
+    ],
+    "correctAnswer": "string.upper()",
+    "explanation": "The upper() method converts all characters in a string to uppercase."
+  },
+  {
+    "id": 5,
+    "question": "How do you convert a string to lowercase in Python?",
+    "options": [
+      "string.lower()",
+      "string.lowercase()",
+      "string.toLower()",
+      "lowercase(string)"
+    ],
+    "correctAnswer": "string.lower()",
+    "explanation": "The lower() method converts all characters in a string to lowercase."
+  },
+  {
+    "id": 6,
+    "question": "What is a substring?",
+    "options": [
+      "A copy of the entire string",
+      "A portion of a string",
+      "A string concatenation",
+      "A string method"
+    ],
+    "correctAnswer": "A portion of a string",
+    "explanation": "A substring is a portion or slice of a string, extracted using indexing or slicing operations."
+  },
+  {
+    "id": 7,
+    "question": "What does the strip() function do?",
+    "options": [
+      "Converts string to lowercase",
+      "Removes leading and trailing whitespace",
+      "Splits a string into a list",
+      "Replaces characters"
+    ],
+    "correctAnswer": "Removes leading and trailing whitespace",
+    "explanation": "The strip() function removes leading and trailing whitespace (spaces, tabs, newlines) from a string."
+  },
+  {
+    "id": 8,
+    "question": "What does the split() function do?",
+    "options": [
+      "Removes whitespace",
+      "Splits a string into a list of substrings based on a delimiter",
+      "Joins strings together",
+      "Reverses a string"
+    ],
+    "correctAnswer": "Splits a string into a list of substrings based on a delimiter",
+    "explanation": "The split() function divides a string into a list of substrings based on a specified delimiter (default is whitespace)."
+  },
+  {
+    "id": 9,
+    "question": "What is a delimiter in the context of the split() function?",
+    "options": [
+      "The string being split",
+      "The character or string that separates substrings",
+      "The result of the split",
+      "A type of string method"
+    ],
+    "correctAnswer": "The character or string that separates substrings",
+    "explanation": "A delimiter is the character or string used to determine where to split the string. For example, ',' is the delimiter in 'a,b,c'.split(',')."
+  },
+  {
+    "id": 10,
+    "question": "What are tokens in the context of string splitting?",
+    "options": [
+      "The delimiters used to split",
+      "The resulting substrings after splitting",
+      "String methods",
+      "Special characters"
+    ],
+    "correctAnswer": "The resulting substrings after splitting",
+    "explanation": "Tokens are the individual substrings that result from splitting a string by delimiters."
+  },
+  {
+    "id": 11,
+    "question": "How do you access a character at a specific position in a string?",
+    "options": [
+      "string[index]",
+      "string.charAt(index)",
+      "string.get(index)",
+      "charAt(string, index)"
+    ],
+    "correctAnswer": "string[index]",
+    "explanation": "You can access individual characters using indexing: string[0] for the first character, string[1] for the second, etc."
+  },
+  {
+    "id": 12,
+    "question": "What is string slicing in Python?",
+    "options": [
+      "Deleting parts of a string",
+      "Extracting a portion of a string using [start:end]",
+      "Splitting a string by delimiter",
+      "Concatenating strings"
+    ],
+    "correctAnswer": "Extracting a portion of a string using [start:end]",
+    "explanation": "String slicing extracts a portion of a string using the syntax string[start:end], where start is inclusive and end is exclusive."
+  },
+  {
+    "id": 13,
+    "question": "Are strings in Python mutable or immutable?",
+    "options": [
+      "Mutable - you can change characters in place",
+      "Immutable - you cannot change characters in place",
+      "Depends on the string length",
+      "Depends on the Python version"
+    ],
+    "correctAnswer": "Immutable - you cannot change characters in place",
+    "explanation": "Strings in Python are immutable. You cannot change individual characters. String methods return new strings rather than modifying the original."
+  },
+  {
+    "id": 14,
+    "question": "What does 'text'[1:4] return if text = 'Python'?",
+    "options": [
+      "'Pyt'",
+      "'yth'",
+      "'ytho'",
+      "'Pyth'"
+    ],
+    "correctAnswer": "'yth'",
+    "explanation": "String slicing [1:4] extracts from index 1 (inclusive) to index 4 (exclusive). In 'Python', this gives 'yth' (indices 1, 2, 3)."
+  },
+  {
+    "id": 15,
+    "question": "How do you join a list of strings into a single string?",
+    "options": [
+      "list.join(delimiter)",
+      "delimiter.join(list)",
+      "join(list, delimiter)",
+      "concat(list)"
+    ],
+    "correctAnswer": "delimiter.join(list)",
+    "explanation": "The join() method is called on the delimiter string: delimiter.join(list). For example, ', '.join(['a', 'b', 'c']) returns 'a, b, c'."
+  }
+]

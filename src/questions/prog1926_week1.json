@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the correct naming convention for Python project names?",
+    "options": [
+      "Use uppercase letters with hyphens between words",
+      "Use lowercase letters with underscores between words",
+      "Use camelCase with no spaces",
+      "Use PascalCase with no spaces"
+    ],
+    "correctAnswer": "Use lowercase letters with underscores between words",
+    "explanation": "Python project names should begin with a lowercase letter and use underscores to separate words (e.g., guessing_game, weather_app)."
+  },
+  {
+    "id": 2,
+    "question": "In Python, what does a line starting with '#' represent?",
+    "options": [
+      "A string literal",
+      "A comment that is ignored by the compiler",
+      "An import statement",
+      "A function definition"
+    ],
+    "correctAnswer": "A comment that is ignored by the compiler",
+    "explanation": "Any line in Python with a # at the beginning is a comment and is ignored by the compiler. It's used to describe code and make it more readable."
+  },
+  {
+    "id": 3,
+    "question": "What is the correct order for code execution in Python?",
+    "options": [
+      "Bottom to top, one instruction at a time",
+      "Top to bottom, one instruction at a time",
+      "Random order based on function calls",
+      "All instructions simultaneously"
+    ],
+    "correctAnswer": "Top to bottom, one instruction at a time",
+    "explanation": "Code is always run one instruction at a time from top to bottom. The order you create the code matters since that is the order it will be run."
+  },
+  {
+    "id": 4,
+    "question": "How do you slow down code execution in Python to make output visible for humans?",
+    "options": [
+      "Use time.sleep() with a duration in seconds",
+      "Use delay() function",
+      "Use wait() method",
+      "Use pause() command"
+    ],
+    "correctAnswer": "Use time.sleep() with a duration in seconds",
+    "explanation": "You can add 'import time' to the top of your code and then use time.sleep(0.5) wherever you want your code to pause, where the value is in seconds."
+  },
+  {
+    "id": 5,
+    "question": "Which naming convention should be used for Python file names?",
+    "options": [
+      "File names must begin with uppercase letter",
+      "File names must begin with a lowercase letter and use underscores for multi-word names",
+      "File names can contain spaces",
+      "File names should use camelCase"
+    ],
+    "correctAnswer": "File names must begin with a lowercase letter and use underscores for multi-word names",
+    "explanation": "File names must begin with a lowercase letter and use underscores to separate words (e.g., hello_world, pay_calculator)."
+  },
+  {
+    "id": 6,
+    "question": "Where should line comments be placed in Python code?",
+    "options": [
+      "Only at the end of code lines",
+      "On a separate line above the code they describe at the same indentation level",
+      "At the beginning of the file only",
+      "Comments can be placed anywhere with any indentation"
+    ],
+    "correctAnswer": "On a separate line above the code they describe at the same indentation level",
+    "explanation": "Line comments should be placed on a separate line above the code they are describing and need to be at the same indentation level as the code below them."
+  },
+  {
+    "id": 7,
+    "question": "What does 'TODO' in a comment indicate?",
+    "options": [
+      "Code that has been completed",
+      "Code that needs to be worked on still",
+      "Code that should be deleted",
+      "Code that is deprecated"
+    ],
+    "correctAnswer": "Code that needs to be worked on still",
+    "explanation": "Use TODO in comments as a visible cue for code that needs to be worked on still."
+  },
+  {
+    "id": 8,
+    "question": "Which of the following is a good example of a Python file name?",
+    "options": [
+      "Hello World.py",
+      "hello_world.py",
+      "HelloWorld.py",
+      "HELLO_WORLD.py"
+    ],
+    "correctAnswer": "hello_world.py",
+    "explanation": "Good file names are short, descriptive, start with a lowercase letter, and use underscores to separate words."
+  },
+  {
+    "id": 9,
+    "question": "What resource contains the official Python coding standards?",
+    "options": [
+      "Python Documentation Manual",
+      "PEP 8 – Style Guide for Python Code",
+      "Python Best Practices Guide",
+      "ISO Python Standards"
+    ],
+    "correctAnswer": "PEP 8 – Style Guide for Python Code",
+    "explanation": "The official Python standards can be found in PEP 8 – Style Guide for Python Code."
+  },
+  {
+    "id": 10,
+    "question": "In PyCharm, which window is where you write the code?",
+    "options": [
+      "Project Window",
+      "Tool Window",
+      "Editor Window",
+      "Console Window"
+    ],
+    "correctAnswer": "Editor Window",
+    "explanation": "The Editor window is where you write the code in PyCharm."
+  }
+]

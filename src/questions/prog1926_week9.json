@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "Why are errors a concern in programming?",
+    "options": [
+      "Errors never occur in well-written code",
+      "Errors can and do occur at any stage when a program runs and users are unpredictable",
+      "Errors only occur during compilation",
+      "Errors can be completely prevented"
+    ],
+    "correctAnswer": "Errors can and do occur at any stage when a program runs and users are unpredictable",
+    "explanation": "Errors can occur at any stage and it's impossible to anticipate every error. Users are unpredictable and may use programs in unexpected ways."
+  },
+  {
+    "id": 2,
+    "question": "What is the purpose of a try-except block?",
+    "options": [
+      "To make code run faster",
+      "To catch and handle exceptions that may occur",
+      "To define new functions",
+      "To import modules"
+    ],
+    "correctAnswer": "To catch and handle exceptions that may occur",
+    "explanation": "A try-except block allows you to catch and handle exceptions (errors) that may occur during code execution, preventing the program from crashing."
+  },
+  {
+    "id": 3,
+    "question": "What does the finally block do in exception handling?",
+    "options": [
+      "Executes only if an exception occurs",
+      "Executes only if no exception occurs",
+      "Executes always, regardless of whether an exception occurred",
+      "Prevents exceptions from occurring"
+    ],
+    "correctAnswer": "Executes always, regardless of whether an exception occurred",
+    "explanation": "The finally block executes always, whether an exception occurred or not. It's typically used for cleanup operations."
+  },
+  {
+    "id": 4,
+    "question": "What does the raise keyword do?",
+    "options": [
+      "Catches an exception",
+      "Manually triggers an exception",
+      "Prevents exceptions",
+      "Logs exceptions"
+    ],
+    "correctAnswer": "Manually triggers an exception",
+    "explanation": "The raise keyword is used to manually trigger (throw) an exception in your code."
+  },
+  {
+    "id": 5,
+    "question": "Which exception is raised when converting invalid input to int?",
+    "options": [
+      "TypeError",
+      "ValueError",
+      "IndexError",
+      "AttributeError"
+    ],
+    "correctAnswer": "ValueError",
+    "explanation": "ValueError is raised when a function receives an argument of correct type but inappropriate value, such as int('xyz')."
+  },
+  {
+    "id": 6,
+    "question": "Which exception is raised when dividing by zero?",
+    "options": [
+      "ValueError",
+      "ZeroDivisionError",
+      "ArithmeticError",
+      "MathError"
+    ],
+    "correctAnswer": "ZeroDivisionError",
+    "explanation": "ZeroDivisionError is specifically raised when attempting to divide by zero."
+  },
+  {
+    "id": 7,
+    "question": "Which exception is raised when trying to open a file that doesn't exist?",
+    "options": [
+      "FileNotFoundError",
+      "FileError",
+      "IOError",
+      "PathError"
+    ],
+    "correctAnswer": "FileNotFoundError",
+    "explanation": "FileNotFoundError is raised when attempting to open a file that doesn't exist."
+  },
+  {
+    "id": 8,
+    "question": "Which exception is raised when accessing an invalid list index?",
+    "options": [
+      "KeyError",
+      "ValueError",
+      "IndexError",
+      "ListError"
+    ],
+    "correctAnswer": "IndexError",
+    "explanation": "IndexError is raised when trying to access a list, tuple, or string index that is out of range."
+  },
+  {
+    "id": 9,
+    "question": "Given: try: num1=int(input()); num2=int(input()); print(num1); print(num2); except ValueError: print('Invalid input'); finally: print('Code complete'). What prints if inputs are 10 and 'xyz'?",
+    "options": [
+      "10, xyz, Code complete",
+      "Invalid input, Code complete",
+      "10, Invalid input, Code complete",
+      "ValueError, Code complete"
+    ],
+    "correctAnswer": "Invalid input, Code complete",
+    "explanation": "When 'xyz' is entered, ValueError is raised on the second input. The except block catches it and prints 'Invalid input', then finally always prints 'Code complete'."
+  },
+  {
+    "id": 10,
+    "question": "What is the Exception class in Python?",
+    "options": [
+      "A specific type of error",
+      "The base class for all exceptions",
+      "A function for handling errors",
+      "A module for error logging"
+    ],
+    "correctAnswer": "The base class for all exceptions",
+    "explanation": "Exception is the base class for all built-in exceptions in Python. Catching Exception catches most errors."
+  },
+  {
+    "id": 11,
+    "question": "Which exception is raised when a file already exists but you try to create it?",
+    "options": [
+      "FileNotFoundError",
+      "FileExistsError",
+      "IOError",
+      "FileError"
+    ],
+    "correctAnswer": "FileExistsError",
+    "explanation": "FileExistsError is raised when trying to create a file that already exists."
+  },
+  {
+    "id": 12,
+    "question": "Can exceptions occur across function calls?",
+    "options": [
+      "No, exceptions are limited to the function where they occur",
+      "Yes, exceptions can propagate up through function calls",
+      "Only if explicitly passed as parameters",
+      "Only in global scope"
+    ],
+    "correctAnswer": "Yes, exceptions can propagate up through function calls",
+    "explanation": "Exceptions can propagate up through function calls. If not caught in a function, the exception bubbles up to the calling function."
+  },
+  {
+    "id": 13,
+    "question": "What happens if you don't catch an exception?",
+    "options": [
+      "The exception is ignored",
+      "The program continues normally",
+      "The program terminates with an error",
+      "The exception is automatically handled"
+    ],
+    "correctAnswer": "The program terminates with an error",
+    "explanation": "If an exception is not caught, the program will terminate and display an error message showing the exception type and traceback."
+  },
+  {
+    "id": 14,
+    "question": "Can you have multiple except blocks for different exception types?",
+    "options": [
+      "No, only one except block is allowed",
+      "Yes, you can have multiple except blocks to handle different exceptions",
+      "Only if using finally",
+      "Only in functions"
+    ],
+    "correctAnswer": "Yes, you can have multiple except blocks to handle different exceptions",
+    "explanation": "You can have multiple except blocks to handle different types of exceptions separately, providing specific handling for each."
+  },
+  {
+    "id": 15,
+    "question": "Why might you encounter errors that are not your application's fault?",
+    "options": [
+      "Your code is always responsible for all errors",
+      "Errors never come from external sources",
+      "Interactions with other software, hardware, or platforms may cause errors",
+      "External errors don't affect your program"
+    ],
+    "correctAnswer": "Interactions with other software, hardware, or platforms may cause errors",
+    "explanation": "You may encounter errors from interactions with other software, different hardware/platforms, or other external sources beyond your application's control."
+  }
+]

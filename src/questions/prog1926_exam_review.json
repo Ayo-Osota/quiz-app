@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "question": "What is the result of: y + x ** y * x where x = 2, y = 3?",
+    "options": [
+      "14",
+      "19",
+      "27",
+      "11"
+    ],
+    "correctAnswer": "19",
+    "explanation": "Following BODMAS: x ** y = 2 ** 3 = 8, then 8 * x = 8 * 2 = 16, then y + 16 = 3 + 16 = 19."
+  },
+  {
+    "id": 2,
+    "question": "What is the final exam worth in PROG1926?",
+    "options": [
+      "25% of final grade",
+      "30% of final grade",
+      "35% of final grade",
+      "40% of final grade"
+    ],
+    "correctAnswer": "35% of final grade",
+    "explanation": "The final exam is worth 35% of your final grade in PROG1926."
+  },
+  {
+    "id": 3,
+    "question": "How much time is allocated for the PROG1926 final exam?",
+    "options": [
+      "2 hours",
+      "2.5 hours",
+      "3 hours",
+      "1.5 hours"
+    ],
+    "correctAnswer": "2.5 hours",
+    "explanation": "The final exam has a total time of 2.5 hours."
+  },
+  {
+    "id": 4,
+    "question": "What tool will be used for the PROG1926 final exam?",
+    "options": [
+      "Paper and pen",
+      "Lockdown browser",
+      "Regular web browser",
+      "PyCharm"
+    ],
+    "correctAnswer": "Lockdown browser",
+    "explanation": "Students will use lockdown browser for the exam, which will automatically submit when time ends."
+  },
+  {
+    "id": 5,
+    "question": "How many marks is the PROG1926 final exam out of?",
+    "options": [
+      "40 marks",
+      "45 marks",
+      "47 marks",
+      "50 marks"
+    ],
+    "correctAnswer": "47 marks",
+    "explanation": "The total marks for the exam is 47 (code creation = 3x3 = 9, multiple choice + short = rest, 1 each)."
+  },
+  {
+    "id": 6,
+    "question": "How many code creation questions are on the exam and how many marks each?",
+    "options": [
+      "2 questions, 5 marks each",
+      "3 questions, 3 marks each",
+      "4 questions, 2 marks each",
+      "5 questions, 3 marks each"
+    ],
+    "correctAnswer": "3 questions, 3 marks each",
+    "explanation": "There are 3 code creation questions worth 3 marks each, totaling 9 marks."
+  },
+  {
+    "id": 7,
+    "question": "What is allowed during the PROG1926 final exam?",
+    "options": [
+      "Notes and textbooks",
+      "Cell phones for emergencies",
+      "Only your laptop",
+      "Smart watches"
+    ],
+    "correctAnswer": "Only your laptop",
+    "explanation": "You must use your own laptop. Personal belongings (phone, backpack, jackets, headphones, smart watches) must be left at the front."
+  },
+  {
+    "id": 8,
+    "question": "What type of questions are on the exam?",
+    "options": [
+      "Only multiple choice",
+      "Multiple choice, short answer, and code creation",
+      "Only code creation",
+      "Essay questions only"
+    ],
+    "correctAnswer": "Multiple choice, short answer, and code creation",
+    "explanation": "The exam has multiple choice questions, short answer questions, and code creation problems."
+  },
+  {
+    "id": 9,
+    "question": "What happens if you violate exam rules (using external sources, talking to students)?",
+    "options": [
+      "Warning only",
+      "Asked to leave with a mark of 0% and academic offense",
+      "Points deduction",
+      "Retake opportunity"
+    ],
+    "correctAnswer": "Asked to leave with a mark of 0% and academic offense",
+    "explanation": "Violating rules (using notes, phone, talking to students) results in being asked to leave with 0% and is considered an academic offense."
+  },
+  {
+    "id": 10,
+    "question": "Given: answer = 'y'; if answer != 'y' or answer != 'n': print('Hello'); else: print('world'). What is printed?",
+    "options": [
+      "world",
+      "Hello",
+      "Both",
+      "Nothing"
+    ],
+    "correctAnswer": "Hello",
+    "explanation": "When answer='y': answer!='y' is False, but answer!='n' is True. With 'or', if either is True, the result is True, so 'Hello' prints."
+  },
+  {
+    "id": 11,
+    "question": "In exception handling, when does the 'finally' block execute?",
+    "options": [
+      "Only if exception occurs",
+      "Only if no exception occurs",
+      "Always, regardless of exception",
+      "Never"
+    ],
+    "correctAnswer": "Always, regardless of exception",
+    "explanation": "The 'finally' block executes always, whether an exception occurred or not."
+  },
+  {
+    "id": 12,
+    "question": "What does the 'raise' keyword do in Python?",
+    "options": [
+      "Catches an exception",
+      "Manually triggers/raises an exception",
+      "Prevents exceptions",
+      "Logs exceptions"
+    ],
+    "correctAnswer": "Manually triggers/raises an exception",
+    "explanation": "The 'raise' keyword is used to manually trigger (throw) an exception in your code."
+  },
+  {
+    "id": 13,
+    "question": "Which exception is raised by int(input('Enter integer: ')) when user enters 'xyz'?",
+    "options": [
+      "TypeError",
+      "ValueError",
+      "InputError",
+      "ConversionError"
+    ],
+    "correctAnswer": "ValueError",
+    "explanation": "ValueError is raised when converting invalid input to int, such as int('xyz')."
+  },
+  {
+    "id": 14,
+    "question": "What exceptions are covered in PROG1926?",
+    "options": [
+      "Only ValueError",
+      "ValueError, FileNotFoundError, FileExistsError, ZeroDivisionError, IndexError, Exception",
+      "Only Exception",
+      "All Python exceptions"
+    ],
+    "correctAnswer": "ValueError, FileNotFoundError, FileExistsError, ZeroDivisionError, IndexError, Exception",
+    "explanation": "The covered exceptions are: ValueError, FileNotFoundError, FileExistsError, ZeroDivisionError, IndexError, and Exception (base class)."
+  },
+  {
+    "id": 15,
+    "question": "Where will code for the exam be written?",
+    "options": [
+      "In PyCharm",
+      "In an online code editor",
+      "Inside a text area with no IDE",
+      "On paper"
+    ],
+    "correctAnswer": "Inside a text area with no IDE",
+    "explanation": "You will write code inside a text area to answer questions. No online code editor or IDE will be available."
+  },
+  {
+    "id": 16,
+    "question": "What topics from week 1 to week 14 are covered on the exam?",
+    "options": [
+      "Only topics from weeks 10-14",
+      "All topics from week 1 to week 14 (inclusive)",
+      "Only topics from midterm",
+      "Only new topics after midterm"
+    ],
+    "correctAnswer": "All topics from week 1 to week 14 (inclusive)",
+    "explanation": "All topics covered from week 1 to week 14 (inclusive) in eConestoga are on the exam, including PowerPoints, practice questions, and in-class exercises."
+  },
+  {
+    "id": 17,
+    "question": "What happens when time ends on the exam?",
+    "options": [
+      "You get extra time",
+      "The lockdown browser automatically submits",
+      "You can finish at home",
+      "The exam is voided"
+    ],
+    "correctAnswer": "The lockdown browser automatically submits",
+    "explanation": "When time ends, the lockdown browser will automatically submit your exam."
+  },
+  {
+    "id": 18,
+    "question": "Given: count=0; while True: print('Welcome'); count+=1; if count==9: break. How many times does the loop execute?",
+    "options": [
+      "8 times",
+      "9 times",
+      "10 times",
+      "Infinite"
+    ],
+    "correctAnswer": "9 times",
+    "explanation": "The loop executes 9 times. It prints 'Welcome' 9 times, and count is 9 after exiting the loop."
+  },
+  {
+    "id": 19,
+    "question": "For the loop: for i in range(1, n): print(n). How many times does it run?",
+    "options": [
+      "n times",
+      "n-1 times",
+      "n+1 times",
+      "1 time"
+    ],
+    "correctAnswer": "n-1 times",
+    "explanation": "range(1, n) runs n-1 times. The loop iterates from 1 to n-1 (inclusive)."
+  },
+  {
+    "id": 20,
+    "question": "What is the value of n after: for i in range(1, n): print(n)?",
+    "options": [
+      "n",
+      "n-1",
+      "n+1",
+      "0"
+    ],
+    "correctAnswer": "n",
+    "explanation": "The value of n remains unchanged after the loop. The loop variable i changes, but n stays the same."
+  }
+]

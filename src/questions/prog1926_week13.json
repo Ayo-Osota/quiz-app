@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is the goal of test planning?",
+    "options": [
+      "To write all the code",
+      "To create a list of tasks that identify all unmet requirements",
+      "To deploy the application",
+      "To design the user interface"
+    ],
+    "correctAnswer": "To create a list of tasks that identify all unmet requirements",
+    "explanation": "The goal of test planning is to create a list of tasks which, if performed, will identify all the requirements that have not been met in the software."
+  },
+  {
+    "id": 2,
+    "question": "What is a test plan?",
+    "options": [
+      "A document that lists all bugs",
+      "A document that outlines the overall approach to testing",
+      "A programming language specification",
+      "A deployment checklist"
+    ],
+    "correctAnswer": "A document that outlines the overall approach to testing",
+    "explanation": "The test plan documents the overall approach to the test and serves as a summary of the test activities that will be performed."
+  },
+  {
+    "id": 3,
+    "question": "What does a test plan show?",
+    "options": [
+      "Only the test results",
+      "How the tests will be organized and all the testers' needs",
+      "The source code",
+      "The project budget"
+    ],
+    "correctAnswer": "How the tests will be organized and all the testers' needs",
+    "explanation": "The test plan shows how the tests will be organized and outlines all the testers' needs which must be met to properly carry out the test."
+  },
+  {
+    "id": 4,
+    "question": "Who should inspect the test plan?",
+    "options": [
+      "Only the project manager",
+      "The test team",
+      "Only the developers",
+      "Only the client"
+    ],
+    "correctAnswer": "The test team",
+    "explanation": "The test plan should be inspected by a test team to ensure it's comprehensive and meets testing requirements."
+  },
+  {
+    "id": 5,
+    "question": "What is the main work product of test planning?",
+    "options": [
+      "The source code",
+      "The test plan",
+      "The user manual",
+      "The deployment script"
+    ],
+    "correctAnswer": "The test plan",
+    "explanation": "The main work product of test planning is the test plan document itself."
+  },
+  {
+    "id": 6,
+    "question": "What is a test scenario?",
+    "options": [
+      "A specific test case with detailed steps",
+      "A high-level description of what to test",
+      "A bug report",
+      "A deployment environment"
+    ],
+    "correctAnswer": "A high-level description of what to test",
+    "explanation": "A test scenario is a high-level description of what functionality or feature needs to be tested, covering one or more test cases."
+  },
+  {
+    "id": 7,
+    "question": "What is a test case?",
+    "options": [
+      "A general testing strategy",
+      "A specific set of test inputs, execution conditions, and expected results",
+      "A bug tracking system",
+      "A testing tool"
+    ],
+    "correctAnswer": "A specific set of test inputs, execution conditions, and expected results",
+    "explanation": "A test case is a specific set of test inputs, execution conditions, and expected results developed for a particular objective."
+  },
+  {
+    "id": 8,
+    "question": "What should a test case include?",
+    "options": [
+      "Only the expected result",
+      "Test inputs, execution steps, and expected results",
+      "Only the test description",
+      "Only the bug fixes"
+    ],
+    "correctAnswer": "Test inputs, execution steps, and expected results",
+    "explanation": "A test case should include test inputs, detailed execution steps, and expected results to verify functionality."
+  },
+  {
+    "id": 9,
+    "question": "Why is testing important in software development?",
+    "options": [
+      "It's not necessary if code is written well",
+      "To identify defects and ensure requirements are met",
+      "Only to satisfy management",
+      "To slow down development"
+    ],
+    "correctAnswer": "To identify defects and ensure requirements are met",
+    "explanation": "Testing is crucial to identify defects, ensure all requirements are met, and verify that the software works as intended."
+  },
+  {
+    "id": 10,
+    "question": "What is the relationship between test scenarios and test cases?",
+    "options": [
+      "They are the same thing",
+      "Test scenarios are high-level; test cases are detailed and multiple test cases can belong to one scenario",
+      "Test cases contain test scenarios",
+      "There is no relationship"
+    ],
+    "correctAnswer": "Test scenarios are high-level; test cases are detailed and multiple test cases can belong to one scenario",
+    "explanation": "Test scenarios provide high-level descriptions, while test cases provide detailed steps. Multiple test cases can be derived from a single test scenario."
+  },
+  {
+    "id": 11,
+    "question": "What types of testing might be included in a test plan?",
+    "options": [
+      "Only unit testing",
+      "Unit, integration, system, and acceptance testing",
+      "Only manual testing",
+      "Only automated testing"
+    ],
+    "correctAnswer": "Unit, integration, system, and acceptance testing",
+    "explanation": "A comprehensive test plan typically includes various testing levels: unit, integration, system, and acceptance testing."
+  },
+  {
+    "id": 12,
+    "question": "What should be documented when a test case fails?",
+    "options": [
+      "Nothing, just fix it",
+      "The actual result, expected result, and steps to reproduce",
+      "Only the error message",
+      "Only who wrote the code"
+    ],
+    "correctAnswer": "The actual result, expected result, and steps to reproduce",
+    "explanation": "When a test fails, document the actual result versus expected result, and steps to reproduce the issue for debugging."
+  },
+  {
+    "id": 13,
+    "question": "What is the purpose of test execution?",
+    "options": [
+      "To write test plans",
+      "To run test cases and record results",
+      "To design the software",
+      "To deploy the application"
+    ],
+    "correctAnswer": "To run test cases and record results",
+    "explanation": "Test execution involves running the test cases according to the test plan and recording the results."
+  },
+  {
+    "id": 14,
+    "question": "Who benefits from a well-written test plan?",
+    "options": [
+      "Only testers",
+      "Testers, developers, project managers, and stakeholders",
+      "Only project managers",
+      "Only the client"
+    ],
+    "correctAnswer": "Testers, developers, project managers, and stakeholders",
+    "explanation": "A well-written test plan benefits the entire team including testers, developers, project managers, and stakeholders by providing clear testing direction."
+  },
+  {
+    "id": 15,
+    "question": "What makes a good test case?",
+    "options": [
+      "Vague and general",
+      "Clear, specific, repeatable, and verifiable",
+      "Long and complex",
+      "Focused only on positive scenarios"
+    ],
+    "correctAnswer": "Clear, specific, repeatable, and verifiable",
+    "explanation": "A good test case is clear, specific, repeatable (can be executed consistently), and verifiable (has clear pass/fail criteria)."
+  }
+]

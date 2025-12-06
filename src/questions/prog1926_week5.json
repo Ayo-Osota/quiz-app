@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is iteration in programming?",
+    "options": [
+      "Making decisions with if statements",
+      "Running code repeatedly (looping)",
+      "Defining functions",
+      "Handling errors"
+    ],
+    "correctAnswer": "Running code repeatedly (looping)",
+    "explanation": "Iteration is running code repeatedly, commonly known as looping. It allows code to execute multiple times."
+  },
+  {
+    "id": 2,
+    "question": "How many times does range(5) iterate?",
+    "options": [
+      "4 times, values 1,2,3,4",
+      "5 times, values 0,1,2,3,4",
+      "6 times, values 0,1,2,3,4,5",
+      "5 times, values 1,2,3,4,5"
+    ],
+    "correctAnswer": "5 times, values 0,1,2,3,4",
+    "explanation": "range(5) iterates 5 times with iterator values 0, 1, 2, 3, 4. It starts at 0 and goes up to but not including 5."
+  },
+  {
+    "id": 3,
+    "question": "How many times does range(1, 5) iterate?",
+    "options": [
+      "5 times, values 1,2,3,4,5",
+      "4 times, values 1,2,3,4",
+      "3 times, values 1,2,3",
+      "5 times, values 0,1,2,3,4"
+    ],
+    "correctAnswer": "4 times, values 1,2,3,4",
+    "explanation": "range(1, 5) iterates 4 times with values 1, 2, 3, 4. It starts at 1 and goes up to but not including 5."
+  },
+  {
+    "id": 4,
+    "question": "What is the purpose of the break statement?",
+    "options": [
+      "To pause the loop temporarily",
+      "To exit the loop immediately",
+      "To skip the current iteration",
+      "To restart the loop"
+    ],
+    "correctAnswer": "To exit the loop immediately",
+    "explanation": "The break statement exits the loop immediately, stopping all remaining iterations."
+  },
+  {
+    "id": 5,
+    "question": "What is the structure of a do-while loop in Python?",
+    "options": [
+      "do: code while condition",
+      "while True: code; if condition: break",
+      "while condition do: code",
+      "Python doesn't have do-while loops"
+    ],
+    "correctAnswer": "while True: code; if condition: break",
+    "explanation": "Python implements do-while as an infinite loop (while True:) with a break statement. This ensures the code runs at least once."
+  },
+  {
+    "id": 6,
+    "question": "Given: count = 0; while True: print('Welcome'); count += 1; if count == 9: break. How many times is 'Welcome' printed?",
+    "options": [
+      "8 times",
+      "9 times",
+      "10 times",
+      "Infinite times"
+    ],
+    "correctAnswer": "9 times",
+    "explanation": "'Welcome' is printed 9 times. The loop starts at count=0 and breaks when count==9, so it prints when count is 0,1,2,3,4,5,6,7,8."
+  },
+  {
+    "id": 7,
+    "question": "What is the value of count after the loop exits: count = 0; while True: print('Welcome'); count += 1; if count == 9: break?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "0"
+    ],
+    "correctAnswer": "9",
+    "explanation": "After the loop exits, count is 9 because the break occurs when count == 9."
+  },
+  {
+    "id": 8,
+    "question": "For loop: for i in range(1, n): print(n). How many times does it run?",
+    "options": [
+      "n times",
+      "n-1 times",
+      "n+1 times",
+      "1 time"
+    ],
+    "correctAnswer": "n-1 times",
+    "explanation": "range(1, n) runs n-1 times. For example, if n=5, it runs with i=1,2,3,4 (4 times)."
+  },
+  {
+    "id": 9,
+    "question": "Given: i = 3; while i < 20: print('hello'); i += 1; if i == 5: break. How many times does it print 'hello'?",
+    "options": [
+      "1 time",
+      "2 times",
+      "3 times",
+      "17 times"
+    ],
+    "correctAnswer": "2 times",
+    "explanation": "It prints 'hello' 2 times. First iteration: i=3, print, i becomes 4. Second iteration: i=4, print, i becomes 5, break."
+  },
+  {
+    "id": 10,
+    "question": "What is the value of i after this loop: i = 3; while i < 20: print('hello'); i += 1; if i == 5: break?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "20"
+    ],
+    "correctAnswer": "5",
+    "explanation": "After the loop exits via break, i equals 5 because the break occurs when i == 5."
+  },
+  {
+    "id": 11,
+    "question": "Given: i = 3; while i > 20: print('hello'); i += 1; if i == 5: break. How many times does it print 'hello'?",
+    "options": [
+      "0 times",
+      "1 time",
+      "2 times",
+      "17 times"
+    ],
+    "correctAnswer": "0 times",
+    "explanation": "It prints 'hello' 0 times because the condition i > 20 is false from the start (3 > 20 is False), so the loop never executes."
+  },
+  {
+    "id": 12,
+    "question": "What is the value of i after this loop: i = 3; while i > 20: print('hello'); i += 1; if i == 5: break?",
+    "options": [
+      "3",
+      "5",
+      "20",
+      "0"
+    ],
+    "correctAnswer": "3",
+    "explanation": "i remains 3 because the loop condition is false from the start, so the loop body never executes and i is never incremented."
+  },
+  {
+    "id": 13,
+    "question": "What are the three main loop types in Python?",
+    "options": [
+      "for, foreach, repeat",
+      "while, for, do-while",
+      "loop, iterate, cycle",
+      "begin, middle, end"
+    ],
+    "correctAnswer": "while, for, do-while",
+    "explanation": "The three main loop types are while, for, and do-while (implemented as while True with break)."
+  },
+  {
+    "id": 14,
+    "question": "What is the difference between a while loop and a do-while loop?",
+    "options": [
+      "There is no difference",
+      "while checks condition first; do-while executes at least once then checks",
+      "do-while is faster",
+      "while is for numbers, do-while is for strings"
+    ],
+    "correctAnswer": "while checks condition first; do-while executes at least once then checks",
+    "explanation": "A while loop checks the condition before executing, while a do-while loop executes the code block at least once before checking the condition."
+  },
+  {
+    "id": 15,
+    "question": "How would you generate random numbers in Python?",
+    "options": [
+      "Using the random module",
+      "Using the math module",
+      "Random numbers are built-in",
+      "Using the time module"
+    ],
+    "correctAnswer": "Using the random module",
+    "explanation": "Python's random module provides functions to generate random numbers for various use cases."
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is the simplest way to produce output in Python?",
+    "options": [
+      "Using the write() function",
+      "Using the print statement/function",
+      "Using the display() function",
+      "Using the output() function"
+    ],
+    "correctAnswer": "Using the print statement/function",
+    "explanation": "The simplest way to produce output is using the print statement/function, which converts expressions to strings and writes to standard output."
+  },
+  {
+    "id": 2,
+    "question": "What is a file path?",
+    "options": [
+      "The content of a file",
+      "The location of a file in the file system",
+      "The size of a file",
+      "The type of a file"
+    ],
+    "correctAnswer": "The location of a file in the file system",
+    "explanation": "A file path specifies the location of a file in the file system, showing how to navigate to the file."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between absolute and relative file paths?",
+    "options": [
+      "There is no difference",
+      "Absolute paths start from root directory; relative paths start from current directory",
+      "Absolute paths are shorter",
+      "Relative paths always start with a drive letter"
+    ],
+    "correctAnswer": "Absolute paths start from root directory; relative paths start from current directory",
+    "explanation": "An absolute path specifies the complete path from the root directory, while a relative path is relative to the current working directory."
+  },
+  {
+    "id": 4,
+    "question": "How do you open a file for reading in Python?",
+    "options": [
+      "open('filename', 'r')",
+      "read('filename')",
+      "file.open('filename')",
+      "load('filename')"
+    ],
+    "correctAnswer": "open('filename', 'r')",
+    "explanation": "You open a file for reading using open('filename', 'r'), where 'r' mode is for reading."
+  },
+  {
+    "id": 5,
+    "question": "How do you open a file for writing in Python?",
+    "options": [
+      "open('filename', 'r')",
+      "open('filename', 'w')",
+      "write('filename')",
+      "save('filename')"
+    ],
+    "correctAnswer": "open('filename', 'w')",
+    "explanation": "You open a file for writing using open('filename', 'w'), where 'w' mode is for writing (creates new or overwrites existing)."
+  },
+  {
+    "id": 6,
+    "question": "What does the 'a' mode do when opening a file?",
+    "options": [
+      "Reads the file",
+      "Appends to the end of the file",
+      "Deletes the file",
+      "Copies the file"
+    ],
+    "correctAnswer": "Appends to the end of the file",
+    "explanation": "The 'a' mode opens a file for appending, adding new content to the end without deleting existing content."
+  },
+  {
+    "id": 7,
+    "question": "What module provides file and directory operations in Python?",
+    "options": [
+      "file module",
+      "os module",
+      "sys module",
+      "io module"
+    ],
+    "correctAnswer": "os module",
+    "explanation": "The os module provides functions for interacting with the operating system, including file and directory operations."
+  },
+  {
+    "id": 8,
+    "question": "What is os.path used for?",
+    "options": [
+      "Creating new files",
+      "Manipulating file paths and checking file properties",
+      "Deleting files",
+      "Reading file contents"
+    ],
+    "correctAnswer": "Manipulating file paths and checking file properties",
+    "explanation": "os.path is a submodule that provides functions for manipulating file paths and checking if files or directories exist."
+  },
+  {
+    "id": 9,
+    "question": "How do you check if a file exists using os.path?",
+    "options": [
+      "os.path.exists('filename')",
+      "os.path.check('filename')",
+      "os.file.exists('filename')",
+      "os.exists('filename')"
+    ],
+    "correctAnswer": "os.path.exists('filename')",
+    "explanation": "os.path.exists('filename') returns True if the file exists, False otherwise."
+  },
+  {
+    "id": 10,
+    "question": "What should you do after finishing operations on a file?",
+    "options": [
+      "Nothing, Python handles it automatically",
+      "Close the file using file.close()",
+      "Delete the file",
+      "Restart the program"
+    ],
+    "correctAnswer": "Close the file using file.close()",
+    "explanation": "You should always close a file after finishing operations using file.close() to free up system resources."
+  },
+  {
+    "id": 11,
+    "question": "What is a better way to handle file operations that ensures files are closed?",
+    "options": [
+      "Always use open() and close()",
+      "Use the 'with' statement (context manager)",
+      "Don't close files",
+      "Use try-except only"
+    ],
+    "correctAnswer": "Use the 'with' statement (context manager)",
+    "explanation": "Using 'with open() as file:' ensures the file is automatically closed when the block ends, even if an error occurs."
+  },
+  {
+    "id": 12,
+    "question": "How do you read the entire contents of a file?",
+    "options": [
+      "file.read()",
+      "file.get()",
+      "file.content()",
+      "file.all()"
+    ],
+    "correctAnswer": "file.read()",
+    "explanation": "The read() method reads the entire contents of a file and returns it as a string."
+  },
+  {
+    "id": 13,
+    "question": "How do you read a file line by line?",
+    "options": [
+      "file.readline() or iterate with for line in file:",
+      "file.getline()",
+      "file.nextline()",
+      "file.lines()"
+    ],
+    "correctAnswer": "file.readline() or iterate with for line in file:",
+    "explanation": "You can use readline() to read one line at a time, or iterate through the file object directly with 'for line in file:'."
+  },
+  {
+    "id": 14,
+    "question": "What happens when you open a file in 'w' mode if the file already exists?",
+    "options": [
+      "An error is raised",
+      "The existing content is overwritten",
+      "Content is appended to the end",
+      "A new file with a different name is created"
+    ],
+    "correctAnswer": "The existing content is overwritten",
+    "explanation": "Opening a file in 'w' mode overwrites any existing content. If you want to preserve existing content, use 'a' (append) mode."
+  },
+  {
+    "id": 15,
+    "question": "What module function can help you work with file paths in a platform-independent way?",
+    "options": [
+      "os.path.join()",
+      "path.combine()",
+      "file.join()",
+      "os.combine()"
+    ],
+    "correctAnswer": "os.path.join()",
+    "explanation": "os.path.join() constructs file paths in a platform-independent way, automatically using the correct path separator for the operating system."
+  }
+]
