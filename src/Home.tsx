@@ -17,9 +17,11 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to the Home Page</h1>
+      <h1 className="text-4xl font-bold mb-4 mt-16">
+        Welcome to the Home Page
+      </h1>
 
-      <div className="max-w-xl mx-auto bg-white p-6 rounded shadow">
+      <div className="max-w-xl mx-auto bg-white p-6 rounded shadow overflow-scroll">
         <h1 className="text-xl font-bold mb-4">
           Select Modules (you can select multiple)
         </h1>
@@ -34,18 +36,18 @@ const Home = () => {
             {m.title}
           </label>
         ))}
-        <button
-          onClick={() => {
-            startQuiz(selectedModules);
-            navigate("/quiz");
-          }}
-          disabled={selectedModules.length === 0}
-          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-        >
-          Start Quiz
-        </button>
       </div>
-      <p>
+      <button
+        onClick={() => {
+          startQuiz(selectedModules);
+          navigate("/quiz");
+        }}
+        disabled={selectedModules.length === 0}
+        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+      >
+        Start Quiz
+      </button>
+      <p className="mb-16 mt-4">
         Note: AI uses course materials to generate this quiz. Please verify
         answers for accuracy.
       </p>
