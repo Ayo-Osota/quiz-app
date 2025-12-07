@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is the basic syntax for a WHERE clause using equal to?",
+    "options": [
+      "SELECT ... FROM ... WHERE column = value",
+      "SELECT ... FROM ... FILTER column = value",
+      "SELECT ... WHERE column = value FROM ...",
+      "SELECT ... FROM ... IF column = value"
+    ],
+    "correctAnswer": "SELECT ... FROM ... WHERE column = value",
+    "explanation": "WHERE clause filters rows based on conditions. Example: SELECT lastName, firstName FROM Person WHERE provinceCode = 'ON'."
+  },
+  {
+    "id": 2,
+    "question": "Which type of quotes should be used around literal string values in SQL?",
+    "options": [
+      "Double quotes",
+      "Single quotes",
+      "Either single or double quotes",
+      "No quotes needed"
+    ],
+    "correctAnswer": "Single quotes",
+    "explanation": "Single quotes are used around literal values in SQL statements. Example: WHERE provinceCode = 'ON'."
+  },
+  {
+    "id": 3,
+    "question": "When are double quotes used in SQL?",
+    "options": [
+      "For literal string values",
+      "For nonstandard column names with spaces or special characters",
+      "For table names",
+      "For numeric values"
+    ],
+    "correctAnswer": "For nonstandard column names with spaces or special characters",
+    "explanation": "Double quotes are used for nonstandard column names. Example: WHERE value = \"name with embedded spaces\"."
+  },
+  {
+    "id": 4,
+    "question": "What is the not equal operator in SQL?",
+    "options": [
+      "!==",
+      "!=",
+      "<>",
+      "Both != and <>"
+    ],
+    "correctAnswer": "Both != and <>",
+    "explanation": "Both != and <> are valid not equal operators. Example: SELECT lastName, firstName FROM Person WHERE provinceCode != 'ON'."
+  },
+  {
+    "id": 5,
+    "question": "Which query finds all students with a balance greater than $100?",
+    "options": [
+      "SELECT balance FROM Student WHERE balance > 100.00",
+      "SELECT balance FROM Student HAVING balance > 100.00",
+      "SELECT balance FROM Student IF balance > 100.00",
+      "SELECT balance FROM Student FILTER balance > 100.00"
+    ],
+    "correctAnswer": "SELECT balance FROM Student WHERE balance > 100.00",
+    "explanation": "WHERE with > (greater than) filters rows. Example: SELECT balance FROM Student WHERE balance > 100.00 ORDER BY balance."
+  },
+  {
+    "id": 6,
+    "question": "What does the NOT operator do in a WHERE clause?",
+    "options": [
+      "Includes rows that meet the condition",
+      "Excludes rows that meet the condition",
+      "Counts rows that meet the condition",
+      "Orders rows by the condition"
+    ],
+    "correctAnswer": "Excludes rows that meet the condition",
+    "explanation": "NOT negates a condition, excluding matching rows. Example: WHERE NOT academicStatus = 'N' excludes students with status 'N'."
+  },
+  {
+    "id": 7,
+    "question": "What does the AND operator do in compound expressions?",
+    "options": [
+      "Includes rows that meet condition1, condition2, or both",
+      "Includes only rows that meet both condition1 and condition2",
+      "Includes rows that meet either condition1 or condition2",
+      "Negates both conditions"
+    ],
+    "correctAnswer": "Includes only rows that meet both condition1 and condition2",
+    "explanation": "AND requires both conditions to be true. Example: WHERE academicStatus = 'N' AND financialStatus = 'N'."
+  },
+  {
+    "id": 8,
+    "question": "What does the OR operator do in compound expressions?",
+    "options": [
+      "Includes only rows that meet both conditions",
+      "Includes rows that meet condition1, condition2, or both",
+      "Excludes rows that meet either condition",
+      "Requires both conditions to be false"
+    ],
+    "correctAnswer": "Includes rows that meet condition1, condition2, or both",
+    "explanation": "OR includes rows meeting any of the conditions. Example: WHERE academicStatus = 'N' OR financialStatus = 'N'."
+  },
+  {
+    "id": 9,
+    "question": "What is the order of precedence for logical operators?",
+    "options": [
+      "OR, AND, NOT",
+      "NOT, OR, AND",
+      "NOT, AND, OR",
+      "AND, OR, NOT"
+    ],
+    "correctAnswer": "NOT, AND, OR",
+    "explanation": "Precedence order is: 1) NOT (highest, because it's unary), 2) AND, 3) OR. AND takes precedence over OR by convention."
+  },
+  {
+    "id": 10,
+    "question": "What is the 'golden rule' for operator precedence?",
+    "options": [
+      "Always use NOT first",
+      "Never mix AND and OR",
+      "When in doubt, use parentheses",
+      "Always write conditions in alphabetical order"
+    ],
+    "correctAnswer": "When in doubt, use parentheses",
+    "explanation": "Parentheses clarify expression evaluation order, just like in arithmetic operations. Use them to avoid ambiguity."
+  },
+  {
+    "id": 11,
+    "question": "Which query correctly uses NOT to find students not in normal status?",
+    "options": [
+      "SELECT * FROM Student WHERE NOT academicStatus = 'N'",
+      "SELECT * FROM Student WHERE academicStatus NOT = 'N'",
+      "SELECT * FROM Student WHERE academicStatus != 'N'",
+      "Both A and C are correct"
+    ],
+    "correctAnswer": "Both A and C are correct",
+    "explanation": "Both WHERE NOT academicStatus = 'N' and WHERE academicStatus != 'N' exclude students with status 'N'."
+  },
+  {
+    "id": 12,
+    "question": "What result does this query produce? WHERE academicStatus = 'N' AND financialStatus = 'N'",
+    "options": [
+      "Students with academic status 'N' only",
+      "Students with financial status 'N' only",
+      "Students with both academic and financial status 'N'",
+      "Students with either academic or financial status 'N'"
+    ],
+    "correctAnswer": "Students with both academic and financial status 'N'",
+    "explanation": "AND requires both conditions to be true, so only students with both statuses set to 'N' are returned."
+  },
+  {
+    "id": 13,
+    "question": "What result does this query produce? WHERE academicStatus = 'N' OR financialStatus = 'N'",
+    "options": [
+      "Students with both statuses 'N'",
+      "Students with academic status 'N' only",
+      "Students with either or both statuses 'N'",
+      "Students with neither status 'N'"
+    ],
+    "correctAnswer": "Students with either or both statuses 'N'",
+    "explanation": "OR includes rows meeting any condition, so students with academicStatus = 'N', financialStatus = 'N', or both are included."
+  },
+  {
+    "id": 14,
+    "question": "Can single quotes be omitted for numeric literals in many databases?",
+    "options": [
+      "Yes, but only for integers",
+      "Yes, for both integers and decimals",
+      "No, quotes are always required",
+      "Only in SELECT clauses"
+    ],
+    "correctAnswer": "Yes, for both integers and decimals",
+    "explanation": "Many database products allow omitting single quotes for numeric literals (both integers and decimals)."
+  },
+  {
+    "id": 15,
+    "question": "Why is operator precedence compared to 'order of operations' in arithmetic?",
+    "options": [
+      "Because they both use parentheses",
+      "Because both determine the sequence in which operations are evaluated",
+      "Because both use the same operators",
+      "Because both are case-sensitive"
+    ],
+    "correctAnswer": "Because both determine the sequence in which operations are evaluated",
+    "explanation": "Like arithmetic order of operations (multiplication before addition), operator precedence determines how SQL evaluates compound expressions."
+  }
+]

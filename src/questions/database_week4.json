@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What are the two methods to retrieve data from multiple tables?",
+    "options": [
+      "Compare & Contrast and SQL JOINS",
+      "INNER JOIN and OUTER JOIN",
+      "WHERE and HAVING",
+      "SELECT and FROM"
+    ],
+    "correctAnswer": "Compare & Contrast and SQL JOINS",
+    "explanation": "There are two methods: Compare & Contrast (using WHERE clause) and SQL JOINS (using explicit JOIN syntax)."
+  },
+  {
+    "id": 2,
+    "question": "How does the Compare & Contrast method work?",
+    "options": [
+      "It uses JOIN keyword explicitly",
+      "It compares values in a given table against another using WHERE clause",
+      "It uses HAVING clause",
+      "It requires a subquery"
+    ],
+    "correctAnswer": "It compares values in a given table against another using WHERE clause",
+    "explanation": "Compare & Contrast puts a comparison statement in the WHERE clause to match rows from different tables."
+  },
+  {
+    "id": 3,
+    "question": "What is an example of Compare & Contrast syntax?",
+    "options": [
+      "SELECT * FROM Movies JOIN Inventory",
+      "SELECT * FROM Movies, Inventory WHERE Movies.MovieID = Inventory.MovieID",
+      "SELECT * FROM Movies CROSS JOIN Inventory",
+      "SELECT * FROM Movies LEFT JOIN Inventory"
+    ],
+    "correctAnswer": "SELECT * FROM Movies, Inventory WHERE Movies.MovieID = Inventory.MovieID",
+    "explanation": "Compare & Contrast lists multiple tables in FROM clause separated by commas, then uses WHERE to specify the relationship."
+  },
+  {
+    "id": 4,
+    "question": "What does SQL JOIN do?",
+    "options": [
+      "Deletes rows from multiple tables",
+      "Combines rows from two or more tables based on a related column",
+      "Creates new tables",
+      "Sorts data from multiple tables"
+    ],
+    "correctAnswer": "Combines rows from two or more tables based on a related column",
+    "explanation": "JOINs combine rows from multiple tables using related columns like foreign keys."
+  },
+  {
+    "id": 5,
+    "question": "When are JOINs typically used?",
+    "options": [
+      "For simple SELECT queries",
+      "When extracting data from tables with one-to-many or many-to-many relationships",
+      "Only for UPDATE statements",
+      "For creating indexes"
+    ],
+    "correctAnswer": "When extracting data from tables with one-to-many or many-to-many relationships",
+    "explanation": "JOINs are used to extract data from tables that have relationships like one-to-many or many-to-many."
+  },
+  {
+    "id": 6,
+    "question": "What does an INNER JOIN return?",
+    "options": [
+      "All rows from both tables",
+      "Only matching rows from both tables",
+      "All rows from the left table",
+      "All rows from the right table"
+    ],
+    "correctAnswer": "Only matching rows from both tables",
+    "explanation": "INNER JOIN returns only rows where there are matching values in both tables."
+  },
+  {
+    "id": 7,
+    "question": "How many tables can be joined at the same time with INNER JOIN?",
+    "options": [
+      "Maximum of 2 tables",
+      "Maximum of 10 tables",
+      "Maximum of 256 tables",
+      "No limit"
+    ],
+    "correctAnswer": "Maximum of 256 tables",
+    "explanation": "INNER JOIN enables a maximum of 256 tables to be joined at the same time."
+  },
+  {
+    "id": 8,
+    "question": "Does INNER JOIN do the same thing as Compare & Contrast?",
+    "options": [
+      "No, they are completely different",
+      "Yes, they produce the same results",
+      "INNER JOIN is faster",
+      "Compare & Contrast is more powerful"
+    ],
+    "correctAnswer": "Yes, they produce the same results",
+    "explanation": "INNER JOIN does the same thing as Compare & Contrast—both return only matching rows."
+  },
+  {
+    "id": 9,
+    "question": "What is the correct INNER JOIN syntax?",
+    "options": [
+      "SELECT ... FROM Table1 INNER JOIN Table2 ON <Relation>",
+      "SELECT ... FROM Table1, Table2 WHERE <Relation>",
+      "SELECT ... FROM Table1 JOIN WITH Table2 ON <Relation>",
+      "SELECT ... FROM Table1 CONNECT Table2 ON <Relation>"
+    ],
+    "correctAnswer": "SELECT ... FROM Table1 INNER JOIN Table2 ON <Relation>",
+    "explanation": "INNER JOIN syntax: Table1 INNER JOIN Table2 ON <Relation>. The ON clause specifies the join criteria."
+  },
+  {
+    "id": 10,
+    "question": "What does the ON clause specify in a JOIN?",
+    "options": [
+      "The columns to select",
+      "The JOIN criteria/relationship between tables",
+      "The sorting order",
+      "The grouping criteria"
+    ],
+    "correctAnswer": "The JOIN criteria/relationship between tables",
+    "explanation": "The ON clause specifies which columns relate the tables. Example: ON Movies.MovieID = Inventory.MovieID."
+  },
+  {
+    "id": 11,
+    "question": "Is the keyword INNER required in an INNER JOIN?",
+    "options": [
+      "Yes, always required",
+      "No, you can omit INNER and just use JOIN",
+      "Only required in MySQL",
+      "Only required with three or more tables"
+    ],
+    "correctAnswer": "No, you can omit INNER and just use JOIN",
+    "explanation": "The keyword INNER can be removed; JOIN alone defaults to INNER JOIN."
+  },
+  {
+    "id": 12,
+    "question": "Can you add a WHERE clause after a JOIN?",
+    "options": [
+      "No, WHERE cannot be used with JOIN",
+      "Yes, a WHERE clause can be added to subset the results",
+      "Only with LEFT JOIN",
+      "Only in subqueries"
+    ],
+    "correctAnswer": "Yes, a WHERE clause can be added to subset the results",
+    "explanation": "After joining tables with ON, you can add WHERE to further filter the result set."
+  },
+  {
+    "id": 13,
+    "question": "Which query uses Compare & Contrast correctly?",
+    "options": [
+      "SELECT DISTINCT M.MovieName FROM Movies M, Inventory I WHERE M.MovieID = I.MovieID",
+      "SELECT DISTINCT M.MovieName FROM Movies M JOIN Inventory I",
+      "SELECT DISTINCT M.MovieName FROM Movies M WHERE M.MovieID",
+      "SELECT DISTINCT MovieName FROM Movies INNER JOIN Inventory"
+    ],
+    "correctAnswer": "SELECT DISTINCT M.MovieName FROM Movies M, Inventory I WHERE M.MovieID = I.MovieID",
+    "explanation": "Compare & Contrast lists tables in FROM with aliases, then uses WHERE to compare the related columns."
+  },
+  {
+    "id": 14,
+    "question": "Which statement correctly uses INNER JOIN with aliases?",
+    "options": [
+      "SELECT DISTINCT MovieName FROM Movies INNER JOIN Inventory",
+      "SELECT DISTINCT M.MovieName FROM Movies M INNER JOIN Inventory I ON M.MovieID = I.MovieID",
+      "SELECT DISTINCT M.MovieName FROM Movies AS M WHERE MovieID = Inventory.MovieID",
+      "SELECT MovieName FROM Movies, Inventory ON MovieID = MovieID"
+    ],
+    "correctAnswer": "SELECT DISTINCT M.MovieName FROM Movies M INNER JOIN Inventory I ON M.MovieID = I.MovieID",
+    "explanation": "INNER JOIN uses ON clause to specify the relationship. Table aliases (M, I) make the query more readable."
+  },
+  {
+    "id": 15,
+    "question": "How are INNER JOINs described in the notes?",
+    "options": [
+      "Pulling together two tables that have a parent-child relationship",
+      "Pulling together two tables that sit at the same level",
+      "Combining all rows from both tables",
+      "Creating a temporary table with all columns"
+    ],
+    "correctAnswer": "Pulling together two tables that sit at the same level",
+    "explanation": "INNER JOINs are best described as pulling together two tables that sit at the same level based on matching values."
+  }
+]

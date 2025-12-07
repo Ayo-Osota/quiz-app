@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What are the two main options for loading CSV data into MySQL?",
+    "options": [
+      "IMPORT DATA and LOAD CSV",
+      "Table Data Import Wizard and LOAD DATA INFILE",
+      "CSV IMPORT and BULK INSERT",
+      "COPY FROM and IMPORT FILE"
+    ],
+    "correctAnswer": "Table Data Import Wizard and LOAD DATA INFILE",
+    "explanation": "MySQL Workbench offers Table Data Import Wizard (GUI) and LOAD DATA INFILE (SQL command) for importing CSV files."
+  },
+  {
+    "id": 2,
+    "question": "What is the basic syntax for LOAD DATA LOCAL INFILE?",
+    "options": [
+      "LOAD DATA LOCAL INFILE 'path' INTO TABLE table_name;",
+      "IMPORT CSV 'path' INTO table_name;",
+      "LOAD CSV FROM 'path' TO table_name;",
+      "INSERT FROM FILE 'path' INTO table_name;"
+    ],
+    "correctAnswer": "LOAD DATA LOCAL INFILE 'path' INTO TABLE table_name;",
+    "explanation": "LOAD DATA LOCAL INFILE 'path' INTO TABLE table_name is the basic syntax for importing CSV with additional clauses for field delimiters."
+  },
+  {
+    "id": 3,
+    "question": "What does FIELDS TERMINATED BY ',' specify?",
+    "options": [
+      "The end of each row",
+      "The delimiter between columns in the CSV file",
+      "The character to replace commas",
+      "The end of the file"
+    ],
+    "correctAnswer": "The delimiter between columns in the CSV file",
+    "explanation": "FIELDS TERMINATED BY ',' tells MySQL that commas separate the column values in the CSV file."
+  },
+  {
+    "id": 4,
+    "question": "What does ENCLOSED BY '\"' specify?",
+    "options": [
+      "The file path",
+      "The character that wraps text values in the CSV",
+      "The line terminator",
+      "The comment character"
+    ],
+    "correctAnswer": "The character that wraps text values in the CSV",
+    "explanation": "ENCLOSED BY '\"' specifies that field values are enclosed in double quotes, which is common in CSV files with text containing commas."
+  },
+  {
+    "id": 5,
+    "question": "What does LINES TERMINATED BY '\\n' specify?",
+    "options": [
+      "The field delimiter",
+      "The end of each row/line in the CSV",
+      "The enclosing character",
+      "The escape character"
+    ],
+    "correctAnswer": "The end of each row/line in the CSV",
+    "explanation": "LINES TERMINATED BY '\\n' specifies that each line in the CSV ends with a newline character."
+  },
+  {
+    "id": 6,
+    "question": "What does IGNORE 1 ROWS do in LOAD DATA INFILE?",
+    "options": [
+      "Skips the last row",
+      "Skips the first row (typically the header row)",
+      "Ignores NULL values",
+      "Ignores duplicate rows"
+    ],
+    "correctAnswer": "Skips the first row (typically the header row)",
+    "explanation": "IGNORE 1 ROWS skips the first line of the CSV file, which is usually the header row with column names."
+  },
+  {
+    "id": 7,
+    "question": "What variable must be enabled to use LOAD DATA LOCAL INFILE?",
+    "options": [
+      "local_file",
+      "local_infile",
+      "file_import",
+      "csv_enabled"
+    ],
+    "correctAnswer": "local_infile",
+    "explanation": "The local_infile variable must be set to ON (SET GLOBAL local_infile = 1) to allow LOAD DATA LOCAL INFILE."
+  },
+  {
+    "id": 8,
+    "question": "How do you check if local_infile is enabled?",
+    "options": [
+      "SHOW VARIABLES LIKE 'local_infile';",
+      "SELECT local_infile FROM settings;",
+      "CHECK VARIABLE local_infile;",
+      "GET local_infile;"
+    ],
+    "correctAnswer": "SHOW VARIABLES LIKE 'local_infile';",
+    "explanation": "SHOW VARIABLES LIKE 'local_infile'; displays the current value of the local_infile variable."
+  },
+  {
+    "id": 9,
+    "question": "What does Error Code 1290 indicate?",
+    "options": [
+      "File not found",
+      "MySQL server is running with --secure-file-priv option restricting file locations",
+      "Invalid CSV format",
+      "Database does not exist"
+    ],
+    "correctAnswer": "MySQL server is running with --secure-file-priv option restricting file locations",
+    "explanation": "Error 1290 means MySQL only allows loading files from a specific directory for security reasons (secure-file-priv)."
+  },
+  {
+    "id": 10,
+    "question": "How do you check the secure_file_priv directory?",
+    "options": [
+      "SHOW DIRECTORY;",
+      "SHOW VARIABLES LIKE 'secure_file_priv';",
+      "SELECT secure_path;",
+      "GET FILE_PATH;"
+    ],
+    "correctAnswer": "SHOW VARIABLES LIKE 'secure_file_priv';",
+    "explanation": "SHOW VARIABLES LIKE 'secure_file_priv'; shows the directory where MySQL allows file operations."
+  },
+  {
+    "id": 11,
+    "question": "What should you do if you get Error Code 1290?",
+    "options": [
+      "Disable MySQL",
+      "Move your CSV file to the secure_file_priv directory and restart MySQL Workbench",
+      "Delete the CSV file",
+      "Change the table structure"
+    ],
+    "correctAnswer": "Move your CSV file to the secure_file_priv directory and restart MySQL Workbench",
+    "explanation": "Move the CSV to the allowed directory (e.g., C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads) and restart."
+  },
+  {
+    "id": 12,
+    "question": "What is a common cause of import failures?",
+    "options": [
+      "Table has too many columns",
+      "Data type mismatches (e.g., inserting text into an INT column)",
+      "CSV file is too large",
+      "Network connection issues"
+    ],
+    "correctAnswer": "Data type mismatches (e.g., inserting text into an INT column)",
+    "explanation": "Imports fail when CSV data doesn't match column types, such as trying to insert 'abc' into an INT column."
+  },
+  {
+    "id": 13,
+    "question": "How can you handle date format mismatches during import?",
+    "options": [
+      "Change the database timezone",
+      "Use STR_TO_DATE() function to convert the format",
+      "Delete the date column",
+      "Import as text first"
+    ],
+    "correctAnswer": "Use STR_TO_DATE() function to convert the format",
+    "explanation": "STR_TO_DATE(enrolled_date, '%m/%d/%Y') converts date strings to MySQL date format during import."
+  },
+  {
+    "id": 14,
+    "question": "What is the difference between LOAD DATA INFILE and LOAD DATA LOCAL INFILE?",
+    "options": [
+      "No difference",
+      "LOCAL reads from the client machine, without LOCAL reads from the server machine",
+      "LOCAL is faster",
+      "INFILE is deprecated"
+    ],
+    "correctAnswer": "LOCAL reads from the client machine, without LOCAL reads from the server machine",
+    "explanation": "LOAD DATA LOCAL INFILE reads from the client, while LOAD DATA INFILE reads from the server's file system."
+  },
+  {
+    "id": 15,
+    "question": "Where is the Table Data Import Wizard accessed in MySQL Workbench?",
+    "options": [
+      "File menu",
+      "Right-click on the table in Navigator panel",
+      "Tools menu",
+      "Query menu"
+    ],
+    "correctAnswer": "Right-click on the table in Navigator panel",
+    "explanation": "Right-click on the table (or Tables group) in the Navigator panel and choose 'Table Data Import Wizard'."
+  }
+]

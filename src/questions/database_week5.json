@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "question": "What does the acronym CRUD stand for in database operations?",
+    "options": [
+      "Create, Read, Update, Delete",
+      "Connect, Retrieve, Upload, Drop",
+      "Copy, Remove, Upload, Download",
+      "Create, Remove, Update, Display"
+    ],
+    "correctAnswer": "Create, Read, Update, Delete",
+    "explanation": "CRUD stands for Create, Read, Update, and Delete—the four basic functions of persistent storage."
+  },
+  {
+    "id": 2,
+    "question": "What must you do before creating a table in a database?",
+    "options": [
+      "Create indexes",
+      "Create a database and USE that database",
+      "Create foreign keys",
+      "Create views"
+    ],
+    "correctAnswer": "Create a database and USE that database",
+    "explanation": "Before creating a table, you must first CREATE DATABASE and then USE that database to have the table created inside it."
+  },
+  {
+    "id": 3,
+    "question": "What is the correct basic syntax for CREATE TABLE?",
+    "options": [
+      "CREATE TABLE table_name (column_name data_type constraints);",
+      "NEW TABLE table_name (column_name data_type);",
+      "MAKE TABLE table_name WITH columns;",
+      "TABLE CREATE table_name (column_name);"
+    ],
+    "correctAnswer": "CREATE TABLE table_name (column_name data_type constraints);",
+    "explanation": "The syntax is: CREATE TABLE table_name (column_name data_type constraints, ...)."
+  },
+  {
+    "id": 4,
+    "question": "What must column names start with?",
+    "options": [
+      "A number",
+      "A letter (a-z or A-Z)",
+      "An underscore",
+      "A special character"
+    ],
+    "correctAnswer": "A letter (a-z or A-Z)",
+    "explanation": "Column names must start with a letter. They can include numbers, underscores, and letters but cannot start with numbers."
+  },
+  {
+    "id": 5,
+    "question": "Why should you use lowercase letters for column names in PostgreSQL?",
+    "options": [
+      "It's required by SQL standard",
+      "PostgreSQL is case-sensitive with unquoted names",
+      "It improves performance",
+      "It's only a style preference"
+    ],
+    "correctAnswer": "PostgreSQL is case-sensitive with unquoted names",
+    "explanation": "PostgreSQL is case-sensitive with unquoted identifiers, so using lowercase helps avoid issues."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of constraints in SQL?",
+    "options": [
+      "To improve query speed",
+      "To define rules for columns or tables to ensure data integrity",
+      "To create indexes automatically",
+      "To backup data"
+    ],
+    "correctAnswer": "To define rules for columns or tables to ensure data integrity",
+    "explanation": "Constraints define rules to ensure data integrity, such as preventing NULL values or enforcing uniqueness."
+  },
+  {
+    "id": 7,
+    "question": "What does the NOT NULL constraint do?",
+    "options": [
+      "Allows NULL values",
+      "Ensures the column cannot contain NULL values",
+      "Sets a default value",
+      "Makes values unique"
+    ],
+    "correctAnswer": "Ensures the column cannot contain NULL values",
+    "explanation": "NOT NULL constraint ensures a column must always have a value and cannot be NULL."
+  },
+  {
+    "id": 8,
+    "question": "What does the UNIQUE constraint do?",
+    "options": [
+      "Prevents NULL values",
+      "Ensures all values in a column are unique",
+      "Sets a default value",
+      "Creates an index"
+    ],
+    "correctAnswer": "Ensures all values in a column are unique",
+    "explanation": "UNIQUE constraint ensures that all values in a column are different from each other."
+  },
+  {
+    "id": 9,
+    "question": "What does PRIMARY KEY combine?",
+    "options": [
+      "UNIQUE and DEFAULT",
+      "NOT NULL and UNIQUE",
+      "NOT NULL and CHECK",
+      "UNIQUE and FOREIGN KEY"
+    ],
+    "correctAnswer": "NOT NULL and UNIQUE",
+    "explanation": "PRIMARY KEY combines NOT NULL and UNIQUE. Each table can have only one primary key."
+  },
+  {
+    "id": 10,
+    "question": "What is the purpose of a FOREIGN KEY?",
+    "options": [
+      "To prevent duplicate values",
+      "To establish a relationship between tables by linking to another table's primary key",
+      "To set default values",
+      "To allow NULL values"
+    ],
+    "correctAnswer": "To establish a relationship between tables by linking to another table's primary key",
+    "explanation": "FOREIGN KEY creates relationships between tables by referencing another table's primary key."
+  },
+  {
+    "id": 11,
+    "question": "What does the CHECK constraint do?",
+    "options": [
+      "Ensures uniqueness",
+      "Validates a condition for data values in a column",
+      "Prevents NULL values",
+      "Creates an index"
+    ],
+    "correctAnswer": "Validates a condition for data values in a column",
+    "explanation": "CHECK constraint validates data against a condition. Example: CHECK (age > 0) ensures age is positive."
+  },
+  {
+    "id": 12,
+    "question": "What does the DEFAULT constraint do?",
+    "options": [
+      "Prevents NULL values",
+      "Ensures uniqueness",
+      "Sets a default value for the column if no value is specified during insert",
+      "Creates a foreign key"
+    ],
+    "correctAnswer": "Sets a default value for the column if no value is specified during insert",
+    "explanation": "DEFAULT provides a default value when no value is specified. Example: enrollment_date DATE DEFAULT (CURRENT_DATE)."
+  },
+  {
+    "id": 13,
+    "question": "What data type category would you use to store customer names?",
+    "options": [
+      "Numeric Data",
+      "Textual Data",
+      "Date and Time Data",
+      "Boolean Data"
+    ],
+    "correctAnswer": "Textual Data",
+    "explanation": "Textual data types like VARCHAR are used to store strings such as names, descriptions, and general text."
+  },
+  {
+    "id": 14,
+    "question": "Which data type is perfect for exact financial calculations?",
+    "options": [
+      "REAL",
+      "DOUBLE PRECISION",
+      "NUMERIC or DECIMAL",
+      "INTEGER"
+    ],
+    "correctAnswer": "NUMERIC or DECIMAL",
+    "explanation": "NUMERIC and DECIMAL types are perfect for exact calculations like financial data, avoiding floating-point rounding errors."
+  },
+  {
+    "id": 15,
+    "question": "What does SERIAL do in PostgreSQL?",
+    "options": [
+      "Creates a text column",
+      "Auto-generates unique integer values",
+      "Creates a foreign key",
+      "Validates data"
+    ],
+    "correctAnswer": "Auto-generates unique integer values",
+    "explanation": "SERIAL automatically generates sequential integer values, commonly used for primary keys. Example: student_id SERIAL PRIMARY KEY."
+  },
+  {
+    "id": 16,
+    "question": "What is the difference between CHAR(n) and VARCHAR(n)?",
+    "options": [
+      "CHAR is for numbers, VARCHAR is for text",
+      "CHAR is fixed length, VARCHAR is variable length",
+      "CHAR is faster, VARCHAR is slower",
+      "There is no difference"
+    ],
+    "correctAnswer": "CHAR is fixed length, VARCHAR is variable length",
+    "explanation": "CHAR(n) always uses n characters (padding with spaces), while VARCHAR(n) uses only as many characters as needed up to n."
+  },
+  {
+    "id": 17,
+    "question": "Which data type stores TRUE, FALSE, or NULL values?",
+    "options": [
+      "INTEGER",
+      "BIT",
+      "BOOLEAN",
+      "CHAR(1)"
+    ],
+    "correctAnswer": "BOOLEAN",
+    "explanation": "BOOLEAN data type stores logical values: TRUE, FALSE, or NULL."
+  },
+  {
+    "id": 18,
+    "question": "What is the TEXT data type used for?",
+    "options": [
+      "Short fixed-length strings",
+      "Numeric values",
+      "Variable-length strings with no specified limit",
+      "Date values"
+    ],
+    "correctAnswer": "Variable-length strings with no specified limit",
+    "explanation": "TEXT allows storing variable-length strings with virtually no limit, ideal for large text content."
+  },
+  {
+    "id": 19,
+    "question": "Given this CREATE TABLE statement, what does CHECK (age > 0) ensure? CREATE TABLE students (age INT CHECK (age > 0));",
+    "options": [
+      "Age cannot be NULL",
+      "Age must be a positive number",
+      "Age must be unique",
+      "Age has a default value"
+    ],
+    "correctAnswer": "Age must be a positive number",
+    "explanation": "CHECK (age > 0) validates that the age value is greater than zero, preventing negative or zero ages."
+  },
+  {
+    "id": 20,
+    "question": "In this statement: enrollment_date DATE DEFAULT (CURRENT_DATE), what happens if no enrollment_date is provided during INSERT?",
+    "options": [
+      "An error occurs",
+      "The value is set to NULL",
+      "The current date is automatically used",
+      "The field is left empty"
+    ],
+    "correctAnswer": "The current date is automatically used",
+    "explanation": "DEFAULT (CURRENT_DATE) automatically sets the enrollment_date to today's date if no value is provided during insertion."
+  }
+]

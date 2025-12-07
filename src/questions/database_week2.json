@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is the correct syntax to create a column alias in SQL?",
+    "options": [
+      "SELECT column1 AS alias FROM table",
+      "SELECT column1 ALIAS alias FROM table",
+      "SELECT column1 -> alias FROM table",
+      "SELECT column1 = alias FROM table"
+    ],
+    "correctAnswer": "SELECT column1 AS alias FROM table",
+    "explanation": "The AS keyword is used to create an alias for a column. Example: SELECT lastName AS surname FROM Person."
+  },
+  {
+    "id": 2,
+    "question": "Is the AS keyword required when creating column aliases?",
+    "options": [
+      "Yes, AS is always required",
+      "No, AS is optional and can be omitted",
+      "Yes, but only in MySQL",
+      "No, it's deprecated"
+    ],
+    "correctAnswer": "No, AS is optional and can be omitted",
+    "explanation": "AS can be omitted. Both 'SELECT lastName AS surname' and 'SELECT lastName surname' are valid."
+  },
+  {
+    "id": 3,
+    "question": "How do you create a calculated column in SQL?",
+    "options": [
+      "SELECT column1, expression FROM table",
+      "SELECT column1, CALC(expression) FROM table",
+      "SELECT column1, COMPUTE expression FROM table",
+      "SELECT column1 + EXPRESSION FROM table"
+    ],
+    "correctAnswer": "SELECT column1, expression FROM table",
+    "explanation": "You can create calculated columns using expressions. Example: SELECT amount, amount * 10 FROM Payment."
+  },
+  {
+    "id": 4,
+    "question": "Why should you use AS with calculated columns?",
+    "options": [
+      "It's required for calculations to work",
+      "To give the calculated column a meaningful name",
+      "To improve query performance",
+      "To enable sorting on the column"
+    ],
+    "correctAnswer": "To give the calculated column a meaningful name",
+    "explanation": "AS gives calculated columns meaningful names. Example: SELECT amount, amount * 10 AS 'Increased payment' FROM Payment."
+  },
+  {
+    "id": 5,
+    "question": "What does SELECT DISTINCT do?",
+    "options": [
+      "Selects only the first row",
+      "Removes rows with redundant values from the result set",
+      "Selects rows with NULL values",
+      "Sorts the result set"
+    ],
+    "correctAnswer": "Removes rows with redundant values from the result set",
+    "explanation": "DISTINCT removes duplicate rows. Example: SELECT DISTINCT provinceCode FROM Person returns unique province codes."
+  },
+  {
+    "id": 6,
+    "question": "What is the syntax to order results in ascending order?",
+    "options": [
+      "SELECT ... ORDER BY column ASC",
+      "SELECT ... SORT BY column ASC",
+      "SELECT ... ARRANGE BY column ASC",
+      "SELECT ... ASCENDING column"
+    ],
+    "correctAnswer": "SELECT ... ORDER BY column ASC",
+    "explanation": "ORDER BY column ASC sorts in ascending order. Example: SELECT lastName, firstName FROM person ORDER BY lastName ASC."
+  },
+  {
+    "id": 7,
+    "question": "Is ASC required in ORDER BY for ascending order?",
+    "options": [
+      "Yes, ASC must always be specified",
+      "No, ASC is the default and can be omitted",
+      "Yes, but only in older SQL versions",
+      "No, but it's required for descending order"
+    ],
+    "correctAnswer": "No, ASC is the default and can be omitted",
+    "explanation": "ASC is the default sorting order and is rarely used in practice. ORDER BY lastName is equivalent to ORDER BY lastName ASC."
+  },
+  {
+    "id": 8,
+    "question": "How do you order results in descending order?",
+    "options": [
+      "SELECT ... ORDER BY column DOWN",
+      "SELECT ... ORDER BY column DESC",
+      "SELECT ... ORDER BY column REVERSE",
+      "SELECT ... ORDER BY column -1"
+    ],
+    "correctAnswer": "SELECT ... ORDER BY column DESC",
+    "explanation": "DESC specifies descending order. Example: SELECT lastName, firstName FROM person ORDER BY lastName DESC."
+  },
+  {
+    "id": 9,
+    "question": "What does this query do? SELECT lastName, firstName FROM person ORDER BY lastName, firstName",
+    "options": [
+      "Orders by lastName only",
+      "Orders by firstName only",
+      "Orders by firstName within lastName",
+      "Orders randomly"
+    ],
+    "correctAnswer": "Orders by firstName within lastName",
+    "explanation": "Multiple columns in ORDER BY create nested sorting. Results are sorted by lastName first, then by firstName within each lastName group."
+  },
+  {
+    "id": 10,
+    "question": "What is the effect of this query? SELECT lastName AS surname, firstName FROM person ORDER BY lastName DESC, firstName",
+    "options": [
+      "Orders lastName descending, then firstName ascending within each lastName",
+      "Orders both columns descending",
+      "Orders firstName descending only",
+      "Creates an error because an alias is used"
+    ],
+    "correctAnswer": "Orders lastName descending, then firstName ascending within each lastName",
+    "explanation": "You can mix ASC and DESC for different columns. lastName is sorted descending, while firstName is sorted ascending (default) within each lastName."
+  },
+  {
+    "id": 11,
+    "question": "Which statement correctly uses double quotes for column names?",
+    "options": [
+      "SELECT amount * 10 AS 'Increased payment' FROM Payment",
+      "SELECT amount * 10 AS \"Increased payment\" FROM Payment",
+      "Both are correct",
+      "Neither is correct"
+    ],
+    "correctAnswer": "SELECT amount * 10 AS \"Increased payment\" FROM Payment",
+    "explanation": "Double quotes are used for nonstandard column names (with spaces or special characters). Single quotes are for literal string values."
+  },
+  {
+    "id": 12,
+    "question": "What is the primary use of single quotes in SQL?",
+    "options": [
+      "To create column aliases",
+      "Around literal values in SQL statements",
+      "To define table names",
+      "To create comments"
+    ],
+    "correctAnswer": "Around literal values in SQL statements",
+    "explanation": "Single quotes are used around literal values like strings. Example: WHERE provinceCode = 'ON'."
+  },
+  {
+    "id": 13,
+    "question": "Can you omit single quotes for numeric literals in many database products?",
+    "options": [
+      "Yes, many databases allow this",
+      "No, quotes are always required",
+      "Only for integers, not decimals",
+      "Only in WHERE clauses"
+    ],
+    "correctAnswer": "Yes, many databases allow this",
+    "explanation": "Many database products let you omit single quotes for numeric literals, though strings always require them."
+  },
+  {
+    "id": 14,
+    "question": "Which query removes duplicate province codes from the Person table?",
+    "options": [
+      "SELECT provinceCode FROM Person",
+      "SELECT DISTINCT provinceCode FROM Person",
+      "SELECT UNIQUE provinceCode FROM Person",
+      "SELECT REMOVE_DUPLICATES provinceCode FROM Person"
+    ],
+    "correctAnswer": "SELECT DISTINCT provinceCode FROM Person",
+    "explanation": "DISTINCT keyword removes duplicate values. Example: SELECT DISTINCT provinceCode FROM Person."
+  },
+  {
+    "id": 15,
+    "question": "What is the correct order for clauses in a SELECT statement with ORDER BY?",
+    "options": [
+      "SELECT ... ORDER BY ... FROM ...",
+      "SELECT ... FROM ... ORDER BY ...",
+      "FROM ... SELECT ... ORDER BY ...",
+      "ORDER BY ... SELECT ... FROM ..."
+    ],
+    "correctAnswer": "SELECT ... FROM ... ORDER BY ...",
+    "explanation": "The correct order is SELECT, FROM, then ORDER BY. ORDER BY comes at the end of the query."
+  }
+]

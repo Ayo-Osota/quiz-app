@@ -1,0 +1,462 @@
+[
+  {
+    "id": 1,
+    "question": "Which SQL keyword is used to create a new database?",
+    "options": [
+      "MAKE DATABASE",
+      "CREATE DATABASE",
+      "NEW DATABASE",
+      "INIT DATABASE"
+    ],
+    "correctAnswer": "CREATE DATABASE",
+    "explanation": "CREATE DATABASE is the standard SQL keyword for creating a new database."
+  },
+  {
+    "id": 2,
+    "question": "Which command is part of SQL DDL (Data Definition Language)?",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "CREATE",
+      "SELECT"
+    ],
+    "correctAnswer": "CREATE",
+    "explanation": "CREATE is a DDL command that defines database structure. INSERT, UPDATE, and SELECT are DML (Data Manipulation Language) commands."
+  },
+  {
+    "id": 3,
+    "question": "Which statement creates a table?",
+    "options": [
+      "NEW TABLE",
+      "FORM TABLE",
+      "CREATE TABLE",
+      "MAKE TABLE"
+    ],
+    "correctAnswer": "CREATE TABLE",
+    "explanation": "CREATE TABLE is the standard SQL syntax for creating a new table."
+  },
+  {
+    "id": 4,
+    "question": "Which constraint ensures values in a column cannot be NULL?",
+    "options": [
+      "UNIQUE",
+      "NOT NULL",
+      "PRIMARY KEY",
+      "CHECK"
+    ],
+    "correctAnswer": "NOT NULL",
+    "explanation": "NOT NULL constraint ensures a column cannot contain NULL values. PRIMARY KEY also enforces this but has additional uniqueness requirements."
+  },
+  {
+    "id": 5,
+    "question": "Which SQL command deletes all rows but keeps the table structure?",
+    "options": [
+      "DROP",
+      "REMOVE",
+      "DELETE",
+      "TRUNCATE"
+    ],
+    "correctAnswer": "TRUNCATE",
+    "explanation": "TRUNCATE removes all rows from a table but keeps the table structure intact. DELETE can also remove all rows but is slower and not in safe mode."
+  },
+  {
+    "id": 6,
+    "question": "Which operator is used in a WHERE clause to match a pattern?",
+    "options": [
+      "LIKE",
+      "MATCHES",
+      "CONTAINS",
+      "FINDS"
+    ],
+    "correctAnswer": "LIKE",
+    "explanation": "LIKE operator is used for pattern matching in WHERE clauses, often with wildcards like % and _."
+  },
+  {
+    "id": 7,
+    "question": "What does the ORDER BY clause do?",
+    "options": [
+      "Filters rows",
+      "Groups rows",
+      "Sorts rows",
+      "Limits output"
+    ],
+    "correctAnswer": "Sorts rows",
+    "explanation": "ORDER BY sorts the result set. WHERE filters rows, GROUP BY groups rows, and LIMIT restricts output."
+  },
+  {
+    "id": 8,
+    "question": "Which SQL keyword returns only unique values?",
+    "options": [
+      "DISTINCT",
+      "UNIQUE",
+      "ONLY",
+      "SINGLE"
+    ],
+    "correctAnswer": "DISTINCT",
+    "explanation": "DISTINCT removes duplicate rows from the result set. UNIQUE is a DDL constraint, not a query keyword."
+  },
+  {
+    "id": 9,
+    "question": "Which clause groups rows based on a column?",
+    "options": [
+      "SORT BY",
+      "GROUP BY",
+      "ORDER BY",
+      "CLUSTER BY"
+    ],
+    "correctAnswer": "GROUP BY",
+    "explanation": "GROUP BY groups rows that have the same values in specified columns, often used with aggregate functions."
+  },
+  {
+    "id": 10,
+    "question": "Which aggregate function counts non-NULL values?",
+    "options": [
+      "SUM",
+      "COUNT(column)",
+      "TOTAL",
+      "NUMBER()"
+    ],
+    "correctAnswer": "COUNT(column)",
+    "explanation": "COUNT(column) counts non-NULL values in the specified column. COUNT(*) counts all rows including NULLs."
+  },
+  {
+    "id": 11,
+    "question": "Which SQL statement modifies existing data?",
+    "options": [
+      "CHANGE",
+      "UPDATE",
+      "REWRITE",
+      "EDIT"
+    ],
+    "correctAnswer": "UPDATE",
+    "explanation": "UPDATE statement is used to modify existing records in a table."
+  },
+  {
+    "id": 12,
+    "question": "Which keyword inserts a new record?",
+    "options": [
+      "NEW",
+      "INSERT INTO",
+      "ADD ROW",
+      "PUSH"
+    ],
+    "correctAnswer": "INSERT INTO",
+    "explanation": "INSERT INTO is the SQL command for adding new rows to a table."
+  },
+  {
+    "id": 13,
+    "question": "In SQL, a JOIN is used to:",
+    "options": [
+      "Delete related rows",
+      "Combine rows from multiple tables",
+      "Format output",
+      "Backup a table"
+    ],
+    "correctAnswer": "Combine rows from multiple tables",
+    "explanation": "JOIN operations combine rows from two or more tables based on a related column."
+  },
+  {
+    "id": 14,
+    "question": "Which JOIN returns only rows with matching values in both tables?",
+    "options": [
+      "FULL JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "INNER JOIN"
+    ],
+    "correctAnswer": "INNER JOIN",
+    "explanation": "INNER JOIN returns only the rows where there is a match in both tables."
+  },
+  {
+    "id": 15,
+    "question": "Which clause filters groups after aggregation?",
+    "options": [
+      "WHERE",
+      "FILTER",
+      "HAVING",
+      "GROUP WHERE"
+    ],
+    "correctAnswer": "HAVING",
+    "explanation": "HAVING clause filters grouped results after aggregation. WHERE filters rows before grouping."
+  },
+  {
+    "id": 16,
+    "question": "Which of the following is a valid comparison operator in SQL?",
+    "options": [
+      "!=",
+      "NOTMATCH",
+      "DIFFERENT",
+      "NOEQUAL"
+    ],
+    "correctAnswer": "!=",
+    "explanation": "!= (or <>) is the not-equal comparison operator. Example: WHERE name != 'Canada'."
+  },
+  {
+    "id": 17,
+    "question": "The default sorting order for ORDER BY is:",
+    "options": [
+      "DESC",
+      "ASC",
+      "RANDOM",
+      "NONE"
+    ],
+    "correctAnswer": "ASC",
+    "explanation": "ASC (ascending) is the default sort order for ORDER BY and can be omitted."
+  },
+  {
+    "id": 18,
+    "question": "What does this SQL do? SELECT AVG(Price) FROM Products;",
+    "options": [
+      "Returns the smallest price",
+      "Returns all prices",
+      "Returns the average price",
+      "Returns only NULL values"
+    ],
+    "correctAnswer": "Returns the average price",
+    "explanation": "AVG() calculates the arithmetic mean of all values in the specified column."
+  },
+  {
+    "id": 19,
+    "question": "In a SELECT query, * means:",
+    "options": [
+      "Multiply values",
+      "Select all columns",
+      "Count all rows",
+      "Expand table"
+    ],
+    "correctAnswer": "Select all columns",
+    "explanation": "The asterisk (*) is a wildcard that selects all columns from the specified table(s)."
+  },
+  {
+    "id": 20,
+    "question": "Which statement removes a column?",
+    "options": [
+      "ALTER TABLE t REMOVE COLUMN c;",
+      "UPDATE t DROP c;",
+      "ALTER TABLE t DROP COLUMN c;",
+      "DELETE COLUMN c FROM t;"
+    ],
+    "correctAnswer": "ALTER TABLE t DROP COLUMN c;",
+    "explanation": "ALTER TABLE table_name DROP COLUMN column_name is the correct syntax for removing a column."
+  },
+  {
+    "id": 21,
+    "question": "Which SQL function returns the highest value in a column?",
+    "options": [
+      "MOST",
+      "MAX",
+      "TOP",
+      "HIGH"
+    ],
+    "correctAnswer": "MAX",
+    "explanation": "MAX() aggregate function returns the maximum value in a column."
+  },
+  {
+    "id": 22,
+    "question": "Which clause limits the number of rows displayed?",
+    "options": [
+      "LIMIT",
+      "STOP",
+      "END",
+      "REDUCE"
+    ],
+    "correctAnswer": "LIMIT",
+    "explanation": "LIMIT clause restricts the number of rows returned. Example: SELECT * FROM students LIMIT 3 returns only 3 rows."
+  },
+  {
+    "id": 23,
+    "question": "Which keyword tests multiple OR conditions more cleanly?",
+    "options": [
+      "ALLOF",
+      "ANY",
+      "SOME",
+      "IN"
+    ],
+    "correctAnswer": "IN",
+    "explanation": "IN operator allows testing if a value matches any in a list. Example: WHERE first_Name IN ('Alex', 'Emma','Joe')."
+  },
+  {
+    "id": 24,
+    "question": "What does this do? DELETE FROM Students;",
+    "options": [
+      "Deletes table",
+      "Deletes all rows (can be rolled back in safe mode)",
+      "Deletes one row",
+      "Does nothing"
+    ],
+    "correctAnswer": "Deletes all rows (can be rolled back in safe mode)",
+    "explanation": "DELETE FROM Students removes all rows from the table but keeps the structure. In safe mode, it can be rolled back, unlike TRUNCATE."
+  },
+  {
+    "id": 25,
+    "question": "Which DML command removes one specific row?",
+    "options": [
+      "DROP",
+      "ERASE",
+      "DELETE",
+      "TRUNCATE"
+    ],
+    "correctAnswer": "DELETE",
+    "explanation": "DELETE with a WHERE clause removes specific rows. DROP removes tables, and TRUNCATE removes all rows."
+  },
+  {
+    "id": 26,
+    "question": "Which SQL statement is valid?",
+    "options": [
+      "SELECT name FROM users WHERE age > 18;",
+      "SELECT name users WHERE age > 18;",
+      "SELECT FROM users name WHERE age > 18",
+      "GET name FROM users IF age > 18;"
+    ],
+    "correctAnswer": "SELECT name FROM users WHERE age > 18;",
+    "explanation": "The correct syntax is SELECT column FROM table WHERE condition. The second option is missing FROM."
+  },
+  {
+    "id": 27,
+    "question": "The keyword used to rename a column or table in a query is:",
+    "options": [
+      "RENAME",
+      "CHANGE",
+      "AS",
+      "ALIAS"
+    ],
+    "correctAnswer": "AS",
+    "explanation": "AS keyword creates aliases for columns or tables. Example: SELECT fname AS 'First Name' FROM students."
+  },
+  {
+    "id": 28,
+    "question": "Which is a valid JOIN condition?",
+    "options": [
+      "ON table1.id = table2.id",
+      "WHEN table1.id = table2.id",
+      "MATCH table1.id WITH table2.id",
+      "IF table1.id = table2.id"
+    ],
+    "correctAnswer": "ON table1.id = table2.id",
+    "explanation": "ON clause specifies the join condition between tables. Example: JOIN table2 ON table1.id = table2.id."
+  },
+  {
+    "id": 29,
+    "question": "SQL's CHECK constraint is used to:",
+    "options": [
+      "Validate data based on a rule",
+      "Remove duplicates",
+      "Auto-increment numbers",
+      "Format dates"
+    ],
+    "correctAnswer": "Validate data based on a rule",
+    "explanation": "CHECK constraint validates that column values meet a specified condition. Example: CHECK (age>0)."
+  },
+  {
+    "id": 30,
+    "question": "Which command imports a CSV file in many SQL systems/tools?",
+    "options": [
+      "LOAD DATA",
+      "IMPORT CSV",
+      "ADD FILE",
+      "ATTACH DATA"
+    ],
+    "correctAnswer": "LOAD DATA",
+    "explanation": "LOAD DATA INFILE is commonly used to import CSV files into database tables."
+  },
+  {
+    "id": 31,
+    "question": "DDL commands change the structure of a database.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "DDL (Data Definition Language) commands like CREATE, ALTER, and DROP modify database structure."
+  },
+  {
+    "id": 32,
+    "question": "The WHERE clause is used to filter rows before grouping.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "WHERE filters individual rows before GROUP BY aggregation occurs."
+  },
+  {
+    "id": 33,
+    "question": "The HAVING clause filters rows before grouping.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "False",
+    "explanation": "HAVING filters groups after aggregation, not before. WHERE filters rows before grouping."
+  },
+  {
+    "id": 34,
+    "question": "A LEFT JOIN returns all rows from the right table.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "False",
+    "explanation": "LEFT JOIN returns all rows from the left table and matching rows from the right table. RIGHT JOIN returns all rows from the right table."
+  },
+  {
+    "id": 35,
+    "question": "In SQL, NULL is treated as a zero in aggregate functions.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "False",
+    "explanation": "Aggregate functions like AVG, SUM, and COUNT(column) ignore NULL values; they are not treated as zero."
+  },
+  {
+    "id": 36,
+    "question": "COUNT(*) includes NULL rows.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "COUNT(*) returns the number of all rows in the table, including rows with NULL values. COUNT(column) excludes NULLs."
+  },
+  {
+    "id": 37,
+    "question": "ORDER BY must always be used after GROUP BY.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "False",
+    "explanation": "ORDER BY can be used without GROUP BY. When both are present, ORDER BY comes after GROUP BY, but it's not required."
+  },
+  {
+    "id": 38,
+    "question": "TRUNCATE TABLE removes all rows faster than DELETE.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "TRUNCATE is faster than DELETE because it doesn't log individual row deletions, but it cannot be rolled back in safe mode."
+  },
+  {
+    "id": 39,
+    "question": "A UNIQUE constraint allows multiple NULL values in some databases.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "In many database systems, UNIQUE constraint allows multiple NULL values because NULL is not considered equal to NULL."
+  },
+  {
+    "id": 40,
+    "question": "SQL keywords are case-insensitive in most database systems.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "Most SQL database systems treat keywords as case-insensitive, so SELECT, select, and SeLeCt are all valid."
+  }
+]
