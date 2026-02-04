@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is an Operating System according to the definition provided?",
+    "options": [
+      "A layer of software that manages a computer's resources for its users and their applications",
+      "Only the hardware components of a computer",
+      "A collection of application software",
+      "The physical structure of a computer"
+    ],
+    "correctAnswer": "A layer of software that manages a computer's resources for its users and their applications",
+    "explanation": "An Operating System is a layer of software that manages a computer's resources for its users and their applications, including the kernel and system programs."
+  },
+  {
+    "id": 2,
+    "question": "What is the kernel in an operating system?",
+    "options": [
+      "A user application program",
+      "The software that is always running and has complete control over everything in the system",
+      "A network protocol",
+      "The graphical user interface"
+    ],
+    "correctAnswer": "The software that is always running and has complete control over everything in the system",
+    "explanation": "The kernel is a computer program at the core of a computer's operating system and generally has complete control over everything in the system."
+  },
+  {
+    "id": 3,
+    "question": "What are the two spaces an OS is divided into?",
+    "options": [
+      "Application Space and Hardware Space",
+      "Kernel Space (privileged mode) and User Space (user mode)",
+      "Memory Space and Disk Space",
+      "Network Space and Local Space"
+    ],
+    "correctAnswer": "Kernel Space (privileged mode) and User Space (user mode)",
+    "explanation": "The OS is divided into Kernel space (privileged mode for core OS functions) and User space (user mode for user applications and processes with restricted hardware access)."
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is NOT a primary purpose of an operating system?",
+    "options": [
+      "Allocate resources between different applications",
+      "Provide an interface that abstracts the details of accessing hardware",
+      "Create hardware components",
+      "Provide common services like network and disk device access"
+    ],
+    "correctAnswer": "Create hardware components",
+    "explanation": "Operating systems manage software and hardware resources but do not create hardware components. They allocate resources, provide hardware abstraction, and offer common services."
+  },
+  {
+    "id": 5,
+    "question": "What role does the BIOS play in a computer system?",
+    "options": [
+      "It manages user applications",
+      "It provides the initial program that runs when the computer starts, before the OS loads",
+      "It encrypts all data on the hard drive",
+      "It manages network connections"
+    ],
+    "correctAnswer": "It provides the initial program that runs when the computer starts, before the OS loads",
+    "explanation": "The BIOS (Basic Input/Output System) is the firmware that initializes hardware during the boot process before loading the operating system."
+  },
+  {
+    "id": 6,
+    "question": "What does the OS sit between?",
+    "options": [
+      "The monitor and keyboard",
+      "Users/applications and lower-level computer firmware/hardware",
+      "The CPU and RAM only",
+      "The hard disk and network"
+    ],
+    "correctAnswer": "Users/applications and lower-level computer firmware/hardware",
+    "explanation": "The OS sits between users/applications and the lower-level computer firmware/hardware, managing access to system resources like CPU, memory, storage, and devices."
+  },
+  {
+    "id": 7,
+    "question": "Which mode does the kernel run in?",
+    "options": [
+      "User mode",
+      "Supervisor mode",
+      "Application mode",
+      "Network mode"
+    ],
+    "correctAnswer": "Supervisor mode",
+    "explanation": "The kernel runs in supervisor mode (also called privileged mode), which gives it complete control over system resources, while user applications run in user mode with restricted access."
+  },
+  {
+    "id": 8,
+    "question": "What are the key components of an operating system?",
+    "options": [
+      "Only the graphical interface",
+      "The kernel, system programs, and applications",
+      "Just the device drivers",
+      "Only network protocols"
+    ],
+    "correctAnswer": "The kernel, system programs, and applications",
+    "explanation": "Operating systems include the kernel (always running), system programs (associated with the OS), and support for applications (all other software)."
+  },
+  {
+    "id": 9,
+    "question": "What resources does the OS allow users and applications to access?",
+    "options": [
+      "Only the keyboard and mouse",
+      "CPU, memory, hard disks, USB devices, and network resources",
+      "Only the monitor",
+      "Just the printer"
+    ],
+    "correctAnswer": "CPU, memory, hard disks, USB devices, and network resources",
+    "explanation": "The OS manages access to all system resources including the CPU, memory, fixed hard-disks, USB devices, network resources, and any devices plugged into the computer."
+  },
+  {
+    "id": 10,
+    "question": "What does 'OS licensing' refer to?",
+    "options": [
+      "The legal agreement that defines how software can be used",
+      "The hardware warranty",
+      "The internet service provider agreement",
+      "The computer manufacturer's guarantee"
+    ],
+    "correctAnswer": "The legal agreement that defines how software can be used",
+    "explanation": "OS licensing, like other software licensing, refers to the legal terms and conditions that govern how the operating system can be used, distributed, and modified."
+  }
+]

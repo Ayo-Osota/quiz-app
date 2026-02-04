@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "How does the operating system schedule background processes?",
+    "options": [
+      "Randomly without any order",
+      "Based on priority and available resources",
+      "Always in alphabetical order",
+      "Only when the user is not active"
+    ],
+    "correctAnswer": "Based on priority and available resources",
+    "explanation": "The operating system schedules background processes based on priority and available resources to ensure efficient system operation."
+  },
+  {
+    "id": 2,
+    "question": "What are Daemon processes?",
+    "options": [
+      "Processes that only run when requested by users",
+      "Processes that start when the system boots and run continuously until shutdown",
+      "Temporary processes that run once",
+      "Processes that only handle graphics"
+    ],
+    "correctAnswer": "Processes that start when the system boots and run continuously until shutdown",
+    "explanation": "Daemon processes start when the system boots up and run continuously without intervention until the system shuts down. They handle tasks like network connections, printing services, and email delivery."
+  },
+  {
+    "id": 3,
+    "question": "What are Scheduled processes designed to do?",
+    "options": [
+      "Run continuously without stopping",
+      "Perform specific tasks at predetermined times",
+      "Only run when the CPU is idle",
+      "Handle user input"
+    ],
+    "correctAnswer": "Perform specific tasks at predetermined times",
+    "explanation": "Scheduled processes perform specific tasks at predetermined times. They can be set up to run daily, weekly, or at any other interval. Examples include automatic patching, updates, and backups."
+  },
+  {
+    "id": 4,
+    "question": "What is the primary function of Service processes?",
+    "options": [
+      "To display graphics on screen",
+      "To provide services to other software running in the background",
+      "To manage keyboard input",
+      "To control the mouse cursor"
+    ],
+    "correctAnswer": "To provide services to other software running in the background",
+    "explanation": "Service processes provide services to other software. They run in the background and are usually started and stopped by the operating system as needed, such as database service processes."
+  },
+  {
+    "id": 5,
+    "question": "What are System processes responsible for?",
+    "options": [
+      "Running user applications",
+      "Managing and controlling hardware and system resources",
+      "Displaying web pages",
+      "Playing multimedia files"
+    ],
+    "correctAnswer": "Managing and controlling hardware and system resources",
+    "explanation": "System processes are responsible for managing and controlling hardware and system resources. They are vital for the functioning of the operating system."
+  },
+  {
+    "id": 6,
+    "question": "What is Context Switching?",
+    "options": [
+      "Switching between different users",
+      "The process of saving the context of one process and loading the context of another",
+      "Switching between different operating systems",
+      "Changing the computer's display settings"
+    ],
+    "correctAnswer": "The process of saving the context of one process and loading the context of another",
+    "explanation": "Context Switching is the process of saving the context of one process and loading the context of another process, allowing the OS to manage multiple processes efficiently."
+  },
+  {
+    "id": 7,
+    "question": "When does context switching occur?",
+    "options": [
+      "Only when the computer starts up",
+      "When a high-priority process comes to ready state, an interrupt occurs, or preemptive CPU scheduling is used",
+      "Only during shutdown",
+      "Never in modern operating systems"
+    ],
+    "correctAnswer": "When a high-priority process comes to ready state, an interrupt occurs, or preemptive CPU scheduling is used",
+    "explanation": "Context switching occurs when: a high-priority process comes to ready state, an interrupt occurs, user and kernel-mode switching happens, or preemptive CPU scheduling is used."
+  },
+  {
+    "id": 8,
+    "question": "What is the Long-term scheduler also known as?",
+    "options": [
+      "CPU scheduler",
+      "Job scheduler",
+      "Memory scheduler",
+      "Network scheduler"
+    ],
+    "correctAnswer": "Job scheduler",
+    "explanation": "The Long-term scheduler is also known as the job scheduler. It chooses processes from the pool (secondary memory) and keeps them in the ready queue in primary memory."
+  },
+  {
+    "id": 9,
+    "question": "What is the purpose of the Short-term scheduler?",
+    "options": [
+      "To manage long-running background tasks",
+      "To select one job from the ready queue and dispatch it to the CPU for execution",
+      "To manage disk space",
+      "To handle network connections"
+    ],
+    "correctAnswer": "To select one job from the ready queue and dispatch it to the CPU for execution",
+    "explanation": "The Short-term scheduler (CPU scheduler) selects one job from the ready queue and dispatches it to the CPU for execution. Its selection is critical as a long-running job can cause others to wait."
+  },
+  {
+    "id": 10,
+    "question": "What does the Medium-term scheduler handle?",
+    "options": [
+      "New process creation",
+      "Swapped out processes, suspending and resuming them",
+      "Network traffic",
+      "File system operations"
+    ],
+    "correctAnswer": "Swapped out processes, suspending and resuming them",
+    "explanation": "The Medium-term scheduler takes care of swapped out processes. It is responsible for suspending and resuming processes, such as when a running process needs IO time and must be moved to waiting state."
+  },
+  {
+    "id": 11,
+    "question": "What is the First-Come, First-Served (FCFS) scheduling algorithm?",
+    "options": [
+      "A preemptive scheduling algorithm",
+      "A non-preemptive algorithm where processes execute in the order they arrive",
+      "An algorithm that prioritizes short processes",
+      "A random selection algorithm"
+    ],
+    "correctAnswer": "A non-preemptive algorithm where processes execute in the order they arrive",
+    "explanation": "FCFS is a non-preemptive scheduling algorithm where processes are executed on a first-come, first-served basis. Once a process starts, it continues until finished or waiting for I/O."
+  },
+  {
+    "id": 12,
+    "question": "How does the Shortest Job First (SJF) algorithm select processes?",
+    "options": [
+      "Based on the order they arrive",
+      "Based on which process has the shortest burst time",
+      "Based on process priority level",
+      "Randomly"
+    ],
+    "correctAnswer": "Based on which process has the shortest burst time",
+    "explanation": "SJF is a proactive scheduling algorithm that selects the process with the shortest burst time (the time a process takes to complete execution), minimizing average waiting time."
+  },
+  {
+    "id": 13,
+    "question": "How does Round Robin (RR) scheduling work?",
+    "options": [
+      "Processes run until completion",
+      "It reserves a fixed amount of time for each process; if not complete, the process is blocked and moved to end of queue",
+      "Only high-priority processes run",
+      "Processes are selected randomly"
+    ],
+    "correctAnswer": "It reserves a fixed amount of time for each process; if not complete, the process is blocked and moved to end of queue",
+    "explanation": "Round Robin is a proactive scheduling algorithm that reserves a fixed time slice for each process. If a process doesn't complete within the time, it's blocked and added to the end of the queue."
+  },
+  {
+    "id": 14,
+    "question": "What is Priority Scheduling based on?",
+    "options": [
+      "The order processes arrive",
+      "Process type, importance, or resource requirements",
+      "Random selection",
+      "Alphabetical order of process names"
+    ],
+    "correctAnswer": "Process type, importance, or resource requirements",
+    "explanation": "Priority Scheduling assigns priority to each process, and the process with the highest priority is executed first. Priority can be set based on process type, importance, or resource requirements."
+  },
+  {
+    "id": 15,
+    "question": "What are the three main types of process queues managed by the OS?",
+    "options": [
+      "Input Queue, Output Queue, Processing Queue",
+      "Job Queue, Ready Queue, Waiting Queue",
+      "User Queue, System Queue, Network Queue",
+      "High Queue, Medium Queue, Low Queue"
+    ],
+    "correctAnswer": "Job Queue, Ready Queue, Waiting Queue",
+    "explanation": "The OS manages three main queues: Job Queue (in secondary memory for all started processes), Ready Queue (in primary memory for processes ready for CPU), and Waiting Queue (for processes needing IO operations)."
+  }
+]

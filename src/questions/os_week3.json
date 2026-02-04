@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is a key advantage of Open-Source Operating Systems in terms of cost?",
+    "options": [
+      "They always require expensive licenses",
+      "They are frequently free or inexpensive with no licensing fees",
+      "They cost more than commercial OS",
+      "They require monthly subscriptions"
+    ],
+    "correctAnswer": "They are frequently free or inexpensive with no licensing fees",
+    "explanation": "Open-source operating systems are frequently free or inexpensive, which can be extremely helpful for people or businesses on a tight budget. Users are not required to pay licensing fees."
+  },
+  {
+    "id": 2,
+    "question": "What is a security concern with Open-Source Operating Systems?",
+    "options": [
+      "They are completely immune to security threats",
+      "They can still be at risk from security intrusions and users must implement necessary security measures",
+      "They automatically protect against all viruses",
+      "They have built-in unbreakable encryption"
+    ],
+    "correctAnswer": "They can still be at risk from security intrusions and users must implement necessary security measures",
+    "explanation": "Despite frequently being more secure than proprietary systems, open-source OS can still be at risk from security intrusions. Users must implement security measures like firewalls and security updates."
+  },
+  {
+    "id": 3,
+    "question": "What is a disadvantage of open-source OS regarding technical support?",
+    "options": [
+      "24/7 dedicated phone support is always available",
+      "There is no active technical support; users must rely on community support and own research",
+      "Support is more comprehensive than commercial OS",
+      "All issues are automatically fixed"
+    ],
+    "correctAnswer": "There is no active technical support; users must rely on community support and own research",
+    "explanation": "There is no active technical support available for open-source OS. Most of the time users have to go to community support and do their own research to apply necessary fixes."
+  },
+  {
+    "id": 4,
+    "question": "What challenge might users face with the learning curve of open-source OS?",
+    "options": [
+      "They all have identical interfaces",
+      "Many don't have fancy UI and work through command line, requiring deeper technical knowledge",
+      "They are simpler than commercial OS",
+      "No learning is required"
+    ],
+    "correctAnswer": "Many don't have fancy UI and work through command line, requiring deeper technical knowledge",
+    "explanation": "Many open-source OS don't have fancy UI and mostly work through command line. This can be too much for users to learn and implement, requiring them to dig deeper for technical issues."
+  },
+  {
+    "id": 5,
+    "question": "What type of support do companies like Microsoft and Apple offer for their Commercial OS?",
+    "options": [
+      "No support is provided",
+      "Comprehensive support packages including 24/7 help desks, updates, and training",
+      "Only email support once a month",
+      "Support only for hardware issues"
+    ],
+    "correctAnswer": "Comprehensive support packages including 24/7 help desks, updates, and training",
+    "explanation": "Vendor support for commercial OS includes 24/7 help desks, troubleshooting, remote assistance, regular updates and patches, and official training programs and certifications."
+  },
+  {
+    "id": 6,
+    "question": "What type of community support is available for open-source OS like Ubuntu and Fedora?",
+    "options": [
+      "No community exists",
+      "Forums, mailing lists, and extensive documentation maintained by the community",
+      "Only paid support is available",
+      "Support is limited to developers only"
+    ],
+    "correctAnswer": "Forums, mailing lists, and extensive documentation maintained by the community",
+    "explanation": "Open-source OS like Ubuntu and Fedora have vibrant communities that offer forums and mailing lists where users can ask questions and share solutions, plus extensive guides and manuals."
+  },
+  {
+    "id": 7,
+    "question": "What do companies like Canonical (Ubuntu) and Red Hat offer for open-source OS?",
+    "options": [
+      "No paid services",
+      "Enterprise support including 24/7 support, security maintenance, and consulting services",
+      "Only community forums",
+      "Hardware replacement only"
+    ],
+    "correctAnswer": "Enterprise support including 24/7 support, security maintenance, and consulting services",
+    "explanation": "Enterprise support for open-source OS includes 24/7 technical support via phone and tickets, extended security maintenance, regular updates, and consulting services for deployment and optimization."
+  },
+  {
+    "id": 8,
+    "question": "What is a key difference between community support and paid support for operating systems?",
+    "options": [
+      "They provide identical services",
+      "Community support is free while paid support guarantees faster response times and more reliable solutions",
+      "Paid support is always slower",
+      "Community support is more expensive"
+    ],
+    "correctAnswer": "Community support is free while paid support guarantees faster response times and more reliable solutions",
+    "explanation": "Community support is typically free, while enterprise and third-party support come at a cost but often guarantee faster response times and more reliable solutions."
+  },
+  {
+    "id": 9,
+    "question": "What is an advantage of open-source systems regarding customization?",
+    "options": [
+      "They cannot be customized",
+      "They offer more flexibility for customization supported by both community and enterprise services",
+      "Only commercial OS can be customized",
+      "Customization voids all warranties"
+    ],
+    "correctAnswer": "They offer more flexibility for customization supported by both community and enterprise services",
+    "explanation": "Open-source systems offer more flexibility for customization, which can be supported by both community and enterprise services, unlike more restrictive commercial systems."
+  },
+  {
+    "id": 10,
+    "question": "What is a potential compatibility issue with open-source operating systems?",
+    "options": [
+      "They work with all hardware and software without exception",
+      "There may be occasional incompatibility problems with specific hardware or software configurations",
+      "They only work with open-source hardware",
+      "They are incompatible with the internet"
+    ],
+    "correctAnswer": "There may be occasional incompatibility problems with specific hardware or software configurations",
+    "explanation": "While open-source operating systems frequently work with a variety of hardware and software, there may be occasional incompatibility problems with specific hardware or software configurations."
+  },
+  {
+    "id": 11,
+    "question": "What is a limitation regarding software availability on open-source OS?",
+    "options": [
+      "All software works on open-source OS",
+      "Some specialized or proprietary applications might only be accessible through commercial operating systems",
+      "No software is available for open-source OS",
+      "Only games are unavailable"
+    ],
+    "correctAnswer": "Some specialized or proprietary applications might only be accessible through commercial operating systems",
+    "explanation": "While a vast variety of open-source applications are available, some specialized or proprietary applications might only be accessible through commercial operating systems."
+  },
+  {
+    "id": 12,
+    "question": "How does third-party support for OS typically compare to vendor support?",
+    "options": [
+      "Third-party support is always more expensive",
+      "Third-party support often provides services at a lower cost than the vendor",
+      "Third-party support is illegal",
+      "Vendor support is always free"
+    ],
+    "correctAnswer": "Third-party support often provides services at a lower cost than the vendor",
+    "explanation": "Independent third-party companies provide support services for both commercial and open-source OS, often at a lower cost than the vendor's official support."
+  },
+  {
+    "id": 13,
+    "question": "What training options are typically available for Commercial OS?",
+    "options": [
+      "No training is provided",
+      "Official training programs and certifications for IT professionals",
+      "Only on-the-job training",
+      "Self-study is the only option"
+    ],
+    "correctAnswer": "Official training programs and certifications for IT professionals",
+    "explanation": "Commercial OS vendors offer official training programs and certifications for IT professionals as part of their comprehensive support packages."
+  },
+  {
+    "id": 14,
+    "question": "What type of updates do commercial OS vendors regularly provide?",
+    "options": [
+      "No updates are provided",
+      "Regular updates and patches to ensure security and performance",
+      "Updates only once a year",
+      "Updates that must be purchased separately"
+    ],
+    "correctAnswer": "Regular updates and patches to ensure security and performance",
+    "explanation": "Commercial OS vendors provide regular updates and patches to ensure security and performance as part of their software support services."
+  },
+  {
+    "id": 15,
+    "question": "What does extended security maintenance for open-source enterprise support include?",
+    "options": [
+      "No security updates",
+      "Security updates and regular maintenance beyond standard community support",
+      "Only antivirus software",
+      "Hardware security only"
+    ],
+    "correctAnswer": "Security updates and regular maintenance beyond standard community support",
+    "explanation": "Enterprise support for open-source OS includes extended security maintenance with regular updates, going beyond what's typically available through community support."
+  }
+]

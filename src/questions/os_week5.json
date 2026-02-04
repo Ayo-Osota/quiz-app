@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is a Task in an operating system?",
+    "options": [
+      "A complete program on disk",
+      "A unit of execution within a job",
+      "A hardware component",
+      "A network connection"
+    ],
+    "correctAnswer": "A unit of execution within a job",
+    "explanation": "A Task is a unit of execution within a job. One or more tasks make up a job. A task is termed as a thread when it is undergoing execution."
+  },
+  {
+    "id": 2,
+    "question": "What is multitasking?",
+    "options": [
+      "Running only one task at a time",
+      "Performing more than one task together at the same time",
+      "Switching between users",
+      "Installing multiple programs"
+    ],
+    "correctAnswer": "Performing more than one task together at the same time",
+    "explanation": "Multitasking is when more than one task can be performed together at the same time. When tasks are performed in parallel, it is known as parallel multitasking."
+  },
+  {
+    "id": 3,
+    "question": "What is a Process?",
+    "options": [
+      "A program stored on the hard drive",
+      "An executing program in computer memory",
+      "A hardware device",
+      "A network protocol"
+    ],
+    "correctAnswer": "An executing program in computer memory",
+    "explanation": "A process refers to an executing program in computer memory. A program may be a piece of code or software application that is currently running."
+  },
+  {
+    "id": 4,
+    "question": "What are the five stages of process execution?",
+    "options": [
+      "Create, Load, Execute, Save, Delete",
+      "Start, Ready, Running, Waiting, Terminated",
+      "Begin, Process, End, Save, Exit",
+      "Open, Active, Pause, Resume, Close"
+    ],
+    "correctAnswer": "Start, Ready, Running, Waiting, Terminated",
+    "explanation": "Execution of a process is completed in five different stages: start, ready, running, waiting, and terminated."
+  },
+  {
+    "id": 5,
+    "question": "How is a process's memory divided?",
+    "options": [
+      "Into two sections: code and data",
+      "Into four sections: text section, data section, heap, and stack",
+      "Into three sections: input, output, and processing",
+      "It is not divided"
+    ],
+    "correctAnswer": "Into four sections: text section, data section, heap, and stack",
+    "explanation": "A process memory is divided into 4 sections: text section (code), data section (variables), heap (dynamic memory), and stack (function calls and local variables)."
+  },
+  {
+    "id": 6,
+    "question": "What resources does the OS allocate to processes?",
+    "options": [
+      "Only CPU time",
+      "Memory, CPU time, and input-output (I/O) devices",
+      "Only memory",
+      "Only I/O devices"
+    ],
+    "correctAnswer": "Memory, CPU time, and input-output (I/O) devices",
+    "explanation": "To execute a process, the OS allocates resources such as memory, CPU time, and input-output (I/O) devices in a timely and orderly manner."
+  },
+  {
+    "id": 7,
+    "question": "What properties does the OS track for processes?",
+    "options": [
+      "Only the process name",
+      "Process id, security context, virtual address space, process priority, environment variables, etc.",
+      "Only the CPU usage",
+      "Only the memory usage"
+    ],
+    "correctAnswer": "Process id, security context, virtual address space, process priority, environment variables, etc.",
+    "explanation": "The OS keeps track of many properties including process id, security context, virtual address space, process priority, environment variables, and more."
+  },
+  {
+    "id": 8,
+    "question": "What is a key difference between Single-Tasking and Multi-Tasking systems?",
+    "options": [
+      "Multi-tasking is always slower",
+      "Single-tasking allocates all resources to one task; Multi-tasking shares resources among tasks",
+      "They are the same",
+      "Single-tasking is newer technology"
+    ],
+    "correctAnswer": "Single-tasking allocates all resources to one task; Multi-tasking shares resources among tasks",
+    "explanation": "Single-tasking allocates all system resources to a single task for better performance of that task. Multi-tasking shares resources among tasks for better overall system utilization."
+  },
+  {
+    "id": 9,
+    "question": "What is a Service in general terms?",
+    "options": [
+      "A program with a user interface",
+      "Software that works in background without user interface, invoked by other programs",
+      "A hardware device",
+      "An operating system component that manages displays"
+    ],
+    "correctAnswer": "Software that works in background without user interface, invoked by other programs",
+    "explanation": "A Service generally doesn't have a user interface, is invoked/called by other main programs/applications, works in the background performing various tasks, and can auto-start when the OS starts."
+  },
+  {
+    "id": 10,
+    "question": "What are key features of services?",
+    "options": [
+      "They always require user interaction",
+      "They provide specific operations, are reusable, and can be accessed remotely through APIs",
+      "They only run once per boot",
+      "They cannot communicate with other programs"
+    ],
+    "correctAnswer": "They provide specific operations, are reusable, and can be accessed remotely through APIs",
+    "explanation": "Services provide specific operations (data retrieval, transactions, business logic), are designed to be reusable across applications, and can be accessed remotely through APIs."
+  },
+  {
+    "id": 11,
+    "question": "What is the main difference between Services and Applications?",
+    "options": [
+      "Services and Applications are the same thing",
+      "Services perform single operations without user interaction; Applications perform wide range of operations with user interface",
+      "Applications run in background; Services have user interfaces",
+      "Services are faster than Applications"
+    ],
+    "correctAnswer": "Services perform single operations without user interaction; Applications perform wide range of operations with user interface",
+    "explanation": "Services mostly perform single operations, don't require user interaction, and are accessed by other programs. Applications perform wide range of operations, are started by users, and have well-defined user interfaces."
+  },
+  {
+    "id": 12,
+    "question": "How are Services typically installed and managed?",
+    "options": [
+      "Only manually by users",
+      "Automatically installed, managed, and started without user involvement once system starts",
+      "They cannot be installed",
+      "Only through command line"
+    ],
+    "correctAnswer": "Automatically installed, managed, and started without user involvement once system starts",
+    "explanation": "Services are software managed for users by the system. They are automatically installed, managed, and started without user involvement once the system starts, unlike applications that require user interaction."
+  },
+  {
+    "id": 13,
+    "question": "What tool can be used in Windows to view processes and tasks?",
+    "options": [
+      "Only Notepad",
+      "Task Manager, Performance Monitor, Process Explorer, Visual Studio",
+      "Only Control Panel",
+      "Calculator"
+    ],
+    "correctAnswer": "Task Manager, Performance Monitor, Process Explorer, Visual Studio",
+    "explanation": "Windows provides several useful tools: Task Manager, Performance Monitor, Process Explorer (SysInternals Suite), and Visual Studio to view processes, tasks, CPU time, resource usage, and priority."
+  },
+  {
+    "id": 14,
+    "question": "What is SysInternals Suite?",
+    "options": [
+      "A game development toolkit",
+      "A collection of Windows utilities for examining processes and system behavior",
+      "An operating system",
+      "A web browser"
+    ],
+    "correctAnswer": "A collection of Windows utilities for examining processes and system behavior",
+    "explanation": "SysInternals Suite is a collection of advanced Windows utilities that administrators can use to examine processes, tasks, and system behavior, including tools like Process Explorer."
+  },
+  {
+    "id": 15,
+    "question": "How do different OS define tasks?",
+    "options": [
+      "All OS define tasks identically",
+      "Different OS define tasks in different ways; some use tasks and processes interchangeably",
+      "Only Linux defines tasks",
+      "Tasks are not defined in operating systems"
+    ],
+    "correctAnswer": "Different OS define tasks in different ways; some use tasks and processes interchangeably",
+    "explanation": "Different OS define tasks in different ways. In some OS, tasks and processes are used interchangeably, representing every single step involved in executing a program."
+  }
+]
