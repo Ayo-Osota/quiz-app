@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "What is an Embedded Operating System designed for?",
+    "options": [
+      "Large enterprise servers",
+      "Smaller, more specialized systems for a specific purpose",
+      "Multi-user desktop computers",
+      "Cloud computing platforms"
+    ],
+    "correctAnswer": "Smaller, more specialized systems for a specific purpose",
+    "explanation": "Embedded OS's are designed for smaller more specialized systems and for a specific purpose. They handle and deal with fewer resources and do it quite well."
+  },
+  {
+    "id": 2,
+    "question": "Which of the following was an example of a Single-Tasking operating system?",
+    "options": [
+      "Windows 10",
+      "Linux",
+      "MS-DOS",
+      "macOS"
+    ],
+    "correctAnswer": "MS-DOS",
+    "explanation": "MS-DOS was an example of a single-tasking OS that can only run a single application at a time."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between Pre-emptive and Cooperative multitasking?",
+    "options": [
+      "Pre-emptive slices CPU time; Cooperative processes voluntarily yield control",
+      "They are the same thing",
+      "Cooperative is faster than Pre-emptive",
+      "Pre-emptive is only for mobile devices"
+    ],
+    "correctAnswer": "Pre-emptive slices CPU time; Cooperative processes voluntarily yield control",
+    "explanation": "Pre-emptive multitasking slices CPU time and each application gets a certain amount (like UNIX, Linux, Windows 95+). Cooperative multitasking has processes voluntarily yield control when idle or blocked (like Windows 1.0, 3.0, 3.1)."
+  },
+  {
+    "id": 4,
+    "question": "What is a Distributed Operating System?",
+    "options": [
+      "An OS that runs on a single computer",
+      "An OS installed on a group of computers making them appear as a single computer",
+      "An OS that only works with distributed databases",
+      "An OS for mobile devices"
+    ],
+    "correctAnswer": "An OS installed on a group of computers making them appear as a single computer",
+    "explanation": "A Distributed OS is installed on a distinct group of computers and makes them all appear and operate as a single computer. Examples include Linux and Windows Server editions."
+  },
+  {
+    "id": 5,
+    "question": "What is the mandate of a Real-Time Operating System (RTOS)?",
+    "options": [
+      "To provide the best graphics",
+      "To guarantee processing of events or data within a fixed/defined amount of time",
+      "To support the most applications",
+      "To use the least amount of memory"
+    ],
+    "correctAnswer": "To guarantee processing of events or data within a fixed/defined amount of time",
+    "explanation": "The mandate of an RTOS is to guarantee the processing of events or data within a fixed/defined amount of time. Examples include RTLinux, Windows CE, and QNX OS."
+  },
+  {
+    "id": 6,
+    "question": "What is the difference between Hard Real-Time and Soft Real-Time systems?",
+    "options": [
+      "Hard systems have strict time constraints; Soft systems have less strict constraints",
+      "Hard systems are more expensive",
+      "Soft systems are faster",
+      "There is no difference"
+    ],
+    "correctAnswer": "Hard systems have strict time constraints; Soft systems have less strict constraints",
+    "explanation": "Hard Real-Time OSs are for applications where time constraints are very strict and even the shortest delay is not acceptable (like airbags). Soft Real-Time systems have less strict time constraints."
+  },
+  {
+    "id": 7,
+    "question": "What type of OS classification emerged as a result of smartphones?",
+    "options": [
+      "Distributed OS",
+      "Real-Time OS",
+      "Mobile OS",
+      "Embedded OS"
+    ],
+    "correctAnswer": "Mobile OS",
+    "explanation": "Mobile OS is a newer type of OS classification that emerged as a result of the smartphone. This OS is far more fully functional than the embedded OS's in earlier cell phones."
+  },
+  {
+    "id": 8,
+    "question": "What are the two user models that OS types can offer?",
+    "options": [
+      "Single-User and Multi-User",
+      "Online and Offline",
+      "Graphical and Command-line",
+      "Local and Remote"
+    ],
+    "correctAnswer": "Single-User and Multi-User",
+    "explanation": "OS types can offer themselves in Single-User (no ability to distinguish users) or Multi-User (identifies different users, their applications and resources) models."
+  },
+  {
+    "id": 9,
+    "question": "Which advantage is associated with Distributed Operating Systems?",
+    "options": [
+      "Lower cost than standalone systems",
+      "Resources are shared, making computation fast and durable; failure of one system doesn't affect others",
+      "Easier to set up than single systems",
+      "Uses less electricity"
+    ],
+    "correctAnswer": "Resources are shared, making computation fast and durable; failure of one system doesn't affect others",
+    "explanation": "Distributed OS advantages include: all systems are independent so one failure doesn't affect network communication, resource sharing makes computation fast and durable, and load on host computer reduces."
+  },
+  {
+    "id": 10,
+    "question": "What is a disadvantage of Real-Time Operating Systems?",
+    "options": [
+      "They are too slow for critical applications",
+      "Complex algorithms and limited tasks running simultaneously",
+      "They cannot handle any calculations",
+      "They use too much memory"
+    ],
+    "correctAnswer": "Complex algorithms and limited tasks running simultaneously",
+    "explanation": "RTOS disadvantages include: very few tasks run simultaneously to avoid errors, complex algorithms that are difficult to design, use of heavy/expensive system resources, and specific device driver requirements."
+  },
+  {
+    "id": 11,
+    "question": "What is an advantage of Mobile Operating Systems?",
+    "options": [
+      "Unlimited battery life",
+      "Most systems are easy for users to learn and operate",
+      "They work on all devices",
+      "No security concerns"
+    ],
+    "correctAnswer": "Most systems are easy for users to learn and operate",
+    "explanation": "An advantage of Mobile OS is that most systems are easy for users to learn and operate, though some can put a heavy drain on battery and some are not user-friendly."
+  },
+  {
+    "id": 12,
+    "question": "How much memory can a 32-bit OS access?",
+    "options": [
+      "Maximum 2 GB RAM",
+      "Maximum 4 GB RAM",
+      "Maximum 8 GB RAM",
+      "Unlimited RAM"
+    ],
+    "correctAnswer": "Maximum 4 GB RAM",
+    "explanation": "A 32-bit system can access 2^32 different memory addresses, which equals a maximum of 4 GB RAM."
+  },
+  {
+    "id": 13,
+    "question": "Which feature distinguishes 64-bit OS from 32-bit OS?",
+    "options": [
+      "64-bit can only run 64-bit applications",
+      "64-bit can run both 32-bit and 64-bit applications",
+      "64-bit is slower than 32-bit",
+      "64-bit uses less memory"
+    ],
+    "correctAnswer": "64-bit can run both 32-bit and 64-bit applications",
+    "explanation": "A key difference is compatibility: 32-bit OS can only run 32-bit applications, while 64-bit OS can run both 32-bit and 64-bit applications."
+  },
+  {
+    "id": 14,
+    "question": "What security advantage does a 64-bit OS have over 32-bit?",
+    "options": [
+      "No viruses can affect it",
+      "Supports hardware level protection",
+      "Automatically encrypts all data",
+      "No internet connection needed"
+    ],
+    "correctAnswer": "Supports hardware level protection",
+    "explanation": "64-bit OS supports hardware level protection, providing better security compared to the limited security support of 32-bit systems."
+  },
+  {
+    "id": 15,
+    "question": "Which examples of operating systems can be configured as Distributed?",
+    "options": [
+      "Only Linux",
+      "Only Windows",
+      "Linux, Windows Server 2003, 2008, 2012, and 2016",
+      "MS-DOS and Windows 3.1"
+    ],
+    "correctAnswer": "Linux, Windows Server 2003, 2008, 2012, and 2016",
+    "explanation": "Examples of OS's that can be loaded/configured as distributed include Linux and Windows Server editions (2003, 2008, 2012, and 2016)."
+  }
+]
