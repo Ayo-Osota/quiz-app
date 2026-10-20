@@ -1,0 +1,587 @@
+[
+  {
+    "id": 1,
+    "question": "Why does BankAccount have to be declared 'abstract' in this assignment?",
+    "options": [
+      "Because it has virtual methods",
+      "Because it has properties with private setters",
+      "Because it contains an abstract method (ToString)",
+      "Because SavingsAccount inherits from it"
+    ],
+    "correctAnswer": "Because it contains an abstract method (ToString)",
+    "explanation": "A class that contains an abstract method must itself be declared abstract. That also means you cannot create a plain BankAccount object, only a derived class such as SavingsAccount."
+  },
+  {
+    "id": 2,
+    "question": "What is the difference between a virtual method and an abstract method?",
+    "options": [
+      "A virtual method has a body and may be overridden; an abstract method has no body and must be overridden in a non-abstract child class",
+      "A virtual method cannot be overridden; an abstract method can",
+      "A virtual method has no body; an abstract method has a body",
+      "There is no difference; the keywords are interchangeable"
+    ],
+    "correctAnswer": "A virtual method has a body and may be overridden; an abstract method has no body and must be overridden in a non-abstract child class",
+    "explanation": "Deposit and Withdrawal are virtual because they have working code that a child may replace. ToString is abstract because the base class supplies nothing and forces every child to provide it."
+  },
+  {
+    "id": 3,
+    "question": "What does the declaration 'public abstract override string ToString();' do?",
+    "options": [
+      "Creates a brand new method unrelated to object's ToString",
+      "Hides the inherited ToString so it cannot be called",
+      "Makes ToString a static method",
+      "Re-declares the inherited ToString from object as abstract, forcing derived classes to supply their own version"
+    ],
+    "correctAnswer": "Re-declares the inherited ToString from object as abstract, forcing derived classes to supply their own version",
+    "explanation": "Every class inherits ToString() from object. Marking it 'abstract override' removes the default body and requires each non-abstract child class to override it."
+  },
+  {
+    "id": 4,
+    "question": "In 'public SavingsAccount(...) : base(accountNumber, ACCOUNT_TYPE, balance)', what does ': base(...)' do?",
+    "options": [
+      "Copies all the parent's methods into the child",
+      "Calls the parent class constructor and passes it values",
+      "Creates a second SavingsAccount object",
+      "Makes the constructor static"
+    ],
+    "correctAnswer": "Calls the parent class constructor and passes it values",
+    "explanation": "Constructors are not inherited, so the child constructor uses ': base(...)' to hand the values the parent needs up to the BankAccount constructor before running its own body."
+  },
+  {
+    "id": 5,
+    "question": "Are constructors inherited by a derived class in C#?",
+    "options": [
+      "Yes, all of them",
+      "Only public ones",
+      "Only parameterless ones",
+      "No, the child must declare its own and can call the parent's with ': base(...)'"
+    ],
+    "correctAnswer": "No, the child must declare its own and can call the parent's with ': base(...)'",
+    "explanation": "Constructors are never inherited. That is why each custom exception class declares its own three constructors and forwards to Exception with ': base(...)'."
+  },
+  {
+    "id": 6,
+    "question": "Balance has 'protected set' in BankAccount. What does that allow?",
+    "options": [
+      "Only the BankAccount class can set it",
+      "Any code in the program can set it",
+      "BankAccount and its derived classes can set it, but outside code cannot",
+      "Nobody can set it, not even the constructor"
+    ],
+    "correctAnswer": "BankAccount and its derived classes can set it, but outside code cannot",
+    "explanation": "'protected' gives access to the declaring class and its children. Outside code has to go through Deposit and Withdrawal, so the balance cannot be changed directly."
+  },
+  {
+    "id": 7,
+    "question": "AccountNumber has 'private set'. When can its value be assigned?",
+    "options": [
+      "Any time from anywhere",
+      "Only inside the BankAccount class, such as in its constructor",
+      "Only from Program.Main",
+      "Only inside SavingsAccount"
+    ],
+    "correctAnswer": "Only inside the BankAccount class, such as in its constructor",
+    "explanation": "A private setter limits assignment to the class that declares the property. Even SavingsAccount cannot assign it, which keeps an account number fixed once the account is created."
+  },
+  {
+    "id": 8,
+    "question": "Why is 'decimal' used for the balance instead of 'double'?",
+    "options": [
+      "Decimal uses less memory",
+      "Decimal supports negative numbers and double does not",
+      "Decimal is required by .NET 10",
+      "Decimal avoids the rounding errors that binary floating-point types can introduce with money"
+    ],
+    "correctAnswer": "Decimal avoids the rounding errors that binary floating-point types can introduce with money",
+    "explanation": "double stores values in binary, so some decimal fractions cannot be represented exactly. decimal is designed for financial calculations where exact base-10 values matter."
+  },
+  {
+    "id": 9,
+    "question": "In the SavingsAccount override of Withdrawal, what does 'base.Withdrawal(amount)' do after the limit check passes?",
+    "options": [
+      "Runs the parent's version, which checks for insufficient funds and subtracts the amount",
+      "Calls the same override again",
+      "Creates a new BankAccount",
+      "Resets the balance to zero"
+    ],
+    "correctAnswer": "Runs the parent's version, which checks for insufficient funds and subtracts the amount",
+    "explanation": "base.Method() calls the parent's implementation. The override adds the withdrawal-limit rule and then reuses the existing logic instead of copying it."
+  },
+  {
+    "id": 10,
+    "question": "Why is the withdrawal-limit check written in SavingsAccount instead of BankAccount?",
+    "options": [
+      "Abstract classes cannot contain if statements",
+      "The WithdrawalLimit property only exists in SavingsAccount",
+      "Virtual methods cannot throw exceptions",
+      "The brief forbids exceptions in the base class"
+    ],
+    "correctAnswer": "The WithdrawalLimit property only exists in SavingsAccount",
+    "explanation": "The base class does not know about a limit. The child overrides Withdrawal, checks its own property, and then calls the base version for the rules that apply to every account."
+  },
+  {
+    "id": 11,
+    "question": "Using Interest = lowest balance * interest rate / 12, what is the interest for a lowest balance of 1200 at a rate of 0.03?",
+    "options": ["36.00", "0.30", "360.00", "3.00"],
+    "correctAnswer": "3.00",
+    "explanation": "1200 * 0.03 = 36, and 36 / 12 = 3.00. The division by 12 turns the yearly rate into one month of interest."
+  },
+  {
+    "id": 12,
+    "question": "A savings account has a lowest balance of 2400 and an interest rate of 0.05. What does CalculateInterest return?",
+    "options": ["120.00", "10.00", "1.00", "100.00"],
+    "correctAnswer": "10.00",
+    "explanation": "2400 * 0.05 = 120, and 120 / 12 = 10.00."
+  },
+  {
+    "id": 13,
+    "question": "Why is the interest rate stored as 0.03 instead of 3 for 3%?",
+    "options": [
+      "decimal cannot hold whole numbers",
+      "The formula multiplies by the rate directly, so storing 3 would make the interest 100 times too large",
+      "C# automatically divides rates by 100",
+      "It makes the account sort correctly"
+    ],
+    "correctAnswer": "The formula multiplies by the rate directly, so storing 3 would make the interest 100 times too large",
+    "explanation": "The brief's formula is lowest balance * rate / 12 with no division by 100, so the rate must already be a fraction. Format specifier P2 then displays 0.03 as 3.00%."
+  },
+  {
+    "id": 14,
+    "question": "In Transfer, what goes wrong if the 'throw' for a missing account is placed in an else block inside the foreach loop?",
+    "options": [
+      "Nothing, it works the same",
+      "The loop never runs",
+      "It throws as soon as the first non-matching account is checked, even if the correct account appears later in the list",
+      "It throws only when the list is empty"
+    ],
+    "correctAnswer": "It throws as soon as the first non-matching account is checked, even if the correct account appears later in the list",
+    "explanation": "The decision that an account is 'not found' can only be made after every account has been checked. The fix is to search first, remember what was found, and test for null after the loop."
+  },
+  {
+    "id": 15,
+    "question": "Why does Transfer find the recipient account BEFORE calling Withdrawal?",
+    "options": [
+      "So a failed transfer does not remove money from the sender",
+      "Because Withdrawal needs the recipient object",
+      "Because Deposit must run first",
+      "To make the method return a value"
+    ],
+    "correctAnswer": "So a failed transfer does not remove money from the sender",
+    "explanation": "If the recipient is missing, the exception is thrown before any balance changes. Searching first keeps the operation all-or-nothing."
+  },
+  {
+    "id": 16,
+    "question": "Transfer calls Withdrawal on the sending account. What does that mean for the withdrawal limit?",
+    "options": [
+      "Transfers ignore the limit",
+      "Transfers are limited by the recipient's limit",
+      "The limit applies to transfers too, because the overridden Withdrawal does the check",
+      "Only deposits are checked against the limit"
+    ],
+    "correctAnswer": "The limit applies to transfers too, because the overridden Withdrawal does the check",
+    "explanation": "Because Withdrawal is virtual, the call from Transfer runs the SavingsAccount override, so both the limit check and the insufficient-funds check apply to transfers."
+  },
+  {
+    "id": 17,
+    "question": "Why is the list of accounts in SavingsAccount declared 'static'?",
+    "options": [
+      "So the list cannot be changed",
+      "Because lists must always be static",
+      "So that it is automatically sorted",
+      "So one list is shared by all SavingsAccount objects and Transfer can find any account by its number"
+    ],
+    "correctAnswer": "So one list is shared by all SavingsAccount objects and Transfer can find any account by its number",
+    "explanation": "A static field belongs to the class, not to one object. Every constructor adds 'this' to the same list, which is how Transfer can look up a recipient from just an account number."
+  },
+  {
+    "id": 18,
+    "question": "In the SavingsAccount constructor, accounts.Add(this) runs after the base constructor. What happens to the list if the base constructor throws AccountNotFoundException?",
+    "options": [
+      "The invalid account is still added to the list",
+      "The program continues silently",
+      "The list is cleared",
+      "The account is never created and never added to the list"
+    ],
+    "correctAnswer": "The account is never created and never added to the list",
+    "explanation": "An exception thrown in the base constructor stops construction, so the line that adds the account never runs and no half-built account ends up registered."
+  },
+  {
+    "id": 19,
+    "question": "What class must a custom exception class inherit from?",
+    "options": ["Exception", "Object only", "Error", "ApplicationForm"],
+    "correctAnswer": "Exception",
+    "explanation": "Custom exceptions inherit from System.Exception (or one of its children). That gives them Message, StackTrace and InnerException and lets them be thrown and caught."
+  },
+  {
+    "id": 20,
+    "question": "Why does each custom exception class in this assignment declare three constructors?",
+    "options": [
+      "C# will not compile an exception with fewer than three",
+      "To follow the standard exception pattern: default, message, and message plus inner exception",
+      "Because each exception needs a different account number",
+      "Because constructors are inherited and must be repeated"
+    ],
+    "correctAnswer": "To follow the standard exception pattern: default, message, and message plus inner exception",
+    "explanation": "The three constructors mirror the ones on Exception and make the class usable in the same ways. Constructors are not inherited, so each one forwards to the parent with ': base(...)'."
+  },
+  {
+    "id": 21,
+    "question": "In a custom exception, what does 'public InsufficientFundsException(string message) : base(message)' accomplish?",
+    "options": [
+      "It prints the message to the console",
+      "It stores the message in a new field of the same name",
+      "It passes the message to Exception so it is available through the Message property",
+      "It throws the exception immediately"
+    ],
+    "correctAnswer": "It passes the message to Exception so it is available through the Message property",
+    "explanation": "Exception stores the text, so 'ex.Message' in a catch block returns what was supplied at the throw site."
+  },
+  {
+    "id": 22,
+    "question": "What happens if 'catch (Exception ex)' is written BEFORE 'catch (InsufficientFundsException ex)' in the same try statement?",
+    "options": [
+      "A compile error, because the general catch already handles every exception type that follows",
+      "Both blocks run",
+      "The specific catch runs first anyway",
+      "The program compiles but the second catch never throws"
+    ],
+    "correctAnswer": "A compile error, because the general catch already handles every exception type that follows",
+    "explanation": "Every exception inherits from Exception, so a general catch placed first would make the specific one unreachable. Put the most specific catch blocks first and the general Exception catch last."
+  },
+  {
+    "id": 23,
+    "question": "Why does 'catch (Exception)' also catch an InsufficientFundsException?",
+    "options": [
+      "Because exceptions are always converted to Exception",
+      "Because the name contains the word Exception",
+      "Because InsufficientFundsException inherits from Exception, so it is-a Exception",
+      "Because it was thrown inside a loop"
+    ],
+    "correctAnswer": "Because InsufficientFundsException inherits from Exception, so it is-a Exception",
+    "explanation": "A catch for a parent type matches any child type. This is the 'is-a' relationship from inheritance applied to exception handling."
+  },
+  {
+    "id": 24,
+    "question": "In a try-catch-finally statement, when does the finally block run?",
+    "options": [
+      "Only when an exception is thrown",
+      "Only when no exception is thrown",
+      "Never, it is only for documentation",
+      "Whether or not an exception occurred"
+    ],
+    "correctAnswer": "Whether or not an exception occurred",
+    "explanation": "finally runs in every case, so it is the right place for cleanup code that must always execute."
+  },
+  {
+    "id": 25,
+    "question": "Which exception is thrown by acc.Deposit(-5m)?",
+    "options": [
+      "InvalidWithdrawAmountException",
+      "InvalidDepositAmountException",
+      "InsufficientFundsException",
+      "AccountNotFoundException"
+    ],
+    "correctAnswer": "InvalidDepositAmountException",
+    "explanation": "The brief requires a deposit amount to be positive. A zero or negative deposit throws InvalidDepositAmountException and leaves the balance unchanged."
+  },
+  {
+    "id": 26,
+    "question": "A savings account has a balance of 100 and a withdrawal limit of 500. What happens on Withdrawal(200m)?",
+    "options": [
+      "InvalidWithdrawAmountException is thrown",
+      "The balance becomes -100",
+      "InsufficientFundsException is thrown",
+      "AccountNotFoundException is thrown"
+    ],
+    "correctAnswer": "InsufficientFundsException is thrown",
+    "explanation": "200 is within the 500 limit, so the limit check passes. The base class then sees that 200 is more than the 100 balance and throws InsufficientFundsException."
+  },
+  {
+    "id": 27,
+    "question": "A savings account has a balance of 550 and a withdrawal limit of 500. Which exception is thrown by Withdrawal(600m)?",
+    "options": [
+      "InsufficientFundsException",
+      "InvalidDepositAmountException",
+      "InvalidWithdrawAmountException",
+      "No exception"
+    ],
+    "correctAnswer": "InvalidWithdrawAmountException",
+    "explanation": "The limit check runs first in the SavingsAccount override. 600 is above the 500 limit, so InvalidWithdrawAmountException is thrown before the balance is ever checked."
+  },
+  {
+    "id": 28,
+    "question": "Which exception should be thrown when Transfer is given an account number that matches no account?",
+    "options": [
+      "AccountNotFoundException",
+      "InsufficientFundsException",
+      "InvalidDepositAmountException",
+      "ArgumentNullException"
+    ],
+    "correctAnswer": "AccountNotFoundException",
+    "explanation": "The brief lists 'Account not found' as a custom exception to be used in the Transfer method (and the constructor)."
+  },
+  {
+    "id": 29,
+    "question": "By default, what does the inherited Equals() method compare for two class objects?",
+    "options": [
+      "All their property values",
+      "Only their account numbers",
+      "Their references, meaning whether they are the same object in memory",
+      "Their data types only"
+    ],
+    "correctAnswer": "Their references, meaning whether they are the same object in memory",
+    "explanation": "object.Equals compares references. That is why the brief asks you to override Equals so two accounts with the same number and type count as equal even when they are different objects."
+  },
+  {
+    "id": 30,
+    "question": "Which values does the overridden Equals() in SavingsAccount compare?",
+    "options": [
+      "Account number only",
+      "Balance and interest rate",
+      "All five properties",
+      "Account number and account type"
+    ],
+    "correctAnswer": "Account number and account type",
+    "explanation": "The brief says to compare by account number and type only. Balance, interest rate and withdrawal limit are intentionally ignored."
+  },
+  {
+    "id": 31,
+    "question": "Why must GetHashCode() be overridden whenever Equals() is overridden?",
+    "options": [
+      "Because Equals cannot compile without it",
+      "Because GetHashCode sorts the objects",
+      "Because hash codes are used for exceptions",
+      "Objects that are equal must return the same hash code, and collections such as Dictionary and HashSet rely on that"
+    ],
+    "correctAnswer": "Objects that are equal must return the same hash code, and collections such as Dictionary and HashSet rely on that",
+    "explanation": "If two objects are Equal but produce different hash codes, hash-based collections will treat them as different. The hash code should be built from the same values Equals uses."
+  },
+  {
+    "id": 32,
+    "question": "Two SavingsAccount objects have the same account number and type but are separate objects. What do 'a.Equals(b)' and 'a == b' return if only Equals was overridden?",
+    "options": [
+      "Both return true",
+      "Equals returns true; == returns false",
+      "Equals returns false; == returns true",
+      "Both return false"
+    ],
+    "correctAnswer": "Equals returns true; == returns false",
+    "explanation": "The == operator was not overloaded, so it still compares references, and the two variables point to different objects. Only the overridden Equals compares by value."
+  },
+  {
+    "id": 33,
+    "question": "In Equals, why use 'SavingsAccount? other = obj as SavingsAccount;'?",
+    "options": [
+      "It copies the object",
+      "It throws an exception if obj is the wrong type",
+      "It makes the comparison faster than a loop",
+      "It gives null when obj is null or not a SavingsAccount, so the method can safely return false"
+    ],
+    "correctAnswer": "It gives null when obj is null or not a SavingsAccount, so the method can safely return false",
+    "explanation": "The 'as' operator attempts a type conversion and returns null instead of throwing if it fails. A null check afterward covers both a null argument and a wrong type."
+  },
+  {
+    "id": 34,
+    "question": "What does a positive result from CompareTo mean?",
+    "options": [
+      "The current object is greater than the object being compared to",
+      "The current object is less than the object being compared to",
+      "The two objects are equal",
+      "The comparison failed"
+    ],
+    "correctAnswer": "The current object is greater than the object being compared to",
+    "explanation": "CompareTo returns a negative number when the current object comes first, 0 when they are equal, and a positive number when the current object comes after."
+  },
+  {
+    "id": 35,
+    "question": "What must a class provide so that List<T>.Sort() can sort its objects without extra arguments?",
+    "options": [
+      "A static Sort method",
+      "An implementation of IComparable, meaning a CompareTo method",
+      "A public Equals method",
+      "A property named SortOrder"
+    ],
+    "correctAnswer": "An implementation of IComparable, meaning a CompareTo method",
+    "explanation": "List.Sort() has no idea what 'smaller' means for your class. Implementing IComparable supplies CompareTo, which Sort calls repeatedly to decide the order."
+  },
+  {
+    "id": 36,
+    "question": "In this assignment, what is the sort order of SavingsAccount objects based on?",
+    "options": [
+      "Balance, highest first",
+      "Interest rate",
+      "Account number only",
+      "Alphabetical order of the account type"
+    ],
+    "correctAnswer": "Account number only",
+    "explanation": "The brief says to use only the account number as the basis for sorting. CompareTo delegates to the int comparison of the two account numbers."
+  },
+  {
+    "id": 37,
+    "question": "Why does CompareTo use 'AccountNumber.CompareTo(other.AccountNumber)' instead of returning 'AccountNumber - other.AccountNumber'?",
+    "options": [
+      "Subtraction is not allowed on int values",
+      "Subtraction always returns zero",
+      "int.CompareTo returns the right negative, zero or positive result without the risk of overflow",
+      "The compiler requires method calls inside CompareTo"
+    ],
+    "correctAnswer": "int.CompareTo returns the right negative, zero or positive result without the risk of overflow",
+    "explanation": "Subtracting values near the limits of int can overflow and flip the sign. int.CompareTo is safe and already returns the negative, zero or positive result Sort expects."
+  },
+  {
+    "id": 38,
+    "question": "What does CompareTo(object? obj) in this assignment do when obj is not a SavingsAccount (and is not null)?",
+    "options": [
+      "Returns 0",
+      "Returns 1",
+      "Returns -1",
+      "Throws an ArgumentException"
+    ],
+    "correctAnswer": "Throws an ArgumentException",
+    "explanation": "The non-generic IComparable receives any object, so the method guards against the wrong type. Throwing ArgumentException is the standard .NET behaviour. A null argument returns 1 because any instance sorts after null."
+  },
+  {
+    "id": 39,
+    "question": "What is an interface in C#?",
+    "options": [
+      "A class that can be instantiated and holds data",
+      "A graphical form that collects input",
+      "A contract of method signatures, with no code, that a class agrees to implement",
+      "A special kind of exception"
+    ],
+    "correctAnswer": "A contract of method signatures, with no code, that a class agrees to implement",
+    "explanation": "An interface lists what a class must provide (names, parameters, return types) but not how. IComparable is an example: it requires a CompareTo method."
+  },
+  {
+    "id": 40,
+    "question": "How many base classes and how many interfaces can a C# class have?",
+    "options": [
+      "One base class and any number of interfaces",
+      "Any number of base classes and one interface",
+      "One of each",
+      "Any number of both"
+    ],
+    "correctAnswer": "One base class and any number of interfaces",
+    "explanation": "C# has single inheritance for classes but allows multiple interfaces, for example 'class SavingsAccount : BankAccount, IComparable'."
+  },
+  {
+    "id": 41,
+    "question": "In 'internal class SavingsAccount : BankAccount, IComparable', why is the base class listed first?",
+    "options": [
+      "It is only a convention with no rule behind it",
+      "The base class, if there is one, must appear first in the list, followed by the interfaces",
+      "Interfaces must always be listed first",
+      "Alphabetical order is required"
+    ],
+    "correctAnswer": "The base class, if there is one, must appear first in the list, followed by the interfaces",
+    "explanation": "C# requires the single base class to come first in the inheritance list, with any interfaces after it, separated by commas."
+  },
+  {
+    "id": 42,
+    "question": "Which pair correctly describes overriding and overloading?",
+    "options": [
+      "Overriding changes an inherited method with the same signature in a child; overloading uses the same name with different parameters",
+      "Overriding and overloading are two names for the same thing",
+      "Overriding adds parameters; overloading replaces the return type",
+      "Overriding happens only in static classes"
+    ],
+    "correctAnswer": "Overriding changes an inherited method with the same signature in a child; overloading uses the same name with different parameters",
+    "explanation": "SavingsAccount.Withdrawal overrides BankAccount.Withdrawal (same signature, new behaviour). Having BankAccount constructors with different parameter lists is an example of overloading."
+  },
+  {
+    "id": 43,
+    "question": "Given 'BankAccount acc = new SavingsAccount(1001, 500m, 0.03m, 500m);', which Withdrawal runs when you call acc.Withdrawal(600m)?",
+    "options": [
+      "The BankAccount version, because that is the variable type",
+      "Neither, it will not compile",
+      "Both versions at the same time",
+      "The SavingsAccount override, because the actual object is a SavingsAccount"
+    ],
+    "correctAnswer": "The SavingsAccount override, because the actual object is a SavingsAccount",
+    "explanation": "This is polymorphism. For virtual methods, the version that runs is chosen from the actual object at run time, not from the variable's declared type."
+  },
+  {
+    "id": 44,
+    "question": "Which statement about 'BankAccount acc = new BankAccount(1, \"Chequing\", 0m);' is true?",
+    "options": [
+      "It compiles and creates a normal account",
+      "It does not compile, because BankAccount is abstract and cannot be instantiated",
+      "It compiles but throws an exception at run time",
+      "It compiles only if ToString is virtual"
+    ],
+    "correctAnswer": "It does not compile, because BankAccount is abstract and cannot be instantiated",
+    "explanation": "Abstract classes exist only to be inherited from. You can use BankAccount as a variable type, but objects must be created from a concrete child such as SavingsAccount."
+  },
+  {
+    "id": 45,
+    "question": "Why do the withdrawal and deposit methods change the balance through the property (Balance += amount) instead of directly changing a separate variable elsewhere?",
+    "options": [
+      "Properties are faster than fields",
+      "It keeps all access to the balance going through one controlled place, so rules on the setter apply everywhere",
+      "C# forbids using fields inside methods",
+      "Properties are required to be static"
+    ],
+    "correctAnswer": "It keeps all access to the balance going through one controlled place, so rules on the setter apply everywhere",
+    "explanation": "Properties are the controlled gateway to an object's data (encapsulation). Using them consistently means any validation or restriction added to the setter later applies to every code path."
+  },
+  {
+    "id": 46,
+    "question": "The assignment forbids 'var' in declarations. What must you use instead?",
+    "options": [
+      "dynamic",
+      "object for everything",
+      "The appropriate explicit data type, such as SavingsAccount or decimal",
+      "No declaration at all"
+    ],
+    "correctAnswer": "The appropriate explicit data type, such as SavingsAccount or decimal",
+    "explanation": "The requirements say to use the appropriate datatype in every declaration, for example 'decimal interestDecimal' and 'SavingsAccount acc1'."
+  },
+  {
+    "id": 47,
+    "question": "Why does the test harness give every test account a different account number?",
+    "options": [
+      "C# rejects duplicate account numbers",
+      "Because Sort requires unique numbers",
+      "Because the static list of accounts is shared by the whole run, so duplicates could be found instead of the intended account during Transfer",
+      "Because account numbers must be sequential"
+    ],
+    "correctAnswer": "Because the static list of accounts is shared by the whole run, so duplicates could be found instead of the intended account during Transfer",
+    "explanation": "Every constructor adds its object to the same static list. Reusing a number means Transfer's search could land on the wrong object. The one deliberate exception is the Equals test, which needs two accounts with the same number."
+  },
+  {
+    "id": 48,
+    "question": "What does the test harness prove with 'same1 == same2' returning False while 'same1.Equals(same2)' returns True?",
+    "options": [
+      "That Equals is broken",
+      "That == compares references while the overridden Equals compares account number and type",
+      "That the two accounts have different balances",
+      "That GetHashCode was not overridden"
+    ],
+    "correctAnswer": "That == compares references while the overridden Equals compares account number and type",
+    "explanation": "The two objects are different instances (== is false) but represent the same account by the brief's definition (Equals is true)."
+  },
+  {
+    "id": 49,
+    "question": "A Transfer of 600 is attempted from an account with a balance of 550 and a withdrawal limit of 500. What is the balance of both accounts afterward?",
+    "options": [
+      "Both are unchanged, because the exception is thrown before any money moves",
+      "Sender 0, recipient 600",
+      "Sender -50, recipient 600",
+      "Sender 550, recipient 600"
+    ],
+    "correctAnswer": "Both are unchanged, because the exception is thrown before any money moves",
+    "explanation": "Transfer calls Withdrawal first. The limit check throws InvalidWithdrawAmountException, so the Deposit line never runs and neither balance changes."
+  },
+  {
+    "id": 50,
+    "question": "Why does the assignment require regular Git commits throughout development?",
+    "options": [
+      "To make the .zip file smaller",
+      "To demonstrate your development process with multiple commits in your local repository",
+      "Because Visual Studio cannot run without Git",
+      "To let classmates download your code"
+    ],
+    "correctAnswer": "To demonstrate your development process with multiple commits in your local repository",
+    "explanation": "The brief asks you to create the local repository as soon as you create the solution and commit as you progress, showing the work was built step by step."
+  }
+]

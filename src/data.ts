@@ -26,6 +26,7 @@ import prog1926_week11 from "./questions/prog1926_week11.json";
 import prog1926_week12 from "./questions/prog1926_week12.json";
 import prog1926_week13 from "./questions/prog1926_week13.json";
 import prog1926_exam_review from "./questions/prog1926_exam_review.json";
+import prog2511_a04_quiz from "./questions/prog2511_a04_quiz.json";
 import os_week1 from "./questions/os_week1.json";
 import os_week2 from "./questions/os_week2.json";
 import os_week3 from "./questions/os_week3.json";
@@ -60,6 +61,7 @@ export const modules: IModule[] = [
   { id: "prog1926_week12", title: "PROG1926 Wk 12", data: prog1926_week12 },
   { id: "prog1926_week13", title: "PROG1926 Wk 13", data: prog1926_week13 },
   { id: "prog1926_exam_review", title: "PROG1926 Exam Review", data: prog1926_exam_review },
+  { id: "prog2511_a04_quiz", title: "Object Oriented Programming", data: prog2511_a04_quiz },
   { id: "os_week1", title: "OS (PROG 2635) Wk 1", data: os_week1 },
   { id: "os_week2", title: "OS (PROG 2635) Wk 2", data: os_week2 },
   { id: "os_week3", title: "OS (PROG 2635) Wk 3", data: os_week3 },
