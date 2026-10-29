@@ -5,8 +5,8 @@
     "options": [
       "Circular linked lists and circular arrays",
       "Circular stacks and circular queues",
-      "Circular trees and circular graphs",
-      "Circular hash tables and circular heaps"
+      "Circular trees and circular directed graphs",
+      "Circular hash tables and circular binary heaps"
     ],
     "correctAnswer": "Circular linked lists and circular arrays",
     "explanation": "The class covers circular linked lists and circular arrays (buffers)."
@@ -15,10 +15,10 @@
     "id": 262,
     "question": "Which of these is given as a real-world example of a circular structure?",
     "options": [
-      "A grocery store checkout line",
+      "A grocery store checkout line, where the first person in line is served first",
       "Players in a game where the turn passes around and returns to the first player",
-      "A stack of dishes",
-      "A sorted phone book"
+      "A stack of dishes, where only the top dish can be removed",
+      "A sorted phone book, where entries are kept in alphabetical order"
     ],
     "correctAnswer": "Players in a game where the turn passes around and returns to the first player",
     "explanation": "Other examples: sports rotations (serving/batting), molecule rings in chemistry, and dependency loops between organisms in biology."
@@ -27,10 +27,10 @@
     "id": 263,
     "question": "Short answer: 'Where does a circular list end?'",
     "options": [
-      "At the node whose link is NULL",
-      "At the middle node",
+      "At the middle node, which marks where the circle turns back on itself",
+      "At the node whose link is NULL, just like a classic linked list",
       "It doesn't really end; you need a pointer/marker (or several) to designate specific members",
-      "At the largest value"
+      "At the node holding the largest value, since circular lists are always kept in sorted order"
     ],
     "correctAnswer": "It doesn't really end; you need a pointer/marker (or several) to designate specific members",
     "explanation": "There is no natural end, so markers like a head pointer designate members for various purposes."
@@ -39,9 +39,9 @@
     "id": 264,
     "question": "What is the ONLY difference between a circular linked list and a regular linked list?",
     "options": [
-      "Circular lists store two values per node",
-      "Circular lists are always sorted",
-      "Circular lists have no head",
+      "Circular lists have no head pointer, so traversal can start anywhere",
+      "Each node stores two values, one for the data and one for its position in the circle",
+      "Circular lists are always kept sorted, so the smallest value follows the largest",
       "The last element's next (tail.next) points to the first element (head) instead of null"
     ],
     "correctAnswer": "The last element's next (tail.next) points to the first element (head) instead of null",
@@ -52,9 +52,9 @@
     "question": "Can a circular linked list be doubly linked?",
     "options": [
       "Yes; it can have one reference direction or a double reference like a doubly linked list",
-      "No, circular lists can only be singly linked",
-      "Only if it is sorted",
-      "Only if it has fewer than 10 nodes"
+      "No; circular lists can only be singly linked",
+      "Only if it is sorted, since the prev links must point to smaller values",
+      "Only if it has fewer than 10 nodes, to avoid infinite loops in both directions"
     ],
     "correctAnswer": "Yes; it can have one reference direction or a double reference like a doubly linked list",
     "explanation": "Circular lists can be singly or doubly linked."
@@ -63,10 +63,10 @@
     "id": 266,
     "question": "In a doubly circular linked list, what do the tail's 'next' and the head's 'prev' point to?",
     "options": [
-      "Both point to NULL",
+      "Both point to NULL, just like the ends of a doubly linked list",
       "Tail's next points to the head; head's prev points to the tail",
       "Tail's next points to the tail; head's prev points to the head",
-      "Both point to the middle node"
+      "Tail's prev points to the head; head's next points to the tail instead"
     ],
     "correctAnswer": "Tail's next points to the head; head's prev points to the tail",
     "explanation": "Both directions wrap around."
@@ -75,10 +75,10 @@
     "id": 267,
     "question": "What is the main 'gotcha' when processing a circular linked list?",
     "options": [
-      "It uses too much memory",
-      "You can't insert at the head",
+      "You can't insert at the head without first rebuilding the entire circle",
+      "It uses too much memory, since every node stores an extra pointer back to the head",
       "Traversal can become an infinite loop because the pointers go around in a circle",
-      "It can't be freed"
+      "It can't be freed, because there is always another node pointing to each one"
     ],
     "correctAnswer": "Traversal can become an infinite loop because the pointers go around in a circle",
     "explanation": "There's no NULL to stop at, so a naive while (current != NULL) loop never ends."
@@ -87,9 +87,9 @@
     "id": 268,
     "question": "How do you know you've walked around a circular list exactly once?",
     "options": [
-      "When you reach NULL",
-      "When the value is 0",
-      "After 100 iterations",
+      "After visiting the same number of nodes twice",
+      "When you reach a node whose next is NULL",
+      "When the node's value is 0",
       "When you 'see' the head pointer again"
     ],
     "correctAnswer": "When you 'see' the head pointer again",
@@ -102,19 +102,19 @@
       "Node* cur = head; do { printf(\"%d \", cur->data); cur = cur->next; } while (cur != head);",
       "Node* cur = head; while (cur != NULL) { printf(\"%d \", cur->data); cur = cur->next; }",
       "Node* cur = head; while (cur != head) { printf(\"%d \", cur->data); cur = cur->next; }",
-      "Node* cur = head->next; while (cur->next != NULL) { printf(\"%d \", cur->data); cur = cur->next; }"
+      "Node* cur = head; do { printf(\"%d \", cur->data); cur = cur->next; } while (cur != NULL && cur->next != head);"
     ],
     "correctAnswer": "Node* cur = head; do { printf(\"%d \", cur->data); cur = cur->next; } while (cur != head);",
-    "explanation": "The do-while prints the head first, then stops when it gets back to the head. Option 2 loops forever (no NULL); option 3 never runs because cur starts equal to head; option 4 also loops forever."
+    "explanation": "The do-while prints the head first, then stops when it gets back to the head. while (cur != NULL) loops forever because there's no NULL; while (cur != head) never runs because cur starts at head; checking cur->next != head stops before printing the tail."
   },
   {
     "id": 270,
     "question": "How does inserting in the MIDDLE of a circular linked list compare to other linked lists?",
     "options": [
+      "It's completely different, because every insert must also update the head",
       "It's like your other linked lists; only head and tail insertions differ",
-      "It's completely different",
-      "It's impossible",
-      "It's always O(1)"
+      "It's impossible; circular lists only allow inserts at the head or tail",
+      "It's always O(1), since any node can be reached directly from the tail"
     ],
     "correctAnswer": "It's like your other linked lists; only head and tail insertions differ",
     "explanation": "Insertion within the list works as before; head/tail inserts must also maintain the wrap-around link."
@@ -123,10 +123,10 @@
     "id": 271,
     "question": "Circular list B -> C -> D (D links back to B). Node A is inserted at the HEAD. Which two things must happen?",
     "options": [
-      "A becomes the new tail, and B's next points to A",
+      "D is deleted, and A takes its place as the last node in the circle",
+      "A becomes the new tail, and B's next link now points to A",
       "A becomes the new head, and D's (tail) next link now points to A",
-      "D is deleted, and A replaces it",
-      "A's next points to NULL"
+      "A's next points to NULL, and B's next link now points back to A instead"
     ],
     "correctAnswer": "A becomes the new head, and D's (tail) next link now points to A",
     "explanation": "A's next points to B, A becomes head, and the tail must be updated to wrap to the new head."
@@ -135,10 +135,10 @@
     "id": 272,
     "question": "Circular list A -> B -> C -> D (D links back to A). Node E is inserted at the END. Which updates are needed?",
     "options": [
-      "D's next points to NULL; E's next points to D",
-      "E becomes the new head; E's next points to D",
-      "E becomes the new tail; D's next points to E; E's next points to A",
-      "A's next points to E"
+      "A's next points to E; E's next points to B; E becomes the new tail",
+      "D's next points to NULL; E's next points to D; E becomes the new tail",
+      "E becomes the new head; E's next points to D; D's next points to A",
+      "E becomes the new tail; D's next points to E; E's next points to A"
     ],
     "correctAnswer": "E becomes the new tail; D's next points to E; E's next points to A",
     "explanation": "The new tail must link back to the head to keep the circle."
@@ -147,10 +147,10 @@
     "id": 273,
     "question": "Fill in the blank: After inserting a new tail into a singly circular linked list, the new tail's next must point to _____.",
     "options": [
-      "NULL",
+      "the head",
       "the old tail",
-      "itself",
-      "the head"
+      "NULL",
+      "itself"
     ],
     "correctAnswer": "the head",
     "explanation": "In a circular list the tail always links to the head."
@@ -159,10 +159,10 @@
     "id": 274,
     "question": "Circular list A -> B -> C -> D (D links back to A). Deleting the last node D: what happens to C's link?",
     "options": [
+      "It is set to NULL, since C is now the last node in the list",
       "It is changed to point to the head (A), since C is now the last node",
-      "It is set to NULL",
-      "It points to D still",
-      "It points to B"
+      "It still points to D, which is freed but remains in the circle",
+      "It is changed to point to B, so the circle skips the head node entirely"
     ],
     "correctAnswer": "It is changed to point to the head (A), since C is now the last node",
     "explanation": "Find D and its predecessor C; C becomes the tail and links back to the head."
@@ -171,22 +171,22 @@
     "id": 275,
     "question": "Coding: In a singly circular list with head and tail pointers, which code correctly inserts newNode at the head (list not empty)?",
     "options": [
+      "newNode->next = NULL; head = newNode; tail->next = head;",
+      "head->next = newNode; head = newNode; tail->next = head;",
       "newNode->next = head; head = newNode; tail->next = head;",
-      "head->next = newNode; head = newNode;",
-      "newNode->next = NULL; head = newNode;",
-      "tail->next = newNode; tail = newNode;"
+      "tail->next = newNode; newNode->next = head; tail = newNode;"
     ],
     "correctAnswer": "newNode->next = head; head = newNode; tail->next = head;",
-    "explanation": "Link the new node to the old head, move the head, and update the tail to wrap to the new head. Option 4 inserts at the tail but forgets to link back to the head."
+    "explanation": "Link the new node to the old head, move the head, and update the tail to wrap to the new head. head->next = newNode cuts the rest of the list off; newNode->next = NULL breaks the circle; linking newNode after the tail inserts at the end, not the head."
   },
   {
     "id": 276,
     "question": "What is a circular buffer / circular array?",
     "options": [
-      "An array whose elements are sorted in a circle",
-      "A fixed-size buffer used as if it were connected end-to-end in a circle",
-      "A linked list stored in an array",
-      "An array that grows automatically"
+      "An array that grows automatically when the write index reaches the end",
+      "An array whose elements are kept sorted so the smallest follows the largest",
+      "A linked list whose nodes are stored inside an array of fixed size",
+      "A fixed-size buffer used as if it were connected end-to-end in a circle"
     ],
     "correctAnswer": "A fixed-size buffer used as if it were connected end-to-end in a circle",
     "explanation": "The 'first' element isn't necessarily physically first, and the 'last' isn't necessarily physically last."
@@ -195,9 +195,9 @@
     "id": 277,
     "question": "What is the 'physical-first' element of a circular array?",
     "options": [
+      "The element at index 0",
       "The element processed first",
       "The element at the read index",
-      "The element at index 0",
       "The newest element"
     ],
     "correctAnswer": "The element at index 0",
@@ -207,10 +207,10 @@
     "id": 278,
     "question": "What is the 'logical-first' element of a circular array?",
     "options": [
-      "Always the element at index 0",
-      "The element at the last index",
-      "The last element written",
-      "The element that will be processed first by the program, which can be anywhere in the array"
+      "Always the element at index 0, since that is where the array begins in memory",
+      "The element that will be processed first by the program, which can be anywhere in the array",
+      "The element at the last index, since circular arrays are processed from the end",
+      "The element most recently written by the program"
     ],
     "correctAnswer": "The element that will be processed first by the program, which can be anywhere in the array",
     "explanation": "The logical-first element doesn't need to be at index 0."
@@ -219,9 +219,9 @@
     "id": 279,
     "question": "In a circular array of size 10, which index is the 'physical-last' element?",
     "options": [
-      "9",
       "0",
       "10",
+      "9",
       "It depends on the rear"
     ],
     "correctAnswer": "9",
@@ -231,10 +231,10 @@
     "id": 280,
     "question": "What is the 'logical-last' element of a circular array?",
     "options": [
-      "Always at the last physical index",
-      "The element that will be processed last, which can be anywhere in the array",
-      "The element at index 0",
-      "The element just before the physical-last"
+      "The element just before the physical-last, since the last slot is always kept empty",
+      "Always the element at the last physical index, such as index 9 in a size-10 array",
+      "The element at index 0, since the circle wraps around to it at the end",
+      "The element that will be processed last, which can be anywhere in the array"
     ],
     "correctAnswer": "The element that will be processed last, which can be anywhere in the array",
     "explanation": "The logical-last element doesn't need to be at the physical end."
@@ -243,9 +243,9 @@
     "id": 281,
     "question": "Match the terms: 'front' is the index of the _____ element, and 'rear' is the index of the _____ element.",
     "options": [
+      "logical-first; logical-last",
       "physical-first; physical-last",
       "logical-last; logical-first",
-      "logical-first; logical-last",
       "physical-last; physical-first"
     ],
     "correctAnswer": "logical-first; logical-last",
@@ -255,10 +255,10 @@
     "id": 282,
     "question": "Fill in the blank: The 'length' of a circular array equals _____.",
     "options": [
-      "the capacity of the array",
-      "the physical-last index",
-      "rear + front",
-      "the number of used elements"
+      "the total capacity of the array",
+      "the number of used elements",
+      "the physical-last index plus one",
+      "rear + front"
     ],
     "correctAnswer": "the number of used elements",
     "explanation": "Length counts used elements, not the total capacity."
@@ -267,10 +267,10 @@
     "id": 283,
     "question": "A circular array of size 10 has front = 7 and rear = 2 (wrapped around). Which indexes hold data, and what is the length?",
     "options": [
-      "Indexes 7, 8, 9, 0, 1, 2; length 6",
-      "Indexes 2 to 7; length 6",
       "Indexes 0 to 9; length 10",
-      "Indexes 7 to 9; length 3"
+      "Indexes 2 to 7; length 6",
+      "Indexes 7, 8, 9, 0, 1, 2; length 6",
+      "Indexes 7, 8, 9, 0, 1, 2, 3; length 7"
     ],
     "correctAnswer": "Indexes 7, 8, 9, 0, 1, 2; length 6",
     "explanation": "Data runs from front (7) to the physical end (9), wraps to 0, and continues to rear (2): six used elements."
@@ -279,10 +279,10 @@
     "id": 284,
     "question": "Circular arrays are typically used when data is being written and processed at the same time. Which two indexes are needed?",
     "options": [
-      "A head index and a tail index for a linked list",
-      "A read index (next item to process) and a write index (where the next item can be stored)",
-      "A min index and a max index",
-      "A top index only"
+      "A top index only, since items are written to and read from the same end like a stack does",
+      "A head index and a tail index, used to link the elements together like a linked list",
+      "A min index and a max index, which track the smallest and largest values in the array",
+      "A read index (next item to process) and a write index (where the next item can be stored)"
     ],
     "correctAnswer": "A read index (next item to process) and a write index (where the next item can be stored)",
     "explanation": "One process/thread reads while another writes into the array."
@@ -291,10 +291,10 @@
     "id": 285,
     "question": "What is the rule about the relationship between the write index and the read index?",
     "options": [
-      "The read index must always be ahead of the write index",
-      "They must always be equal",
       "The write index must always be logically ahead of the read index",
-      "There is no rule"
+      "The read index must always be logically ahead of the write index",
+      "They must always be equal, so each value is read as soon as it's written",
+      "There is no rule; either index may move ahead depending on which thread runs first"
     ],
     "correctAnswer": "The write index must always be logically ahead of the read index",
     "explanation": "You can't read data that hasn't been written yet."
@@ -303,34 +303,34 @@
     "id": 286,
     "question": "When the write index physically reaches the end of the circular array, what happens?",
     "options": [
-      "The program stops",
-      "The array doubles in size",
-      "It overwrites the read index",
-      "It wraps around to the beginning, but only if the read index isn't there, and keeps increasing up to but not equal to the read index"
+      "The program stops, since a fixed-size buffer cannot accept any more data",
+      "It wraps to index 0 if the read index isn't there, and never moves onto the read index",
+      "It overwrites the slot at the read index, then continues writing from index 0",
+      "The array automatically doubles in size so the write index can keep moving forward without wrapping"
     ],
-    "correctAnswer": "It wraps around to the beginning, but only if the read index isn't there, and keeps increasing up to but not equal to the read index",
+    "correctAnswer": "It wraps to index 0 if the read index isn't there, and never moves onto the read index",
     "explanation": "The writer must never catch up to and overwrite unread data."
   },
   {
     "id": 287,
     "question": "Which statement about the read index is TRUE?",
     "options": [
-      "It trails behind the write index, never overtaking it, and wraps to the beginning when it reaches the physical end",
-      "It can overtake the write index",
-      "It always stays at index 0",
-      "It moves backwards"
+      "It always stays at index 0, and the data is shifted toward it after every read",
+      "It can overtake the write index whenever the reader thread is faster than the writer",
+      "It trails the write index, never overtaking it, and wraps to index 0 at the physical end",
+      "It moves backwards from the physical end toward index 0"
     ],
-    "correctAnswer": "It trails behind the write index, never overtaking it, and wraps to the beginning when it reaches the physical end",
+    "correctAnswer": "It trails the write index, never overtaking it, and wraps to index 0 at the physical end",
     "explanation": "The reader follows the writer around the circle."
   },
   {
     "id": 288,
     "question": "Coding: In a circular array of SIZE elements, which expression correctly moves an index forward one slot, wrapping to 0 after the last index?",
     "options": [
+      "index = (index + 1) % (SIZE - 1);",
       "index = index + 1;",
-      "index = (index + 1) % SIZE;",
       "index = (index - 1) % SIZE;",
-      "index = SIZE / (index + 1);"
+      "index = (index + 1) % SIZE;"
     ],
     "correctAnswer": "index = (index + 1) % SIZE;",
     "explanation": "The modulo operator wraps the index: when index is SIZE - 1, (SIZE - 1 + 1) % SIZE = 0."
@@ -339,9 +339,9 @@
     "id": 289,
     "question": "A circular array has SIZE = 8. The write index is at 7. After writing one value and advancing with (write + 1) % SIZE, where is the write index?",
     "options": [
+      "0",
       "8",
       "1",
-      "0",
       "7"
     ],
     "correctAnswer": "0",
@@ -351,10 +351,10 @@
     "id": 290,
     "question": "Coding: Using read and write indexes, which check correctly stops the writer before it would land on the read index (buffer full)?",
     "options": [
-      "if (write == SIZE) { /* full: don't write */ }",
       "if (write == read) { /* full: don't write */ }",
-      "if (write > read) { /* full: don't write */ }",
-      "if ((write + 1) % SIZE == read) { /* full: don't write */ }"
+      "if ((write + 1) % SIZE == read) { /* full: don't write */ }",
+      "if ((write + 1) % SIZE == write) { /* full: don't write */ }",
+      "if ((read + 1) % SIZE == write) { /* full: don't write */ }"
     ],
     "correctAnswer": "if ((write + 1) % SIZE == read) { /* full: don't write */ }",
     "explanation": "The write index may go up to but not equal to the read index. If advancing would make it equal, the buffer is full. write == read is typically used to mean the buffer is empty."
