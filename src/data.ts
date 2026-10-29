@@ -27,6 +27,12 @@ import prog1926_week12 from "./questions/prog1926_week12.json";
 import prog1926_week13 from "./questions/prog1926_week13.json";
 import prog1926_exam_review from "./questions/prog1926_exam_review.json";
 import prog2511_a04_quiz from "./questions/prog2511_a04_quiz.json";
+import dataStructuresWeek1 from "./questions/data-structures/week1-introduction-to-data-structures.json";
+import dataStructuresWeek2 from "./questions/data-structures/week2-algorithm-efficiency-and-big-o.json";
+import dataStructuresWeek3 from "./questions/data-structures/week3-simple-linked-lists.json";
+import dataStructuresWeek4 from "./questions/data-structures/week4-advanced-linked-lists.json";
+import dataStructuresWeek5 from "./questions/data-structures/week5-stacks-and-queues.json";
+import dataStructuresWeek6 from "./questions/data-structures/week6-circular-data-structures.json";
 import os_week1 from "./questions/os_week1.json";
 import os_week2 from "./questions/os_week2.json";
 import os_week3 from "./questions/os_week3.json";
@@ -62,6 +68,12 @@ export const modules: IModule[] = [
   { id: "prog1926_week13", title: "PROG1926 Wk 13", data: prog1926_week13 },
   { id: "prog1926_exam_review", title: "PROG1926 Exam Review", data: prog1926_exam_review },
   { id: "prog2511_a04_quiz", title: "Object Oriented Programming", data: prog2511_a04_quiz },
+  { id: "data_structures_week1", title: "Data Structures Wk 1: Introduction", data: dataStructuresWeek1 },
+  { id: "data_structures_week2", title: "Data Structures Wk 2: Algorithm Efficiency and Big O", data: dataStructuresWeek2 },
+  { id: "data_structures_week3", title: "Data Structures Wk 3: Simple Linked Lists", data: dataStructuresWeek3 },
+  { id: "data_structures_week4", title: "Data Structures Wk 4: Advanced Linked Lists", data: dataStructuresWeek4 },
+  { id: "data_structures_week5", title: "Data Structures Wk 5: Stacks and Queues", data: dataStructuresWeek5 },
+  { id: "data_structures_week6", title: "Data Structures Wk 6: Circular Data Structures", data: dataStructuresWeek6 },
   { id: "os_week1", title: "OS (PROG 2635) Wk 1", data: os_week1 },
   { id: "os_week2", title: "OS (PROG 2635) Wk 2", data: os_week2 },
   { id: "os_week3", title: "OS (PROG 2635) Wk 3", data: os_week3 },

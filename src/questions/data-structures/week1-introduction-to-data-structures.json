@@ -1,0 +1,842 @@
+[
+  {
+    "id": 1,
+    "question": "In the context of this course, what does the term 'data' refer to?",
+    "options": [
+      "All types of information, down to the most basic numbers and strings",
+      "Only numbers stored in a database",
+      "Only information stored on the heap",
+      "Only the output a program prints"
+    ],
+    "correctAnswer": "All types of information, down to the most basic numbers and strings",
+    "explanation": "Data is a broad term covering all types of information. Even the string \"Hello World!\" is data, and even complex data usually breaks down into numbers and strings."
+  },
+  {
+    "id": 2,
+    "question": "Fill in the blank: Data structures refer to how data is _____.",
+    "options": [
+      "compiled",
+      "organized",
+      "encrypted",
+      "deleted"
+    ],
+    "correctAnswer": "organized",
+    "explanation": "A data structure is about how data is organized."
+  },
+  {
+    "id": 3,
+    "question": "In the boots and shoes example, what did reordering the footwear (two shoes first, then two boots) give us?",
+    "options": [
+      "Less memory usage",
+      "Faster compilation",
+      "An easy identification technique",
+      "Automatic sorting by size"
+    ],
+    "correctAnswer": "An easy identification technique",
+    "explanation": "Reorganizing the inventory so the shoes came first and boots after made the items easier to identify."
+  },
+  {
+    "id": 4,
+    "question": "In the footwear example, what problem does assigning each item an index solve?",
+    "options": [
+      "It removes the need to store the items",
+      "It doubles the number of items",
+      "It makes boots and shoes the same type",
+      "It removes ambiguity, e.g. 'the second shoe' from the left or the right"
+    ],
+    "correctAnswer": "It removes ambiguity, e.g. 'the second shoe' from the left or the right",
+    "explanation": "With an identifier you can ask for 'the shoe at index 2' and get exactly what you wanted instead of wondering which direction to count from."
+  },
+  {
+    "id": 5,
+    "question": "A program stores three strings in three separate variables, then the same program is rewritten to store them in one array. What changed?",
+    "options": [
+      "Only the organization of the data changed",
+      "The output message changed",
+      "The data itself changed",
+      "The program now uses the heap"
+    ],
+    "correctAnswer": "Only the organization of the data changed",
+    "explanation": "Both versions output the same message. The only difference is that three independent string variables were reorganized into a collection (array) of three strings."
+  },
+  {
+    "id": 6,
+    "question": "Short answer: Why does the choice of data structure matter beyond keeping things tidy?",
+    "options": [
+      "It only affects how readable the code is",
+      "It can change how fast code runs by orders of magnitude, and whether software can handle the load at all",
+      "It decides which compiler you must use",
+      "It only matters for programs that print strings"
+    ],
+    "correctAnswer": "It can change how fast code runs by orders of magnitude, and whether software can handle the load at all",
+    "explanation": "Data organization can make a program faster or slower by orders of magnitude. For large data or apps used by thousands of people, it can decide whether the software runs or conks out under load."
+  },
+  {
+    "id": 7,
+    "question": "Fill in the blank: A data type is a specification on the use of a particular set of _____.",
+    "options": [
+      "functions",
+      "files",
+      "bits / bytes",
+      "variables names"
+    ],
+    "correctAnswer": "bits / bytes",
+    "explanation": "A data type specifies how a particular set of bits/bytes is used."
+  },
+  {
+    "id": 8,
+    "question": "Which are the small building blocks data types are built from?",
+    "options": [
+      "Arrays, pointers and structures",
+      "Functions, methods and classes",
+      "Stacks, queues and lists",
+      "Integers, floats and chars"
+    ],
+    "correctAnswer": "Integers, floats and chars",
+    "explanation": "Data types are built from small building blocks: integers, floats, and chars."
+  },
+  {
+    "id": 9,
+    "question": "Choosing short vs. long int, or float vs. double, is an example of which trade-off?",
+    "options": [
+      "Space for accuracy",
+      "Speed for readability",
+      "Stack for heap",
+      "Static for dynamic"
+    ],
+    "correctAnswer": "Space for accuracy",
+    "explanation": "Larger types use more space but hold larger values or more precision, so it is a trade-off between space and accuracy."
+  },
+  {
+    "id": 10,
+    "question": "According to the slides, what are functions/methods such as GetSum() and ToString() in relation to data types?",
+    "options": [
+      "Memory regions",
+      "Operations performed on the data",
+      "Primary data types",
+      "Pointer types"
+    ],
+    "correctAnswer": "Operations performed on the data",
+    "explanation": "Functions/methods are the operations performed on the data."
+  },
+  {
+    "id": 11,
+    "question": "Complete the definition: A data type is a set of values and _____.",
+    "options": [
+      "a memory address",
+      "a fixed size of 4 bytes",
+      "a collection of operations on those values",
+      "a pointer to the next value"
+    ],
+    "correctAnswer": "a collection of operations on those values",
+    "explanation": "A data type is a set of values and a collection of operations on those values. Defining your own data types is often an effective way to organize software."
+  },
+  {
+    "id": 12,
+    "question": "Which of these is a PRIMARY data type in C?",
+    "options": [
+      "Array",
+      "Structure",
+      "Enum",
+      "Double"
+    ],
+    "correctAnswer": "Double",
+    "explanation": "Primary C data types are Integers, Characters, Float, Double and Void."
+  },
+  {
+    "id": 13,
+    "question": "Which of these is a SECONDARY data type in C?",
+    "options": [
+      "Union",
+      "Void",
+      "Float",
+      "Character"
+    ],
+    "correctAnswer": "Union",
+    "explanation": "Secondary C data types are Array, Pointer, Structure, Union and Enum."
+  },
+  {
+    "id": 14,
+    "question": "Which list contains ONLY primary C data types?",
+    "options": [
+      "Array, Pointer, Structure, Union, Enum",
+      "Integers, Characters, Float, Double, Void",
+      "Integers, Array, Float, Pointer, Void",
+      "Characters, Structure, Double, Enum, Union"
+    ],
+    "correctAnswer": "Integers, Characters, Float, Double, Void",
+    "explanation": "The five primary types are Integers, Characters, Float, Double and Void."
+  },
+  {
+    "id": 15,
+    "question": "According to the ISO C definition, what is the MINIMUM size of an int?",
+    "options": [
+      "1 byte",
+      "4 bytes",
+      "2 bytes",
+      "8 bytes"
+    ],
+    "correctAnswer": "2 bytes",
+    "explanation": "ISO C sets the minimum size of an int at 2 bytes, although on most modern 64-bit systems an int is actually 4 bytes."
+  },
+  {
+    "id": 16,
+    "question": "On most modern 64-bit systems, how large is an int?",
+    "options": [
+      "2 bytes",
+      "16 bytes",
+      "8 bytes",
+      "4 bytes"
+    ],
+    "correctAnswer": "4 bytes",
+    "explanation": "The minimum is 2 bytes, but most modern 64-bit systems use a 4-byte int."
+  },
+  {
+    "id": 17,
+    "question": "What does ISO C say about the size of a long?",
+    "options": [
+      "Its minimum is 4 bytes, and on modern 64-bit systems it can be 4 or 8 bytes depending on the platform",
+      "It is always exactly 8 bytes",
+      "It is always the same size as an int",
+      "Its minimum is 2 bytes"
+    ],
+    "correctAnswer": "Its minimum is 4 bytes, and on modern 64-bit systems it can be 4 or 8 bytes depending on the platform",
+    "explanation": "A long has a minimum of 4 bytes; on modern 64-bit systems it is platform dependent (4 or 8 bytes)."
+  },
+  {
+    "id": 18,
+    "question": "Which data type is declared to be 8 bytes in length?",
+    "options": [
+      "short",
+      "long long",
+      "int",
+      "char"
+    ],
+    "correctAnswer": "long long",
+    "explanation": "A long long is declared to be 8 bytes."
+  },
+  {
+    "id": 19,
+    "question": "Which header gives you integer types with a guaranteed size, such as int32_t?",
+    "options": [
+      "<stdlib.h>",
+      "<stdio.h>",
+      "<stdint.h>",
+      "<string.h>"
+    ],
+    "correctAnswer": "<stdint.h>",
+    "explanation": "Including <stdint.h> gives int16_t, int32_t and int64_t, which have guaranteed lengths."
+  },
+  {
+    "id": 20,
+    "question": "How many bytes is an int16_t guaranteed to be?",
+    "options": [
+      "1 byte",
+      "16 bytes",
+      "4 bytes",
+      "2 bytes"
+    ],
+    "correctAnswer": "2 bytes",
+    "explanation": "int16_t is guaranteed to be 16 bits, which is 2 bytes."
+  },
+  {
+    "id": 21,
+    "question": "Match the type to its guaranteed size: int64_t is _____.",
+    "options": [
+      "8 bytes (64 bits)",
+      "4 bytes (32 bits)",
+      "2 bytes (16 bits)",
+      "Platform dependent"
+    ],
+    "correctAnswer": "8 bytes (64 bits)",
+    "explanation": "int16_t = 2 bytes, int32_t = 4 bytes, int64_t = 8 bytes."
+  },
+  {
+    "id": 22,
+    "question": "What does ISO C mandate as the fixed size of a long double?",
+    "options": [
+      "8 bytes",
+      "Nothing; there is no mandated fixed size",
+      "16 bytes",
+      "10 bytes"
+    ],
+    "correctAnswer": "Nothing; there is no mandated fixed size",
+    "explanation": "There is no mandated size for long double. It depends entirely on the hardware architecture, OS and compiler."
+  },
+  {
+    "id": 23,
+    "question": "Using gcc on an x86/x64 platform (Linux or macOS), how big is a long double and how much of it holds the value?",
+    "options": [
+      "8 bytes, all used",
+      "10 bytes, all used",
+      "16 bytes, but only 10 bytes hold the value and 6 are padding",
+      "16 bytes, all used"
+    ],
+    "correctAnswer": "16 bytes, but only 10 bytes hold the value and 6 are padding",
+    "explanation": "With gcc on x86/x64, a long double is 16 bytes, of which only 10 hold the value and 6 are padded."
+  },
+  {
+    "id": 24,
+    "question": "Using the Microsoft Visual C compiler on Windows (x86/x64), how big is a long double?",
+    "options": [
+      "4 bytes",
+      "16 bytes",
+      "10 bytes",
+      "8 bytes, the same as a double"
+    ],
+    "correctAnswer": "8 bytes, the same as a double",
+    "explanation": "With MSVC, a long double is 8 bytes, which is the same as a double. That is why dataTypeSize.c says there's no use printing a long double on Windows."
+  },
+  {
+    "id": 25,
+    "question": "What is an enum used for?",
+    "options": [
+      "To define a data type that holds constants (unchangeable values)",
+      "To dynamically allocate memory",
+      "To store the address of another variable",
+      "To group variables of different types into one record"
+    ],
+    "correctAnswer": "To define a data type that holds constants (unchangeable values)",
+    "explanation": "An enum defines a data type to hold/contain constants."
+  },
+  {
+    "id": 26,
+    "question": "Given: enum MyLevels { LOW, MEDIUM, HIGH }; What is the value of HIGH?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "75"
+    ],
+    "correctAnswer": "2",
+    "explanation": "With default values, enum constants start at 0, so LOW = 0, MEDIUM = 1, HIGH = 2."
+  },
+  {
+    "id": 27,
+    "question": "Given: enum MyLevels { LOW = 25, MEDIUM = 50, HIGH = 75 }; What is the value of MEDIUM?",
+    "options": [
+      "1",
+      "26",
+      "50",
+      "75"
+    ],
+    "correctAnswer": "50",
+    "explanation": "You can set your own enum values. Here MEDIUM is explicitly set to 50."
+  },
+  {
+    "id": 28,
+    "question": "Fill in the blank: A pointer is a variable that stores the _____ of another variable.",
+    "options": [
+      "value",
+      "data type",
+      "name",
+      "memory address"
+    ],
+    "correctAnswer": "memory address",
+    "explanation": "A pointer stores the address of a memory location of another variable."
+  },
+  {
+    "id": 29,
+    "question": "Short answer: What is the key to understanding pointers?",
+    "options": [
+      "Understanding how memory is organized and managed in a C program",
+      "Memorizing the size of every data type",
+      "Knowing how to use printf",
+      "Understanding enums"
+    ],
+    "correctAnswer": "Understanding how memory is organized and managed in a C program",
+    "explanation": "Pointers contain addresses in memory, so without understanding how memory is organized and managed, it is hard to understand how pointers work."
+  },
+  {
+    "id": 30,
+    "question": "Which statement about pointers is TRUE?",
+    "options": [
+      "A pointer stores both an address and the type of data it points to",
+      "Nothing inherent in a pointer indicates what type of data it references; it only contains an address",
+      "A pointer can only point to integers",
+      "A pointer always points to the heap"
+    ],
+    "correctAnswer": "Nothing inherent in a pointer indicates what type of data it references; it only contains an address",
+    "explanation": "A pointer is normally declared with a type (e.g. pointer to char), but the pointer itself only contains an address."
+  },
+  {
+    "id": 31,
+    "question": "Which three types of memory does a compiled C program work with?",
+    "options": [
+      "Primary, Secondary, Tertiary",
+      "Cache, RAM, Disk",
+      "Static (Global), Stack, Heap",
+      "Local, Remote, Shared"
+    ],
+    "correctAnswer": "Static (Global), Stack, Heap",
+    "explanation": "A C program works with static/global memory, the stack, and the heap."
+  },
+  {
+    "id": 32,
+    "question": "Which memory region holds global and statically declared variables that exist from program start until it terminates?",
+    "options": [
+      "Stack",
+      "Heap",
+      "Register",
+      "Static (Global)"
+    ],
+    "correctAnswer": "Static (Global)",
+    "explanation": "Static and global variables are allocated when the program starts and remain until it terminates."
+  },
+  {
+    "id": 33,
+    "question": "What is the difference in scope between global variables and static variables?",
+    "options": [
+      "All functions can access global variables, but a static variable's scope is restricted to its defining function",
+      "There is no difference",
+      "Static variables are accessible everywhere, global variables only in main",
+      "Global variables live on the heap"
+    ],
+    "correctAnswer": "All functions can access global variables, but a static variable's scope is restricted to its defining function",
+    "explanation": "Both use static memory, but the scope of static variables is restricted to their defining function."
+  },
+  {
+    "id": 34,
+    "question": "Which memory region is sometimes called 'automatic memory'?",
+    "options": [
+      "Heap",
+      "Stack",
+      "Static",
+      "Global"
+    ],
+    "correctAnswer": "Stack",
+    "explanation": "The stack is sometimes called automatic memory. Variables declared in a function, or passed into one, live there only while the function is executing."
+  },
+  {
+    "id": 35,
+    "question": "A variable declared inside a function lives in which memory region, and for how long?",
+    "options": [
+      "Heap, until freed",
+      "Static memory, until the program ends",
+      "Stack, only while the function is executing",
+      "Stack, until the program ends"
+    ],
+    "correctAnswer": "Stack, only while the function is executing",
+    "explanation": "Stack variables are restricted to their function in scope, and their lifetime is limited to the time the function is executing."
+  },
+  {
+    "id": 36,
+    "question": "Memory you allocate dynamically comes from which region, and how long does it exist?",
+    "options": [
+      "Stack, until the function returns",
+      "Heap, until the function returns",
+      "Static, until the program ends",
+      "Heap, until it is released"
+    ],
+    "correctAnswer": "Heap, until it is released",
+    "explanation": "Dynamic memory comes from the heap, is referenced by a pointer, and exists until it is released."
+  },
+  {
+    "id": 37,
+    "question": "Which operator returns the memory address of a variable?",
+    "options": [
+      "&",
+      "*",
+      "->",
+      "."
+    ],
+    "correctAnswer": "&",
+    "explanation": "The & (address-of) operator gives the physical memory address of a variable."
+  },
+  {
+    "id": 38,
+    "question": "Variable x is stored at memory address 2712. What does &x evaluate to?",
+    "options": [
+      "The value stored in x",
+      "2712",
+      "The size of x",
+      "A pointer to a pointer"
+    ],
+    "correctAnswer": "2712",
+    "explanation": "&x gives the address of x, which is 2712 in this example. The programmer sees 'x'; the operating system sees address 2712. The real address depends on the machine and execution time."
+  },
+  {
+    "id": 39,
+    "question": "What is the '*' operator called when used on a pointer?",
+    "options": [
+      "Address-of operator",
+      "Member access operator",
+      "Indirection / dereference ('value at address') operator",
+      "Multiplication operator only"
+    ],
+    "correctAnswer": "Indirection / dereference ('value at address') operator",
+    "explanation": "If the address of a variable is known, '*' gives the contents at that address."
+  },
+  {
+    "id": 40,
+    "question": "What does this code print?\n\nint x = 15;\nint *p = &x;\n*p = 40;\nprintf(\"%d\", x);",
+    "options": [
+      "15",
+      "Compile error",
+      "The address of x",
+      "40"
+    ],
+    "correctAnswer": "40",
+    "explanation": "p holds the address of x, so *p = 40 writes 40 into x."
+  },
+  {
+    "id": 41,
+    "question": "Which header must you include to use malloc()?",
+    "options": [
+      "<stdlib.h>",
+      "<stdio.h>",
+      "<stdint.h>",
+      "<malloc.c>"
+    ],
+    "correctAnswer": "<stdlib.h>",
+    "explanation": "malloc() is declared in <stdlib.h>: void* malloc(size_t numBytes);"
+  },
+  {
+    "id": 42,
+    "question": "What does malloc() return if the system runs out of memory on the heap?",
+    "options": [
+      "0 bytes of memory",
+      "NULL",
+      "-1",
+      "It crashes the program"
+    ],
+    "correctAnswer": "NULL",
+    "explanation": "If the heap runs out of memory, malloc() returns NULL, so you should always check its result."
+  },
+  {
+    "id": 43,
+    "question": "malloc() returns a void*. What is the programmer's responsibility?",
+    "options": [
+      "Nothing; C converts it automatically into the right struct",
+      "Call free() immediately",
+      "Cast the pointer to the type (shape) of pointer you want",
+      "Convert it into an int"
+    ],
+    "correctAnswer": "Cast the pointer to the type (shape) of pointer you want",
+    "explanation": "It is your responsibility to cast the void* to the pointer type you need, e.g. (MyDate*)malloc(sizeof(MyDate))."
+  },
+  {
+    "id": 44,
+    "question": "How long does memory allocated with malloc() exist?",
+    "options": [
+      "Until the current function returns",
+      "Until the next call to malloc()",
+      "Exactly one second",
+      "Until you free it"
+    ],
+    "correctAnswer": "Until you free it",
+    "explanation": "Dynamically allocated memory persists for as long as you want it to, until you free it."
+  },
+  {
+    "id": 45,
+    "question": "Short answer: Why use a structure to store a date instead of separate month, day and year variables?",
+    "options": [
+      "A structure groups logically related variables together so you don't have to track three separate variables for every date",
+      "Separate variables are not allowed in C",
+      "Structures use less memory than ints",
+      "Structures are faster to print"
+    ],
+    "correctAnswer": "A structure groups logically related variables together so you don't have to track three separate variables for every date",
+    "explanation": "With separate variables you'd need month/day/year and purchaseMonth/purchaseDay/purchaseYear, and so on. A structure groups those logically related values together."
+  },
+  {
+    "id": 46,
+    "question": "Given:\nstruct date { int month; int day; int year; };\nWhat does this definition do?",
+    "options": [
+      "Reserves memory for three integers",
+      "Defines a new type, struct date, but reserves no storage",
+      "Declares a variable called date",
+      "Allocates a date on the heap"
+    ],
+    "correctAnswer": "Defines a new type, struct date, but reserves no storage",
+    "explanation": "Defining a structure only tells the compiler what it looks like. Declaring a variable of that type is what reserves memory."
+  },
+  {
+    "id": 47,
+    "question": "Which line actually causes memory to be reserved?",
+    "options": [
+      "struct date { int month; int day; int year; };",
+      "#include <stdio.h>",
+      "struct date today;",
+      "typedef struct date Date;"
+    ],
+    "correctAnswer": "struct date today;",
+    "explanation": "Declaring the variable today of type struct date reserves storage for its three integer members."
+  },
+  {
+    "id": 48,
+    "question": "Which is a valid way to declare two struct date variables on the same line?",
+    "options": [
+      "struct today, purchaseDate date;",
+      "struct date today & purchaseDate;",
+      "date struct today, purchaseDate;",
+      "struct date today, purchaseDate;"
+    ],
+    "correctAnswer": "struct date today, purchaseDate;",
+    "explanation": "You can declare variables separately or include both declarations on one line: struct date today, purchaseDate;"
+  },
+  {
+    "id": 49,
+    "question": "Fill in the blank: To set the day of the struct variable today to 25, you write _____.",
+    "options": [
+      "today.day = 25;",
+      "today->day = 25;",
+      "day.today = 25;",
+      "today[day] = 25;"
+    ],
+    "correctAnswer": "today.day = 25;",
+    "explanation": "A structure member is accessed with the variable name, a period, then the member name."
+  },
+  {
+    "id": 50,
+    "question": "Which statement correctly tests whether the month in today is December?",
+    "options": [
+      "if (today.month = 12)",
+      "if (today.month == 12)",
+      "if (month.today == 12)",
+      "if (today == 12)"
+    ],
+    "correctAnswer": "if (today.month == 12)",
+    "explanation": "Use the dot operator to reach the member and == to compare. A single = would assign instead of compare."
+  },
+  {
+    "id": 51,
+    "question": "today.year is the int 2015. What is the value of today.year / 100?",
+    "options": [
+      "20.15",
+      "15",
+      "20",
+      "21"
+    ],
+    "correctAnswer": "20",
+    "explanation": "Structure members follow the same expression rules as ordinary variables, so int / int is integer division: 2015 / 100 = 20."
+  },
+  {
+    "id": 52,
+    "question": "The 'tomorrow's date' program was required to properly handle which two special cases?",
+    "options": [
+      "Leap years and time zones",
+      "Weekends and holidays",
+      "Negative dates and empty input",
+      "A date at the end of a month, and a date at the end of a year (December 31)"
+    ],
+    "correctAnswer": "A date at the end of a month, and a date at the end of a year (December 31)",
+    "explanation": "The problem required handling end-of-month and end-of-year (December 31). Leap year logic was noted in date.c as a further enhancement but not implemented."
+  },
+  {
+    "id": 53,
+    "question": "In date.c, the user enters 2025-12-31. What does tomorrow get set to?",
+    "options": [
+      "2026-01-01",
+      "2025-13-01",
+      "2025-12-32",
+      "2025-01-01"
+    ],
+    "correctAnswer": "2026-01-01",
+    "explanation": "It's the last day of the month and the month is 12, so day = 1, month = 1, year = year + 1, with the note 'Happy New Year!!'."
+  },
+  {
+    "id": 54,
+    "question": "In date.c, the user enters 2025-04-30. Which branch runs?",
+    "options": [
+      "Same Month, Next Day",
+      "Brand New Month - First Day",
+      "Happy New Year!!",
+      "None; the program crashes"
+    ],
+    "correctAnswer": "Brand New Month - First Day",
+    "explanation": "April has 30 days, so day == numberOfDaysInEachMonth[3] and month isn't 12. Tomorrow becomes 2025-05-01."
+  },
+  {
+    "id": 55,
+    "question": "In date.c, why is the array indexed as numberOfDaysInEachMonth[today.month - 1]?",
+    "options": [
+      "Because months are stored backwards",
+      "To skip February",
+      "Because arrays start at index 0 but months are numbered 1 to 12",
+      "To avoid a compile warning"
+    ],
+    "correctAnswer": "Because arrays start at index 0 but months are numbered 1 to 12",
+    "explanation": "January (month 1) is at index 0, so you subtract 1 from the month number."
+  },
+  {
+    "id": 56,
+    "question": "What is a known limitation of date.c as written?",
+    "options": [
+      "It can't handle December 31",
+      "It never frees memory",
+      "It can't handle the end of a month",
+      "It doesn't handle leap years; February always has 28 days"
+    ],
+    "correctAnswer": "It doesn't handle leap years; February always has 28 days",
+    "explanation": "The array hard-codes 28 days for February. The comments note leap year logic and input validation as things to add."
+  },
+  {
+    "id": 57,
+    "question": "In date.c, randomDay is declared as MyDate* and today as MyDate. Why does the code use randomDay->year but today.year?",
+    "options": [
+      "-> is used for members accessed through a pointer; . is used on a struct variable directly",
+      "-> is faster than .",
+      "-> is only for heap memory and . is only for the stack, with no other difference",
+      "It is a typo; both should use ."
+    ],
+    "correctAnswer": "-> is used for members accessed through a pointer; . is used on a struct variable directly",
+    "explanation": "randomDay is a pointer to a MyDate (allocated with malloc), so its members are accessed with ->. today is an actual struct variable, so it uses the dot operator. randomDay->year is equivalent to (*randomDay).year."
+  },
+  {
+    "id": 58,
+    "question": "Which line correctly allocates a MyDate struct on the heap, as in date.c?",
+    "options": [
+      "randomDay = malloc(MyDate);",
+      "randomDay = (MyDate*)malloc((size_t)(sizeof(MyDate)));",
+      "randomDay = (MyDate)malloc(sizeof(MyDate*));",
+      "randomDay = &malloc(sizeof(MyDate));"
+    ],
+    "correctAnswer": "randomDay = (MyDate*)malloc((size_t)(sizeof(MyDate)));",
+    "explanation": "Request sizeof(MyDate) bytes, then cast the returned void* to MyDate*."
+  },
+  {
+    "id": 59,
+    "question": "What is the last thing date.c must do with randomDay before returning?",
+    "options": [
+      "Set it to 0",
+      "Print it again",
+      "free(randomDay);",
+      "Nothing; heap memory is freed automatically when main returns"
+    ],
+    "correctAnswer": "free(randomDay);",
+    "explanation": "The code ends with free(randomDay) because memory from malloc must be freed when no longer needed."
+  },
+  {
+    "id": 60,
+    "question": "In date.c: char* inpPtr = inpDateStr; This line is equivalent to which of the following?",
+    "options": [
+      "char* inpPtr = *inpDateStr;",
+      "char* inpPtr = &inpDateStr;",
+      "char* inpPtr = inpDateStr[1];",
+      "char* inpPtr = &inpDateStr[0];"
+    ],
+    "correctAnswer": "char* inpPtr = &inpDateStr[0];",
+    "explanation": "Using an array's name without an index gives the address of the base (first element) of the array."
+  },
+  {
+    "id": 61,
+    "question": "The user typed \"2025-10-29\" into inpDateStr. After char* inpPtr = inpDateStr; inpPtr += 4; what is *inpPtr?",
+    "options": [
+      "'-'",
+      "'5'",
+      "'2'",
+      "'1'"
+    ],
+    "correctAnswer": "'-'",
+    "explanation": "Indexes 0-3 are the year, so moving 4 characters ahead lands on index 4, the first '-'."
+  },
+  {
+    "id": 62,
+    "question": "Continuing: after another inpPtr += 4; (so 8 characters from the start of \"2025-10-29\"), what is *inpPtr?",
+    "options": [
+      "'-'",
+      "'2' (the first D of the day)",
+      "'0'",
+      "'9'"
+    ],
+    "correctAnswer": "'2' (the first D of the day)",
+    "explanation": "In YYYY-MM-DD, index 8 is the first D character. For \"2025-10-29\" that's '2'."
+  },
+  {
+    "id": 63,
+    "question": "In date.c, which pair of functions reads a line of input and then parses YYYY-MM-DD out of it?",
+    "options": [
+      "scanf then printf",
+      "gets then atoi",
+      "fgets then sscanf",
+      "sprintf then strcpy"
+    ],
+    "correctAnswer": "fgets then sscanf",
+    "explanation": "fgets reads the line into inpDateStr, then sscanf(inpDateStr, \"%d-%d-%d\", &today.year, &today.month, &today.day) parses it."
+  },
+  {
+    "id": 64,
+    "question": "In dataTypeSize.c, an unsigned char initialized to 0 is decremented by 1. What value is printed?",
+    "options": [
+      "-1",
+      "0",
+      "127",
+      "255"
+    ],
+    "correctAnswer": "255",
+    "explanation": "An unsigned char can't be negative, so it wraps around to its maximum value, 255."
+  },
+  {
+    "id": 65,
+    "question": "In dataTypeSize.c, an unsigned short initialized to 0 is decremented by 1. What value is printed?",
+    "options": [
+      "65535",
+      "32767",
+      "-1",
+      "0"
+    ],
+    "correctAnswer": "65535",
+    "explanation": "A 2-byte unsigned short wraps around to its maximum, 65535."
+  },
+  {
+    "id": 66,
+    "question": "In dataTypeSize.c, signed char signChar = 127; signChar++; What is printed on a typical system?",
+    "options": [
+      "128",
+      "-128",
+      "0",
+      "127"
+    ],
+    "correctAnswer": "-128",
+    "explanation": "127 is the maximum of a signed char, so incrementing overflows and wraps to the minimum, -128."
+  },
+  {
+    "id": 67,
+    "question": "In dataTypeSize.c, signed short signShort = 32767; signShort++; What is printed on a typical system?",
+    "options": [
+      "32768",
+      "65535",
+      "-32768",
+      "0"
+    ],
+    "correctAnswer": "-32768",
+    "explanation": "32767 is the max signed short, so incrementing wraps to the minimum, -32768."
+  },
+  {
+    "id": 68,
+    "question": "What does sizeof(char) return?",
+    "options": [
+      "It depends on the string length",
+      "2",
+      "4",
+      "1"
+    ],
+    "correctAnswer": "1",
+    "explanation": "A char is always 1 byte."
+  },
+  {
+    "id": 69,
+    "question": "According to dataTypeSize.c, how many decimal places of accuracy does a float have vs. a double?",
+    "options": [
+      "Float 6, double 15",
+      "Float 15, double 6",
+      "Float 2, double 4",
+      "Both 15"
+    ],
+    "correctAnswer": "Float 6, double 15",
+    "explanation": "The program prints a float to 6 decimal places and a double to 15 decimal places."
+  },
+  {
+    "id": 70,
+    "question": "Which of the following reference books is listed for this course?",
+    "options": [
+      "Clean Code by Robert Martin",
+      "A Common-Sense Guide to Data Structures and Algorithms by Jay Wengrow",
+      "The Pragmatic Programmer",
+      "Design Patterns by the Gang of Four"
+    ],
+    "correctAnswer": "A Common-Sense Guide to Data Structures and Algorithms by Jay Wengrow",
+    "explanation": "References include Wengrow's Common-Sense Guide, Kochan's Programming in C, Lafore's Data Structures and Algorithms in Java, Subero's Codeless Data Structures and Algorithms, and Kamthane's Introduction to Data Structures in C."
+  }
+]

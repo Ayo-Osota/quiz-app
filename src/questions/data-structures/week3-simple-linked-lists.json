@@ -1,0 +1,650 @@
+[
+  {
+    "id": 147,
+    "question": "On the surface arrays and linked lists look and act similarly. What is the big difference 'under the hood'?",
+    "options": [
+      "An array is a contiguous block of memory, while a linked list's nodes can be scattered across memory",
+      "Linked lists can only hold integers",
+      "Arrays are stored on the heap and linked lists on the stack",
+      "Linked lists can't be printed"
+    ],
+    "correctAnswer": "An array is a contiguous block of memory, while a linked list's nodes can be scattered across memory",
+    "explanation": "Arrays need a contiguous group of cells; linked list data can be dispersed throughout memory."
+  },
+  {
+    "id": 148,
+    "question": "A char array starts at memory address 1000. Where is index 4?",
+    "options": [
+      "1000",
+      "1004",
+      "1003",
+      "1040"
+    ],
+    "correctAnswer": "1004",
+    "explanation": "The program knows the start address, so for a 1-byte char array it jumps to 1000 + 4 = 1004 in one step."
+  },
+  {
+    "id": 149,
+    "question": "Fill in the blank: In a linked list, connected data dispersed throughout memory are known as _____.",
+    "options": [
+      "cells",
+      "indexes",
+      "nodes",
+      "buffers"
+    ],
+    "correctAnswer": "nodes",
+    "explanation": "Each node represents one item in the list."
+  },
+  {
+    "id": 150,
+    "question": "Short answer: If nodes aren't next to each other in memory, how does the computer know they belong to the same linked list?",
+    "options": [
+      "They all have the same value",
+      "They are sorted by address",
+      "The operating system keeps a list of them",
+      "Each node also stores the memory address of the next node"
+    ],
+    "correctAnswer": "Each node also stores the memory address of the next node",
+    "explanation": "This is the key to the linked list: each node points to (tells us the address of) the next node."
+  },
+  {
+    "id": 151,
+    "question": "Fill in the blank: The pointer in a node that holds the next node's memory address is called a _____.",
+    "options": [
+      "link",
+      "head",
+      "tail",
+      "index"
+    ],
+    "correctAnswer": "link",
+    "explanation": "This extra piece of data, the pointer to the next node, is known as a link."
+  },
+  {
+    "id": 152,
+    "question": "A linked list stores \"a\", \"b\", \"c\", \"d\". Each node uses 1 byte for the character and 2 bytes for the link. How much memory does the list use?",
+    "options": [
+      "4 bytes",
+      "12 bytes",
+      "8 bytes",
+      "16 bytes"
+    ],
+    "correctAnswer": "12 bytes",
+    "explanation": "Four nodes x 3 bytes each = 12 bytes, even though there are only four pieces of data. This shows the memory overhead of links."
+  },
+  {
+    "id": 153,
+    "question": "What does the final node's link contain?",
+    "options": [
+      "The address of the first node",
+      "Its own address",
+      "null",
+      "The value 0 as data"
+    ],
+    "correctAnswer": "null",
+    "explanation": "The final node's link is null because the list ends there."
+  },
+  {
+    "id": 154,
+    "question": "What are a linked list's first and final nodes called?",
+    "options": [
+      "Top and bottom",
+      "Front and rear",
+      "Root and leaf",
+      "Head and tail"
+    ],
+    "correctAnswer": "Head and tail",
+    "explanation": "The first node is the head and the final node is the tail."
+  },
+  {
+    "id": 155,
+    "question": "What is the only thing the computer needs to know to begin working with a linked list?",
+    "options": [
+      "The memory address where the list begins (the head)",
+      "The size of the list",
+      "The address of every node",
+      "The tail's value"
+    ],
+    "correctAnswer": "The memory address where the list begins (the head)",
+    "explanation": "Since each node links to the next, the computer can follow the links from the head to string together the whole list."
+  },
+  {
+    "id": 156,
+    "question": "Why can a linked list's scattered memory be an advantage over an array?",
+    "options": [
+      "It makes reading faster",
+      "An array needs a contiguous block of cells, which gets harder to find as the array grows",
+      "Scattered memory uses fewer bytes",
+      "It allows binary search"
+    ],
+    "correctAnswer": "An array needs a contiguous block of cells, which gets harder to find as the array grows",
+    "explanation": "Linked list nodes can live anywhere, so they don't need one large contiguous block."
+  },
+  {
+    "id": 157,
+    "question": "Which statement about built-in linked lists is TRUE according to the slides?",
+    "options": [
+      "C has a built-in linked list type",
+      "No language has built-in linked lists",
+      "Java comes with linked lists built in, but C does not, so we implement them ourselves",
+      "Linked lists can only be written in Java"
+    ],
+    "correctAnswer": "Java comes with linked lists built in, but C does not, so we implement them ourselves",
+    "explanation": "Some languages like Java include linked lists. C does not, and it's simple to implement one."
+  },
+  {
+    "id": 158,
+    "question": "In the student linked list problem, what does each student node contain?",
+    "options": [
+      "Name, GPA and a link",
+      "StudentId and a pointer to the previous student",
+      "Only a StudentId",
+      "StudentId, Age, and a pointer to the next student"
+    ],
+    "correctAnswer": "StudentId, Age, and a pointer to the next student",
+    "explanation": "Each student has a unique StudentId, an Age, and a connection to the next student (nextStudent)."
+  },
+  {
+    "id": 159,
+    "question": "Which struct correctly defines a node for the student linked list?",
+    "options": [
+      "struct Student { int StudentId; int Age; struct Student* nextStudent; };",
+      "struct Student { int StudentId; int Age; struct Student nextStudent; };",
+      "struct Student { int StudentId; int Age; int* nextStudent; };",
+      "struct Student { int StudentId; int Age; };"
+    ],
+    "correctAnswer": "struct Student { int StudentId; int Age; struct Student* nextStudent; };",
+    "explanation": "The link must be a pointer to the same struct type. A struct can't contain itself by value."
+  },
+  {
+    "id": 160,
+    "question": "In the simple (non-dynamic) implementation with student1, student2 and student3 declared in main, how are they linked?",
+    "options": [
+      "student1.nextStudent = student2; student2.nextStudent = student3;",
+      "student1.nextStudent = &student2; student2.nextStudent = &student3; student3.nextStudent = NULL;",
+      "student3.nextStudent = &student1;",
+      "student1.nextStudent = NULL; student2.nextStudent = &student1;"
+    ],
+    "correctAnswer": "student1.nextStudent = &student2; student2.nextStudent = &student3; student3.nextStudent = NULL;",
+    "explanation": "Each nextStudent is set to the ADDRESS of the next variable, and the last one is NULL because it ends the list."
+  },
+  {
+    "id": 161,
+    "question": "In the simple implementation, why is student3's nextStudent set to NULL?",
+    "options": [
+      "Because student3 is invalid",
+      "To free its memory",
+      "Because student3 is the last element in the list",
+      "Because NULL is the head"
+    ],
+    "correctAnswer": "Because student3 is the last element in the list",
+    "explanation": "The tail's link is NULL to mark the end of the list."
+  },
+  {
+    "id": 162,
+    "question": "Does the first (simple) student implementation use dynamic memory allocation?",
+    "options": [
+      "Yes, it uses malloc for every node",
+      "Only for the head",
+      "Yes, it uses calloc",
+      "No, the three struct variables are declared directly in main"
+    ],
+    "correctAnswer": "No, the three struct variables are declared directly in main",
+    "explanation": "The bare-bones version declares struct variables in main (on the stack). The second version re-implements it with malloc."
+  },
+  {
+    "id": 163,
+    "question": "Fill in the blank: printList takes a _____ as input and walks the list printing each StudentId and Age.",
+    "options": [
+      "starting student (the head)",
+      "array of students",
+      "student count",
+      "tail pointer"
+    ],
+    "correctAnswer": "starting student (the head)",
+    "explanation": "printList takes a starting student and follows the links to print each student."
+  },
+  {
+    "id": 164,
+    "question": "What is the time complexity of reading the value at a given index of a linked list (worst case)?",
+    "options": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctAnswer": "O(N)",
+    "explanation": "The program only knows the head's address, so it must follow links node by node. Reading the last node takes N steps."
+  },
+  {
+    "id": 165,
+    "question": "Short answer: Why can't a computer read the third item of a linked list in one step?",
+    "options": [
+      "Because linked lists are sorted",
+      "Because the third item is always NULL",
+      "Because it only knows the first node's address and each node could be anywhere in memory",
+      "Because linked lists are stored on disk"
+    ],
+    "correctAnswer": "Because it only knows the first node's address and each node could be anywhere in memory",
+    "explanation": "It must access the first node, follow its link to the second, then the second's link to the third."
+  },
+  {
+    "id": 166,
+    "question": "What is a major disadvantage of linked lists compared to arrays for reading?",
+    "options": [
+      "Both are O(log N)",
+      "Reading is O(1) for linked lists but O(N) for arrays",
+      "Linked lists can't be read",
+      "Reading is O(N) for linked lists but O(1) for arrays"
+    ],
+    "correctAnswer": "Reading is O(N) for linked lists but O(1) for arrays",
+    "explanation": "Arrays read any index in one step; linked lists must traverse from the head."
+  },
+  {
+    "id": 167,
+    "question": "What is the time complexity of searching a linked list for a value?",
+    "options": [
+      "O(N)",
+      "O(log N)",
+      "O(1)",
+      "O(N^2)"
+    ],
+    "correctAnswer": "O(N)",
+    "explanation": "Like linear search on an array, we start at the head and inspect each node until we find the value."
+  },
+  {
+    "id": 168,
+    "question": "Inserting at the beginning of an array is O(N). What is inserting at the beginning of a linked list?",
+    "options": [
+      "O(N)",
+      "O(1)",
+      "O(N + 1)",
+      "O(log N)"
+    ],
+    "correctAnswer": "O(1)",
+    "explanation": "No shifting is needed: create a new node and point its link to the old head. This is where linked lists shine."
+  },
+  {
+    "id": 169,
+    "question": "List: blue -> green -> red -> black. To add \"yellow\" to the beginning, what must you do?",
+    "options": [
+      "Shift every node one position right",
+      "Point \"black\"'s link to \"yellow\"",
+      "Create a new node with \"yellow\" and make its link point to the \"blue\" node",
+      "Point \"blue\"'s link to \"yellow\""
+    ],
+    "correctAnswer": "Create a new node with \"yellow\" and make its link point to the \"blue\" node",
+    "explanation": "The new node becomes the head and links to the old head."
+  },
+  {
+    "id": 170,
+    "question": "List: yellow -> blue -> green -> red -> black. To insert \"purple\" at index 2, which node's link must change?",
+    "options": [
+      "yellow",
+      "black",
+      "green",
+      "blue"
+    ],
+    "correctAnswer": "blue",
+    "explanation": "You go to index 1 (\"blue\"), set purple's link to green, and change blue's link to point to purple."
+  },
+  {
+    "id": 171,
+    "question": "How many steps did inserting \"purple\" at index 2 take in the slides' example?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "5"
+    ],
+    "correctAnswer": "3",
+    "explanation": "Two steps to reach index 1 (start at index 0, move to index 1) plus one step to insert."
+  },
+  {
+    "id": 172,
+    "question": "Why is linked list insertion practically classified as O(N)?",
+    "options": [
+      "The insertion itself takes N steps",
+      "Although the insert is one step, you must first traverse to the node before the insertion point; inserting at the end takes N + 1 steps",
+      "Because all nodes must be shifted",
+      "Because memory must be reallocated"
+    ],
+    "correctAnswer": "Although the insert is one step, you must first traverse to the node before the insertion point; inserting at the end takes N + 1 steps",
+    "explanation": "The 'gotcha' is reaching the right node, which is an O(N) read."
+  },
+  {
+    "id": 173,
+    "question": "In a 4-node linked list, how many steps does it take to add a node to the end?",
+    "options": [
+      "1",
+      "4",
+      "5",
+      "8"
+    ],
+    "correctAnswer": "5",
+    "explanation": "Four steps to access index 3 (the tail), then one step to insert."
+  },
+  {
+    "id": 174,
+    "question": "How many steps does it take to delete the first node of a linked list?",
+    "options": [
+      "log N steps",
+      "N steps",
+      "N - 1 steps",
+      "One step"
+    ],
+    "correctAnswer": "One step",
+    "explanation": "Remove index 0 and make the node at index 1 the new head."
+  },
+  {
+    "id": 175,
+    "question": "Deleting the LAST node of a linked list: how many steps is the actual deletion, and why is the overall operation O(N)?",
+    "options": [
+      "One step (set the second-to-last node's link to null), but it takes N steps to reach the second-to-last node",
+      "N steps for the deletion itself",
+      "One step overall; it's O(1)",
+      "Two steps; it's O(2)"
+    ],
+    "correctAnswer": "One step (set the second-to-last node's link to null), but it takes N steps to reach the second-to-last node",
+    "explanation": "You must start at the head and follow links to find the second-to-last node."
+  },
+  {
+    "id": 176,
+    "question": "List: yellow -> blue -> purple -> green -> red. To delete \"purple\" (index 2), what do you do?",
+    "options": [
+      "Point green's link to blue",
+      "Access \"blue\" and change its link to point to \"green\"",
+      "Point purple's link to null",
+      "Shift green and red left"
+    ],
+    "correctAnswer": "Access \"blue\" and change its link to point to \"green\"",
+    "explanation": "Go to the node before the one being deleted and bypass it by linking to the node after."
+  },
+  {
+    "id": 177,
+    "question": "After you unlink a node from a linked list, what happens to that node?",
+    "options": [
+      "It is immediately erased",
+      "It moves to the end of the list",
+      "It still exists in memory; it's just no longer linked by any node in the list",
+      "It becomes the new head"
+    ],
+    "correctAnswer": "It still exists in memory; it's just no longer linked by any node in the list",
+    "explanation": "Removing a node means nothing links to it. Some languages garbage collect it; in C you must free() it yourself."
+  },
+  {
+    "id": 178,
+    "question": "Fill in the blank: Some programming languages automatically detect unused deleted nodes and _____ them.",
+    "options": [
+      "sort",
+      "duplicate",
+      "re-link",
+      "garbage collect"
+    ],
+    "correctAnswer": "garbage collect",
+    "explanation": "Garbage collection automatically frees memory that is no longer used. C does not do this."
+  },
+  {
+    "id": 179,
+    "question": "Which of these is listed as a PRO of linked lists?",
+    "options": [
+      "Dynamic size; they can grow or shrink during execution",
+      "Fast random access",
+      "No memory overhead",
+      "O(1) search"
+    ],
+    "correctAnswer": "Dynamic size; they can grow or shrink during execution",
+    "explanation": "Pros: dynamic size, ease of insertion and deletion, no wastage of memory, no pre-allocation of memory."
+  },
+  {
+    "id": 180,
+    "question": "Which of these is listed as a CON of linked lists?",
+    "options": [
+      "Fixed size",
+      "Memory overhead, since each node needs extra memory for the pointer",
+      "Difficult insertion",
+      "Requires pre-allocation"
+    ],
+    "correctAnswer": "Memory overhead, since each node needs extra memory for the pointer",
+    "explanation": "Cons: memory overhead from pointers, and no quick random access."
+  },
+  {
+    "id": 181,
+    "question": "Short answer: Why do linked lists avoid 'wastage of memory' compared to arrays?",
+    "options": [
+      "They compress their data",
+      "They don't use pointers",
+      "They only use as much memory as needed for the elements they contain, while arrays may allocate more than required",
+      "They store everything in one byte"
+    ],
+    "correctAnswer": "They only use as much memory as needed for the elements they contain, while arrays may allocate more than required",
+    "explanation": "Linked lists don't need a pre-allocated size."
+  },
+  {
+    "id": 182,
+    "question": "According to the best practices, when should you use an array instead of a linked list?",
+    "options": [
+      "When you need frequent insertions at the beginning",
+      "Never",
+      "When the size changes constantly",
+      "When you need random access to elements"
+    ],
+    "correctAnswer": "When you need random access to elements",
+    "explanation": "Best practice: use arrays for random access, and linked lists when dynamic size or frequent insert/delete matters."
+  },
+  {
+    "id": 183,
+    "question": "Which data structure do the best practices suggest considering for faster lookups instead of traversing a linked list?",
+    "options": [
+      "Hash table",
+      "Stack",
+      "Queue",
+      "Circular array"
+    ],
+    "correctAnswer": "Hash table",
+    "explanation": "To avoid excessive traversal for searching, consider structures like hash tables."
+  },
+  {
+    "id": 184,
+    "question": "What memory management best practice is listed for linked lists?",
+    "options": [
+      "Never call free()",
+      "Always free memory when nodes are no longer needed to prevent memory leaks",
+      "Allocate all nodes on the stack",
+      "Use only global variables"
+    ],
+    "correctAnswer": "Always free memory when nodes are no longer needed to prevent memory leaks",
+    "explanation": "Be cautious about allocation and deallocation to prevent memory leaks."
+  },
+  {
+    "id": 185,
+    "question": "In CreateNewNode, what happens if malloc returns NULL?",
+    "options": [
+      "It returns NULL to the caller silently",
+      "It retries forever",
+      "It prints 'No more memory available!!!' and calls exit(EXIT_FAILURE)",
+      "It creates the node on the stack instead"
+    ],
+    "correctAnswer": "It prints 'No more memory available!!!' and calls exit(EXIT_FAILURE)",
+    "explanation": "This is the memory validation step: always check malloc's result."
+  },
+  {
+    "id": 186,
+    "question": "What does CreateNewNode set the new node's NextStudent to?",
+    "options": [
+      "The head",
+      "Itself",
+      "An uninitialized value",
+      "NULL"
+    ],
+    "correctAnswer": "NULL",
+    "explanation": "The new node starts unlinked; the caller (e.g. InsertAtBeginning) sets its link."
+  },
+  {
+    "id": 187,
+    "question": "Which is the correct body of InsertAtBeginning?",
+    "options": [
+      "Student* n = CreateNewNode(id, age); n->NextStudent = head; return n;",
+      "Student* n = CreateNewNode(id, age); head->NextStudent = n; return head;",
+      "Student* n = CreateNewNode(id, age); return head;",
+      "Student* n = CreateNewNode(id, age); n->NextStudent = NULL; return n;"
+    ],
+    "correctAnswer": "Student* n = CreateNewNode(id, age); n->NextStudent = head; return n;",
+    "explanation": "The new node links to the old head and is returned as the new head."
+  },
+  {
+    "id": 188,
+    "question": "Why does InsertAtBeginning RETURN a Student* and get called as studentList = InsertAtBeginning(studentList, ...)?",
+    "options": [
+      "To return an error code",
+      "Because the head changes, and the caller's head pointer must be updated to the new node",
+      "Because C requires all functions to return pointers",
+      "To free the old head"
+    ],
+    "correctAnswer": "Because the head changes, and the caller's head pointer must be updated to the new node",
+    "explanation": "The function receives a copy of the head pointer, so it returns the new head for the caller to store."
+  },
+  {
+    "id": 189,
+    "question": "What is the output order of PrintList after this code?\n\nStudent* studentList = NULL;\nstudentList = InsertAtBeginning(studentList, 1001, 10);\nstudentList = InsertAtBeginning(studentList, 1002, 20);\nstudentList = InsertAtBeginning(studentList, 1003, 30);\nPrintList(studentList);",
+    "options": [
+      "1001, 1002, 1003",
+      "1002, 1001, 1003",
+      "1003, 1002, 1001",
+      "1001, 1003, 1002"
+    ],
+    "correctAnswer": "1003, 1002, 1001",
+    "explanation": "Each insert at the beginning becomes the new head, so the last inserted (1003) is printed first."
+  },
+  {
+    "id": 190,
+    "question": "Continuing from 1003 -> 1002 -> 1001, the code calls studentList = InsertAtEnd(studentList, 1004, 40); What does PrintList show?",
+    "options": [
+      "1004, 1003, 1002, 1001",
+      "1003, 1004, 1002, 1001",
+      "1001, 1002, 1003, 1004",
+      "1003, 1002, 1001, 1004"
+    ],
+    "correctAnswer": "1003, 1002, 1001, 1004",
+    "explanation": "InsertAtEnd walks to the tail (1001) and links the new node after it."
+  },
+  {
+    "id": 191,
+    "question": "With the list 1003(30) -> 1002(20) -> 1001(10) -> 1004(40), what does GetAgeByStudentId(studentList, 1002) return?",
+    "options": [
+      "20",
+      "10",
+      "30",
+      "-1"
+    ],
+    "correctAnswer": "20",
+    "explanation": "Student 1002 was created with age 20."
+  },
+  {
+    "id": 192,
+    "question": "What does GetAgeByStudentId return if the StudentId is not in the list?",
+    "options": [
+      "0",
+      "-1 (after printing a 'Not Found!' message)",
+      "NULL",
+      "The age of the last student"
+    ],
+    "correctAnswer": "-1 (after printing a 'Not Found!' message)",
+    "explanation": "If the loop ends without a match, it prints 'Student with StudentId: X Not Found!' and returns -1. main checks age != -1 before printing."
+  },
+  {
+    "id": 193,
+    "question": "In InsertAtEnd, what is the loop condition used to find the tail?",
+    "options": [
+      "while (current != NULL)",
+      "while (current == NULL)",
+      "while (current->NextStudent != NULL)",
+      "while (head != NULL)"
+    ],
+    "correctAnswer": "while (current->NextStudent != NULL)",
+    "explanation": "It stops ON the tail (the node whose next is NULL) so it can set tail->NextStudent = newStudent."
+  },
+  {
+    "id": 194,
+    "question": "Short answer: What bug occurs if InsertAtEnd from the course code is called on an EMPTY list (head == NULL)?",
+    "options": [
+      "Nothing; it works fine",
+      "It returns the wrong age",
+      "It inserts the node twice",
+      "It dereferences a NULL pointer (current->NextStudent) and crashes"
+    ],
+    "correctAnswer": "It dereferences a NULL pointer (current->NextStudent) and crashes",
+    "explanation": "current starts as NULL, so current->NextStudent is invalid. A safe version checks: if (head == NULL) return newStudent;"
+  },
+  {
+    "id": 195,
+    "question": "Why does FreeList use a tempNode variable?\n\nwhile (current != NULL) {\n  tempNode = current->NextStudent;\n  free(current);\n  current = tempNode;\n}",
+    "options": [
+      "To save the next node's address before freeing the current node, since you can't read current->NextStudent after free",
+      "To count the nodes",
+      "To sort the list",
+      "It isn't needed"
+    ],
+    "correctAnswer": "To save the next node's address before freeing the current node, since you can't read current->NextStudent after free",
+    "explanation": "Accessing memory after it's freed is undefined behaviour, so grab the next pointer first."
+  },
+  {
+    "id": 196,
+    "question": "What does PrintList's loop condition need to be so that every node, including the tail, is printed?",
+    "options": [
+      "while (current->NextStudent != NULL)",
+      "while (current != NULL)",
+      "while (current == head)",
+      "while (current->Age > 0)"
+    ],
+    "correctAnswer": "while (current != NULL)",
+    "explanation": "Using current->NextStudent != NULL would stop before printing the tail."
+  },
+  {
+    "id": 197,
+    "question": "In the multi-file version (main.c, supporting.c), how does main.c know about Student and the list functions?",
+    "options": [
+      "It copies them",
+      "Through #include <linkedlist.h>",
+      "Through #include \"dynamicLinkedList.h\"",
+      "C finds them automatically"
+    ],
+    "correctAnswer": "Through #include \"dynamicLinkedList.h\"",
+    "explanation": "The header declares the struct and function prototypes; supporting.c holds the implementations and main.c uses them."
+  },
+  {
+    "id": 198,
+    "question": "What does typedef struct Student { ... } Student; allow you to do?",
+    "options": [
+      "Allocate a student automatically",
+      "Prevent Student from being freed",
+      "Make Student a pointer type",
+      "Write Student instead of struct Student when declaring variables"
+    ],
+    "correctAnswer": "Write Student instead of struct Student when declaring variables",
+    "explanation": "typedef creates an alias. Inside the struct, the link is still written struct Student* because the alias isn't complete yet."
+  },
+  {
+    "id": 199,
+    "question": "Coding: Which function correctly counts the nodes in a linked list?",
+    "options": [
+      "int Count(Student* head) { int c = 0; while (head != NULL) { c++; head = head->NextStudent; } return c; }",
+      "int Count(Student* head) { int c = 0; while (head->NextStudent != NULL) { c++; } return c; }",
+      "int Count(Student* head) { return sizeof(head); }",
+      "int Count(Student* head) { int c = 1; head = NULL; return c; }"
+    ],
+    "correctAnswer": "int Count(Student* head) { int c = 0; while (head != NULL) { c++; head = head->NextStudent; } return c; }",
+    "explanation": "Walk until NULL, counting each node and advancing the pointer. Option 2 never advances (infinite loop) and crashes on an empty list; sizeof gives the pointer size, not the length."
+  },
+  {
+    "id": 200,
+    "question": "Coding: Which function correctly deletes the head node and returns the new head?",
+    "options": [
+      "Student* DeleteHead(Student* head) { if (head == NULL) return NULL; Student* next = head->NextStudent; free(head); return next; }",
+      "Student* DeleteHead(Student* head) { free(head); return head->NextStudent; }",
+      "Student* DeleteHead(Student* head) { head = NULL; return head; }",
+      "Student* DeleteHead(Student* head) { Student* next = head->NextStudent; return head; }"
+    ],
+    "correctAnswer": "Student* DeleteHead(Student* head) { if (head == NULL) return NULL; Student* next = head->NextStudent; free(head); return next; }",
+    "explanation": "Handle the empty case, save the next pointer, free the old head, return the new head. Option 2 reads freed memory; option 3 leaks the whole list; option 4 doesn't delete anything."
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "id": 201,
+    "question": "Which two advanced linked list types are covered in Week 4?",
+    "options": [
+      "Sorted linked lists and doubly linked lists",
+      "Circular and skip lists",
+      "Stacks and queues",
+      "Hash lists and trees"
+    ],
+    "correctAnswer": "Sorted linked lists and doubly linked lists",
+    "explanation": "Week 4 covers sorted linked lists and doubly linked lists."
+  },
+  {
+    "id": 202,
+    "question": "What is a sorted linked list?",
+    "options": [
+      "A list whose elements stay in insertion order",
+      "A list that keeps its elements in a specific order (e.g. numerical or alphabetical) at all times",
+      "A list that is sorted only when printed",
+      "A list with no head"
+    ],
+    "correctAnswer": "A list that keeps its elements in a specific order (e.g. numerical or alphabetical) at all times",
+    "explanation": "Unlike regular linked lists that keep insertion order, sorted linked lists always maintain a predetermined sequence."
+  },
+  {
+    "id": 203,
+    "question": "Short answer: What is the primary benefit of a sorted linked list?",
+    "options": [
+      "O(1) reading",
+      "It uses less memory than an array",
+      "Data is always sorted, so you can access it in sorted order without extra sorting operations",
+      "It never needs traversal"
+    ],
+    "correctAnswer": "Data is always sorted, so you can access it in sorted order without extra sorting operations",
+    "explanation": "Sorted linked lists are useful when elements are frequently accessed, searched or retrieved in sorted order."
+  },
+  {
+    "id": 204,
+    "question": "Fill in the blank: Insertions into a sorted linked list automatically place elements in their _____ according to the sorting criteria.",
+    "options": [
+      "head position",
+      "tail position",
+      "random position",
+      "appropriate position"
+    ],
+    "correctAnswer": "appropriate position",
+    "explanation": "Each insert goes where it belongs so the order is always maintained."
+  },
+  {
+    "id": 205,
+    "question": "Sorted insertion: when should the new node be inserted at the BEGINNING of the list?",
+    "options": [
+      "When the list is empty or the new data is smaller than the head's data",
+      "When the new data is larger than the tail",
+      "Always",
+      "When the new data equals the tail's data"
+    ],
+    "correctAnswer": "When the list is empty or the new data is smaller than the head's data",
+    "explanation": "In that case set newNode->next = head, update head to the new node, and return it."
+  },
+  {
+    "id": 206,
+    "question": "Sorted insertion: while traversing to find the insertion position, when do you keep moving to the next node?",
+    "options": [
+      "While the current node's data is greater than the new data",
+      "While the next node exists and its data is less than the new data",
+      "Until you reach the tail, always",
+      "While the next node is NULL"
+    ],
+    "correctAnswer": "While the next node exists and its data is less than the new data",
+    "explanation": "Stop when there's no next node or the next node's data is >= the new data, then insert after current."
+  },
+  {
+    "id": 207,
+    "question": "Sorted insertion: once the right 'current' node is found, how is the new node inserted?",
+    "options": [
+      "current->next = newNode; newNode->next = current->next;",
+      "newNode->next = NULL; current->next = newNode;",
+      "newNode->next = current->next; current->next = newNode;",
+      "current = newNode;"
+    ],
+    "correctAnswer": "newNode->next = current->next; current->next = newNode;",
+    "explanation": "Set the new node's link first. Doing it in the other order would make newNode point to itself and lose the rest of the list."
+  },
+  {
+    "id": 208,
+    "question": "A sorted linked list contains 10 -> 20 -> 40. After inserting 30 and then 5, what is the list?",
+    "options": [
+      "10 -> 20 -> 40 -> 30 -> 5",
+      "5 -> 30 -> 10 -> 20 -> 40",
+      "30 -> 5 -> 10 -> 20 -> 40",
+      "5 -> 10 -> 20 -> 30 -> 40"
+    ],
+    "correctAnswer": "5 -> 10 -> 20 -> 30 -> 40",
+    "explanation": "30 goes between 20 and 40; 5 is smaller than the head so it becomes the new head."
+  },
+  {
+    "id": 209,
+    "question": "Coding: Which SortedInsert is correct (sorted by StudentId, ascending)?",
+    "options": [
+      "Student* SortedInsert(Student* head, int id, int age) { Student* n = CreateNewNode(id, age); if (head == NULL || id < head->StudentId) { n->NextStudent = head; return n; } Student* cur = head; while (cur->NextStudent != NULL && cur->NextStudent->StudentId < id) cur = cur->NextStudent; n->NextStudent = cur->NextStudent; cur->NextStudent = n; return head; }",
+      "Student* SortedInsert(Student* head, int id, int age) { Student* n = CreateNewNode(id, age); n->NextStudent = head; return n; }",
+      "Student* SortedInsert(Student* head, int id, int age) { Student* n = CreateNewNode(id, age); Student* cur = head; while (cur->NextStudent != NULL) cur = cur->NextStudent; cur->NextStudent = n; return head; }",
+      "Student* SortedInsert(Student* head, int id, int age) { Student* n = CreateNewNode(id, age); Student* cur = head; while (cur != NULL && cur->StudentId < id) cur = cur->NextStudent; cur->NextStudent = n; return head; }"
+    ],
+    "correctAnswer": "Student* SortedInsert(Student* head, int id, int age) { Student* n = CreateNewNode(id, age); if (head == NULL || id < head->StudentId) { n->NextStudent = head; return n; } Student* cur = head; while (cur->NextStudent != NULL && cur->NextStudent->StudentId < id) cur = cur->NextStudent; n->NextStudent = cur->NextStudent; cur->NextStudent = n; return head; }",
+    "explanation": "It follows the four steps: create node, handle empty/smaller-than-head, traverse while next < new, then link. Option 2 always inserts at the head; option 3 always inserts at the end; option 4 can run cur to NULL and dereference it, and loses the rest of the list."
+  },
+  {
+    "id": 210,
+    "question": "What makes a doubly linked list different from a classic linked list?",
+    "options": [
+      "Each node has two links (next and previous), and the list tracks both the first and last nodes",
+      "Each node stores two values",
+      "It has two heads",
+      "It stores data twice for safety"
+    ],
+    "correctAnswer": "Each node has two links (next and previous), and the list tracks both the first and last nodes",
+    "explanation": "A doubly linked list has next and previous links and keeps track of the head and tail."
+  },
+  {
+    "id": 211,
+    "question": "Short answer: What can a doubly linked list do that a classic (singly) linked list cannot?",
+    "options": [
+      "Read any element in O(1)",
+      "Move both forward and backward, including starting at the last node and working back to the first",
+      "Store more data per node",
+      "Avoid using pointers"
+    ],
+    "correctAnswer": "Move both forward and backward, including starting at the last node and working back to the first",
+    "explanation": "A classic list only moves forward because no node knows its previous node."
+  },
+  {
+    "id": 212,
+    "question": "Reverse iteration in a doubly linked list is useful for which of these?",
+    "options": [
+      "Removing the need for a head pointer",
+      "Making reads O(1)",
+      "Processing data in reverse sequence or reversing the list itself",
+      "Binary search"
+    ],
+    "correctAnswer": "Processing data in reverse sequence or reversing the list itself",
+    "explanation": "Reverse traversal helps when data must be processed backwards or for algorithms like reversing the list."
+  },
+  {
+    "id": 213,
+    "question": "With a tail pointer maintained, what is the time complexity of inserting or deleting at the END of a doubly linked list?",
+    "options": [
+      "O(N^2)",
+      "O(N)",
+      "O(log N)",
+      "O(1)"
+    ],
+    "correctAnswer": "O(1)",
+    "explanation": "This is tail pointer optimization: you can jump straight to the tail instead of traversing."
+  },
+  {
+    "id": 214,
+    "question": "Which is NOT listed as a use case for doubly linked lists?",
+    "options": [
+      "O(1) random access by index",
+      "Caches that move frequently accessed items to the front",
+      "Dequeues (double-ended queues)",
+      "Undo/redo functionality in text editors"
+    ],
+    "correctAnswer": "O(1) random access by index",
+    "explanation": "Doubly linked lists still need traversal to reach an index. Their listed use cases are undo/redo, caches and dequeues."
+  },
+  {
+    "id": 215,
+    "question": "Fill in the blank: Even with bidirectional traversal, reading or searching a doubly linked list is _____.",
+    "options": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctAnswer": "O(N)",
+    "explanation": "The exact memory location of a node still isn't known, so the computer must traverse."
+  },
+  {
+    "id": 216,
+    "question": "Which struct correctly represents a doubly linked list Student node?",
+    "options": [
+      "typedef struct Student { int StudentId; int Age; struct Student* NextStudent; } Student;",
+      "typedef struct Student { int StudentId; int Age; struct Student NextStudent; struct Student PreviousStudent; } Student;",
+      "typedef struct Student { int StudentId; int Age; struct Student* NextStudent; struct Student* PreviousStudent; } Student;",
+      "typedef struct Student { int StudentId; int Age; int* Next; int* Prev; } Student;"
+    ],
+    "correctAnswer": "typedef struct Student { int StudentId; int Age; struct Student* NextStudent; struct Student* PreviousStudent; } Student;",
+    "explanation": "A doubly linked node needs pointers to both the next and previous Student."
+  },
+  {
+    "id": 217,
+    "question": "In the doubly linked CreateNewNode, what are NextStudent and PreviousStudent set to, and who sets their real values?",
+    "options": [
+      "Both set to the head; CreateNewNode handles linking",
+      "Left uninitialized",
+      "Next set to NULL, Previous set to the tail",
+      "Both set to NULL; it's the calling function's responsibility to populate them"
+    ],
+    "correctAnswer": "Both set to NULL; it's the calling function's responsibility to populate them",
+    "explanation": "The helper just creates a clean node; insert functions do the linking."
+  },
+  {
+    "id": 218,
+    "question": "In the doubly linked InsertAtBeginning, which statements are needed (assuming head is not NULL)?",
+    "options": [
+      "newStudent->NextStudent = head; head->PreviousStudent = newStudent; return newStudent;",
+      "newStudent->PreviousStudent = head; return head;",
+      "head->NextStudent = newStudent; return head;",
+      "newStudent->NextStudent = NULL; return newStudent;"
+    ],
+    "correctAnswer": "newStudent->NextStudent = head; head->PreviousStudent = newStudent; return newStudent;",
+    "explanation": "The old head's PreviousStudent (previously NULL) now points to the new node, and the new node's next points to the old head."
+  },
+  {
+    "id": 219,
+    "question": "Short answer: Why must the doubly linked InsertAtBeginning check whether head is NULL before setting head->PreviousStudent?",
+    "options": [
+      "It doesn't need to",
+      "On an empty list, head is NULL, and dereferencing it would crash",
+      "To keep the list sorted",
+      "To free the old head"
+    ],
+    "correctAnswer": "On an empty list, head is NULL, and dereferencing it would crash",
+    "explanation": "Guard with: if (head != NULL) head->PreviousStudent = newStudent;"
+  },
+  {
+    "id": 220,
+    "question": "In the doubly linked InsertAtEnd (traversing from head), which two links must be set once the tail is found?",
+    "options": [
+      "newStudent->NextStudent = head; head->PreviousStudent = newStudent;",
+      "tail->PreviousStudent = newStudent; newStudent->NextStudent = tail;",
+      "tail->NextStudent = newStudent; newStudent->PreviousStudent = tail;",
+      "tail = newStudent;"
+    ],
+    "correctAnswer": "tail->NextStudent = newStudent; newStudent->PreviousStudent = tail;",
+    "explanation": "The tail's next points to the new node, and the new node's previous points back to the tail."
+  },
+  {
+    "id": 221,
+    "question": "How does FreeList for a doubly linked list compare to the classic version?",
+    "options": [
+      "It must walk backwards from the tail",
+      "It frees each node twice",
+      "It frees only the head",
+      "It is like the classic implementation: save next, free current, move on"
+    ],
+    "correctAnswer": "It is like the classic implementation: save next, free current, move on",
+    "explanation": "You only need to follow NextStudent links to free every node once."
+  },
+  {
+    "id": 222,
+    "question": "InsertAtIndex: what should happen if the index is 0?",
+    "options": [
+      "Call InsertAtBeginning, since a new head is being created",
+      "Return an error",
+      "Call InsertAtEnd",
+      "Do nothing"
+    ],
+    "correctAnswer": "Call InsertAtBeginning, since a new head is being created",
+    "explanation": "Index 0 means the new node becomes the head."
+  },
+  {
+    "id": 223,
+    "question": "InsertAtIndex: to which position do you traverse before inserting?",
+    "options": [
+      "index",
+      "index - 1",
+      "index + 1",
+      "the tail"
+    ],
+    "correctAnswer": "index - 1",
+    "explanation": "Traverse until current is NULL or index - 1 iterations are done, so current is the node BEFORE the insertion point."
+  },
+  {
+    "id": 224,
+    "question": "InsertAtIndex: What is the correct order of the four link updates (with current at index - 1)?",
+    "options": [
+      "1) new->Previous = NULL; 2) new->Next = NULL; 3) current->Next = new; 4) done",
+      "1) current->Next = new; 2) new->Next = current->Next; 3) new->Previous = current; 4) current->Next->Previous = new",
+      "1) new->Next = current->Next; 2) if current->Next != NULL, current->Next->Previous = new; 3) current->Next = new; 4) new->Previous = current",
+      "1) current->Previous = new; 2) new->Next = current; 3) done; 4) done"
+    ],
+    "correctAnswer": "1) new->Next = current->Next; 2) if current->Next != NULL, current->Next->Previous = new; 3) current->Next = new; 4) new->Previous = current",
+    "explanation": "You must use current->Next to wire the new node BEFORE overwriting current->Next; otherwise you lose the rest of the list."
+  },
+  {
+    "id": 225,
+    "question": "In InsertAtIndex, why check 'if current->NextStudent is not NULL' before updating its PreviousStudent?",
+    "options": [
+      "It isn't necessary",
+      "To keep the list sorted",
+      "Because NULL nodes must be freed",
+      "Because inserting at the end means there is no next node to update"
+    ],
+    "correctAnswer": "Because inserting at the end means there is no next node to update",
+    "explanation": "If current is the tail, current->NextStudent is NULL and dereferencing it would crash."
+  },
+  {
+    "id": 226,
+    "question": "Doubly linked list: A <-> B <-> C. After InsertAtIndex(head, 1, X), what is B->PreviousStudent?",
+    "options": [
+      "X",
+      "A",
+      "NULL",
+      "C"
+    ],
+    "correctAnswer": "X",
+    "explanation": "X is inserted between A and B, giving A <-> X <-> B <-> C, so B's previous is X."
+  },
+  {
+    "id": 227,
+    "question": "Coding: Which function correctly prints a doubly linked list in REVERSE, given its tail?",
+    "options": [
+      "void PrintReverse(Student* tail) { Student* cur = tail; while (cur != NULL) { printf(\"%d \", cur->StudentId); cur = cur->PreviousStudent; } }",
+      "void PrintReverse(Student* tail) { Student* cur = tail; while (cur != NULL) { printf(\"%d \", cur->StudentId); cur = cur->NextStudent; } }",
+      "void PrintReverse(Student* tail) { printf(\"%d \", tail->StudentId); }",
+      "void PrintReverse(Student* tail) { Student* cur = tail; while (cur->PreviousStudent != NULL) { cur = cur->PreviousStudent; } }"
+    ],
+    "correctAnswer": "void PrintReverse(Student* tail) { Student* cur = tail; while (cur != NULL) { printf(\"%d \", cur->StudentId); cur = cur->PreviousStudent; } }",
+    "explanation": "Start at the tail and follow PreviousStudent until NULL. Option 2 follows Next from the tail (prints only the tail); option 4 prints nothing."
+  },
+  {
+    "id": 228,
+    "question": "Coding: Which correctly deletes a middle node 'target' from a doubly linked list (target has both a previous and a next node)?",
+    "options": [
+      "target->PreviousStudent->NextStudent = target->NextStudent; target->NextStudent->PreviousStudent = target->PreviousStudent; free(target);",
+      "free(target); target->PreviousStudent->NextStudent = target->NextStudent;",
+      "target->NextStudent = NULL; target->PreviousStudent = NULL;",
+      "target->PreviousStudent->NextStudent = target; free(target);"
+    ],
+    "correctAnswer": "target->PreviousStudent->NextStudent = target->NextStudent; target->NextStudent->PreviousStudent = target->PreviousStudent; free(target);",
+    "explanation": "Both neighbours are re-linked to bypass the target, then it's freed. Option 2 reads freed memory; option 3 just disconnects target and leaves the neighbours broken; option 4 keeps pointing at the freed node."
+  }
+]

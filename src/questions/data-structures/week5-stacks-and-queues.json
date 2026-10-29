@@ -1,0 +1,386 @@
+[
+  {
+    "id": 229,
+    "question": "A stack stores data like an array. Which three constraints make it a stack?",
+    "options": [
+      "Insert, delete and read only at the end",
+      "Insert at the end, delete and read only from the front",
+      "Insert anywhere, delete only at the end",
+      "Read anywhere, insert and delete at the front"
+    ],
+    "correctAnswer": "Insert, delete and read only at the end",
+    "explanation": "Data can be inserted, deleted, and read only from the end of the stack."
+  },
+  {
+    "id": 230,
+    "question": "In the 'stack of dishes' analogy, which of these is allowed?",
+    "options": [
+      "Looking at the face of the third dish",
+      "Removing the top dish",
+      "Adding a dish to the middle",
+      "Removing the bottom dish"
+    ],
+    "correctAnswer": "Removing the top dish",
+    "explanation": "You can only see, add, or remove the dish at the top."
+  },
+  {
+    "id": 231,
+    "question": "In computer science literature, the end of a stack is called its _____ and the beginning is called its _____.",
+    "options": [
+      "front; back",
+      "head; tail",
+      "top; bottom",
+      "rear; front"
+    ],
+    "correctAnswer": "top; bottom",
+    "explanation": "Viewing stacks as vertical arrays, the end is the top and the beginning is the bottom."
+  },
+  {
+    "id": 232,
+    "question": "A stack holds 2, 4, 6, 8 with 2 pushed first and 8 pushed last. What are its top and bottom?",
+    "options": [
+      "Top 2, bottom 8",
+      "Top 4, bottom 6",
+      "Top 6, bottom 4",
+      "Top 8, bottom 2"
+    ],
+    "correctAnswer": "Top 8, bottom 2",
+    "explanation": "The last item pushed is the top; the first is the bottom."
+  },
+  {
+    "id": 233,
+    "question": "Fill in the blank: Inserting a new value into a stack is called _____.",
+    "options": [
+      "pushing",
+      "popping",
+      "enqueuing",
+      "peeking"
+    ],
+    "correctAnswer": "pushing",
+    "explanation": "Pushing is like adding a dish onto the top of the stack, which is just inserting at the end of an array."
+  },
+  {
+    "id": 234,
+    "question": "Fill in the blank: Removing an element from the top of a stack is called _____.",
+    "options": [
+      "pushing",
+      "popping",
+      "dequeuing",
+      "shifting"
+    ],
+    "correctAnswer": "popping",
+    "explanation": "Because of a stack's restrictions, data can only be popped from the top."
+  },
+  {
+    "id": 235,
+    "question": "Starting with an empty stack: push 5, push 3, push 0, pop, pop. What remains?",
+    "options": [
+      "0",
+      "3",
+      "5",
+      "3 and 5"
+    ],
+    "correctAnswer": "5",
+    "explanation": "Pops remove 0 first, then 3, leaving only 5."
+  },
+  {
+    "id": 236,
+    "question": "Can you insert a 0 into the middle or bottom of a stack?",
+    "options": [
+      "Yes, at any index",
+      "Only at the bottom",
+      "Only if the stack is empty",
+      "No; by the nature of a stack, data can only be added to the top"
+    ],
+    "correctAnswer": "No; by the nature of a stack, data can only be added to the top",
+    "explanation": "That restriction is what defines a stack."
+  },
+  {
+    "id": 237,
+    "question": "What does LIFO stand for, and which structure does it describe?",
+    "options": [
+      "Last In, First Out; stack",
+      "Last In, First Out; queue",
+      "Linked In, First Out; linked list",
+      "List In, Fixed Out; array"
+    ],
+    "correctAnswer": "Last In, First Out; stack",
+    "explanation": "The last item pushed onto a stack is always the first item popped."
+  },
+  {
+    "id": 238,
+    "question": "How is a stack used in a function call stack?",
+    "options": [
+      "Functions are stored in alphabetical order",
+      "When a function is called its parameters and locals are pushed on; when it returns they're popped off",
+      "Functions are queued and run first-come, first-served",
+      "Each function gets its own heap"
+    ],
+    "correctAnswer": "When a function is called its parameters and locals are pushed on; when it returns they're popped off",
+    "explanation": "Programming languages use stacks extensively to manage function calls and returns."
+  },
+  {
+    "id": 239,
+    "question": "Which of these is listed as a use case for STACKS?",
+    "options": [
+      "Printer spooling",
+      "Network packet buffering",
+      "Expression evaluation (infix, postfix, prefix), e.g. infix-to-postfix conversion",
+      "First-Come, First-Served CPU scheduling"
+    ],
+    "correctAnswer": "Expression evaluation (infix, postfix, prefix), e.g. infix-to-postfix conversion",
+    "explanation": "Stack use cases: function call stack, expression evaluation, and undo mechanisms. The others are queue use cases."
+  },
+  {
+    "id": 240,
+    "question": "Short answer: How does a text editor's undo feature use a stack?",
+    "options": [
+      "It stores actions in a queue and undoes the oldest one",
+      "It deletes the whole document",
+      "It sorts actions by time",
+      "It records each action on a stack and pops the last action to undo it"
+    ],
+    "correctAnswer": "It records each action on a stack and pops the last action to undo it",
+    "explanation": "The most recent action is the first one undone (LIFO)."
+  },
+  {
+    "id": 241,
+    "question": "What is a queue designed to process, and how does it compare to a stack?",
+    "options": [
+      "Temporary data; like a stack, but it processes data in a different order",
+      "Permanent data; it's identical to a stack",
+      "Sorted data; it's the same as a sorted list",
+      "Only strings; it's unrelated to stacks"
+    ],
+    "correctAnswer": "Temporary data; like a stack, but it processes data in a different order",
+    "explanation": "A queue processes temporary data. Like a stack, it's an abstract data type, but the order differs."
+  },
+  {
+    "id": 242,
+    "question": "Fill in the blank: Like a stack, a queue is an _____ data type.",
+    "options": [
+      "primary",
+      "abstract",
+      "enumerated",
+      "unsigned"
+    ],
+    "correctAnswer": "abstract",
+    "explanation": "Both stacks and queues are abstract data types, defined by their rules of use rather than by how they're stored."
+  },
+  {
+    "id": 243,
+    "question": "A queue is like a line at a grocery store. Which acronym describes it?",
+    "options": [
+      "LIFO",
+      "FILO",
+      "FIFO",
+      "LILO"
+    ],
+    "correctAnswer": "FIFO",
+    "explanation": "First In, First Out: the first person in line is the first to check out."
+  },
+  {
+    "id": 244,
+    "question": "How is a queue usually depicted, and what are its beginning and end called?",
+    "options": [
+      "Vertically; top and bottom",
+      "Vertically; head and tail",
+      "Circularly; head and tail",
+      "Horizontally; front and back"
+    ],
+    "correctAnswer": "Horizontally; front and back",
+    "explanation": "Like a line of people, a queue is drawn horizontally with a front and a back."
+  },
+  {
+    "id": 245,
+    "question": "Which set of restrictions defines a QUEUE?",
+    "options": [
+      "Insert at the end; delete from the front; read from the front",
+      "Insert at the end; delete from the end; read from the end",
+      "Insert at the front; delete from the end; read from the end",
+      "Insert anywhere; delete anywhere; read anywhere"
+    ],
+    "correctAnswer": "Insert at the end; delete from the front; read from the front",
+    "explanation": "Insertion is the same as a stack (at the end); deletion and reading are the opposite (from the front)."
+  },
+  {
+    "id": 246,
+    "question": "In what way does a queue behave IDENTICALLY to a stack?",
+    "options": [
+      "Data is deleted from the front",
+      "Data is inserted only at the end",
+      "Data is read from the front",
+      "Data is read from the end"
+    ],
+    "correctAnswer": "Data is inserted only at the end",
+    "explanation": "Both insert at the end; they differ in where they delete and read."
+  },
+  {
+    "id": 247,
+    "question": "Fill in the blank: Inserting into a queue is called _____ and removing from it is called _____.",
+    "options": [
+      "pushing; popping",
+      "linking; unlinking",
+      "enqueuing; dequeuing",
+      "writing; reading"
+    ],
+    "correctAnswer": "enqueuing; dequeuing",
+    "explanation": "Enqueue adds to the back; dequeue removes from the front."
+  },
+  {
+    "id": 248,
+    "question": "Starting with an empty queue: enqueue 5, enqueue 9, enqueue 100, dequeue, dequeue. What remains?",
+    "options": [
+      "5",
+      "9",
+      "5 and 9",
+      "100"
+    ],
+    "correctAnswer": "100",
+    "explanation": "5 is removed first, then 9, leaving 100."
+  },
+  {
+    "id": 249,
+    "question": "The values 1, 2, 3 are pushed onto a stack AND enqueued into a queue. Then one item is removed from each. Which items are removed?",
+    "options": [
+      "Stack removes 3; queue removes 1",
+      "Stack removes 1; queue removes 3",
+      "Both remove 1",
+      "Both remove 3"
+    ],
+    "correctAnswer": "Stack removes 3; queue removes 1",
+    "explanation": "Stack = LIFO (last in, 3, comes out first). Queue = FIFO (first in, 1, comes out first)."
+  },
+  {
+    "id": 250,
+    "question": "Which of these is a use case for QUEUES?",
+    "options": [
+      "Undo mechanisms",
+      "Printer spooling",
+      "Function call management",
+      "Infix-to-postfix conversion"
+    ],
+    "correctAnswer": "Printer spooling",
+    "explanation": "Queue use cases: task scheduling (e.g. FCFS), printer spooling, and buffering/data streaming."
+  },
+  {
+    "id": 251,
+    "question": "Which CPU scheduling algorithm is named as an example of queue-based task scheduling?",
+    "options": [
+      "Shortest Job First",
+      "Round Robin",
+      "First-Come, First-Served (FCFS)",
+      "Priority Scheduling"
+    ],
+    "correctAnswer": "First-Come, First-Served (FCFS)",
+    "explanation": "Tasks are processed in the order they're received."
+  },
+  {
+    "id": 252,
+    "question": "Short answer: Why are queues used for buffering and data streaming?",
+    "options": [
+      "Because queues allow random access",
+      "Because queues sort data",
+      "Because queues use less memory",
+      "Because data is produced at one rate and consumed at another, and must be handled in order"
+    ],
+    "correctAnswer": "Because data is produced at one rate and consumed at another, and must be handled in order",
+    "explanation": "Examples include message queues for inter-process communication and network packet buffering."
+  },
+  {
+    "id": 253,
+    "question": "According to the best practices, what is the trade-off between implementing a stack/queue with an array vs. a linked list?",
+    "options": [
+      "Arrays give constant-time access but have a fixed size; linked lists resize dynamically but have allocation overhead",
+      "Arrays resize dynamically; linked lists have a fixed size",
+      "There is no difference",
+      "Linked lists give constant-time access by index"
+    ],
+    "correctAnswer": "Arrays give constant-time access but have a fixed size; linked lists resize dynamically but have allocation overhead",
+    "explanation": "Choose the implementation based on your needs."
+  },
+  {
+    "id": 254,
+    "question": "Pushing onto a full stack is called _____, and popping from an empty stack is called _____.",
+    "options": [
+      "underflow; overflow",
+      "overflow; underflow",
+      "leak; crash",
+      "wrap; trail"
+    ],
+    "correctAnswer": "overflow; underflow",
+    "explanation": "Error handling for overflow and underflow makes the program behave predictably in exceptional cases."
+  },
+  {
+    "id": 255,
+    "question": "Which best practice applies when a stack or queue is built with linked list nodes?",
+    "options": [
+      "Never free nodes",
+      "Store all nodes in global variables",
+      "Release resources (free node memory) properly to avoid memory leaks",
+      "Use recursion for every operation"
+    ],
+    "correctAnswer": "Release resources (free node memory) properly to avoid memory leaks",
+    "explanation": "This is the resource management best practice."
+  },
+  {
+    "id": 256,
+    "question": "What does this array-based stack code print?\n\nint stack[5]; int top = -1;\nstack[++top] = 10;\nstack[++top] = 20;\nstack[++top] = 30;\ntop--;\nprintf(\"%d\", stack[top]);",
+    "options": [
+      "10",
+      "-1",
+      "30",
+      "20"
+    ],
+    "correctAnswer": "20",
+    "explanation": "After three pushes top = 2 (value 30). top-- pops it, so top = 1 and stack[1] is 20."
+  },
+  {
+    "id": 257,
+    "question": "Coding: For an array stack with int stack[MAX]; int top = -1;, which Push correctly checks for overflow?",
+    "options": [
+      "void Push(int v) { if (top == MAX - 1) { printf(\"Stack Overflow\\n\"); return; } stack[++top] = v; }",
+      "void Push(int v) { stack[top++] = v; }",
+      "void Push(int v) { if (top == -1) { printf(\"Stack Overflow\\n\"); return; } stack[++top] = v; }",
+      "void Push(int v) { if (top == MAX) return; stack[top] = v; }"
+    ],
+    "correctAnswer": "void Push(int v) { if (top == MAX - 1) { printf(\"Stack Overflow\\n\"); return; } stack[++top] = v; }",
+    "explanation": "The stack is full when top is at the last index (MAX - 1). Pre-increment moves top to the next free slot. With top starting at -1, stack[top++] would write to index -1."
+  },
+  {
+    "id": 258,
+    "question": "Coding: Which Pop correctly checks for underflow on an array stack (top starts at -1)?",
+    "options": [
+      "int Pop(void) { return stack[--top]; }",
+      "int Pop(void) { if (top == -1) { printf(\"Stack Underflow\\n\"); return -1; } return stack[top--]; }",
+      "int Pop(void) { if (top == MAX - 1) return -1; return stack[top--]; }",
+      "int Pop(void) { top = -1; return stack[0]; }"
+    ],
+    "correctAnswer": "int Pop(void) { if (top == -1) { printf(\"Stack Underflow\\n\"); return -1; } return stack[top--]; }",
+    "explanation": "Empty means top == -1. Post-decrement returns the top value, then moves top down."
+  },
+  {
+    "id": 259,
+    "question": "Coding: A linked-list stack keeps 'top' as the head. Which Push is O(1) and correct?",
+    "options": [
+      "Node* Push(Node* top, int v) { top->data = v; return top; }",
+      "Node* Push(Node* top, int v) { Node* cur = top; while (cur->next) cur = cur->next; cur->next = malloc(sizeof(Node)); return top; }",
+      "Node* Push(Node* top, int v) { Node* n = malloc(sizeof(Node)); n->data = v; n->next = top; return n; }",
+      "Node* Push(Node* top, int v) { Node* n = malloc(sizeof(Node)); n->data = v; n->next = NULL; return top; }"
+    ],
+    "correctAnswer": "Node* Push(Node* top, int v) { Node* n = malloc(sizeof(Node)); n->data = v; n->next = top; return n; }",
+    "explanation": "Pushing is insert-at-beginning: the new node links to the old top and becomes the new top. Walking to the end would make push O(N)."
+  },
+  {
+    "id": 260,
+    "question": "Coding: A linked-list queue keeps both front and rear pointers. Where should enqueue add and dequeue remove so both are O(1)?",
+    "options": [
+      "Enqueue and dequeue both at rear",
+      "Enqueue at front; dequeue at rear",
+      "Enqueue and dequeue both at front",
+      "Enqueue at rear (rear->next = n; rear = n); dequeue at front (front = front->next)"
+    ],
+    "correctAnswer": "Enqueue at rear (rear->next = n; rear = n); dequeue at front (front = front->next)",
+    "explanation": "This matches the queue rules (insert at the back, delete from the front). Removing at the rear of a singly linked list would need O(N) traversal to find the node before it."
+  }
+]

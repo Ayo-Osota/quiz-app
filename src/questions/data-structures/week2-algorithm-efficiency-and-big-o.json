@@ -1,0 +1,914 @@
+[
+  {
+    "id": 71,
+    "question": "When students first learn to code, what single metric is their code measured by?",
+    "options": [
+      "Whether the code works",
+      "How fast it runs",
+      "How few lines it has",
+      "How much memory it uses"
+    ],
+    "correctAnswer": "Whether the code works",
+    "explanation": "Beginners focus, rightly, on one metric: does the code work? With experience you learn other measures of quality."
+  },
+  {
+    "id": 72,
+    "question": "Maintainability of code involves which aspects?",
+    "options": [
+      "Speed, memory and step count",
+      "Readability, organization and modularity",
+      "Big O, best case and worst case",
+      "Compilation time and file size"
+    ],
+    "correctAnswer": "Readability, organization and modularity",
+    "explanation": "Maintainability covers readability, organization and modularity. Efficiency is a separate measure of code quality."
+  },
+  {
+    "id": 73,
+    "question": "Besides maintainability, which aspect of high-quality code does this course focus on?",
+    "options": [
+      "Code comments",
+      "Code style",
+      "Code efficiency",
+      "Code security"
+    ],
+    "correctAnswer": "Code efficiency",
+    "explanation": "Two snippets can do the same task while one is more efficient. This course focuses on code efficiency."
+  },
+  {
+    "id": 74,
+    "question": "Fill in the blank: An algorithm is simply a set of _____ for completing a specific task.",
+    "options": [
+      "variables",
+      "memory addresses",
+      "data structures",
+      "instructions"
+    ],
+    "correctAnswer": "instructions",
+    "explanation": "An algorithm is a set of instructions for completing a specific task."
+  },
+  {
+    "id": 75,
+    "question": "Why is preparing a bowl of cereal technically an algorithm?",
+    "options": [
+      "Because it follows a defined set of steps in a particular order to achieve a task",
+      "Because it uses a computer",
+      "Because it is O(1)",
+      "Because it involves data"
+    ],
+    "correctAnswer": "Because it follows a defined set of steps in a particular order to achieve a task",
+    "explanation": "Grab a bowl, pour cereal, pour milk, dip a spoon. Following defined steps in order to complete a task is an algorithm."
+  },
+  {
+    "id": 76,
+    "question": "In the cereal-preparation algorithm, what is step 3?",
+    "options": [
+      "Grab a bowl",
+      "Pour milk into the bowl",
+      "Pour cereal into the bowl",
+      "Dip a spoon into the bowl"
+    ],
+    "correctAnswer": "Pour milk into the bowl",
+    "explanation": "The four steps are: 1. Grab a bowl, 2. Pour cereal, 3. Pour milk, 4. Dip a spoon."
+  },
+  {
+    "id": 77,
+    "question": "In computing, what is an algorithm, and how else can it be expressed besides code?",
+    "options": [
+      "A hardware component; it can only be expressed in code",
+      "A type of data structure; it can be expressed as a diagram only",
+      "The set of instructions given to a computer to achieve a task; it can also be expressed in plain English",
+      "A compiler setting; it can be expressed in binary only"
+    ],
+    "correctAnswer": "The set of instructions given to a computer to achieve a task; it can also be expressed in plain English",
+    "explanation": "When we write code we're creating algorithms for the computer to follow. Algorithms can also be written in plain English."
+  },
+  {
+    "id": 78,
+    "question": "What is the 'size' of an array?",
+    "options": [
+      "The number of bytes in the first element",
+      "The memory address where it starts",
+      "The highest index",
+      "How many data elements the array holds"
+    ],
+    "correctAnswer": "How many data elements the array holds",
+    "explanation": "The size is the number of elements. The grocery list has a size of 5."
+  },
+  {
+    "id": 79,
+    "question": "In [\"apples\", \"bananas\", \"cucumbers\", \"dates\", \"elderberries\"], what is the index of \"elderberries\"?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "1"
+    ],
+    "correctAnswer": "4",
+    "explanation": "Indexes start at 0, so apples = 0 and elderberries = 4."
+  },
+  {
+    "id": 80,
+    "question": "Which are the four common operations used to analyze a data structure's performance?",
+    "options": [
+      "Push, Pop, Peek, Clear",
+      "Read, Search, Insert, Delete",
+      "Sort, Merge, Split, Copy",
+      "Open, Close, Save, Print"
+    ],
+    "correctAnswer": "Read, Search, Insert, Delete",
+    "explanation": "To understand performance we analyze how code reads, searches, inserts into, and deletes from a structure."
+  },
+  {
+    "id": 81,
+    "question": "Looking up which grocery item is at index 2 is an example of which operation?",
+    "options": [
+      "Search",
+      "Insert",
+      "Read",
+      "Delete"
+    ],
+    "correctAnswer": "Read",
+    "explanation": "Reading means looking something up at a particular spot (index)."
+  },
+  {
+    "id": 82,
+    "question": "Finding the index of \"dates\" in the grocery list is an example of which operation?",
+    "options": [
+      "Read",
+      "Delete",
+      "Insert",
+      "Search"
+    ],
+    "correctAnswer": "Search",
+    "explanation": "Searching means looking for a particular value and, if found, which index it is at."
+  },
+  {
+    "id": 83,
+    "question": "Short answer: How is searching the inverse of reading?",
+    "options": [
+      "Reading gives an index and returns a value; searching gives a value and returns its index",
+      "Reading deletes data; searching adds data",
+      "Reading is always slower than searching",
+      "There is no relationship between them"
+    ],
+    "correctAnswer": "Reading gives an index and returns a value; searching gives a value and returns its index",
+    "explanation": "Reading: index in, value out. Searching: value in, index out."
+  },
+  {
+    "id": 84,
+    "question": "Adding \"figs\" to the shopping list and removing \"bananas\" are examples of which operations?",
+    "options": [
+      "Read and Search",
+      "Insert and Delete",
+      "Search and Delete",
+      "Insert and Read"
+    ],
+    "correctAnswer": "Insert and Delete",
+    "explanation": "Insertion adds a new value; deletion removes one."
+  },
+  {
+    "id": 85,
+    "question": "How do we measure the speed of an operation in this course?",
+    "options": [
+      "In seconds",
+      "In milliseconds on a reference computer",
+      "In the number of steps it takes",
+      "In lines of code"
+    ],
+    "correctAnswer": "In the number of steps it takes",
+    "explanation": "Speed is measured in steps, not in pure time."
+  },
+  {
+    "id": 86,
+    "question": "Short answer: Why measure speed in steps rather than time?",
+    "options": [
+      "Time is harder to type",
+      "Computers can't measure time",
+      "Steps are always smaller numbers",
+      "Time depends on hardware, but the number of steps is the same on any machine"
+    ],
+    "correctAnswer": "Time depends on hardware, but the number of steps is the same on any machine",
+    "explanation": "Code might take 5 seconds on one machine and longer or shorter elsewhere. If Operation A takes 5 steps and B takes 500, A is faster on all hardware."
+  },
+  {
+    "id": 87,
+    "question": "The second version of the 'print even numbers from 2 to 100' function was faster. Why?",
+    "options": [
+      "It took half as many steps as the first version",
+      "It used a faster computer",
+      "It used a different language",
+      "It printed fewer numbers"
+    ],
+    "correctAnswer": "It took half as many steps as the first version",
+    "explanation": "Both print the same numbers, but the second version took half as many steps (e.g. stepping by 2 instead of checking every number)."
+  },
+  {
+    "id": 88,
+    "question": "How many steps does it take a computer to read from an array?",
+    "options": [
+      "N steps",
+      "One step",
+      "log N steps",
+      "N + 1 steps"
+    ],
+    "correctAnswer": "One step",
+    "explanation": "A computer can jump to any index and look inside in a single step."
+  },
+  {
+    "id": 89,
+    "question": "When a program declares an array, what kind of memory cells does it allocate?",
+    "options": [
+      "Randomly scattered cells",
+      "Cells on the stack only",
+      "A contiguous set of empty cells",
+      "One cell per array"
+    ],
+    "correctAnswer": "A contiguous set of empty cells",
+    "explanation": "For a 5-element array, the computer finds five empty cells in a row and designates them as the array."
+  },
+  {
+    "id": 90,
+    "question": "Fill in the blank: Each cell's memory address is _____ than the previous cell's address.",
+    "options": [
+      "unrelated to",
+      "one number smaller",
+      "twice as large",
+      "one number greater"
+    ],
+    "correctAnswer": "one number greater",
+    "explanation": "Memory addresses are sequential, like street addresses, each one greater than the previous."
+  },
+  {
+    "id": 91,
+    "question": "Which TWO facts let a computer read any array index in one step?",
+    "options": [
+      "It can jump to any memory address in one step, and it notes the address where the array begins",
+      "It knows every value in memory, and it sorts arrays automatically",
+      "It stores arrays on the heap, and it uses pointers",
+      "It caches every array, and it uses binary search"
+    ],
+    "correctAnswer": "It can jump to any memory address in one step, and it notes the address where the array begins",
+    "explanation": "Like raising your right pinky without searching your fingers, the computer can jump to any address. Since it knows the start address, it finds any index by simple addition."
+  },
+  {
+    "id": 92,
+    "question": "An array of single-byte elements starts at memory address 1010. Where is index 3?",
+    "options": [
+      "1003",
+      "1013",
+      "1030",
+      "1011"
+    ],
+    "correctAnswer": "1013",
+    "explanation": "The computer takes the address of index 0 and adds the index: 1010 + 3 = 1013."
+  },
+  {
+    "id": 93,
+    "question": "Short answer: Why is searching an array tedious compared to reading it?",
+    "options": [
+      "Arrays are not stored contiguously",
+      "The computer must sort the array first",
+      "The computer has immediate access to all memory addresses but has no idea what values are stored at each one",
+      "Searching requires dynamic memory"
+    ],
+    "correctAnswer": "The computer has immediate access to all memory addresses but has no idea what values are stored at each one",
+    "explanation": "The computer can't jump to a value, so it must inspect each cell one at a time."
+  },
+  {
+    "id": 94,
+    "question": "Using linear search on [\"apples\", \"bananas\", \"cucumbers\", \"dates\", \"elderberries\"], how many steps does it take to find \"dates\"?",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "4"
+    ],
+    "correctAnswer": "4",
+    "explanation": "The computer checks index 0, 1, 2, then finds \"dates\" at index 3, a total of four cell checks."
+  },
+  {
+    "id": 95,
+    "question": "In which TWO situations does linear search on an array take the maximum number of steps?",
+    "options": [
+      "When the value is in the final cell, or the value isn't in the array at all",
+      "When the value is first, or the array is empty",
+      "When the value is in the middle, or appears twice",
+      "When the array is sorted, or unsorted"
+    ],
+    "correctAnswer": "When the value is in the final cell, or the value isn't in the array at all",
+    "explanation": "In both cases the computer must check every cell, giving N steps for N cells."
+  },
+  {
+    "id": 96,
+    "question": "What is the maximum number of steps linear search takes on an array of 500 cells?",
+    "options": [
+      "1",
+      "500",
+      "250",
+      "9"
+    ],
+    "correctAnswer": "500",
+    "explanation": "For N cells, linear search takes at most N steps."
+  },
+  {
+    "id": 97,
+    "question": "How many steps does inserting a value at the END of an array take?",
+    "options": [
+      "N + 1 steps",
+      "N steps",
+      "One step",
+      "log N steps"
+    ],
+    "correctAnswer": "One step",
+    "explanation": "The computer knows where the array begins and its size, so it can calculate the next address and insert in one step."
+  },
+  {
+    "id": 98,
+    "question": "An array starts at address 1010 and has size 5. At which address would a new value be inserted at the end?",
+    "options": [
+      "1014",
+      "1005",
+      "1016",
+      "1015"
+    ],
+    "correctAnswer": "1015",
+    "explanation": "The final element is at 1014 (1010 + 5 - 1), so the next address is 1015."
+  },
+  {
+    "id": 99,
+    "question": "What 'hitch' can occur when inserting a sixth element into an array that was allocated with five cells?",
+    "options": [
+      "The computer may have to allocate additional cells for the array",
+      "The array is automatically deleted",
+      "The array becomes a linked list",
+      "The insertion becomes O(log N)"
+    ],
+    "correctAnswer": "The computer may have to allocate additional cells for the array",
+    "explanation": "Only five cells were reserved, so more may need to be allocated. Many languages do this under the hood, each in its own way."
+  },
+  {
+    "id": 100,
+    "question": "Inserting \"figs\" at index 2 of [\"apples\", \"bananas\", \"cucumbers\", \"dates\", \"elderberries\"] takes how many steps?",
+    "options": [
+      "1",
+      "4",
+      "3",
+      "6"
+    ],
+    "correctAnswer": "4",
+    "explanation": "Three shifts (elderberries, dates, cucumbers move right) plus one step for the actual insertion."
+  },
+  {
+    "id": 101,
+    "question": "When shifting elements right to make room for an insertion, which element must move first?",
+    "options": [
+      "The element at the insertion index",
+      "The first element",
+      "The last element",
+      "Any element"
+    ],
+    "correctAnswer": "The last element",
+    "explanation": "You move \"elderberries\" (the last element) right first to make room to move \"dates\", then \"cucumbers\"."
+  },
+  {
+    "id": 102,
+    "question": "Fill in the blank: In a worst-case scenario, inserting into an array of N elements takes _____ steps.",
+    "options": [
+      "1",
+      "N",
+      "log N",
+      "N + 1"
+    ],
+    "correctAnswer": "N + 1",
+    "explanation": "Inserting at the beginning requires shifting all N elements, then one more step for the insertion."
+  },
+  {
+    "id": 103,
+    "question": "Deleting \"cucumbers\" (index 2) from [\"apples\", \"bananas\", \"cucumbers\", \"dates\", \"elderberries\"] takes how many steps?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "5"
+    ],
+    "correctAnswer": "3",
+    "explanation": "One step for the deletion, then two shifts (\"dates\" and \"elderberries\" move left) to close the gap."
+  },
+  {
+    "id": 104,
+    "question": "Why do elements shift after a deletion in the middle of an array?",
+    "options": [
+      "To sort the array",
+      "Because an array is not effective with gaps in the middle",
+      "To free memory",
+      "To make the array circular"
+    ],
+    "correctAnswer": "Because an array is not effective with gaps in the middle",
+    "explanation": "An empty cell in the middle is a problem, so the remaining elements shift left."
+  },
+  {
+    "id": 105,
+    "question": "What is the worst-case scenario for deletion from an array, and how many steps does it take for N elements?",
+    "options": [
+      "Deleting the last element; 1 step",
+      "Deleting the middle element; N/2 steps",
+      "Deleting the first element; N steps",
+      "Deleting the first element; N + 1 steps"
+    ],
+    "correctAnswer": "Deleting the first element; N steps",
+    "explanation": "One step to delete index 0, then N - 1 shifts. For 500 elements: 1 delete + 499 shifts = 500 steps."
+  },
+  {
+    "id": 106,
+    "question": "Why can't we just call one algorithm a '22-step algorithm' and another a '400-step algorithm'?",
+    "options": [
+      "Because steps can't be counted",
+      "Because every algorithm takes one step",
+      "Because Big O only counts seconds",
+      "Because the number of steps varies with the amount of data"
+    ],
+    "correctAnswer": "Because the number of steps varies with the amount of data",
+    "explanation": "Linear search takes 22 steps for 22 elements and 400 for 400 elements, so a single number can't describe it."
+  },
+  {
+    "id": 107,
+    "question": "Big O notation was borrowed from which field?",
+    "options": [
+      "Mathematics",
+      "Physics",
+      "Biology",
+      "Linguistics"
+    ],
+    "correctAnswer": "Mathematics",
+    "explanation": "Computer scientists borrowed Big O from math to give a concise, consistent language for describing efficiency."
+  },
+  {
+    "id": 108,
+    "question": "What is the 'key question' Big O answers?",
+    "options": [
+      "How many seconds will the algorithm take?",
+      "If there are N data elements, how many steps will the algorithm take?",
+      "How much memory does the algorithm use?",
+      "Is the algorithm correct?"
+    ],
+    "correctAnswer": "If there are N data elements, how many steps will the algorithm take?",
+    "explanation": "Big O expresses the answer to the key question: for N elements, how many steps?"
+  },
+  {
+    "id": 109,
+    "question": "O(N) is also known as having _____.",
+    "options": [
+      "constant time",
+      "logarithmic time",
+      "linear time",
+      "quadratic time"
+    ],
+    "correctAnswer": "linear time",
+    "explanation": "O(N) means N steps for N elements, which is linear time."
+  },
+  {
+    "id": 110,
+    "question": "Reading from an array is expressed in Big O as _____ and is called _____.",
+    "options": [
+      "O(N), linear time",
+      "O(N^2), quadratic time",
+      "O(log N), logarithmic time",
+      "O(1), constant time"
+    ],
+    "correctAnswer": "O(1), constant time",
+    "explanation": "Reading takes one step no matter how large the array, so it is O(1), constant time."
+  },
+  {
+    "id": 111,
+    "question": "Why is O(1) considered the 'fastest' kind of algorithm?",
+    "options": [
+      "Because it takes no additional steps as the data increases",
+      "Because it always takes exactly one second",
+      "Because it uses no memory",
+      "Because it only works on small arrays"
+    ],
+    "correctAnswer": "Because it takes no additional steps as the data increases",
+    "explanation": "An O(1) algorithm takes a constant number of steps no matter what N is."
+  },
+  {
+    "id": 112,
+    "question": "An algorithm always takes 3 steps no matter how much data there is. What is its Big O?",
+    "options": [
+      "O(3)",
+      "O(1)",
+      "O(N)",
+      "O(3N)"
+    ],
+    "correctAnswer": "O(1)",
+    "explanation": "Big O cares about how steps grow with data. A constant number of steps is O(1), not O(3)."
+  },
+  {
+    "id": 113,
+    "question": "What is 'the soul of Big O'?",
+    "options": [
+      "Counting the exact number of steps",
+      "Measuring the best case",
+      "How an algorithm's performance changes as the data increases",
+      "Measuring time in seconds"
+    ],
+    "correctAnswer": "How an algorithm's performance changes as the data increases",
+    "explanation": "Big O tells the story of how the number of steps increases as the data changes."
+  },
+  {
+    "id": 114,
+    "question": "On a graph of steps vs. number of elements, what shapes do O(N) and O(1) make?",
+    "options": [
+      "O(N) is a horizontal line; O(1) is a diagonal line",
+      "Both are diagonal lines",
+      "Both are curves",
+      "O(N) is a perfect diagonal line; O(1) is a perfect horizontal line"
+    ],
+    "correctAnswer": "O(N) is a perfect diagonal line; O(1) is a perfect horizontal line",
+    "explanation": "O(N) adds one step per extra element (diagonal). O(1) stays constant (horizontal)."
+  },
+  {
+    "id": 115,
+    "question": "What story does O(N) tell?",
+    "options": [
+      "Steps increase in direct proportion to the data",
+      "Steps stay the same as data grows",
+      "Steps double each time data increases by one",
+      "Steps increase by one each time data doubles"
+    ],
+    "correctAnswer": "Steps increase in direct proportion to the data",
+    "explanation": "O(N) describes a proportional relationship between data and steps."
+  },
+  {
+    "id": 116,
+    "question": "What is linear search's efficiency in the best case and the worst case?",
+    "options": [
+      "O(1) best, O(1) worst",
+      "O(1) best, O(N) worst",
+      "O(N) best, O(N^2) worst",
+      "O(log N) best, O(N) worst"
+    ],
+    "correctAnswer": "O(1) best, O(N) worst",
+    "explanation": "If the item is in the first cell it takes one step; if it's in the last cell, N steps."
+  },
+  {
+    "id": 117,
+    "question": "Unless specified otherwise, Big O notation generally refers to which scenario?",
+    "options": [
+      "Best case",
+      "Average case",
+      "Worst case",
+      "Random case"
+    ],
+    "correctAnswer": "Worst case",
+    "explanation": "That's why linear search is described as O(N) even though it can be O(1) in the best case."
+  },
+  {
+    "id": 118,
+    "question": "In the 'guess a number between 1 and 100' game, what is the smartest first guess and why?",
+    "options": [
+      "1, because it's the smallest",
+      "A random number, because it's unpredictable",
+      "100, because it's the largest",
+      "50, because it eliminates half the possible numbers whatever the answer"
+    ],
+    "correctAnswer": "50, because it eliminates half the possible numbers whatever the answer",
+    "explanation": "Guessing the middle eliminates half the remaining numbers on every guess."
+  },
+  {
+    "id": 119,
+    "question": "In the number game, you guess 50 and are told 'higher', then guess 75 and are told 'lower'. What do you guess next?",
+    "options": [
+      "62 or 63",
+      "51",
+      "74",
+      "88"
+    ],
+    "correctAnswer": "62 or 63",
+    "explanation": "The remaining range is 51-74, so the halfway mark is 62 or 63."
+  },
+  {
+    "id": 120,
+    "question": "Binary search can only be applied to what kind of array?",
+    "options": [
+      "An empty array",
+      "An ordered (sorted) array",
+      "An array of strings only",
+      "A circular array"
+    ],
+    "correctAnswer": "An ordered (sorted) array",
+    "explanation": "Binary search eliminates half of the cells based on order, so the array must be ordered."
+  },
+  {
+    "id": 121,
+    "question": "In binary search, how is the central cell found in one step?",
+    "options": [
+      "By checking every cell",
+      "By picking a random index",
+      "By taking the array's length and dividing it by 2",
+      "By starting at index 0"
+    ],
+    "correctAnswer": "By taking the array's length and dividing it by 2",
+    "explanation": "We can jump straight to the middle index by dividing the length by 2."
+  },
+  {
+    "id": 122,
+    "question": "Searching for 7 in an ordered array of 9 elements, the middle cell holds 9. What happens next?",
+    "options": [
+      "Search the cells to the right of the 9",
+      "Conclude 7 isn't in the array",
+      "Start over from index 0",
+      "Eliminate the 9 and all cells to its right, then search the left half"
+    ],
+    "correctAnswer": "Eliminate the 9 and all cells to its right, then search the left half",
+    "explanation": "Since 7 < 9, the 7 must be to the left. Half the array is eliminated in one step."
+  },
+  {
+    "id": 123,
+    "question": "In binary search, when there are two middlemost values, what does the example do?",
+    "options": [
+      "Arbitrarily chooses the left one",
+      "Checks both",
+      "Always chooses the right one",
+      "Stops searching"
+    ],
+    "correctAnswer": "Arbitrarily chooses the left one",
+    "explanation": "The slides arbitrarily choose the left middle value."
+  },
+  {
+    "id": 124,
+    "question": "In the 9-element binary search example, how many steps did it take to find (or rule out) the 7?",
+    "options": [
+      "2",
+      "4",
+      "9",
+      "1"
+    ],
+    "correctAnswer": "4",
+    "explanation": "Step 1: middle (9). Step 2: middle of the left half. Step 3: choose between two remaining cells. Step 4: inspect the final cell."
+  },
+  {
+    "id": 125,
+    "question": "Fill in the blank: Logarithms are the inverse of _____.",
+    "options": [
+      "algorithms",
+      "fractions",
+      "exponents",
+      "square roots"
+    ],
+    "correctAnswer": "exponents",
+    "explanation": "Logarithms have nothing to do with algorithms despite the similar name. They are the inverse of exponents."
+  },
+  {
+    "id": 126,
+    "question": "What is log2 8?",
+    "options": [
+      "2",
+      "16",
+      "4",
+      "3"
+    ],
+    "correctAnswer": "3",
+    "explanation": "You multiply 2 by itself 3 times to get 8 (2 x 2 x 2 = 8), so log2 8 = 3."
+  },
+  {
+    "id": 127,
+    "question": "In computer science, O(log N) is shorthand for:",
+    "options": [
+      "O(log2 N)",
+      "O(log10 N)",
+      "O(ln N)",
+      "O(N log N)"
+    ],
+    "correctAnswer": "O(log2 N)",
+    "explanation": "We omit the small 2 for convenience; O(log N) means log base 2."
+  },
+  {
+    "id": 128,
+    "question": "Short answer: In plain terms, what does O(log N) mean?",
+    "options": [
+      "The algorithm takes as many steps as there are elements",
+      "The algorithm takes as many steps as it takes to keep halving the data until 1 remains",
+      "The algorithm always takes one step",
+      "The algorithm doubles its steps for each new element"
+    ],
+    "correctAnswer": "The algorithm takes as many steps as it takes to keep halving the data until 1 remains",
+    "explanation": "Binary search keeps halving the cells until it narrows down to one, so it is O(log N)."
+  },
+  {
+    "id": 129,
+    "question": "Binary search on an ordered array of 1,024 elements takes about how many steps in the worst case?",
+    "options": [
+      "1,024",
+      "512",
+      "10",
+      "32"
+    ],
+    "correctAnswer": "10",
+    "explanation": "log2 1024 = 10. Linear search would take up to 1,024 steps."
+  },
+  {
+    "id": 130,
+    "question": "What happens to the number of steps of an O(log N) algorithm each time the data doubles?",
+    "options": [
+      "It doubles",
+      "It stays the same",
+      "It squares",
+      "It increases by just one step"
+    ],
+    "correctAnswer": "It increases by just one step",
+    "explanation": "O(N) takes as many steps as elements; O(log N) adds only one step when the data doubles (e.g. 8 -> 3 steps, 16 -> 4 steps)."
+  },
+  {
+    "id": 131,
+    "question": "Which Big O is called 'linearithmic time'?",
+    "options": [
+      "O(N log N)",
+      "O(N^2)",
+      "O(2^N)",
+      "O(log N)"
+    ],
+    "correctAnswer": "O(N log N)",
+    "explanation": "O(N log N) is linearithmic, O(N^2) quadratic, O(2^N) exponential, O(N!) factorial."
+  },
+  {
+    "id": 132,
+    "question": "Match the notation: O(2^N) is _____ time and O(N!) is _____ time.",
+    "options": [
+      "quadratic; linear",
+      "exponential; factorial",
+      "factorial; exponential",
+      "logarithmic; linearithmic"
+    ],
+    "correctAnswer": "exponential; factorial",
+    "explanation": "O(2^N) is exponential time; O(N!) is factorial time."
+  },
+  {
+    "id": 133,
+    "question": "Rank these from fastest to slowest growth: O(N^2), O(1), O(N), O(log N)",
+    "options": [
+      "O(1), O(N), O(log N), O(N^2)",
+      "O(log N), O(1), O(N), O(N^2)",
+      "O(1), O(log N), O(N), O(N^2)",
+      "O(N^2), O(N), O(log N), O(1)"
+    ],
+    "correctAnswer": "O(1), O(log N), O(N), O(N^2)",
+    "explanation": "Constant is flat, log N grows very slowly, N grows proportionally, and N^2 grows fastest."
+  },
+  {
+    "id": 134,
+    "question": "In average_of_even_numbers, what are the 'N' data elements?",
+    "options": [
+      "The even numbers only",
+      "The sum variable",
+      "The number of loops",
+      "The numbers in the array passed into the method"
+    ],
+    "correctAnswer": "The numbers in the array passed into the method",
+    "explanation": "N is the size of the array being processed."
+  },
+  {
+    "id": 135,
+    "question": "In average_of_even_numbers, what is the worst-case scenario?",
+    "options": [
+      "All numbers are even",
+      "All numbers are odd",
+      "The array is empty",
+      "Only the first number is even"
+    ],
+    "correctAnswer": "All numbers are even",
+    "explanation": "Even numbers trigger extra steps (updating sum and count), so all-even is the worst case: three steps per loop round."
+  },
+  {
+    "id": 136,
+    "question": "average_of_even_numbers takes 3 steps per element in the worst case, plus 2 initializations before the loop and 1 division after. What is the total step count and the Big O?",
+    "options": [
+      "3N steps; O(3N)",
+      "3N + 3 steps; O(N)",
+      "N + 3 steps; O(1)",
+      "3N + 3 steps; O(3N + 3)"
+    ],
+    "correctAnswer": "3N + 3 steps; O(N)",
+    "explanation": "Big O ignores constants, so O(3N + 3) is simply O(N)."
+  },
+  {
+    "id": 137,
+    "question": "What does the Word Builder algorithm do with the input [\"a\", \"b\", \"c\", \"d\"]?",
+    "options": [
+      "Sorts the characters",
+      "Counts the vowels",
+      "Collects every combination of two-character strings built from them",
+      "Reverses the array"
+    ],
+    "correctAnswer": "Collects every combination of two-character strings built from them",
+    "explanation": "It returns combinations like \"ab\", \"ac\", \"ad\", \"ba\", and so on."
+  },
+  {
+    "id": 138,
+    "question": "What is the Big O of the Word Builder algorithm (an outer loop over N elements, with an inner loop over N elements)?",
+    "options": [
+      "O(N)",
+      "O(log N)",
+      "O(2N)",
+      "O(N^2)"
+    ],
+    "correctAnswer": "O(N^2)",
+    "explanation": "N steps multiplied by N steps is the classic O(N^2) nested-loop case."
+  },
+  {
+    "id": 139,
+    "question": "If a third nested loop over N elements is added to Word Builder, what does its Big O become?",
+    "options": [
+      "O(N^3)",
+      "O(3N)",
+      "O(N^2)",
+      "O(N log N)"
+    ],
+    "correctAnswer": "O(N^3)",
+    "explanation": "Each additional nested loop over N multiplies by another N."
+  },
+  {
+    "id": 140,
+    "question": "A function returns the first, middle and last element of an array. What is its time complexity?",
+    "options": [
+      "O(N)",
+      "O(1)",
+      "O(3N)",
+      "O(log N)"
+    ],
+    "correctAnswer": "O(1)",
+    "explanation": "Each is a direct index read (index 0, length/2, length-1). Three reads is a constant number of steps, so O(1)."
+  },
+  {
+    "id": 141,
+    "question": "Count the Ones takes an array of arrays of 1s and 0s, using nested loops. Why is it O(N) and not O(N^2)?",
+    "options": [
+      "Because the inner loop never runs",
+      "Because 1s and 0s are small",
+      "Because the loops iterate over different things; the inner loop runs once per number in total, so N is the total count of numbers",
+      "Because it uses binary search"
+    ],
+    "correctAnswer": "Because the loops iterate over different things; the inner loop runs once per number in total, so N is the total count of numbers",
+    "explanation": "The outer loop goes over inner arrays and the inner loop over numbers. Overall each number is processed once."
+  },
+  {
+    "id": 142,
+    "question": "What does Count the Ones return for [[0,1,1,1,0], [0,1,0,1,0,1], [1,0]]?",
+    "options": [
+      "5",
+      "6",
+      "13",
+      "7"
+    ],
+    "correctAnswer": "7",
+    "explanation": "3 + 3 + 1 = 7 ones."
+  },
+  {
+    "id": 143,
+    "question": "Short answer: What is the lesson of the Count the Ones example?",
+    "options": [
+      "Don't jump to O(N^2) just because you see nested loops; identify what N actually represents",
+      "Nested loops are always O(N^2)",
+      "Arrays of arrays are always O(1)",
+      "Counting is always O(log N)"
+    ],
+    "correctAnswer": "Don't jump to O(N^2) just because you see nested loops; identify what N actually represents",
+    "explanation": "Big O can differ from what it seems at first glance. Always ask what the N data elements are."
+  },
+  {
+    "id": 144,
+    "question": "What is the time complexity of this function?\n\nint sum(int arr[], int n) {\n  int total = 0;\n  for (int i = 0; i < n; i++) {\n    total += arr[i];\n  }\n  return total;\n}",
+    "options": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctAnswer": "O(N)",
+    "explanation": "The loop runs once per element; the setup and return are constants that Big O drops."
+  },
+  {
+    "id": 145,
+    "question": "What is the time complexity of this function?\n\nvoid pairs(int arr[], int n) {\n  for (int i = 0; i < n; i++)\n    for (int j = 0; j < n; j++)\n      printf(\"%d%d \", arr[i], arr[j]);\n}",
+    "options": [
+      "O(N)",
+      "O(2N)",
+      "O(N^2)",
+      "O(N log N)"
+    ],
+    "correctAnswer": "O(N^2)",
+    "explanation": "Two nested loops over the same N elements give N x N steps."
+  },
+  {
+    "id": 146,
+    "question": "What is the time complexity of this function?\n\nint steps(int n) {\n  int count = 0;\n  while (n > 1) {\n    n = n / 2;\n    count++;\n  }\n  return count;\n}",
+    "options": [
+      "O(1)",
+      "O(N^2)",
+      "O(N)",
+      "O(log N)"
+    ],
+    "correctAnswer": "O(log N)",
+    "explanation": "n is halved each iteration until it reaches 1, which is the definition of O(log N)."
+  }
+]
