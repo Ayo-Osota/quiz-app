@@ -13,6 +13,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     initialState.questions
   );
   const [answers, setAnswers] = useState<string[]>(initialState.answers);
+  const [timerSeconds, setTimerSeconds] = useState<number | null>(10);
 
   const startQuiz = (selectedModules: string[]) => {
     // Gather questions from selected modules
@@ -28,6 +29,8 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       .map(({ q }) => q);
 
     setQuestions(shuffledQuestions);
+    // Start fresh so the previous quiz's answers don't leak into this score
+    setAnswers([]);
   };
 
   return (
@@ -36,6 +39,8 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         questions,
         answers,
         setAnswers,
+        timerSeconds,
+        setTimerSeconds,
         startQuiz,
       }}
     >

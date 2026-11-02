@@ -16,5 +16,8 @@ export interface IAppContextType {
   questions: IQuestion[];
   answers: string[];
   setAnswers: (answers: string[]) => void;
+  // Seconds per question, or null when the timer is off
+  timerSeconds: number | null;
+  setTimerSeconds: (seconds: number | null) => void;
   startQuiz: (selectedModules: string[]) => void;
 }
