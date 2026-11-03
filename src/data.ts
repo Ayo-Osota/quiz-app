@@ -27,6 +27,7 @@ import prog1926_week12 from "./questions/prog1926_week12.json";
 import prog1926_week13 from "./questions/prog1926_week13.json";
 import prog1926_exam_review from "./questions/prog1926_exam_review.json";
 import prog2511_a04_quiz from "./questions/prog2511_a04_quiz.json";
+import prog2511_wpf_xaml_mvvm from "./questions/week9-10-wpf-xaml-mvvm (1).json";
 import dataStructuresWeek1 from "./questions/data-structures/week1-introduction-to-data-structures.json";
 import dataStructuresWeek2 from "./questions/data-structures/week2-algorithm-efficiency-and-big-o.json";
 import dataStructuresWeek3 from "./questions/data-structures/week3-simple-linked-lists.json";
@@ -68,6 +69,7 @@ export const modules: IModule[] = [
   { id: "prog1926_week13", title: "PROG1926 Wk 13", data: prog1926_week13 },
   { id: "prog1926_exam_review", title: "PROG1926 Exam Review", data: prog1926_exam_review },
   { id: "prog2511_a04_quiz", title: "Object Oriented Programming", data: prog2511_a04_quiz },
+  { id: "prog2511_wk9_10_wpf_xaml_mvvm", title: "Object Oriented Programming Wk 9-10: WPF, XAML and MVVM", data: prog2511_wpf_xaml_mvvm },
   { id: "data_structures_week1", title: "Data Structures Wk 1: Introduction", data: dataStructuresWeek1 },
   { id: "data_structures_week2", title: "Data Structures Wk 2: Algorithm Efficiency and Big O", data: dataStructuresWeek2 },
   { id: "data_structures_week3", title: "Data Structures Wk 3: Simple Linked Lists", data: dataStructuresWeek3 },

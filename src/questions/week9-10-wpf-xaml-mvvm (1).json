@@ -1,0 +1,1442 @@
+[
+  {
+    "id": 1,
+    "question": "Fill in the blank: XML stands for ____ Markup Language.",
+    "options": [
+      "Extended",
+      "Executable",
+      "Exchangeable",
+      "Extensible"
+    ],
+    "correctAnswer": "Extensible",
+    "explanation": "XML is Extensible Markup Language. Extended and Exchangeable only sound similar, and Executable is wrong because XML describes data rather than being run as a program."
+  },
+  {
+    "id": 2,
+    "question": "Short answer: Which description of XML matches the definition given in the slides?",
+    "options": [
+      "A styling language that defines rules for formatting web pages in a format that browsers render without any extra markup",
+      "A query language that defines rules for retrieving records from a database in a format that is optimised for fast indexing",
+      "A markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable",
+      "A compiled programming language that defines rules for executing documents in a format that only machines can interpret"
+    ],
+    "correctAnswer": "A markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable",
+    "explanation": "The slides quote XML as a markup language with rules for encoding documents that people and machines can both read. It is not compiled, it does not style pages, and it is not a database query language."
+  },
+  {
+    "id": 3,
+    "question": "Which statement about the origin of XML and HTML is correct according to the slides?",
+    "options": [
+      "Like HTML, XML is based on EDI (Electronic Data Interchange) messages",
+      "Like HTML, XML is based on DTD (Document Type Definition) files only",
+      "Like HTML, XML is based on XAML (Extensible Application Markup Language)",
+      "Like HTML, XML is based on SGML (Standard Generalized Markup Language)"
+    ],
+    "correctAnswer": "Like HTML, XML is based on SGML (Standard Generalized Markup Language)",
+    "explanation": "Both XML and HTML descend from SGML. XAML is built on XML rather than being its ancestor, a DTD is a way of describing a document's structure, and EDI is the older data-exchange approach XML is contrasted with."
+  },
+  {
+    "id": 4,
+    "question": "Short answer: The slides describe XML as machine/platform independent and contrast it with which older approach?",
+    "options": [
+      "Classical SGML (standard generalised markup) documents",
+      "Classical XAML (application markup) screens",
+      "Classical EDI (electronic data interchange) formats",
+      "Classical DTD (document type definition) files"
+    ],
+    "correctAnswer": "Classical EDI (electronic data interchange) formats",
+    "explanation": "The slide contrasts XML's platform independence with classical EDI. SGML is XML's parent rather than a contrast, a DTD is a description of structure, and XAML is a WPF technology built on XML."
+  },
+  {
+    "id": 5,
+    "question": "Which characteristic of XML is listed in the slides?",
+    "options": [
+      "Platform specific: it can only be read by the system that created it",
+      "Imperative: it lists procedural steps that the machine runs in order",
+      "Compiled: it must be converted into machine code before it can be read",
+      "Declarative: it describes content and structure instead of procedural steps"
+    ],
+    "correctAnswer": "Declarative: it describes content and structure instead of procedural steps",
+    "explanation": "XML is declarative. It does not contain step-by-step instructions, it is not compiled, and it is platform independent rather than tied to one system."
+  },
+  {
+    "id": 6,
+    "question": "Fill in the blank: A well-formed XML document conforms to a ____, which can be in the XML data file or in an external file.",
+    "options": [
+      "Data Transfer Directive (DTD)",
+      "Dynamic Type Declaration (DTD)",
+      "Document Type Definition (DTD)",
+      "Document Template Descriptor (DTD)"
+    ],
+    "correctAnswer": "Document Type Definition (DTD)",
+    "explanation": "The slide says the document conforms to a Document Type Definition. The other expansions use the same initials but are not real XML terms."
+  },
+  {
+    "id": 7,
+    "question": "Short answer: According to the slides, what is true of an XML file that is simplified by not using a DTD?",
+    "options": [
+      "Strictly speaking, it becomes HTML automatically when opened in an editor",
+      "Strictly speaking, it is not \"well-formed\"",
+      "Strictly speaking, it is still well-formed but cannot be opened by any browser",
+      "Strictly speaking, it is invalid XML and no parser is able to read it at all"
+    ],
+    "correctAnswer": "Strictly speaking, it is not \"well-formed\"",
+    "explanation": "The slide says such a file may be simplified, but strictly speaking it is not well-formed. It is not stated that browsers or parsers refuse it, and editors never convert XML into HTML."
+  },
+  {
+    "id": 8,
+    "question": "Coding: Consider this XML:\n<?xml version=\"1.0\" standalone=\"true\"?>\n<DocumentElement>\n  <DataName>\n    <ID>1</ID>\n    <Description>First Piece</Description>\n  </DataName>\n  <DataName>\n    <ID>2</ID>\n    <Description>Second Piece</Description>\n  </DataName>\n</DocumentElement>\nWhat is the root element and how many DataName elements does it directly contain?",
+    "options": [
+      "The root is DocumentElement and it directly contains four DataName elements",
+      "The root is ID and it directly contains two Description elements inside it",
+      "The root is DataName and it directly contains two DocumentElement elements",
+      "The root is DocumentElement and it directly contains two DataName elements"
+    ],
+    "correctAnswer": "The root is DocumentElement and it directly contains two DataName elements",
+    "explanation": "DocumentElement wraps everything, so it is the root, and it has two DataName children. ID and Description are children of each DataName, so counting them as DataName elements gives the wrong total, and DataName is not the root."
+  },
+  {
+    "id": 9,
+    "question": "Coding: What is the first line of this document called?\n<?xml version=\"1.0\" standalone=\"true\"?>\n<DocumentElement>\n  <DataName>\n    <ID>1</ID>\n  </DataName>\n</DocumentElement>",
+    "options": [
+      "The root element",
+      "A closing tag for the document",
+      "The content of the first DataName",
+      "The XML declaration"
+    ],
+    "correctAnswer": "The XML declaration",
+    "explanation": "The line that begins with <?xml and gives the version is the XML declaration. The root element is DocumentElement, there is no closing tag on that line, and the content is the data inside the elements."
+  },
+  {
+    "id": 10,
+    "question": "Coding: Consider <Book id=\"7\">Moby Dick</Book>. Which part is the attribute?",
+    "options": [
+      "</Book>",
+      "Moby Dick",
+      "id=\"7\"",
+      "<Book>"
+    ],
+    "correctAnswer": "id=\"7\"",
+    "explanation": "id=\"7\" is a name and value pair placed inside the start tag, which makes it an attribute. <Book> and </Book> are the start and end tags, and Moby Dick is the content."
+  },
+  {
+    "id": 11,
+    "question": "Coding: In <Description>First Piece</Description>, what is the text First Piece?",
+    "options": [
+      "The markup that closes the element and ends the document",
+      "The content found between the start tag and the end tag",
+      "The XML declaration describing the document version",
+      "The attribute value placed inside the start tag"
+    ],
+    "correctAnswer": "The content found between the start tag and the end tag",
+    "explanation": "Text between the start and end tags is the element's content. Attributes sit inside the start tag, the declaration is the <?xml ...?> line, and a closing tag is markup rather than content."
+  },
+  {
+    "id": 12,
+    "question": "Fill in the blank: The whole piece of XML from <Description> through </Description>, including its content, is called an ____.",
+    "options": [
+      "namespace",
+      "declaration",
+      "element",
+      "attribute"
+    ],
+    "correctAnswer": "element",
+    "explanation": "A start tag, its content and the matching end tag together form an element. An attribute is a single name and value inside the tag, the declaration is the <?xml?> line, and a namespace groups names."
+  },
+  {
+    "id": 13,
+    "question": "Short answer: Which pair describes the two broad parts of an XML document at the top of the slide's parts list?",
+    "options": [
+      "Declaration and schema",
+      "Elements and namespaces",
+      "Markup and content",
+      "Tags and attributes only"
+    ],
+    "correctAnswer": "Markup and content",
+    "explanation": "The slide lists Markup and Content first. Tags, elements, attributes and the declaration are all kinds of markup, so they are not the two broad parts."
+  },
+  {
+    "id": 14,
+    "question": "Which statement describes how the 'XML Example - Well-Formed' slide differs from the simple XML example?",
+    "options": [
+      "It includes an embedded schema (xs:schema) and wraps the data in a NewDataSet root element",
+      "It includes a code-behind class that handles ID and Description events and keeps DocumentElement as the root",
+      "It includes a second XML declaration at the end of the file and keeps DocumentElement as the root",
+      "It includes a style sheet that colours each DataName element and keeps DocumentElement as the root"
+    ],
+    "correctAnswer": "It includes an embedded schema (xs:schema) and wraps the data in a NewDataSet root element",
+    "explanation": "The well-formed example adds a schema section and uses NewDataSet as its root. XML has no style sheet or code-behind inside it in that example, and a second declaration at the end would not be valid."
+  },
+  {
+    "id": 15,
+    "question": "Fill in the blank: In the 'XML Example - Well-Formed' slide, the data and the schema are wrapped in the root element ____.",
+    "options": [
+      "DocumentElement",
+      "NewDataSet",
+      "Description",
+      "DataName"
+    ],
+    "correctAnswer": "NewDataSet",
+    "explanation": "The well-formed example uses NewDataSet as its root. DocumentElement is the root of the simple example, while DataName and Description are nested inside."
+  },
+  {
+    "id": 16,
+    "question": "Where does the slide say XML is commonly used for transferring data?",
+    "options": [
+      "In many B2B systems, where many industries have developed their own documents using XML syntax",
+      "In many B2B systems, where XML replaces the network protocols that actually carry the data between companies",
+      "In many B2B systems, where industries convert their XML documents into compiled code before transferring them",
+      "In many B2B systems, where each industry shares one universal XML document defined by a single standard"
+    ],
+    "correctAnswer": "In many B2B systems, where many industries have developed their own documents using XML syntax",
+    "explanation": "XML is used for B2B data transfer and many industries define their own XML-based documents. There is no single universal document, XML is not compiled before sending, and it does not replace the network protocols."
+  },
+  {
+    "id": 17,
+    "question": "Fill in the blank: Besides B2B data transfer, communication protocols and productivity tool documents, the slide lists XML as widely used in ____ files.",
+    "options": [
+      "compiled assembly",
+      "configuration",
+      "binary resource",
+      "installer package"
+    ],
+    "correctAnswer": "configuration",
+    "explanation": "Configuration files are one of the uses listed for XML. XML is readable text, so compiled assemblies, installer packages and binary resources are not what the slide lists."
+  },
+  {
+    "id": 18,
+    "question": "Short answer: Besides B2B data transfer and configuration files, which two other uses of XML does the slide list?",
+    "options": [
+      "Part of operating system kernels and document storage for web servers",
+      "Part of database engines and image storage for productivity tools",
+      "Part of communication protocols and document storage for productivity tools",
+      "Part of memory management routines and document storage for compilers"
+    ],
+    "correctAnswer": "Part of communication protocols and document storage for productivity tools",
+    "explanation": "The slide lists communication protocols and productivity tools' document storage. Memory management, compilers, database engines and kernels are not listed uses."
+  },
+  {
+    "id": 19,
+    "question": "What kind of editor is needed to edit an XML file?",
+    "options": [
+      "Only a specialised XML compiler, because XML is stored in binary form",
+      "Only Visual Studio, because XML is a proprietary Microsoft file format",
+      "Any modern text editor, because XML is Unicode text",
+      "Only a legacy ASCII editor, because XML does not support Unicode text"
+    ],
+    "correctAnswer": "Any modern text editor, because XML is Unicode text",
+    "explanation": "XML is Unicode text, so any modern text editor works. It is not binary, it supports Unicode and it is not proprietary to Visual Studio."
+  },
+  {
+    "id": 20,
+    "question": "Short answer: How are tabs, carriage returns and line feeds treated in an XML file, and what effect does that have when viewing it in a plain editor?",
+    "options": [
+      "They are white space, so the file may not appear formatted in an editor",
+      "They are content, so the file is rejected by an editor unless they are removed",
+      "They are markup, so the file always appears formatted in an editor",
+      "They are attributes, so the file shows them as visible symbols in an editor"
+    ],
+    "correctAnswer": "They are white space, so the file may not appear formatted in an editor",
+    "explanation": "These characters are white space, which is why a plain editor may show unformatted XML. They are not markup, content that must be removed, or attributes."
+  },
+  {
+    "id": 21,
+    "question": "Which options for viewing XML are mentioned in the slides?",
+    "options": [
+      "Only compiled viewers that translate XML into binary, and Notepad for plain text",
+      "Only the Toolbox in Visual Studio, and the Blend design surface for formatting",
+      "Only DTD validators that print the document, and editors that hide the markup",
+      "Editors that support a formatted view, and many browsers that show proper formatting"
+    ],
+    "correctAnswer": "Editors that support a formatted view, and many browsers that show proper formatting",
+    "explanation": "The slide says editors may support a formatted view and many browsers allow viewing with proper formatting. The Toolbox and Blend are WPF design tools, and the other options are invented."
+  },
+  {
+    "id": 22,
+    "question": "Fill in the blank: WPF stands for Windows ____ Foundation.",
+    "options": [
+      "Processing",
+      "Platform",
+      "Programming",
+      "Presentation"
+    ],
+    "correctAnswer": "Presentation",
+    "explanation": "WPF is Windows Presentation Foundation. Programming, Processing and Platform are plausible guesses but are not the name of the technology."
+  },
+  {
+    "id": 23,
+    "question": "Which two pieces make up a WPF user interface according to the slides?",
+    "options": [
+      "Markup written in XAML and a Win32 message loop that implements behaviour",
+      "Markup written in XAML and a code-behind file that implements behaviour",
+      "Markup written in HTML and a code-behind file that implements behaviour",
+      "Markup written in XML and a DTD file that implements behaviour"
+    ],
+    "correctAnswer": "Markup written in XAML and a code-behind file that implements behaviour",
+    "explanation": "WPF uses XAML markup together with code-behind. HTML is the web's markup, the Win32 message loop belongs to the older Win32 model, and a DTD describes structure rather than behaviour."
+  },
+  {
+    "id": 24,
+    "question": "Fill in the blank: XAML stands for Extensible ____ Markup Language.",
+    "options": [
+      "Architecture",
+      "Assembly",
+      "Abstract",
+      "Application"
+    ],
+    "correctAnswer": "Application",
+    "explanation": "XAML is Extensible Application Markup Language. The other words are not part of the name."
+  },
+  {
+    "id": 25,
+    "question": "Short answer: What does the code-behind do in WPF, and which other technologies does the slide compare it with?",
+    "options": [
+      "It implements behaviour, like the registry settings in Windows Forms and ASP.NET",
+      "It describes the layout, like the markup files in Windows Forms and ASP.NET",
+      "It implements behaviour, like the code-behind in Windows Forms and ASP.NET",
+      "It describes the layout, like the DTD files used in Windows Forms and ASP.NET"
+    ],
+    "correctAnswer": "It implements behaviour, like the code-behind in Windows Forms and ASP.NET",
+    "explanation": "The slide says code-behind implements behaviour, as in Windows Forms and ASP.NET. Layout and appearance belong to the XAML markup, so the other options mix up the roles."
+  },
+  {
+    "id": 26,
+    "question": "Why does the slide say separating the UI from code is useful in WPF?",
+    "options": [
+      "It allows more flexibility in development, so code-behind can be developed separately with different tools such as Microsoft Blend",
+      "It allows more flexibility in development, so XAML can be developed separately with different tools such as Microsoft Blend",
+      "It allows faster compilation of the project, so XAML must always be developed in the same tool as the code",
+      "It allows the UI to run without .NET installed, so XAML can be developed separately with tools such as Notepad only"
+    ],
+    "correctAnswer": "It allows more flexibility in development, so XAML can be developed separately with different tools such as Microsoft Blend",
+    "explanation": "Because the UI is separate, XAML can be designed in other tools, and the slide gives Microsoft Blend as the example. The code still needs .NET, and the designer tools work on XAML rather than on the code-behind."
+  },
+  {
+    "id": 27,
+    "question": "What does the slide mean by saying XAML rendering can take advantage of graphics hardware transparently?",
+    "options": [
+      "The developer must write extra code that selects the graphics card manually",
+      "The developer must turn off the Common Language Runtime to use the hardware",
+      "The developer can only use hardware rendering for the 3-D features of WPF",
+      "The developer does not need to write extra code for the hardware to be used"
+    ],
+    "correctAnswer": "The developer does not need to write extra code for the hardware to be used",
+    "explanation": "Transparently means the hardware is used automatically. It does not require hand-written code, it is not limited to 3-D, and the runtime stays on."
+  },
+  {
+    "id": 28,
+    "question": "Looking at the WPF Architecture diagram, which layer sits directly beneath PresentationFramework?",
+    "options": [
+      "PresentationCore",
+      "User32",
+      "Common Language Runtime",
+      "milcore"
+    ],
+    "correctAnswer": "PresentationCore",
+    "explanation": "In the diagram the top box is PresentationFramework and PresentationCore is right under it. The Common Language Runtime is below PresentationCore, and milcore and User32 are lower still."
+  },
+  {
+    "id": 29,
+    "question": "Looking at the WPF Architecture diagram, which layer sits directly beneath PresentationCore?",
+    "options": [
+      "Kernel",
+      "DirectX",
+      "Common Language Runtime",
+      "PresentationFramework"
+    ],
+    "correctAnswer": "Common Language Runtime",
+    "explanation": "The Common Language Runtime is the layer under PresentationCore. PresentationFramework is above, while DirectX and Kernel are further down the stack."
+  },
+  {
+    "id": 30,
+    "question": "Looking at the WPF Architecture diagram, which two boxes sit directly on top of the Kernel layer?",
+    "options": [
+      "milcore and PresentationCore",
+      "User32 and DirectX",
+      "PresentationFramework and DirectX",
+      "Common Language Runtime and milcore"
+    ],
+    "correctAnswer": "User32 and DirectX",
+    "explanation": "User32 and DirectX are the two boxes resting on Kernel. milcore sits above DirectX, and the other boxes belong to the upper managed layers."
+  },
+  {
+    "id": 31,
+    "question": "Fill in the blank: In the WPF Architecture diagram, the layer at the very bottom is ____.",
+    "options": [
+      "Kernel",
+      "milcore",
+      "DirectX",
+      "User32"
+    ],
+    "correctAnswer": "Kernel",
+    "explanation": "Kernel is the bottom layer. DirectX and User32 sit on top of it, and milcore is above DirectX."
+  },
+  {
+    "id": 32,
+    "question": "Which statement about XAML built-in controls is correct?",
+    "options": [
+      "Most are completely different from the controls in Windows Forms, and their appearance cannot be modified",
+      "Most are similar to the controls in Windows Forms, and their appearance can be modified using Blend",
+      "Most are similar to the controls in Windows Forms, and their appearance can only be changed in the Toolbox",
+      "Most are only available for web pages, and their appearance can be modified using Blend"
+    ],
+    "correctAnswer": "Most are similar to the controls in Windows Forms, and their appearance can be modified using Blend",
+    "explanation": "The slide says most are similar to Windows Forms controls and that Blend can change their appearance. They are not web-only, and the Toolbox is where controls are viewed in the demo, not where appearance is edited."
+  },
+  {
+    "id": 33,
+    "question": "Short answer: In the demo that builds a simple WPF application to view the built-in controls, where are the controls viewed?",
+    "options": [
+      "In the Properties window",
+      "In the Solution Explorer",
+      "In the Error List",
+      "In the Toolbox"
+    ],
+    "correctAnswer": "In the Toolbox",
+    "explanation": "The demo shows the controls in the Toolbox. The Properties window shows a control's properties and events, Solution Explorer lists files, and the Error List shows build problems."
+  },
+  {
+    "id": 34,
+    "question": "Coding: What is wrong with this XAML?\n<Window x:Class=\"Demo.MainWindow\">\n    <Grid />\n</Window>\n<Page x:Class=\"Demo.Home\">\n    <Grid />\n</Page>",
+    "options": [
+      "A Window cannot contain a Grid, because a Grid has to be inside a Page",
+      "A XAML file must have a code-behind class, but x:Class is not allowed in Window",
+      "A XAML file must have only one root element, but this one has two",
+      "A Page must always be placed before a Window, because Page is the default root"
+    ],
+    "correctAnswer": "A XAML file must have only one root element, but this one has two",
+    "explanation": "XAML needs a single root element, so a Window followed by a Page is invalid. A Window can contain a Grid, and x:Class is how a root links to its code-behind."
+  },
+  {
+    "id": 35,
+    "question": "Short answer: Which two elements does the slide give as examples of a XAML root element?",
+    "options": [
+      "Window and Grid",
+      "Window and Canvas",
+      "Form and Page",
+      "Window and Page"
+    ],
+    "correctAnswer": "Window and Page",
+    "explanation": "The slide names Window or Page. Form belongs to Windows Forms, and Grid and Canvas are layout controls placed inside the root."
+  },
+  {
+    "id": 36,
+    "question": "What does the plain xmlns attribute on a XAML root element map to?",
+    "options": [
+      "The code-behind class name",
+      "The local project namespace",
+      "The XAML language definition",
+      "The default XAML namespace"
+    ],
+    "correctAnswer": "The default XAML namespace",
+    "explanation": "xmlns with no prefix is the default XAML namespace. The code-behind class is named by x:Class, the local namespace uses xmlns:local, and the language definition uses xmlns:x."
+  },
+  {
+    "id": 37,
+    "question": "What does xmlns:x map to on a XAML root element?",
+    "options": [
+      "The XAML language definition",
+      "The local project namespace",
+      "The default XAML namespace",
+      "The WPF graphics layer"
+    ],
+    "correctAnswer": "The XAML language definition",
+    "explanation": "xmlns:x maps to the XAML language definition, which is where the x: prefix constructs come from. The default namespace has no prefix, and xmlns:local is for the project's own types."
+  },
+  {
+    "id": 38,
+    "question": "What does xmlns:local map to on a XAML root element?",
+    "options": [
+      "The namespace of the Toolbox controls",
+      "The local namespace of the application",
+      "The XAML language definition",
+      "The default XAML namespace"
+    ],
+    "correctAnswer": "The local namespace of the application",
+    "explanation": "xmlns:local defines the application's own namespace. The XAML language definition belongs to xmlns:x and the default namespace is the unprefixed xmlns."
+  },
+  {
+    "id": 39,
+    "question": "Fill in the blank: The x: prefix in XAML is used for ____ constructs.",
+    "options": [
+      "networking",
+      "formatting",
+      "programming",
+      "graphics"
+    ],
+    "correctAnswer": "programming",
+    "explanation": "The slide says the x: prefix is for programming constructs such as x:Class and x:Name. It is not about formatting, graphics or networking."
+  },
+  {
+    "id": 40,
+    "question": "Coding: In this root element, what does x:Class specify?\n<Window x:Class=\"DemoApp.MainWindow\"\n        xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"\n        xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\">",
+    "options": [
+      "The default XAML namespace that holds all of the WPF controls",
+      "The namespace and class name of the code-behind for the XAML page",
+      "The run-time object name used by code-behind to reference this element",
+      "The folder path of the compiled assembly for the XAML page"
+    ],
+    "correctAnswer": "The namespace and class name of the code-behind for the XAML page",
+    "explanation": "x:Class gives the namespace and class name of the code-behind. x:Name is the run-time object name, the default namespace is the unprefixed xmlns, and x:Class is not a file path."
+  },
+  {
+    "id": 41,
+    "question": "Coding: A button must be used from code-behind as btnSave.IsEnabled = false;. Which markup makes that possible?",
+    "options": [
+      "<Button x:Class=\"btnSave\" Content=\"Save\" />",
+      "<Button x:Name=\"btnSave\" Content=\"Save\" />",
+      "<Button x:Local=\"btnSave\" Content=\"Save\" />",
+      "<Button xmlns=\"btnSave\" Content=\"Save\" />"
+    ],
+    "correctAnswer": "<Button x:Name=\"btnSave\" Content=\"Save\" />",
+    "explanation": "x:Name gives the element a run-time object name that code-behind can use. x:Class names the code-behind class, xmlns maps a namespace, and x:Local is not a real attribute."
+  },
+  {
+    "id": 42,
+    "question": "What does the slide say about how x:Name relates to names defined by WPF?",
+    "options": [
+      "It is only mapped to a WPF defined name for Window and Page elements",
+      "It is never related to any WPF defined name and is only used in code-behind",
+      "It is always mapped to an equivalent WPF defined name without exception",
+      "It is generally mapped to an equivalent WPF defined name, but not always"
+    ],
+    "correctAnswer": "It is generally mapped to an equivalent WPF defined name, but not always",
+    "explanation": "The slide says x:Name is generally mapped to an equivalent WPF name, but not always. It is neither always nor never mapped, and it is not limited to Window and Page."
+  },
+  {
+    "id": 43,
+    "question": "Which inputs does WPF support according to the slides?",
+    "options": [
+      "Keyboard, mouse and touch/gesture, with pen only supported in Windows Forms",
+      "Keyboard, mouse, touch/gesture and pen",
+      "Keyboard, mouse, touch/gesture and voice recognition",
+      "Keyboard and mouse only, with touch added in the .NET Framework only"
+    ],
+    "correctAnswer": "Keyboard, mouse, touch/gesture and pen",
+    "explanation": "The slide lists keyboard, mouse, touch/gesture and pen. Voice is not listed, and pen and touch are both part of WPF."
+  },
+  {
+    "id": 44,
+    "question": "What happens when the user provides input to an element in WPF?",
+    "options": [
+      "A layout is generated for the element, and the handler works much like in an ASP.NET application",
+      "A command is generated for the element, and the handler works much like in a Windows Forms application",
+      "An event is generated for the element, and the event handler works much like in a Windows Forms application",
+      "An event is generated for the window only, and the handler is written in XAML instead of code-behind"
+    ],
+    "correctAnswer": "An event is generated for the element, and the event handler works much like in a Windows Forms application",
+    "explanation": "Input generates an event for an element, typically a control, and the handler is similar to Windows Forms. It is not a command or layout, and it is not limited to the window."
+  },
+  {
+    "id": 45,
+    "question": "Short answer: Which WPF property on many controls plays the role that the Text property plays in Windows Forms?",
+    "options": [
+      "Caption",
+      "Content",
+      "Title",
+      "Header"
+    ],
+    "correctAnswer": "Content",
+    "explanation": "The tip says the Content property in some controls is like Text in Windows Forms. The Text property still exists on others such as TextBox, and the other names are not the general replacement."
+  },
+  {
+    "id": 46,
+    "question": "Which two ways do the slides give for seeing all of the events of a control?",
+    "options": [
+      "Click the wrench in the Properties window, or use the Toolbox and look for the lightning bolt icon",
+      "Click the lightning bolt in the Properties window, or use Intellisense on attributes and look for the lightning bolt icon",
+      "Click the lightning bolt in the Toolbox, or open the code-behind and look for the wrench icon",
+      "Open the Solution Explorer and search for events, or use Intellisense on the Content property"
+    ],
+    "correctAnswer": "Click the lightning bolt in the Properties window, or use Intellisense on attributes and look for the lightning bolt icon",
+    "explanation": "The lightning bolt in Properties and the lightning bolts in Intellisense both show events. The Toolbox lists controls and Solution Explorer lists files."
+  },
+  {
+    "id": 47,
+    "question": "What are layouts used for in WPF according to the slides?",
+    "options": [
+      "Controlling the colour and font of controls as the theme and language settings change",
+      "Controlling the order and timing of events as the keyboard and mouse settings change",
+      "Controlling the data and state of controls as the model and view model values change",
+      "Controlling the location and size of controls as the window size and settings change"
+    ],
+    "correctAnswer": "Controlling the location and size of controls as the window size and settings change",
+    "explanation": "Layouts help control where controls are placed and how big they are when the window or settings change. Colours and fonts, data and state, and event ordering are handled elsewhere."
+  },
+  {
+    "id": 48,
+    "question": "Fill in the blank: The common layout controls listed are Grid, Canvas, DockPanel, StackPanel, WrapPanel and ____.",
+    "options": [
+      "VirtualizingPanel",
+      "FlowPanel",
+      "TablePanel",
+      "FloatPanel"
+    ],
+    "correctAnswer": "VirtualizingPanel",
+    "explanation": "The slide ends the list with VirtualizingPanel. FlowPanel, TablePanel and FloatPanel are not WPF layout controls."
+  },
+  {
+    "id": 49,
+    "question": "Which of these is NOT one of the common layout controls listed in the slides?",
+    "options": [
+      "WrapPanel",
+      "DockPanel",
+      "StackPanel",
+      "TextBlock"
+    ],
+    "correctAnswer": "TextBlock",
+    "explanation": "TextBlock displays text and is not a layout container. WrapPanel, DockPanel and StackPanel are all in the slide's list."
+  },
+  {
+    "id": 50,
+    "question": "Short answer: What do layout controls do with the controls placed inside them?",
+    "options": [
+      "They act as templates that handle the colours and fonts of the controls",
+      "They act as models that handle the data and notifications of the controls",
+      "They act as commands that handle the clicks and gestures of the controls",
+      "They act as containers that handle the locations and dimensions of the controls"
+    ],
+    "correctAnswer": "They act as containers that handle the locations and dimensions of the controls",
+    "explanation": "Layouts are containers that handle location and dimensions. Appearance, commands and data belong to styles, commanding and the model."
+  },
+  {
+    "id": 51,
+    "question": "Why are layouts important, and what does the slide compare them to?",
+    "options": [
+      "They support one fixed screen size on one device (pixel exactness) and are somewhat similar to a fixed-width table in a web page",
+      "They support many screen sizes on many devices (device independence) and are somewhat similar to threading in a desktop app",
+      "They support many screen sizes on many devices (device independence) and are somewhat similar to responsiveness in a web app",
+      "They support faster rendering on one device (hardware speed) and are somewhat similar to caching in a web app"
+    ],
+    "correctAnswer": "They support many screen sizes on many devices (device independence) and are somewhat similar to responsiveness in a web app",
+    "explanation": "Layouts are important for device independence and compare to a web app's responsiveness. They are about adapting to sizes, not fixing one size, and not about threading or caching."
+  },
+  {
+    "id": 52,
+    "question": "Which statement about nesting layouts is correct?",
+    "options": [
+      "Layouts are recursive, so a layout can be contained in another layout",
+      "Layouts are exclusive, so a Window can hold only one layout and no others",
+      "Layouts are recursive, so a layout can only be nested inside a Canvas",
+      "Layouts are exclusive, so a layout can only contain controls and never another layout"
+    ],
+    "correctAnswer": "Layouts are recursive, so a layout can be contained in another layout",
+    "explanation": "The slide says layouts are recursive. For example, a StackPanel can live inside a Grid cell. A window has one root, but layouts can be nested to any depth."
+  },
+  {
+    "id": 53,
+    "question": "What does the slide say about the WPF layout system?",
+    "options": [
+      "It is very complex and uses the code-behind of each window to calculate bounding boxes",
+      "It is very simple and uses only the Width and Height of controls to calculate positions",
+      "It is very simple and uses only the Margin of controls to calculate bounding boxes",
+      "It is very complex and uses many properties of UIElements to calculate bounding boxes and positions"
+    ],
+    "correctAnswer": "It is very complex and uses many properties of UIElements to calculate bounding boxes and positions",
+    "explanation": "The layout system is complex and relies on many properties of UIElements. It does not depend on Width and Height or Margin alone, and it does not use code-behind."
+  },
+  {
+    "id": 54,
+    "question": "What is suggested for learning about the options in the layout elements?",
+    "options": [
+      "Use the designer, with Intellisense helping you see the options",
+      "Use the Solution Explorer, with the Toolbox helping you see the options",
+      "Use the Error List, with the Output window helping you see the options",
+      "Use the code-behind, with the debugger helping you see the options"
+    ],
+    "correctAnswer": "Use the designer, with Intellisense helping you see the options",
+    "explanation": "The slide says the designer is very helpful when learning layout options and mentions Intellisense. The other windows do not show layout options."
+  },
+  {
+    "id": 55,
+    "question": "Short answer: Which pair of properties controls where an element sits horizontally and vertically inside its layout slot?",
+    "options": [
+      "Width and Height",
+      "HorizontalAlignment and VerticalAlignment",
+      "Top and Left",
+      "Margin and Padding"
+    ],
+    "correctAnswer": "HorizontalAlignment and VerticalAlignment",
+    "explanation": "HorizontalAlignment and VerticalAlignment set the position within the available space. Width and Height set size, Margin is spacing between elements, and Top and Left apply to Canvas."
+  },
+  {
+    "id": 56,
+    "question": "What does the Margin property describe?",
+    "options": [
+      "The space between the element's content and its own edge",
+      "The size of the element's border and its thickness",
+      "The space between the element and the next element",
+      "The distance between the element and the window title bar only"
+    ],
+    "correctAnswer": "The space between the element and the next element",
+    "explanation": "The slide defines Margin as the space between the element and the next element. Padding is the space inside an element, and the other options describe something different."
+  },
+  {
+    "id": 57,
+    "question": "Coding: Using four values, what does this margin mean?\n<Button Content=\"OK\" Margin=\"10,20,30,40\" />",
+    "options": [
+      "Left 10, Top 20, Right 30, Bottom 40",
+      "Left 40, Top 30, Right 20, Bottom 10",
+      "Top 10, Right 20, Bottom 30, Left 40",
+      "Left 10, Right 20, Top 30, Bottom 40"
+    ],
+    "correctAnswer": "Left 10, Top 20, Right 30, Bottom 40",
+    "explanation": "WPF lists a four-value margin as Left, Top, Right, Bottom. The clockwise order starting at the top is the CSS convention and is a common mix-up."
+  },
+  {
+    "id": 58,
+    "question": "Short answer: Which three ways does the slide list for specifying the Margin property?",
+    "options": [
+      "Left, Top, Right, Bottom; Width, Height; or a Thickness",
+      "Left, Top, Right, Bottom; Left, Top; or a Thickness",
+      "Left, Top, Right, Bottom; Left, Top; or a Padding",
+      "Left, Right; Top, Bottom; or a Border"
+    ],
+    "correctAnswer": "Left, Top, Right, Bottom; Left, Top; or a Thickness",
+    "explanation": "The slide lists Left, Top, Right, Bottom; Left, Top; and Thickness. Width and Height size an element, and Border and Padding are different properties."
+  },
+  {
+    "id": 59,
+    "question": "Which layout is the default when a new WPF project is created in Visual Studio?",
+    "options": [
+      "DockPanel",
+      "StackPanel",
+      "Canvas",
+      "Grid"
+    ],
+    "correctAnswer": "Grid",
+    "explanation": "The slide says Grid is the default layout for a new WPF project. Canvas, DockPanel and StackPanel have to be added by hand."
+  },
+  {
+    "id": 60,
+    "question": "How many rows and columns does a Grid have by default?",
+    "options": [
+      "1 row and 2 columns",
+      "1 row and 1 column",
+      "3 rows and 1 column",
+      "2 rows and 2 columns"
+    ],
+    "correctAnswer": "1 row and 1 column",
+    "explanation": "A default Grid has a single row and column until you define more. The other combinations are not the default."
+  },
+  {
+    "id": 61,
+    "question": "Coding: How many cells does this Grid have?\n<Grid>\n  <Grid.ColumnDefinitions>\n    <ColumnDefinition />\n    <ColumnDefinition />\n  </Grid.ColumnDefinitions>\n  <Grid.RowDefinitions>\n    <RowDefinition />\n    <RowDefinition />\n    <RowDefinition />\n  </Grid.RowDefinitions>\n</Grid>",
+    "options": [
+      "3 cells, because only the row definitions create cells",
+      "6 cells, because it has 2 columns and 3 rows",
+      "9 cells, because it has 3 columns and 3 rows",
+      "5 cells, because it has 2 columns and 3 rows added together"
+    ],
+    "correctAnswer": "6 cells, because it has 2 columns and 3 rows",
+    "explanation": "Cells equal columns times rows, so 2 x 3 gives 6. Adding the counts gives 5, and both definitions contribute to the grid."
+  },
+  {
+    "id": 62,
+    "question": "Short answer: Which two sets of definitions are used to define the structure of a Grid?",
+    "options": [
+      "CellDefinitions and BorderDefinitions",
+      "GridColumns and GridRows",
+      "ColumnDefinitions and RowDefinitions",
+      "Column.Rows and Row.Columns"
+    ],
+    "correctAnswer": "ColumnDefinitions and RowDefinitions",
+    "explanation": "The slide says to use ColumnDefinitions and RowDefinitions. The other names are not WPF properties."
+  },
+  {
+    "id": 63,
+    "question": "Coding: In the Grid above (2 columns, 3 rows), which cell holds this button?\n<Button Content=\"Go\" Grid.Row=\"1\" Grid.Column=\"0\" />",
+    "options": [
+      "The second row of the first column",
+      "The second row of the second column",
+      "The first row of the first column",
+      "The first row of the second column"
+    ],
+    "correctAnswer": "The second row of the first column",
+    "explanation": "Grid.Row and Grid.Column start counting at 0, so row 1 is the second row and column 0 is the first column. Swapping them or counting from 1 gives the other cells."
+  },
+  {
+    "id": 64,
+    "question": "Which attached properties place an element in a particular Grid cell?",
+    "options": [
+      "Canvas.Row and Canvas.Column",
+      "Grid.X and Grid.Y",
+      "Grid.Row and Grid.Column",
+      "Grid.Top and Grid.Left"
+    ],
+    "correctAnswer": "Grid.Row and Grid.Column",
+    "explanation": "The slide says to use Grid.Row and Grid.Column. Top and Left belong to Canvas, and X and Y are not WPF grid properties."
+  },
+  {
+    "id": 65,
+    "question": "What happens to the elements inside a Grid when the window is resized?",
+    "options": [
+      "They are repositioned as the window is sized",
+      "They are repositioned only when the user closes and reopens the window",
+      "They keep the exact positions they had at design time",
+      "They are removed until the window returns to its original size"
+    ],
+    "correctAnswer": "They are repositioned as the window is sized",
+    "explanation": "The slide says elements within the Grid are repositioned as the window is sized. They do not stay fixed, disappear or wait for a restart."
+  },
+  {
+    "id": 66,
+    "question": "Which layout allows explicit positioning of elements and is closest to the way Windows Forms works?",
+    "options": [
+      "Canvas",
+      "Grid",
+      "StackPanel",
+      "DockPanel"
+    ],
+    "correctAnswer": "Canvas",
+    "explanation": "Canvas places elements at explicit positions, as Windows Forms does. Grid, DockPanel and StackPanel arrange elements according to rules."
+  },
+  {
+    "id": 67,
+    "question": "Why is Canvas described as the most efficient layout?",
+    "options": [
+      "It performs layout calculations only for elements in the first row",
+      "It performs layout calculations only once at start-up",
+      "It performs no layout calculations",
+      "It performs all layout calculations on the graphics card"
+    ],
+    "correctAnswer": "It performs no layout calculations",
+    "explanation": "The slide says Canvas is most efficient because there are no layout calculations. It does not calculate once, use the graphics card for layout, or handle rows."
+  },
+  {
+    "id": 68,
+    "question": "Coding: Where is this button placed?\n<Canvas>\n  <Button Content=\"Run\" Canvas.Left=\"30\" Canvas.Top=\"50\" Width=\"80\" Height=\"25\" />\n</Canvas>",
+    "options": [
+      "50 units from the left edge and 30 units from the top edge of the Canvas",
+      "In the centre of the Canvas with margins of 30 and 50 units",
+      "30 units from the left edge and 50 units from the top edge of the Canvas",
+      "30 units from the right edge and 50 units from the bottom edge of the Canvas"
+    ],
+    "correctAnswer": "30 units from the left edge and 50 units from the top edge of the Canvas",
+    "explanation": "Left and Top give the offset from the top-left corner. The values are not swapped, measured from the right and bottom, or used as margins."
+  },
+  {
+    "id": 69,
+    "question": "Which properties does the slide list as controlling position and size on a Canvas?",
+    "options": [
+      "Height, Width, Top and Left",
+      "Height, Width, Row and Column",
+      "Height, Width, Dock and Stretch",
+      "Margin, Padding, Top and Left"
+    ],
+    "correctAnswer": "Height, Width, Top and Left",
+    "explanation": "The slide lists Height, Width, Top and Left for Canvas. Row and Column belong to Grid, and Dock belongs to DockPanel."
+  },
+  {
+    "id": 70,
+    "question": "Why is Canvas called the least flexible layout?",
+    "options": [
+      "You have to place every element in a numbered row and column",
+      "You have to do a lot yourself, positioning and sizing each element explicitly",
+      "You have to do very little yourself, because elements are arranged automatically",
+      "You have to nest every element inside a DockPanel to position it"
+    ],
+    "correctAnswer": "You have to do a lot yourself, positioning and sizing each element explicitly",
+    "explanation": "Canvas gives explicit control, so you must position everything yourself. It does not arrange elements automatically, use rows and columns, or require DockPanel."
+  },
+  {
+    "id": 71,
+    "question": "Which layout defines an area where elements are arranged vertically or horizontally relative to each other, and is generally used to dock elements to an edge?",
+    "options": [
+      "WrapPanel",
+      "StackPanel",
+      "Canvas",
+      "DockPanel"
+    ],
+    "correctAnswer": "DockPanel",
+    "explanation": "DockPanel docks elements to edges relative to each other. StackPanel arranges elements in a single line, and Canvas uses explicit positions."
+  },
+  {
+    "id": 72,
+    "question": "Which three examples does the slide give for a DockPanel?",
+    "options": [
+      "A title bar on the top, a navigation bar on the side, and an icon bar in the centre",
+      "A status bar on the bottom, a navigation bar on the top, and a menu on the side",
+      "A status bar on the bottom, a navigation bar on the side, and an icon bar on the top",
+      "A status bar on the top, a navigation bar on the bottom, and an icon bar on the side"
+    ],
+    "correctAnswer": "A status bar on the bottom, a navigation bar on the side, and an icon bar on the top",
+    "explanation": "The slide pairs the status bar with the bottom, the navigation bar with the side and the icon bar with the top. The other options swap those edges."
+  },
+  {
+    "id": 73,
+    "question": "Coding: Where does the TextBox appear?\n<DockPanel>\n  <StatusBar DockPanel.Dock=\"Bottom\" />\n  <ToolBar DockPanel.Dock=\"Top\" />\n  <TextBox />\n</DockPanel>",
+    "options": [
+      "It is hidden, because every element in a DockPanel needs a Dock value",
+      "It is docked to the left edge, because that is the default dock",
+      "It fills the remaining space between the toolbar and the status bar",
+      "It is placed in the centre at its natural size, with the rest left empty"
+    ],
+    "correctAnswer": "It fills the remaining space between the toolbar and the status bar",
+    "explanation": "The last element takes the remaining space. It is not docked left by default, left at natural size, or hidden."
+  },
+  {
+    "id": 74,
+    "question": "Coding: What happens to the ListBox, which is the last child?\n<DockPanel>\n  <Button DockPanel.Dock=\"Top\" Content=\"Menu\" />\n  <ListBox DockPanel.Dock=\"Left\" />\n</DockPanel>",
+    "options": [
+      "It docks to the left edge only if the Button is removed",
+      "It is placed outside the panel, because the Dock value is invalid",
+      "It docks to the left edge only and leaves the remainder empty",
+      "It still takes up the remainder of the space, even though Dock is specified"
+    ],
+    "correctAnswer": "It still takes up the remainder of the space, even though Dock is specified",
+    "explanation": "The slide says the last element takes the remainder even if Dock is specified. The Dock value does not shrink it or move it outside."
+  },
+  {
+    "id": 75,
+    "question": "How does a StackPanel arrange its elements?",
+    "options": [
+      "At explicit positions using Top and Left",
+      "In a single line, either horizontal or vertical",
+      "Docked to the edges of the panel",
+      "In rows and columns defined by definitions"
+    ],
+    "correctAnswer": "In a single line, either horizontal or vertical",
+    "explanation": "StackPanel arranges elements in one line. Rows and columns belong to Grid, explicit positions to Canvas and edge docking to DockPanel."
+  },
+  {
+    "id": 76,
+    "question": "Coding: How are the buttons arranged?\n<StackPanel Orientation=\"Horizontal\">\n  <Button Content=\"A\" />\n  <Button Content=\"B\" />\n  <Button Content=\"C\" />\n</StackPanel>",
+    "options": [
+      "In a grid of three rows and one column",
+      "All at the top-left corner, overlapping each other",
+      "On top of each other in a single vertical line",
+      "Side by side in a single horizontal line"
+    ],
+    "correctAnswer": "Side by side in a single horizontal line",
+    "explanation": "Horizontal orientation places elements left to right in one line. Vertical would stack them, and rows and columns come from a Grid."
+  },
+  {
+    "id": 77,
+    "question": "What does the slide say about the default alignment of a StackPanel?",
+    "options": [
+      "It is stretch, based on the contained elements",
+      "It is left, based on the Margin of the panel",
+      "It is top, based on the Dock property",
+      "It is centre, based on the window size"
+    ],
+    "correctAnswer": "It is stretch, based on the contained elements",
+    "explanation": "The slide says the default alignment is stretch, based on the contained elements. It is not centre, left or top."
+  },
+  {
+    "id": 78,
+    "question": "Which layouts did the slides show a demo for, and which had an in-class exercise?",
+    "options": [
+      "Demos for Grid, Canvas and DockPanel, and an in-class exercise for StackPanel",
+      "Demos for Grid, Canvas and StackPanel, and an in-class exercise for DockPanel",
+      "Demos for Canvas, StackPanel and DockPanel, and an in-class exercise for Grid",
+      "Demos for Grid, StackPanel and WrapPanel, and an in-class exercise for Canvas"
+    ],
+    "correctAnswer": "Demos for Grid, Canvas and DockPanel, and an in-class exercise for StackPanel",
+    "explanation": "Grid, Canvas and DockPanel have demos, while the StackPanel slide has the in-class exercise Exploring the StackPanel."
+  },
+  {
+    "id": 79,
+    "question": "Which WPF graphics feature means the UI scales across screens with different resolutions?",
+    "options": [
+      "Single-resolution output, so the UI is tuned for one display only",
+      "Raster-only rendering, so the UI is drawn as fixed bitmaps on every screen",
+      "Pixel-based scaling, so the UI keeps the same pixel size on every screen",
+      "Resolution independence, so the UI scales on screens with different resolutions"
+    ],
+    "correctAnswer": "Resolution independence, so the UI scales on screens with different resolutions",
+    "explanation": "WPF is resolution and device independent, so the UI scales. Pixel-based scaling, fixed bitmaps and single-resolution output would not adapt across screens."
+  },
+  {
+    "id": 80,
+    "question": "What does the slide say about the precision of WPF graphics?",
+    "options": [
+      "Coordinates, opacity and transformations use double precision for better accuracy",
+      "Coordinates, opacity and transformations use integer precision for better speed",
+      "Coordinates and opacity use single precision, but transformations use double precision",
+      "Coordinates use double precision, but opacity and transformations are not supported"
+    ],
+    "correctAnswer": "Coordinates, opacity and transformations use double precision for better accuracy",
+    "explanation": "The slide says better precision comes from double precision in the coordinate system, opacity and transformations. Integer or single precision would be less precise."
+  },
+  {
+    "id": 81,
+    "question": "Which pair of features is listed among WPF graphics features along with resolution independence and better precision?",
+    "options": [
+      "Advanced animation and hardware acceleration",
+      "Hardware acceleration and fixed-size layout",
+      "Basic animation and software acceleration",
+      "Advanced animation and software-only rendering"
+    ],
+    "correctAnswer": "Advanced animation and hardware acceleration",
+    "explanation": "The slide lists advanced animation and hardware acceleration. Software-only rendering and fixed-size layout are not features of WPF graphics."
+  },
+  {
+    "id": 82,
+    "question": "Which graphics are supported in WPF according to the slides?",
+    "options": [
+      "2-D shapes and 3-D graphics, but no geometries, effects or animation",
+      "2-D shapes, 2-D geometries and 2-D effects, but no 3-D graphics or animation",
+      "2-D shapes, 2-D geometries, 2-D effects, 3-D graphics and animation",
+      "3-D graphics and animation, but no 2-D shapes, geometries or effects"
+    ],
+    "correctAnswer": "2-D shapes, 2-D geometries, 2-D effects, 3-D graphics and animation",
+    "explanation": "The slide lists 2-D shapes, geometries, effects, 3-D graphics and animation. The other options leave something out."
+  },
+  {
+    "id": 83,
+    "question": "Which two implementations of WPF does the slide describe?",
+    "options": [
+      ".NET Framework 4.8.x and .NET 4.x (Core) (LTS) or higher",
+      ".NET Framework 4.8.x and .NET 8.x (Core) (LTS) or higher",
+      ".NET Framework 3.5 and .NET 6.x (Core) (LTS) or higher",
+      ".NET Framework 4.8.x and Mono 8.x (Core) (LTS) or higher"
+    ],
+    "correctAnswer": ".NET Framework 4.8.x and .NET 8.x (Core) (LTS) or higher",
+    "explanation": "The slide lists .NET Framework 4.8.x and .NET 8.x (Core). The other versions and Mono are not listed."
+  },
+  {
+    "id": 84,
+    "question": "Which implementation of WPF will the course focus on?",
+    "options": [
+      ".NET 5.x",
+      ".NET Framework 3.5",
+      ".NET 8.x (or higher)",
+      ".NET Framework 4.8.x"
+    ],
+    "correctAnswer": ".NET 8.x (or higher)",
+    "explanation": "The course focuses on .NET 8.x or higher. .NET Framework 4.8.x is the other implementation, and the remaining versions are older."
+  },
+  {
+    "id": 85,
+    "question": "Which task should be attempted some time this week, and what caution is given about the website?",
+    "options": [
+      "Create a new WPF app with .NET; some references to the .NET Framework remain, so use them with caution",
+      "Create a new WPF app with .NET Framework; some references to .NET 8 remain, so use them with caution",
+      "Create a new Windows Forms app with .NET; some references to the .NET Framework remain, so use them with caution",
+      "Create a new WPF app with .NET; some references to the .NET Framework remain, so follow them exactly"
+    ],
+    "correctAnswer": "Create a new WPF app with .NET; some references to the .NET Framework remain, so use them with caution",
+    "explanation": "The slide says to try creating a new WPF app with .NET and warns the site still contains some .NET Framework references. It is a WPF app and the references should be used with caution."
+  },
+  {
+    "id": 86,
+    "question": "Under the Layouts heading of the part 1 references, which Microsoft Docs page is listed?",
+    "options": [
+      "Getting Started - WPF .NET Framework (Microsoft Docs)",
+      "Layout - WPF .NET Framework (Microsoft Docs)",
+      "Data binding overview - WPF .NET (Microsoft Docs)",
+      "Commanding Overview - WPF .NET Framework (Microsoft Docs)"
+    ],
+    "correctAnswer": "Layout - WPF .NET Framework (Microsoft Docs)",
+    "explanation": "The Layouts references list the Layout page from Microsoft Docs. Getting Started is listed in the general Microsoft Docs references, and the binding and commanding pages belong to part 2."
+  },
+  {
+    "id": 87,
+    "question": "What does the summary say XAML is used for?",
+    "options": [
+      "Creating the data access part of a WPF application",
+      "Creating the threading part of a WPF application",
+      "Creating the business logic part of a WPF application",
+      "Creating the user interface part of a WPF application"
+    ],
+    "correctAnswer": "Creating the user interface part of a WPF application",
+    "explanation": "The summary says XAML creates the user interface part. Business logic, data access and threading are not XAML's role."
+  },
+  {
+    "id": 88,
+    "question": "Which statement from the summary is correct?",
+    "options": [
+      "Event handling in WPF is completely different from Windows Forms, and only one layout is supported",
+      "Event handling in WPF is unsupported, and several layouts provide visual management of controls",
+      "Event handling in WPF is similar to Windows Forms, and several layouts provide visual management of controls",
+      "Event handling in WPF is similar to Windows Forms, and layouts are only supported through code-behind"
+    ],
+    "correctAnswer": "Event handling in WPF is similar to Windows Forms, and several layouts provide visual management of controls",
+    "explanation": "The summary says event handling is similar to Windows Forms and several layouts are supported. It is not unsupported or limited to one layout."
+  },
+  {
+    "id": 89,
+    "question": "What does the 'Next Class' slide at the end of part 1 say will be covered?",
+    "options": [
+      "The Model-View-ViewModel pattern, which encourages separation of UI and business logic",
+      "The Model-View-ViewModel pattern, which encourages merging of UI and business logic",
+      "The Model-View-Controller pattern, which encourages separation of UI and business logic",
+      "The Model-View-ViewModel pattern, which encourages separation of UI and graphics"
+    ],
+    "correctAnswer": "The Model-View-ViewModel pattern, which encourages separation of UI and business logic",
+    "explanation": "The next class is MVVM, which separates UI from business logic. It is not Model-View-Controller, and it does not merge UI and logic."
+  },
+  {
+    "id": 90,
+    "question": "Fill in the blank: MVVM stands for Model-View-____.",
+    "options": [
+      "ViewMapper",
+      "ViewManager",
+      "ViewModel",
+      "ViewModule"
+    ],
+    "correctAnswer": "ViewModel",
+    "explanation": "MVVM is Model-View-ViewModel. ViewManager, ViewMapper and ViewModule sound plausible but are not the names of the third part."
+  },
+  {
+    "id": 91,
+    "question": "Is MVVM a framework or a pattern?",
+    "options": [
+      "It is a framework, and it is not a pattern",
+      "It is a pattern that is only available as a framework inside Visual Studio",
+      "It is a framework that Microsoft supplies for Windows Forms and WPF",
+      "It is a pattern, and it is not a framework"
+    ],
+    "correctAnswer": "It is a pattern, and it is not a framework",
+    "explanation": "The slide stresses that MVVM is a pattern and not a framework. It is a way of organising code, so it is not something you install, and it is not tied to Visual Studio or Windows Forms."
+  },
+  {
+    "id": 92,
+    "question": "What is the main purpose of the MVVM pattern?",
+    "options": [
+      "To separate the XAML markup from the layout so that controls position themselves",
+      "To separate the business logic from the database so that data is stored remotely",
+      "To separate the UI from the business logic",
+      "To separate the application window from the application class so that several windows can run"
+    ],
+    "correctAnswer": "To separate the UI from the business logic",
+    "explanation": "MVVM separates the UI from the business logic. It is not about databases, about managing windows, or about layout."
+  },
+  {
+    "id": 93,
+    "question": "Which problem did Microsoft invent MVVM to address, and for which technologies?",
+    "options": [
+      "Event-driven programming, for WPF and Silverlight (legacy)",
+      "Event-driven programming, for Windows Forms and Win32 (legacy)",
+      "Event-driven programming, for ASP.NET and Silverlight (current)",
+      "Multi-threaded programming, for WPF and Silverlight (legacy)"
+    ],
+    "correctAnswer": "Event-driven programming, for WPF and Silverlight (legacy)",
+    "explanation": "The slide describes MVVM as a Microsoft invention to address event-driven programming for WPF and Silverlight, which is now legacy. It was not aimed at threading, Windows Forms or ASP.NET."
+  },
+  {
+    "id": 94,
+    "question": "Which list matches the benefits of MVVM given in the slides?",
+    "options": [
+      "Separation of development activity, solid unit testing, reusable components, and a good fit only for legacy web applications",
+      "Separation of development activity, solid unit testing, reusable components, and a good fit for modern desktop and mobile applications",
+      "Separation of development activity, replacement of unit testing, reusable components, and a good fit for modern desktop and mobile applications",
+      "Merging of development activity, solid unit testing, reusable components, and a good fit for modern desktop and mobile applications"
+    ],
+    "correctAnswer": "Separation of development activity, solid unit testing, reusable components, and a good fit for modern desktop and mobile applications",
+    "explanation": "All four slide benefits are separated development, solid unit testing, reusable components, and a good fit for modern desktop and mobile apps. The other lists change one item, such as merging development, replacing testing, or limiting use to legacy web apps."
+  },
+  {
+    "id": 95,
+    "question": "Which pair lists the drawbacks of MVVM given in the slides?",
+    "options": [
+      "It is difficult to reuse components, and debugging is more challenging",
+      "It is overkill for simple applications, and unit testing is more difficult",
+      "It is slow for large applications, and separation of development is lost",
+      "It is overkill for simple applications, and debugging is more challenging"
+    ],
+    "correctAnswer": "It is overkill for simple applications, and debugging is more challenging",
+    "explanation": "The slide lists overkill for simple applications and more challenging debugging. Unit testing, reuse and separation are benefits of MVVM, not drawbacks."
+  },
+  {
+    "id": 96,
+    "question": "Short answer: A student is writing a one-window calculator with two buttons and no data storage. What does the slide's list of drawbacks suggest about using MVVM?",
+    "options": [
+      "It is impossible, because MVVM cannot be used with a single window",
+      "It is required, because MVVM is the only way that WPF controls can raise events",
+      "It is probably overkill, because MVVM is considered overkill for simple applications",
+      "It is essential, because every WPF application must be built with MVVM"
+    ],
+    "correctAnswer": "It is probably overkill, because MVVM is considered overkill for simple applications",
+    "explanation": "A calculator is a simple application, which is the case the slide calls overkill. MVVM is a choice, not a requirement, and WPF controls raise events without it."
+  },
+  {
+    "id": 97,
+    "question": "In the MVVM diagram, what is the label on the arrow between the View and the View Model?",
+    "options": [
+      "ViewModel updates the model",
+      "Model updates the view",
+      "Send notifications",
+      "Data Binding and Commands"
+    ],
+    "correctAnswer": "Data Binding and Commands",
+    "explanation": "The arrow between View and View Model is labelled Data Binding and Commands. The update label sits between View Model and Model, and the notifications label is on the dashed arrows."
+  },
+  {
+    "id": 98,
+    "question": "In the MVVM diagram, what is the label on the arrow between the View Model and the Model?",
+    "options": [
+      "Data Binding and Commands",
+      "ViewModel updates the model",
+      "Model updates the viewmodel",
+      "View updates the model"
+    ],
+    "correctAnswer": "ViewModel updates the model",
+    "explanation": "The arrow from View Model to Model says ViewModel updates the model. The binding and commands label belongs between the View and the View Model."
+  },
+  {
+    "id": 99,
+    "question": "In the MVVM diagram, which way do the dashed 'Send notifications' arrows point?",
+    "options": [
+      "From the Model to the View Model, and from the View Model to the View",
+      "From the View to the Model directly, and from the Model to the View directly",
+      "From the Model to the View directly, and from the View Model to the Model",
+      "From the View to the View Model, and from the View Model to the Model"
+    ],
+    "correctAnswer": "From the Model to the View Model, and from the View Model to the View",
+    "explanation": "The notifications travel back up: Model to View Model, then View Model to View. The diagram shows no direct connection between the View and the Model."
+  },
+  {
+    "id": 100,
+    "question": "What does the Model represent in MVVM?",
+    "options": [
+      "The user interface elements and their behaviours",
+      "The domain, which is the data and information",
+      "The methods and commands that maintain the state of the View",
+      "The bindings that synchronise the View with the ViewModel"
+    ],
+    "correctAnswer": "The domain, which is the data and information",
+    "explanation": "The Model represents the domain data and information. The interface is the View, and the methods, commands and bindings belong to the ViewModel and the binding mechanism."
+  },
+  {
+    "id": 101,
+    "question": "Which statement about the Model is correct?",
+    "options": [
+      "It generally does not include processes or services that manipulate the data, and it may include notifications that alert the ViewModel of changes",
+      "It generally includes the processes or services that manipulate the data, and it may include notifications that alert the View directly",
+      "It generally does not include any data at all, and it may include notifications that alert the ViewModel of changes",
+      "It generally includes the commands used by the View, and it may include notifications that alert the user of changes"
+    ],
+    "correctAnswer": "It generally does not include processes or services that manipulate the data, and it may include notifications that alert the ViewModel of changes",
+    "explanation": "The slide says the Model generally leaves out data-manipulating processes and services, and may notify the ViewModel. It does hold data, and it does not hold the View's commands or notify the View directly."
+  },
+  {
+    "id": 102,
+    "question": "Which statement best describes the View?",
+    "options": [
+      "It is what maintains the state of the UI, and it contains notifications and commands",
+      "It is the domain data and information, and it contains the services that manipulate that data",
+      "It is what the user sees and interacts with, and it contains behaviours, events and data-bindings",
+      "It is what retrieves the data from the Model, and it contains methods, commands and formatting rules"
+    ],
+    "correctAnswer": "It is what the user sees and interacts with, and it contains behaviours, events and data-bindings",
+    "explanation": "The View is what the user sees and interacts with, along with its behaviours, events and bindings. Retrieval, commands and formatting belong to the ViewModel, and the data belongs to the Model."
+  },
+  {
+    "id": 103,
+    "question": "Who maintains the state of the View in MVVM?",
+    "options": [
+      "The ViewModel, through the use of bindings",
+      "The View itself, through the use of events",
+      "The Model, through the use of notifications",
+      "The Window, through the use of layouts"
+    ],
+    "correctAnswer": "The ViewModel, through the use of bindings",
+    "explanation": "The slide says the View does not maintain state; that is the job of the ViewModel using bindings. The View only handles events, the Model only notifies, and layouts only arrange controls."
+  },
+  {
+    "id": 104,
+    "question": "How can the View be written, according to the slides?",
+    "options": [
+      "It can only be written in the ViewModel, using commands",
+      "It can be entirely declarative, written in XAML",
+      "It must be written entirely as an XML schema, using a DTD",
+      "It must be written entirely in code-behind, using C# events"
+    ],
+    "correctAnswer": "It can be entirely declarative, written in XAML",
+    "explanation": "The slide says the View can be entirely declarative in XAML. It does not need to be code-behind, and a schema or the ViewModel is not where the View is defined."
+  },
+  {
+    "id": 105,
+    "question": "What does the slide say the View is responsible for handling?",
+    "options": [
+      "Events in the UI, where events or properties may be mapped to the viewmodel",
+      "Data in the Model, where events or properties may be mapped to the layout",
+      "Commands in the ViewModel, where events or properties may be mapped to the Model",
+      "Formatting in the Model, where events or properties may be mapped to the database"
+    ],
+    "correctAnswer": "Events in the UI, where events or properties may be mapped to the viewmodel",
+    "explanation": "The View handles UI events, and its events or properties may be mapped to the viewmodel. It does not handle Model data or formatting."
+  },
+  {
+    "id": 106,
+    "question": "What does the ViewModel expose in order to maintain the state of the View?",
+    "options": [
+      "Tags, elements and attributes, such as those defined in XML",
+      "Methods, commands and similar members",
+      "Windows, pages and roots, such as those defined in XAML",
+      "Tables, rows and columns, such as those defined in a Grid"
+    ],
+    "correctAnswer": "Methods, commands and similar members",
+    "explanation": "The ViewModel exposes methods, commands and similar members. Grid tables, XAML roots and XML tags belong to other parts of this topic."
+  },
+  {
+    "id": 107,
+    "question": "Which two data tasks does the ViewModel perform between the Model and the View?",
+    "options": [
+      "It creates the data inside the View and publishes it to the Model",
+      "It retrieves the data from the View and puts the data onto the Model",
+      "It retrieves the data from the Model and puts the data onto the View",
+      "It stores the data inside the View and deletes it from the Model"
+    ],
+    "correctAnswer": "It retrieves the data from the Model and puts the data onto the View",
+    "explanation": "The ViewModel gets data from the Model and puts it onto the View. The reversed direction is not the described flow, and the ViewModel does not store data in the View."
+  },
+  {
+    "id": 108,
+    "question": "Short answer: A Model stores a price as the decimal 5.5, and the screen has to show the text \"$5.50\". Which part of MVVM should translate or format the value?",
+    "options": [
+      "The Window, because it formats the data when the layout is calculated for the screen",
+      "The ViewModel, because it may translate or format data before it is transferred to the View",
+      "The View, because it keeps the state and formats the data before it is transferred to the Model",
+      "The Model, because it formats the data for display before it is transferred to the View"
+    ],
+    "correctAnswer": "The ViewModel, because it may translate or format data before it is transferred to the View",
+    "explanation": "The slide says the ViewModel may translate or format data before it goes to the View. The Model holds the raw value, the View shows what it is given, and layouts do not format data."
+  },
+  {
+    "id": 109,
+    "question": "What is binding, according to the slides?",
+    "options": [
+      "An approach to compiling the UI into the Model",
+      "An approach to synchronizing the UI with the Model",
+      "An approach to storing the UI inside the Model",
+      "An approach to separating the Model from the database"
+    ],
+    "correctAnswer": "An approach to synchronizing the UI with the Model",
+    "explanation": "The slide defines binding as an approach to synchronizing the UI with the Model. It does not compile or store the UI, and it is not about databases."
+  },
+  {
+    "id": 110,
+    "question": "What does binding enhance, according to the slides?",
+    "options": [
+      "Separation, for better testing, maintainability and extensibility",
+      "Coupling, for better speed, size and memory use",
+      "Separation, for better graphics, colour and font handling",
+      "Coupling, for better testing, logging and tracing"
+    ],
+    "correctAnswer": "Separation, for better testing, maintainability and extensibility",
+    "explanation": "Binding enhances separation, which in turn improves testing, maintainability and extensibility. It does not increase coupling or improve graphics."
+  },
+  {
+    "id": 111,
+    "question": "Which three examples of binding does the slide give?",
+    "options": [
+      "Labels to model values, lists (collections) to model lists, and actions to commands",
+      "Labels to model lists, lists to commands, and actions to model values",
+      "Labels to commands, lists to model values, and actions to model lists",
+      "Labels to model values, lists to layouts, and actions to events"
+    ],
+    "correctAnswer": "Labels to model values, lists (collections) to model lists, and actions to commands",
+    "explanation": "The slide pairs labels with model values, lists with model lists, and actions with commands. The other options mix up the pairs."
+  },
+  {
+    "id": 112,
+    "question": "Which pairing is a correct binding example from the slides?",
+    "options": [
+      "An action in the UI bound to a list in the model",
+      "A label in the UI bound to a command in the model",
+      "A list of items in the UI bound to a single value in the model",
+      "A list of items in the UI bound to a list (collection) in the model"
+    ],
+    "correctAnswer": "A list of items in the UI bound to a list (collection) in the model",
+    "explanation": "A list in the UI binds to a list in the model. Labels bind to model values and actions bind to commands, so the other pairings are mismatched."
+  },
+  {
+    "id": 113,
+    "question": "Coding: A Save button in the View must run code that lives in the ViewModel, without a Click handler in code-behind. Which binding fits?",
+    "options": [
+      "Bind the button's action to a command exposed by the ViewModel",
+      "Bind the button's action to a list held in the Model",
+      "Bind the button's label to a model value held in the Model",
+      "Bind the button's label to a command exposed by the View"
+    ],
+    "correctAnswer": "Bind the button's action to a command exposed by the ViewModel",
+    "explanation": "Actions bind to commands, and the command is exposed by the ViewModel. A label binds to a value, and a list is not an action."
+  },
+  {
+    "id": 114,
+    "question": "What is commanding independent of, according to the slides?",
+    "options": [
+      "The binding that connects the View",
+      "The UI element that invokes it",
+      "The window that holds the layout",
+      "The Model that supplies the data"
+    ],
+    "correctAnswer": "The UI element that invokes it",
+    "explanation": "The slide says commanding is independent of the UI element that invokes it, so the same command can be invoked from different elements."
+  },
+  {
+    "id": 115,
+    "question": "Short answer: Which description matches the slide's simple example of commanding?",
+    "options": [
+      "A click event that is invoked by a separate method, rather than the code inside the event itself",
+      "A separate method that is invoked by a layout, rather than the code written inside the click event",
+      "The code written directly inside the click event, rather than a separate method that is invoked",
+      "A separate method that is invoked by a click event, rather than the code written inside the click event itself"
+    ],
+    "correctAnswer": "A separate method that is invoked by a click event, rather than the code written inside the click event itself",
+    "explanation": "The slide's example is a separate method called from the click event instead of putting the logic in the event itself. The other options reverse or change the relationship."
+  },
+  {
+    "id": 116,
+    "question": "In which order do the commanding demo steps happen?",
+    "options": [
+      "Setting up the Command, then binding to the Command",
+      "Setting up the Model, then setting up the View",
+      "Binding to the Command, then setting up the Command",
+      "Binding to the Model, then setting up the Window"
+    ],
+    "correctAnswer": "Setting up the Command, then binding to the Command",
+    "explanation": "The demo first sets up the command and then binds to it. A command has to exist before something can be bound to it."
+  },
+  {
+    "id": 117,
+    "question": "Which two bindings are shown in the binding demo?",
+    "options": [
+      "A label bound to a model list, and a list bound to a command",
+      "A label bound to a command, and a list bound to a model value",
+      "A label bound to model values, and a list bound to a model list",
+      "A label bound to a layout, and a list bound to a window"
+    ],
+    "correctAnswer": "A label bound to model values, and a list bound to a model list",
+    "explanation": "The binding demo covers a label to model values and a list to a model list. The commanding demo is a separate demo."
+  },
+  {
+    "id": 118,
+    "question": "What does the summary of part 2 say about MVVM, binding and commanding?",
+    "options": [
+      "MVVM separates the UI from the business logic, and features like binding and commanding are designed to support patterns like MVVM",
+      "MVVM merges the UI with the business logic, and features like binding and commanding are designed to support patterns like MVVM",
+      "MVVM separates the UI from the business logic, and features like binding and commanding are designed to replace patterns like MVVM",
+      "MVVM separates the UI from the data store, and features like binding and commanding are designed to support threading"
+    ],
+    "correctAnswer": "MVVM separates the UI from the business logic, and features like binding and commanding are designed to support patterns like MVVM",
+    "explanation": "The summary says MVVM separates UI from business logic and that binding and commanding support such patterns. They support MVVM rather than replace it, and they are not about threading."
+  },
+  {
+    "id": 119,
+    "question": "Which data structures are listed for the next class after MVVM?",
+    "options": [
+      "Array, Stack, Queue and Graph",
+      "List, Heap, Queue and Dictionary",
+      "List, Stack, Tree and Hashtable",
+      "List, Stack, Queue and Hashtable"
+    ],
+    "correctAnswer": "List, Stack, Queue and Hashtable",
+    "explanation": "The next class covers List, Stack, Queue and Hashtable. The other lists swap in structures that are not on the slide."
+  },
+  {
+    "id": 120,
+    "question": "Which Microsoft resource does the slide list for binding?",
+    "options": [
+      "Getting Started - WPF .NET Framework (Microsoft Docs)",
+      "Layout - WPF .NET Framework (Microsoft Docs)",
+      "Commanding Overview - WPF .NET Framework (Microsoft Docs)",
+      "Data binding overview - WPF .NET (Microsoft Docs)"
+    ],
+    "correctAnswer": "Data binding overview - WPF .NET (Microsoft Docs)",
+    "explanation": "The binding resource is the Data binding overview. The other pages are listed for commanding, layouts and getting started."
+  }
+]
